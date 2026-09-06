@@ -1,0 +1,211 @@
+﻿<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | Digital Ustad</title>
+  <meta name="description" content="Get in touch with Digital Ustad for a free website or digital marketing quotation. Instant WhatsApp chat available.">
+  <link rel="icon" type="image/png" href="assets/images/favicon.png">
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              orange: '#FF6600',
+              orangeHover: '#EA580C',
+              orangeLight: '#FFF7ED',
+              dark: '#0B0F19',
+              darkCard: '#111827',
+              slateText: '#94A3B8'
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            inter: ['"Inter"', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-white text-slate-800 antialiased selection:bg-[#FF6600] selection:text-white relative">
+
+  <div id="scroll-progress"></div>
+
+  <!-- NAVBAR -->
+  <header class="sticky top-0 z-50 bg-[#0B0F19]/95 backdrop-blur-md border-b border-slate-800/80 transition-all">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <a href="index.html" class="flex items-center group">
+          <img src="assets/images/logo-dark.png" alt="Digital Ustad" class="h-10 sm:h-11 w-auto object-contain transition-transform duration-300 group-hover:scale-105">
+        </a>
+
+        <nav class="hidden md:flex items-center gap-8">
+          <a href="index.html" class="text-sm font-semibold text-slate-300 hover:text-[#FF6600] transition-colors">Home</a>
+          <a href="services.html" class="text-sm font-semibold text-slate-300 hover:text-[#FF6600] transition-colors">Services</a>
+          <a href="solutions.html" class="text-sm font-semibold text-slate-300 hover:text-[#FF6600] transition-colors">Solutions</a>
+          <a href="how-it-works.html" class="text-sm font-semibold text-slate-300 hover:text-[#FF6600] transition-colors">How It Works</a>
+          <a href="portfolio.html" class="text-sm font-semibold text-slate-300 hover:text-[#FF6600] transition-colors">Portfolio</a>
+          <a href="about.html" class="text-sm font-semibold text-slate-300 hover:text-[#FF6600] transition-colors">About Us</a>
+          <a href="contact.html" class="text-sm font-semibold text-white hover:text-[#FF6600] transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-[#FF6600]">Contact</a>
+        </nav>
+
+        <div class="flex items-center gap-4">
+          <a href="https://wa.me/923001234567" target="_blank" class="hidden sm:inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-emerald-600 hover:bg-emerald-700 text-white text-sm font-bold shadow-md transition-all">
+            <i data-lucide="message-circle" class="w-4 h-4"></i>
+            <span>WhatsApp Us</span>
+          </a>
+          <button id="mobile-menu-btn" class="md:hidden p-2.5 rounded-xl text-slate-300 hover:text-white">
+            <i data-lucide="menu" class="w-6 h-6"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="bg-[#0B0F19] text-white py-16 lg:py-24 relative overflow-hidden">
+    <div class="absolute inset-0 bg-hero-glow pointer-events-none"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+      <span class="text-xs font-extrabold uppercase tracking-widest text-[#FF6600] bg-slate-900 border border-slate-700/80 px-4 py-1.5 rounded-full inline-block mb-4">
+        LET'S CONNECT
+      </span>
+      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight">
+        Let's Build Something <span class="text-[#FF6600]">Amazing Together</span>
+      </h1>
+      <p class="text-slate-300 text-base sm:text-lg max-w-2xl mx-auto mt-4 leading-relaxed">
+        Have questions or need a quotation? Send us a message or connect directly with our founders on WhatsApp.
+      </p>
+    </div>
+  </section>
+
+  <!-- CONTACT FORM & DIRECT INFO -->
+  <section class="py-16 lg:py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+        
+        <!-- Left: Contact Details & Fast WhatsApp -->
+        <div class="lg:col-span-5 space-y-8 reveal reveal-left active">
+          <div>
+            <h2 class="text-2xl font-extrabold text-slate-900">Get In Touch Directly</h2>
+            <p class="text-slate-600 text-sm mt-2 leading-relaxed">
+              We respond promptly to all new project inquiries. We can set up an online meeting or discuss requirements on WhatsApp.
+            </p>
+          </div>
+
+          <div class="space-y-4 text-sm font-semibold text-slate-800">
+            <div class="flex items-center gap-4 p-4 rounded-2xl bg-slate-50 border border-slate-100">
+              <div class="w-12 h-12 rounded-xl bg-emerald-100 flex items-center justify-center text-emerald-600 flex-shrink-0">
+                <i data-lucide="message-circle" class="w-6 h-6"></i>
+              </div>
+              <div>
+                <div class="text-xs text-slate-400 font-bold uppercase">Fastest Response</div>
+                <a href="https://wa.me/923001234567" target="_blank" class="text-emerald-600 font-extrabold text-base hover:underline">+92 300 1234567</a>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-4 p-4 rounded-2xl bg-slate-50 border border-slate-100">
+              <div class="w-12 h-12 rounded-xl bg-orange-100 flex items-center justify-center text-[#FF6600] flex-shrink-0">
+                <i data-lucide="mail" class="w-6 h-6"></i>
+              </div>
+              <div>
+                <div class="text-xs text-slate-400 font-bold uppercase">Official Email</div>
+                <a href="mailto:contact@digitalustad.com" class="text-slate-900 font-bold hover:text-[#FF6600]">contact@digitalustad.com</a>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-4 p-4 rounded-2xl bg-slate-50 border border-slate-100">
+              <div class="w-12 h-12 rounded-xl bg-orange-100 flex items-center justify-center text-[#FF6600] flex-shrink-0">
+                <i data-lucide="map-pin" class="w-6 h-6"></i>
+              </div>
+              <div>
+                <div class="text-xs text-slate-400 font-bold uppercase">Office Location</div>
+                <div class="text-slate-900 font-bold">Lahore, Punjab, Pakistan</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-6 rounded-3xl bg-[#0B0F19] text-white border border-slate-800 space-y-2">
+            <div class="text-xs font-bold text-[#FF6600] uppercase">Working Hours</div>
+            <div class="text-sm">Monday – Saturday: 9:00 AM – 9:00 PM (PKT)</div>
+            <div class="text-xs text-slate-400">Emergency & 24/7 Server Monitoring active for clients.</div>
+          </div>
+        </div>
+
+        <!-- Right: Instant Quote Form -->
+        <div class="lg:col-span-7 reveal reveal-right active">
+          <div class="bg-white rounded-3xl p-8 sm:p-10 border border-slate-200/90 shadow-xl">
+            <h3 class="text-2xl font-extrabold text-slate-900 mb-2">Request Free Proposal</h3>
+            <p class="text-slate-500 text-xs sm:text-sm mb-6">Fill out your project requirements to receive a customized estimate.</p>
+
+            <form id="quote-form" class="space-y-4">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Your Name *</label>
+                  <input type="text" id="client-name" required placeholder="e.g. Ali Khan" class="w-full px-4 py-3 rounded-xl border text-sm focus:outline-none focus:border-[#FF6600]">
+                </div>
+                <div>
+                  <label class="block text-xs font-bold text-slate-700 uppercase mb-1">WhatsApp Phone *</label>
+                  <input type="tel" id="client-phone" required placeholder="e.g. 0300 1234567" class="w-full px-4 py-3 rounded-xl border text-sm focus:outline-none focus:border-[#FF6600]">
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Primary Service Needed</label>
+                  <select id="client-service" class="w-full px-4 py-3 rounded-xl border text-sm bg-white focus:outline-none focus:border-[#FF6600]">
+                    <option value="5-Page Business Website (PKR 30k)">5-Page Business Website (PKR 30,000)</option>
+                    <option value="Custom E-Commerce Store">Custom E-Commerce Store</option>
+                    <option value="Social Media Management">Social Media Management</option>
+                    <option value="Meta & Google Ads Campaign">Meta & Google Ads Campaign</option>
+                    <option value="SEO & Google Business Profile">SEO & Google Business Profile</option>
+                    <option value="WhatsApp Automation System">WhatsApp Automation System</option>
+                    <option value="Complete Agency Digital Suite">Complete Digital Suite</option>
+                  </select>
+                </div>
+                <div>
+                  <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Estimated Budget</label>
+                  <select id="client-budget" class="w-full px-4 py-3 rounded-xl border text-sm bg-white focus:outline-none focus:border-[#FF6600]">
+                    <option value="PKR 30,000 - 50,000">PKR 30,000 - 50,000</option>
+                    <option value="PKR 50,000 - 100,000">PKR 50,000 - 100,000</option>
+                    <option value="PKR 100,000+">PKR 100,000+</option>
+                  </select>
+                </div>
+              </div>
+
+              <div>
+                <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Project Notes / Website References</label>
+                <textarea id="client-message" rows="4" placeholder="Tell us about your business, what you want to achieve, or paste links to websites you like..." class="w-full px-4 py-3 rounded-xl border text-sm focus:outline-none focus:border-[#FF6600]"></textarea>
+              </div>
+
+              <button type="submit" class="btn-shine w-full py-4 rounded-xl bg-[#FF6600] hover:bg-[#EA580C] text-white font-bold text-sm shadow-xl orange-glow flex items-center justify-center gap-2 transition-all">
+                <i data-lucide="send" class="w-4 h-4"></i>
+                <span>Send Proposal Request (Direct WhatsApp)</span>
+              </button>
+            </form>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-[#0B0F19] text-slate-400 pt-16 pb-12 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-xs text-slate-500">
+      © 2026 Digital Ustad. All Rights Reserved.
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>lucide.createIcons();</script>
+</body>
+</html>
+

@@ -1,0 +1,411 @@
+﻿<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web Development Services | Digital Ustad</title>
+  <meta name="description" content="Professional, fast and responsive websites that build trust, attract customers and grow your business. 5-Page Business Website from PKR 30,000.">
+  <link rel="icon" type="image/png" href="assets/images/favicon.png">
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              orange: '#FF6600',
+              orangeHover: '#EA580C',
+              orangeLight: '#FFF7ED',
+              dark: '#0B0F19',
+              darkCard: '#111827',
+              slateText: '#94A3B8'
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            inter: ['"Inter"', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-white text-slate-800 antialiased selection:bg-[#FF6600] selection:text-white relative">
+
+  <!-- Top Progress Bar -->
+  <div id="scroll-progress"></div>
+
+  <!-- NAVBAR -->
+  <header class="sticky top-0 z-50 bg-[#0B0F19]/95 backdrop-blur-md border-b border-slate-800/80 transition-all">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <a href="index.html" class="flex items-center group">
+          <img src="assets/images/logo-dark.png" alt="Digital Ustad" class="h-10 sm:h-11 w-auto object-contain transition-transform duration-300 group-hover:scale-105">
+        </a>
+
+        <nav class="hidden md:flex items-center gap-8">
+          <a href="index.html" class="text-sm font-semibold text-slate-300 hover:text-[#FF6600] transition-colors">Home</a>
+          <a href="services.html" class="text-sm font-semibold text-white hover:text-[#FF6600] transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-[#FF6600]">Services</a>
+          <a href="solutions.html" class="text-sm font-semibold text-slate-300 hover:text-[#FF6600] transition-colors">Solutions</a>
+          <a href="how-it-works.html" class="text-sm font-semibold text-slate-300 hover:text-[#FF6600] transition-colors">How It Works</a>
+          <a href="about.html" class="text-sm font-semibold text-slate-300 hover:text-[#FF6600] transition-colors">About Us</a>
+          <a href="contact.html" class="text-sm font-semibold text-slate-300 hover:text-[#FF6600] transition-colors">Contact</a>
+        </nav>
+
+        <div class="flex items-center gap-4">
+          <button class="btn-get-started btn-shine hidden sm:inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-full bg-[#FF6600] hover:bg-[#EA580C] text-white text-sm font-bold shadow-lg orange-glow-sm hover:scale-105 active:scale-95 transition-all">
+            <span>Get Started</span>
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </button>
+          <button id="mobile-menu-btn" class="md:hidden p-2.5 rounded-xl text-slate-300 hover:text-white hover:bg-slate-800/80">
+            <i data-lucide="menu" class="w-6 h-6"></i>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- MOBILE DRAWER -->
+  <div id="mobile-drawer" class="fixed inset-0 z-50 bg-[#0B0F19]/95 backdrop-blur-xl transition-all duration-300 hidden opacity-0 pointer-events-none md:hidden">
+    <div class="flex flex-col h-full p-6">
+      <div class="flex items-center justify-between pb-6 border-b border-slate-800">
+        <a href="index.html" class="flex items-center"><img src="assets/images/logo-dark.png" alt="Digital Ustad" class="h-9 w-auto object-contain"></a>
+        <button id="close-mobile-menu" class="p-2 text-slate-400 hover:text-white"><i data-lucide="x" class="w-7 h-7"></i></button>
+      </div>
+      <div class="flex flex-col gap-5 py-8 flex-1">
+        <a href="index.html" class="mobile-nav-link text-lg font-semibold text-slate-300 hover:text-[#FF6600]">Home</a>
+        <a href="services.html" class="mobile-nav-link text-lg font-semibold text-white hover:text-[#FF6600]">Services</a>
+        <a href="solutions.html" class="mobile-nav-link text-lg font-semibold text-slate-300 hover:text-[#FF6600]">Solutions</a>
+        <a href="how-it-works.html" class="mobile-nav-link text-lg font-semibold text-slate-300 hover:text-[#FF6600]">How It Works</a>
+        <a href="about.html" class="mobile-nav-link text-lg font-semibold text-slate-300 hover:text-[#FF6600]">About Us</a>
+        <a href="contact.html" class="mobile-nav-link text-lg font-semibold text-slate-300 hover:text-[#FF6600]">Contact</a>
+      </div>
+      <div class="pt-6 border-t border-slate-800 flex flex-col gap-3">
+        <button class="btn-get-started btn-shine w-full py-3 rounded-full bg-[#FF6600] text-white font-bold flex items-center justify-center gap-2">
+          <span>Get Started</span>
+          <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- BREADCRUMB & HERO -->
+  <section class="relative bg-white pt-8 pb-16 lg:pt-12 lg:pb-24 overflow-hidden border-b border-slate-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Breadcrumb -->
+      <nav class="flex items-center gap-2 text-xs font-semibold text-slate-400 mb-8 reveal">
+        <a href="index.html" class="hover:text-[#FF6600]">Home</a>
+        <span>&gt;</span>
+        <a href="services.html" class="hover:text-[#FF6600]">Services</a>
+        <span>&gt;</span>
+        <span class="text-slate-800">Web Development</span>
+      </nav>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Left Content -->
+        <div class="lg:col-span-6 space-y-6 reveal reveal-left active">
+          <h1 class="text-4xl sm:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight">
+            Web Development
+          </h1>
+          <p class="text-slate-600 text-base sm:text-lg leading-relaxed max-w-xl">
+            Professional, fast and responsive websites that build trust, attract customers and grow your business.
+          </p>
+
+          <!-- 5 Checkmark List -->
+          <ul class="space-y-3.5 pt-2">
+            <li class="flex items-center gap-3 text-sm font-semibold text-slate-700">
+              <span class="w-5 h-5 rounded-full bg-orange-100 flex items-center justify-center text-[#FF6600] flex-shrink-0">
+                <i data-lucide="check" class="w-3.5 h-3.5 stroke-[3]"></i>
+              </span>
+              <span>Modern & Responsive Design</span>
+            </li>
+            <li class="flex items-center gap-3 text-sm font-semibold text-slate-700">
+              <span class="w-5 h-5 rounded-full bg-orange-100 flex items-center justify-center text-[#FF6600] flex-shrink-0">
+                <i data-lucide="check" class="w-3.5 h-3.5 stroke-[3]"></i>
+              </span>
+              <span>SEO Friendly Structure</span>
+            </li>
+            <li class="flex items-center gap-3 text-sm font-semibold text-slate-700">
+              <span class="w-5 h-5 rounded-full bg-orange-100 flex items-center justify-center text-[#FF6600] flex-shrink-0">
+                <i data-lucide="check" class="w-3.5 h-3.5 stroke-[3]"></i>
+              </span>
+              <span>Fast Loading Speed</span>
+            </li>
+            <li class="flex items-center gap-3 text-sm font-semibold text-slate-700">
+              <span class="w-5 h-5 rounded-full bg-orange-100 flex items-center justify-center text-[#FF6600] flex-shrink-0">
+                <i data-lucide="check" class="w-3.5 h-3.5 stroke-[3]"></i>
+              </span>
+              <span>Secure & Reliable</span>
+            </li>
+            <li class="flex items-center gap-3 text-sm font-semibold text-slate-700">
+              <span class="w-5 h-5 rounded-full bg-orange-100 flex items-center justify-center text-[#FF6600] flex-shrink-0">
+                <i data-lucide="check" class="w-3.5 h-3.5 stroke-[3]"></i>
+              </span>
+              <span>Easy to Manage</span>
+            </li>
+          </ul>
+
+          <!-- Action Buttons -->
+          <div class="flex flex-wrap items-center gap-4 pt-4">
+            <button class="btn-get-started btn-shine inline-flex items-center gap-2.5 px-7 py-3.5 rounded-full bg-[#FF6600] hover:bg-[#EA580C] text-white font-bold text-sm shadow-xl orange-glow hover:scale-105 active:scale-95 transition-all">
+              <span>Get Your Website</span>
+              <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </button>
+
+            <a href="https://wa.me/923001234567?text=Hello%20Digital%20Ustad,%20I%20need%20Web%20Development%20Services!" target="_blank" class="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-full bg-slate-900 hover:bg-slate-800 text-white font-bold text-sm shadow-md hover:scale-105 active:scale-95 transition-all">
+              <i data-lucide="message-circle" class="w-4 h-4 text-emerald-400"></i>
+              <span>WhatsApp Us</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right Hero Mockup -->
+        <div class="lg:col-span-6 relative flex justify-center items-center reveal reveal-right active">
+          <div class="hero-mockup-wrapper relative w-full max-w-[500px]">
+            
+            <!-- Laptop Frame -->
+            <div class="laptop-frame bg-slate-900 border border-slate-700 shadow-2xl relative z-10 w-full">
+              <div class="h-6 bg-slate-800/90 px-3 flex items-center justify-between border-b border-slate-700">
+                <div class="flex items-center gap-1.5">
+                  <div class="w-2.5 h-2.5 rounded-full bg-red-500"></div>
+                  <div class="w-2.5 h-2.5 rounded-full bg-amber-500"></div>
+                  <div class="w-2.5 h-2.5 rounded-full bg-emerald-500"></div>
+                </div>
+                <div class="text-[10px] text-slate-400 font-mono">yourbusiness.com</div>
+                <div class="w-6"></div>
+              </div>
+              <div class="bg-[#0b101b] p-5 text-white min-h-[220px] flex flex-col justify-center relative overflow-hidden">
+                <div class="absolute right-0 top-0 bottom-0 w-1/2 opacity-30 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&q=80');"></div>
+                <span class="text-xs text-[#FF6600] font-bold uppercase tracking-wider">High Impact Website</span>
+                <h3 class="text-2xl font-extrabold mt-1 text-white">Grow Your<br>Business Online</h3>
+                <div class="mt-4 flex gap-2">
+                  <span class="px-3 py-1 rounded bg-[#FF6600] text-xs font-bold">Get Started</span>
+                  <span class="px-3 py-1 rounded border border-slate-600 text-xs">Learn More</span>
+                </div>
+              </div>
+            </div>
+            <div class="laptop-base relative z-10 w-[104%] -ml-[2%]"></div>
+
+            <!-- Mobile Phone Beside Laptop -->
+            <div class="mobile-frame absolute -right-4 bottom-1 w-32 sm:w-36 h-56 sm:h-64 z-20 shadow-2xl border-2 border-slate-700">
+              <div class="mobile-notch"></div>
+              <div class="w-full h-full bg-[#0b101b] pt-6 p-2 text-white flex flex-col justify-between">
+                <div>
+                  <div class="text-[10px] font-bold text-[#FF6600]">Digital Ustad</div>
+                  <div class="text-[9px] font-semibold mt-2">Grow Your Business Online</div>
+                  <div class="text-[8px] text-slate-400 mt-1">100% Mobile Ready</div>
+                </div>
+                <div class="bg-[#FF6600] text-[9px] text-white text-center py-1 rounded font-bold">Contact Us</div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- WHAT'S INCLUDED IN OUR 5-PAGE WEBSITE -->
+  <section class="py-16 lg:py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-14 reveal">
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
+          What's Included in Our 5-Page Website
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-6">
+        
+        <div class="reveal delay-1 hover-lift bg-slate-50/70 p-6 rounded-2xl border border-slate-100 flex flex-col items-center text-center">
+          <div class="w-12 h-12 rounded-xl bg-orange-100 flex items-center justify-center text-[#FF6600] mb-3">
+            <i data-lucide="home" class="w-6 h-6"></i>
+          </div>
+          <h4 class="font-bold text-slate-900 text-sm">Home Page</h4>
+          <p class="text-xs text-slate-500 mt-1">High-converting landing banner & overview.</p>
+        </div>
+
+        <div class="reveal delay-2 hover-lift bg-slate-50/70 p-6 rounded-2xl border border-slate-100 flex flex-col items-center text-center">
+          <div class="w-12 h-12 rounded-xl bg-orange-100 flex items-center justify-center text-[#FF6600] mb-3">
+            <i data-lucide="users" class="w-6 h-6"></i>
+          </div>
+          <h4 class="font-bold text-slate-900 text-sm">About Us</h4>
+          <p class="text-xs text-slate-500 mt-1">Company story, mission & trust badges.</p>
+        </div>
+
+        <div class="reveal delay-3 hover-lift bg-slate-50/70 p-6 rounded-2xl border border-slate-100 flex flex-col items-center text-center">
+          <div class="w-12 h-12 rounded-xl bg-orange-100 flex items-center justify-center text-[#FF6600] mb-3">
+            <i data-lucide="layout-grid" class="w-6 h-6"></i>
+          </div>
+          <h4 class="font-bold text-slate-900 text-sm">Services</h4>
+          <p class="text-xs text-slate-500 mt-1">Clear service catalogs & feature breakdowns.</p>
+        </div>
+
+        <div class="reveal delay-4 hover-lift bg-slate-50/70 p-6 rounded-2xl border border-slate-100 flex flex-col items-center text-center">
+          <div class="w-12 h-12 rounded-xl bg-orange-100 flex items-center justify-center text-[#FF6600] mb-3">
+            <i data-lucide="image" class="w-6 h-6"></i>
+          </div>
+          <h4 class="font-bold text-slate-900 text-sm">Gallery / Projects</h4>
+          <p class="text-xs text-slate-500 mt-1">Showcase work, past projects & client proof.</p>
+        </div>
+
+        <div class="reveal delay-5 hover-lift bg-slate-50/70 p-6 rounded-2xl border border-slate-100 flex flex-col items-center text-center">
+          <div class="w-12 h-12 rounded-xl bg-orange-100 flex items-center justify-center text-[#FF6600] mb-3">
+            <i data-lucide="mail" class="w-6 h-6"></i>
+          </div>
+          <h4 class="font-bold text-slate-900 text-sm">Contact Us</h4>
+          <p class="text-xs text-slate-500 mt-1">Inquiry form, Google Map & WhatsApp click.</p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 5-PAGE PRICING PACKAGE BANNER (MATCHING REFERENCE IMAGE) -->
+  <section class="py-12 pb-20 bg-white">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="reveal relative bg-[#0B0F19] rounded-3xl p-8 sm:p-12 text-white border border-slate-800 shadow-2xl overflow-hidden">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          
+          <!-- Left Offer -->
+          <div class="lg:col-span-7 space-y-4">
+            <span class="text-xs font-extrabold uppercase tracking-widest text-[#FF6600]">Complete Business Setup</span>
+            <h3 class="text-2xl sm:text-3xl font-extrabold">5-Page Business Website</h3>
+            <div class="text-3xl sm:text-4xl font-black text-[#FF6600]">PKR 30,000</div>
+            
+            <p class="text-xs sm:text-sm text-slate-300 leading-relaxed pt-1">
+              5 Pages • Responsive Design • WhatsApp Integration • Contact Form • Google Map • Basic SEO • Social Links • Fast Loading • Free Deployment
+            </p>
+
+            <div class="pt-4">
+              <button class="btn-get-started btn-shine inline-flex items-center gap-2 px-7 py-3 rounded-full bg-[#FF6600] hover:bg-[#EA580C] text-white font-bold text-sm shadow-xl orange-glow transition-all">
+                <span>Get Started</span>
+                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Right Wireframe Diagram Visual -->
+          <div class="lg:col-span-5 flex justify-center">
+            <div class="w-full max-w-[280px] bg-slate-900/90 rounded-2xl border border-slate-700/80 p-4 shadow-xl">
+              <div class="flex items-center gap-1 mb-3">
+                <div class="w-2 h-2 rounded-full bg-red-400"></div>
+                <div class="w-2 h-2 rounded-full bg-amber-400"></div>
+                <div class="w-2 h-2 rounded-full bg-emerald-400"></div>
+              </div>
+              <!-- Wireframe blocks -->
+              <div class="w-full h-16 bg-slate-800 rounded-lg mb-2.5 flex items-center justify-center text-slate-600 font-mono text-[10px]">
+                HERO BANNER
+              </div>
+              <div class="grid grid-cols-3 gap-2 mb-2.5">
+                <div class="h-10 bg-slate-800 rounded flex items-center justify-center text-[8px] text-slate-500">Service 1</div>
+                <div class="h-10 bg-slate-800 rounded flex items-center justify-center text-[8px] text-slate-500">Service 2</div>
+                <div class="h-10 bg-slate-800 rounded flex items-center justify-center text-[8px] text-slate-500">Service 3</div>
+              </div>
+              <div class="w-full h-8 bg-[#FF6600]/20 border border-[#FF6600]/40 rounded flex items-center justify-center text-[9px] text-[#FF6600] font-bold">
+                WhatsApp Connect
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-[#0B0F19] text-slate-400 pt-16 pb-12 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-slate-800">
+        <div class="lg:col-span-2 space-y-4">
+          <a href="index.html" class="inline-block group mb-2"><img src="assets/images/logo-dark.png" alt="Digital Ustad" class="h-9 sm:h-10 w-auto object-contain transition-transform duration-300 group-hover:scale-105"></a>
+          <p class="text-xs sm:text-sm text-slate-400 leading-relaxed max-w-sm">
+            Pakistan's leading digital partner for small & medium businesses. We build fast, beautiful websites, run ROI-driven marketing, and automate operations.
+          </p>
+        </div>
+        <div class="space-y-3">
+          <h4 class="text-sm font-bold text-white uppercase tracking-wider">Services</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="service-web-development.html" class="text-[#FF6600] font-bold">Web Development</a></li>
+            <li><a href="service-social-media.html" class="hover:text-[#FF6600]">Social Media Marketing</a></li>
+            <li><a href="service-graphic-design.html" class="hover:text-[#FF6600]">Graphic Design</a></li>
+            <li><a href="service-meta-google-ads.html" class="hover:text-[#FF6600]">Meta & Google Ads</a></li>
+            <li><a href="service-seo-google-business.html" class="hover:text-[#FF6600]">SEO & Google Business</a></li>
+            <li><a href="service-whatsapp-automation.html" class="hover:text-[#FF6600]">WhatsApp Automation</a></li>
+          </ul>
+        </div>
+        <div class="space-y-3">
+          <h4 class="text-sm font-bold text-white uppercase tracking-wider">Quick Links</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="index.html" class="hover:text-[#FF6600]">Home</a></li>
+            <li><a href="solutions.html" class="hover:text-[#FF6600]">Solutions</a></li>
+            <li><a href="how-it-works.html" class="hover:text-[#FF6600]">How It Works</a></li>
+            <li><a href="about.html" class="hover:text-[#FF6600]">About Us</a></li>
+            <li><a href="contact.html" class="hover:text-[#FF6600]">Contact</a></li>
+          </ul>
+        </div>
+        <div class="space-y-3">
+          <h4 class="text-sm font-bold text-white uppercase tracking-wider">Contact</h4>
+          <p class="text-xs text-slate-300">+92 300 1234567<br>contact@digitalustad.com<br>Lahore, Pakistan</p>
+        </div>
+      </div>
+      <div class="pt-8 text-center text-xs text-slate-500">© 2026 Digital Ustad. All Rights Reserved.</div>
+    </div>
+  </footer>
+
+  <!-- FLOATING WHATSAPP BUTTON -->
+  <a href="https://wa.me/923001234567?text=Hello%20Digital%20Ustad,%20I%20need%20Web%20Development%20Services!" target="_blank" class="fixed bottom-6 right-6 z-40 w-14 h-14 rounded-full bg-emerald-500 hover:bg-emerald-600 text-white flex items-center justify-center shadow-2xl hover:scale-110 transition-all group" title="Chat on WhatsApp">
+    <div class="radar-ring"></div>
+    <i data-lucide="message-circle" class="w-7 h-7"></i>
+  </a>
+
+  <!-- QUOTATION MODAL -->
+  <div id="quote-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/80 modal-backdrop hidden p-4">
+    <div class="modal-box bg-white rounded-3xl max-w-lg w-full p-6 sm:p-8 shadow-2xl relative scale-95 opacity-0 transition-all duration-200">
+      <button id="close-quote-modal" class="absolute top-5 right-5 w-8 h-8 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-500 flex items-center justify-center"><i data-lucide="x" class="w-5 h-5"></i></button>
+      <div class="mb-6">
+        <h3 class="text-2xl font-extrabold text-slate-900">Get Web Development Quote</h3>
+        <p class="text-xs text-slate-500 mt-1">Get an instant proposal for your 5-Page or Custom Website.</p>
+      </div>
+      <form id="quote-form" class="space-y-4">
+        <div>
+          <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Your Name *</label>
+          <input type="text" id="client-name" required placeholder="Ali Khan" class="w-full px-4 py-2.5 rounded-xl border text-sm">
+        </div>
+        <div>
+          <label class="block text-xs font-bold text-slate-700 uppercase mb-1">WhatsApp Number *</label>
+          <input type="tel" id="client-phone" required placeholder="0300 1234567" class="w-full px-4 py-2.5 rounded-xl border text-sm">
+        </div>
+        <div>
+          <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Website Package</label>
+          <select id="client-service" class="w-full px-3 py-2.5 rounded-xl border text-sm bg-white">
+            <option value="5-Page Business Website (PKR 30k)">5-Page Business Website (PKR 30,000)</option>
+            <option value="Custom E-commerce Store">Custom E-Commerce Store</option>
+            <option value="Landing Page Only">High-Converting Landing Page</option>
+          </select>
+        </div>
+        <button type="submit" class="btn-shine w-full py-3.5 rounded-xl bg-[#FF6600] text-white font-bold text-sm shadow-xl flex items-center justify-center gap-2">
+          <span>Send via WhatsApp</span>
+          <i data-lucide="send" class="w-4 h-4"></i>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+  <script>lucide.createIcons();</script>
+</body>
+</html>
+

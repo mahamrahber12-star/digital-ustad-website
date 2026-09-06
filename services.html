@@ -1,0 +1,308 @@
+﻿<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Services | Digital Ustad</title>
+  <meta name="description" content="Explore complete digital solutions for modern businesses: Web Development, Social Media, Graphic Design, Paid Ads, SEO, and WhatsApp Automation.">
+  <link rel="icon" type="image/png" href="assets/images/favicon.png">
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              orange: '#FF6600',
+              orangeHover: '#EA580C',
+              orangeLight: '#FFF7ED',
+              dark: '#0B0F19',
+              darkCard: '#111827',
+              slateText: '#94A3B8'
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            inter: ['"Inter"', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-white text-slate-800 antialiased selection:bg-[#FF6600] selection:text-white relative">
+
+  <div id="scroll-progress"></div>
+
+  <!-- NAVBAR -->
+  <header class="sticky top-0 z-50 bg-[#0B0F19]/95 backdrop-blur-md border-b border-slate-800/80 transition-all">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <a href="index.html" class="flex items-center group">
+          <img src="assets/images/logo-dark.png" alt="Digital Ustad" class="h-10 sm:h-11 w-auto object-contain transition-transform duration-300 group-hover:scale-105">
+        </a>
+
+        <nav class="hidden md:flex items-center gap-8">
+          <a href="index.html" class="text-sm font-semibold text-slate-300 hover:text-[#FF6600] transition-colors">Home</a>
+          <a href="services.html" class="text-sm font-semibold text-white hover:text-[#FF6600] transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-[#FF6600]">Services</a>
+          <a href="solutions.html" class="text-sm font-semibold text-slate-300 hover:text-[#FF6600] transition-colors">Solutions</a>
+          <a href="how-it-works.html" class="text-sm font-semibold text-slate-300 hover:text-[#FF6600] transition-colors">How It Works</a>
+          <a href="portfolio.html" class="text-sm font-semibold text-slate-300 hover:text-[#FF6600] transition-colors">Portfolio</a>
+          <a href="about.html" class="text-sm font-semibold text-slate-300 hover:text-[#FF6600] transition-colors">About Us</a>
+          <a href="contact.html" class="text-sm font-semibold text-slate-300 hover:text-[#FF6600] transition-colors">Contact</a>
+        </nav>
+
+        <div class="flex items-center gap-4">
+          <button class="btn-get-started btn-shine hidden sm:inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-full bg-[#FF6600] hover:bg-[#EA580C] text-white text-sm font-bold shadow-lg orange-glow-sm hover:scale-105 transition-all">
+            <span>Get Started</span>
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </button>
+          <button id="mobile-menu-btn" class="md:hidden p-2.5 rounded-xl text-slate-300 hover:text-white">
+            <i data-lucide="menu" class="w-6 h-6"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO BANNER -->
+  <section class="bg-[#0B0F19] text-white py-16 lg:py-24 relative overflow-hidden">
+    <div class="absolute inset-0 bg-hero-glow pointer-events-none"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+      <span class="text-xs font-extrabold uppercase tracking-widest text-[#FF6600] bg-slate-900 border border-slate-700/80 px-4 py-1.5 rounded-full inline-block mb-4">
+        END-TO-END DIGITAL CAPABILITIES
+      </span>
+      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight">
+        Services That Drive <span class="text-[#FF6600]">Real Business Growth</span>
+      </h1>
+      <p class="text-slate-300 text-base sm:text-lg max-w-2xl mx-auto mt-4 leading-relaxed">
+        Everything your business needs to establish authority, generate high-intent customer leads, and scale online.
+      </p>
+    </div>
+  </section>
+
+  <!-- 6 MAIN DEDICATED SERVICES DIRECTORY -->
+  <section class="py-16 lg:py-24 bg-[#FAFAFA]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <!-- 1. Web Development -->
+        <div class="reveal delay-1 hover-lift bg-white rounded-3xl p-8 border border-slate-200/80 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="w-14 h-14 rounded-2xl bg-orange-100 flex items-center justify-center text-[#FF6600] mb-6 shadow-sm">
+              <i data-lucide="code-2" class="w-7 h-7"></i>
+            </div>
+            <h3 class="text-2xl font-extrabold text-slate-900">Web Development</h3>
+            <p class="text-slate-600 text-sm mt-2 leading-relaxed">
+              High-performance, ultra-responsive websites designed to build trust and convert visitors into buyers. Includes complete 5-Page business setups from PKR 30,000.
+            </p>
+            <ul class="mt-5 space-y-2 text-xs font-semibold text-slate-700 border-t pt-4">
+              <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-[#FF6600]"></span> 5-Page Business Setup</li>
+              <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-[#FF6600]"></span> SEO Friendly & Fast Speed</li>
+              <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-[#FF6600]"></span> Direct WhatsApp Ordering</li>
+            </ul>
+          </div>
+          <div class="mt-8 pt-4 border-t border-slate-100">
+            <a href="service-web-development.html" class="w-full inline-flex items-center justify-center gap-2 py-3 rounded-full bg-slate-900 hover:bg-[#FF6600] text-white text-xs font-bold transition-all">
+              <span>View Web Development</span>
+              <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- 2. Social Media Management -->
+        <div class="reveal delay-2 hover-lift bg-white rounded-3xl p-8 border border-slate-200/80 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="w-14 h-14 rounded-2xl bg-orange-100 flex items-center justify-center text-[#FF6600] mb-6 shadow-sm">
+              <i data-lucide="thumbs-up" class="w-7 h-7"></i>
+            </div>
+            <h3 class="text-2xl font-extrabold text-slate-900">Social Media Management</h3>
+            <p class="text-slate-600 text-sm mt-2 leading-relaxed">
+              We manage your brand across Instagram, Facebook, and LinkedIn with engaging creatives, scheduled posting, and active community management.
+            </p>
+            <ul class="mt-5 space-y-2 text-xs font-semibold text-slate-700 border-t pt-4">
+              <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-[#FF6600]"></span> High-Quality Content Creation</li>
+              <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-[#FF6600]"></span> Daily Community Engagement</li>
+              <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-[#FF6600]"></span> Monthly Analytics & ROI Reports</li>
+            </ul>
+          </div>
+          <div class="mt-8 pt-4 border-t border-slate-100">
+            <a href="service-social-media.html" class="w-full inline-flex items-center justify-center gap-2 py-3 rounded-full bg-slate-900 hover:bg-[#FF6600] text-white text-xs font-bold transition-all">
+              <span>View Social Media</span>
+              <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- 3. Graphic Design -->
+        <div class="reveal delay-3 hover-lift bg-white rounded-3xl p-8 border border-slate-200/80 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="w-14 h-14 rounded-2xl bg-orange-100 flex items-center justify-center text-[#FF6600] mb-6 shadow-sm">
+              <i data-lucide="pen-tool" class="w-7 h-7"></i>
+            </div>
+            <h3 class="text-2xl font-extrabold text-slate-900">Graphic Design</h3>
+            <p class="text-slate-600 text-sm mt-2 leading-relaxed">
+              Memorable brand identities, company profiles, packaging, flyers, and social media designs that make your business stand out from competitors.
+            </p>
+            <ul class="mt-5 space-y-2 text-xs font-semibold text-slate-700 border-t pt-4">
+              <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-[#FF6600]"></span> Logos & Brand Guidelines</li>
+              <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-[#FF6600]"></span> Banners, Flyers & Catalogs</li>
+              <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-[#FF6600]"></span> Print-Ready Vector Assets</li>
+            </ul>
+          </div>
+          <div class="mt-8 pt-4 border-t border-slate-100">
+            <a href="service-graphic-design.html" class="w-full inline-flex items-center justify-center gap-2 py-3 rounded-full bg-slate-900 hover:bg-[#FF6600] text-white text-xs font-bold transition-all">
+              <span>View Graphic Design</span>
+              <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- 4. Meta & Google Ads -->
+        <div class="reveal delay-4 hover-lift bg-white rounded-3xl p-8 border border-slate-200/80 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="w-14 h-14 rounded-2xl bg-orange-100 flex items-center justify-center text-[#FF6600] mb-6 shadow-sm">
+              <i data-lucide="megaphone" class="w-7 h-7"></i>
+            </div>
+            <h3 class="text-2xl font-extrabold text-slate-900">Meta & Google Ads</h3>
+            <p class="text-slate-600 text-sm mt-2 leading-relaxed">
+              Targeted advertising campaigns that reach active shoppers and high-intent buyers, delivering qualified customer leads at low acquisition costs.
+            </p>
+            <ul class="mt-5 space-y-2 text-xs font-semibold text-slate-700 border-t pt-4">
+              <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-[#FF6600]"></span> Targeted Meta (FB/Insta) Funnels</li>
+              <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-[#FF6600]"></span> High-Intent Google Search Ads</li>
+              <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-[#FF6600]"></span> Retargeting & Conversion Tracking</li>
+            </ul>
+          </div>
+          <div class="mt-8 pt-4 border-t border-slate-100">
+            <a href="service-meta-google-ads.html" class="w-full inline-flex items-center justify-center gap-2 py-3 rounded-full bg-slate-900 hover:bg-[#FF6600] text-white text-xs font-bold transition-all">
+              <span>View Ads Management</span>
+              <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- 5. SEO & Google Business -->
+        <div class="reveal delay-5 hover-lift bg-white rounded-3xl p-8 border border-slate-200/80 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="w-14 h-14 rounded-2xl bg-orange-100 flex items-center justify-center text-[#FF6600] mb-6 shadow-sm">
+              <i data-lucide="search" class="w-7 h-7"></i>
+            </div>
+            <h3 class="text-2xl font-extrabold text-slate-900">SEO & Google Business</h3>
+            <p class="text-slate-600 text-sm mt-2 leading-relaxed">
+              Dominate local map searches and rank on page 1 of Google when nearby customers search for your products, clinic, salon, or services.
+            </p>
+            <ul class="mt-5 space-y-2 text-xs font-semibold text-slate-700 border-t pt-4">
+              <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-[#FF6600]"></span> Google Map Profile Optimization</li>
+              <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-[#FF6600]"></span> Local Citation Building</li>
+              <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-[#FF6600]"></span> On-Page Technical SEO</li>
+            </ul>
+          </div>
+          <div class="mt-8 pt-4 border-t border-slate-100">
+            <a href="service-seo-google-business.html" class="w-full inline-flex items-center justify-center gap-2 py-3 rounded-full bg-slate-900 hover:bg-[#FF6600] text-white text-xs font-bold transition-all">
+              <span>View SEO Services</span>
+              <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- 6. WhatsApp Automation -->
+        <div class="reveal delay-6 hover-lift bg-white rounded-3xl p-8 border border-slate-200/80 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="w-14 h-14 rounded-2xl bg-orange-100 flex items-center justify-center text-[#FF6600] mb-6 shadow-sm">
+              <i data-lucide="message-square" class="w-7 h-7"></i>
+            </div>
+            <h3 class="text-2xl font-extrabold text-slate-900">WhatsApp Automation</h3>
+            <p class="text-slate-600 text-sm mt-2 leading-relaxed">
+              Turn your WhatsApp into a 24/7 automated sales machine with instant replies, interactive catalog menus, booking confirmations, and lead capture.
+            </p>
+            <ul class="mt-5 space-y-2 text-xs font-semibold text-slate-700 border-t pt-4">
+              <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-[#FF6600]"></span> Automated Chatbot Flows</li>
+              <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-[#FF6600]"></span> Instant Catalog & Pricing Replies</li>
+              <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-[#FF6600]"></span> CRM & Booking Integrations</li>
+            </ul>
+          </div>
+          <div class="mt-8 pt-4 border-t border-slate-100">
+            <a href="service-whatsapp-automation.html" class="w-full inline-flex items-center justify-center gap-2 py-3 rounded-full bg-slate-900 hover:bg-[#FF6600] text-white text-xs font-bold transition-all">
+              <span>View WhatsApp Automation</span>
+              <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA BANNER -->
+  <section class="py-14 sm:py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="reveal relative bg-[#0B0F19] rounded-3xl p-8 sm:p-12 lg:p-16 overflow-hidden shadow-2xl border border-slate-800">
+        <div class="flex flex-col sm:flex-row items-center justify-between gap-8">
+          <div class="space-y-3 text-center sm:text-left">
+            <span class="text-xs font-extrabold uppercase tracking-widest text-[#FF6600]">NEED A CUSTOM BUNDLE?</span>
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-white">Let's Build Your Complete Digital Suite</h2>
+            <p class="text-slate-300 text-sm max-w-xl">Combine Website, Meta Ads, and WhatsApp Automation for maximum ROI.</p>
+          </div>
+          <div class="flex flex-wrap gap-4">
+            <button class="btn-get-started btn-shine px-8 py-3.5 rounded-full bg-[#FF6600] hover:bg-[#EA580C] text-white font-bold text-sm shadow-xl orange-glow transition-all">
+              <span>Get Custom Quote</span>
+            </button>
+            <a href="https://wa.me/923001234567" target="_blank" class="px-7 py-3.5 rounded-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm shadow-lg flex items-center gap-2 transition-all">
+              <i data-lucide="message-circle" class="w-4 h-4"></i>
+              <span>WhatsApp</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-[#0B0F19] text-slate-400 pt-16 pb-12 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-slate-800">
+        <div class="lg:col-span-2 space-y-4">
+          <a href="index.html" class="inline-block group mb-2"><img src="assets/images/logo-dark.png" alt="Digital Ustad" class="h-9 sm:h-10 w-auto object-contain transition-transform duration-300 group-hover:scale-105"></a>
+          <p class="text-xs sm:text-sm text-slate-400 leading-relaxed max-w-sm">Pakistan's leading digital partner for small & medium businesses.</p>
+        </div>
+        <div class="space-y-3">
+          <h4 class="text-sm font-bold text-white uppercase tracking-wider">Services</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="service-web-development.html" class="hover:text-[#FF6600]">Web Development</a></li>
+            <li><a href="service-social-media.html" class="hover:text-[#FF6600]">Social Media</a></li>
+            <li><a href="service-graphic-design.html" class="hover:text-[#FF6600]">Graphic Design</a></li>
+            <li><a href="service-meta-google-ads.html" class="hover:text-[#FF6600]">Meta & Google Ads</a></li>
+            <li><a href="service-seo-google-business.html" class="hover:text-[#FF6600]">SEO & Google Business</a></li>
+            <li><a href="service-whatsapp-automation.html" class="hover:text-[#FF6600]">WhatsApp Automation</a></li>
+          </ul>
+        </div>
+        <div class="space-y-3">
+          <h4 class="text-sm font-bold text-white uppercase tracking-wider">Quick Links</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="index.html" class="hover:text-[#FF6600]">Home</a></li>
+            <li><a href="solutions.html" class="hover:text-[#FF6600]">Solutions</a></li>
+            <li><a href="how-it-works.html" class="hover:text-[#FF6600]">How It Works</a></li>
+            <li><a href="about.html" class="hover:text-[#FF6600]">About Us</a></li>
+            <li><a href="contact.html" class="hover:text-[#FF6600]">Contact</a></li>
+          </ul>
+        </div>
+        <div class="space-y-3">
+          <h4 class="text-sm font-bold text-white uppercase tracking-wider">Contact</h4>
+          <p class="text-xs text-slate-300">+92 300 1234567<br>contact@digitalustad.com<br>Lahore, Pakistan</p>
+        </div>
+      </div>
+      <div class="pt-8 text-center text-xs text-slate-500">© 2026 Digital Ustad. All Rights Reserved.</div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>lucide.createIcons();</script>
+</body>
+</html>
+

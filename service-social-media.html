@@ -1,0 +1,388 @@
+﻿<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Social Media Management | Digital Ustad</title>
+  <meta name="description" content="We manage your social media presence, create engaging content and help you build a community that converts.">
+  <link rel="icon" type="image/png" href="assets/images/favicon.png">
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              orange: '#FF6600',
+              orangeHover: '#EA580C',
+              orangeLight: '#FFF7ED',
+              dark: '#0B0F19',
+              darkCard: '#111827',
+              slateText: '#94A3B8'
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            inter: ['"Inter"', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-white text-slate-800 antialiased selection:bg-[#FF6600] selection:text-white relative">
+
+  <div id="scroll-progress"></div>
+
+  <!-- NAVBAR -->
+  <header class="sticky top-0 z-50 bg-[#0B0F19]/95 backdrop-blur-md border-b border-slate-800/80 transition-all">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <a href="index.html" class="flex items-center group">
+          <img src="assets/images/logo-dark.png" alt="Digital Ustad" class="h-10 sm:h-11 w-auto object-contain transition-transform duration-300 group-hover:scale-105">
+        </a>
+
+        <nav class="hidden md:flex items-center gap-8">
+          <a href="index.html" class="text-sm font-semibold text-slate-300 hover:text-[#FF6600] transition-colors">Home</a>
+          <a href="services.html" class="text-sm font-semibold text-white hover:text-[#FF6600] transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-[#FF6600]">Services</a>
+          <a href="solutions.html" class="text-sm font-semibold text-slate-300 hover:text-[#FF6600] transition-colors">Solutions</a>
+          <a href="how-it-works.html" class="text-sm font-semibold text-slate-300 hover:text-[#FF6600] transition-colors">How It Works</a>
+          <a href="about.html" class="text-sm font-semibold text-slate-300 hover:text-[#FF6600] transition-colors">About Us</a>
+          <a href="contact.html" class="text-sm font-semibold text-slate-300 hover:text-[#FF6600] transition-colors">Contact</a>
+        </nav>
+
+        <div class="flex items-center gap-4">
+          <button class="btn-get-started btn-shine hidden sm:inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-full bg-[#FF6600] hover:bg-[#EA580C] text-white text-sm font-bold shadow-lg orange-glow-sm hover:scale-105 transition-all">
+            <span>Get Started</span>
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </button>
+          <button id="mobile-menu-btn" class="md:hidden p-2.5 rounded-xl text-slate-300 hover:text-white">
+            <i data-lucide="menu" class="w-6 h-6"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- MOBILE DRAWER -->
+  <div id="mobile-drawer" class="fixed inset-0 z-50 bg-[#0B0F19]/95 backdrop-blur-xl transition-all duration-300 hidden opacity-0 pointer-events-none md:hidden">
+    <div class="flex flex-col h-full p-6">
+      <div class="flex items-center justify-between pb-6 border-b border-slate-800">
+        <a href="index.html" class="flex items-center"><img src="assets/images/logo-dark.png" alt="Digital Ustad" class="h-9 w-auto object-contain"></a>
+        <button id="close-mobile-menu" class="p-2 text-slate-400 hover:text-white"><i data-lucide="x" class="w-7 h-7"></i></button>
+      </div>
+      <div class="flex flex-col gap-5 py-8 flex-1">
+        <a href="index.html" class="mobile-nav-link text-lg font-semibold text-slate-300 hover:text-[#FF6600]">Home</a>
+        <a href="services.html" class="mobile-nav-link text-lg font-semibold text-white hover:text-[#FF6600]">Services</a>
+        <a href="solutions.html" class="mobile-nav-link text-lg font-semibold text-slate-300 hover:text-[#FF6600]">Solutions</a>
+        <a href="how-it-works.html" class="mobile-nav-link text-lg font-semibold text-slate-300 hover:text-[#FF6600]">How It Works</a>
+        <a href="about.html" class="mobile-nav-link text-lg font-semibold text-slate-300 hover:text-[#FF6600]">About Us</a>
+        <a href="contact.html" class="mobile-nav-link text-lg font-semibold text-slate-300 hover:text-[#FF6600]">Contact</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- BREADCRUMB & HERO -->
+  <section class="relative bg-white pt-8 pb-16 lg:pt-12 lg:pb-24 overflow-hidden border-b border-slate-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Breadcrumb -->
+      <nav class="flex items-center gap-2 text-xs font-semibold text-slate-400 mb-8 reveal">
+        <a href="index.html" class="hover:text-[#FF6600]">Home</a>
+        <span>&gt;</span>
+        <a href="services.html" class="hover:text-[#FF6600]">Services</a>
+        <span>&gt;</span>
+        <span class="text-slate-800">Social Media Management</span>
+      </nav>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Left Content -->
+        <div class="lg:col-span-6 space-y-6 reveal reveal-left active">
+          <h1 class="text-4xl sm:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight">
+            Social Media<br>Management
+          </h1>
+          <p class="text-slate-600 text-base sm:text-lg leading-relaxed max-w-xl">
+            We manage your social media presence, create engaging content and help you build a community that converts.
+          </p>
+
+          <!-- 5 Checkmark List -->
+          <ul class="space-y-3.5 pt-2">
+            <li class="flex items-center gap-3 text-sm font-semibold text-slate-700">
+              <span class="w-5 h-5 rounded-full bg-orange-100 flex items-center justify-center text-[#FF6600] flex-shrink-0">
+                <i data-lucide="check" class="w-3.5 h-3.5 stroke-[3]"></i>
+              </span>
+              <span>Content Strategy</span>
+            </li>
+            <li class="flex items-center gap-3 text-sm font-semibold text-slate-700">
+              <span class="w-5 h-5 rounded-full bg-orange-100 flex items-center justify-center text-[#FF6600] flex-shrink-0">
+                <i data-lucide="check" class="w-3.5 h-3.5 stroke-[3]"></i>
+              </span>
+              <span>Creative Posts & Captions</span>
+            </li>
+            <li class="flex items-center gap-3 text-sm font-semibold text-slate-700">
+              <span class="w-5 h-5 rounded-full bg-orange-100 flex items-center justify-center text-[#FF6600] flex-shrink-0">
+                <i data-lucide="check" class="w-3.5 h-3.5 stroke-[3]"></i>
+              </span>
+              <span>Daily Management</span>
+            </li>
+            <li class="flex items-center gap-3 text-sm font-semibold text-slate-700">
+              <span class="w-5 h-5 rounded-full bg-orange-100 flex items-center justify-center text-[#FF6600] flex-shrink-0">
+                <i data-lucide="check" class="w-3.5 h-3.5 stroke-[3]"></i>
+              </span>
+              <span>Community Engagement</span>
+            </li>
+            <li class="flex items-center gap-3 text-sm font-semibold text-slate-700">
+              <span class="w-5 h-5 rounded-full bg-orange-100 flex items-center justify-center text-[#FF6600] flex-shrink-0">
+                <i data-lucide="check" class="w-3.5 h-3.5 stroke-[3]"></i>
+              </span>
+              <span>Performance Reports</span>
+            </li>
+          </ul>
+
+          <!-- Action Buttons -->
+          <div class="flex flex-wrap items-center gap-4 pt-4">
+            <button class="btn-get-started btn-shine inline-flex items-center gap-2.5 px-7 py-3.5 rounded-full bg-[#FF6600] hover:bg-[#EA580C] text-white font-bold text-sm shadow-xl orange-glow hover:scale-105 active:scale-95 transition-all">
+              <span>Get Started</span>
+              <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </button>
+
+            <a href="https://wa.me/923001234567?text=Hello%20Digital%20Ustad,%20I%20want%20Social%20Media%20Management!" target="_blank" class="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-full bg-slate-900 hover:bg-slate-800 text-white font-bold text-sm shadow-md hover:scale-105 active:scale-95 transition-all">
+              <i data-lucide="message-circle" class="w-4 h-4 text-emerald-400"></i>
+              <span>WhatsApp Us</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right Hero Mockup (Instagram Phone with floating 3D icons) -->
+        <div class="lg:col-span-6 relative flex justify-center items-center reveal reveal-right active">
+          <div class="hero-mockup-wrapper relative w-full max-w-[340px] flex justify-center">
+            
+            <!-- Floating Social Icons -->
+            <div class="absolute -left-6 top-8 w-11 h-11 rounded-2xl bg-gradient-to-tr from-pink-500 via-red-500 to-yellow-400 text-white flex items-center justify-center shadow-lg animate-float z-30">
+              <i data-lucide="instagram" class="w-6 h-6"></i>
+            </div>
+            <div class="absolute -right-6 top-20 w-11 h-11 rounded-2xl bg-blue-600 text-white flex items-center justify-center shadow-lg animate-float z-30" style="animation-delay: 1s;">
+              <i data-lucide="facebook" class="w-6 h-6"></i>
+            </div>
+            <div class="absolute -right-4 bottom-16 w-11 h-11 rounded-2xl bg-sky-700 text-white flex items-center justify-center shadow-lg animate-float z-30" style="animation-delay: 2s;">
+              <i data-lucide="linkedin" class="w-6 h-6"></i>
+            </div>
+
+            <!-- Phone Frame -->
+            <div class="mobile-frame w-72 h-[480px] bg-slate-950 border-4 border-slate-700 rounded-[38px] shadow-2xl p-3 text-white overflow-hidden relative">
+              <div class="mobile-notch"></div>
+              
+              <!-- Instagram App Header -->
+              <div class="pt-5 pb-2 flex items-center justify-between border-b border-slate-800 text-xs">
+                <span class="font-bold tracking-tight">digitalustad.co</span>
+                <i data-lucide="more-horizontal" class="w-4 h-4 text-slate-400"></i>
+              </div>
+
+              <!-- Profile Stats -->
+              <div class="flex items-center justify-between py-3">
+                <div class="w-14 h-14 rounded-full bg-[#FF6600] flex items-center justify-center text-white font-extrabold text-sm p-1 border-2 border-white">
+                  DU
+                </div>
+                <div class="text-center"><div class="font-bold text-xs">120</div><div class="text-[9px] text-slate-400">Posts</div></div>
+                <div class="text-center"><div class="font-bold text-xs">890</div><div class="text-[9px] text-slate-400">Followers</div></div>
+                <div class="text-center"><div class="font-bold text-xs">310</div><div class="text-[9px] text-slate-400">Following</div></div>
+              </div>
+
+              <!-- Bio -->
+              <div class="text-[10px] space-y-0.5">
+                <div class="font-bold">Digital Ustad</div>
+                <div class="text-slate-400">Your Digital Team ✨</div>
+                <div class="text-slate-300">Websites | Marketing | Creative | Automation</div>
+                <div class="text-[#FF6600] font-semibold">Helping local businesses grow online.</div>
+              </div>
+
+              <!-- Action buttons -->
+              <div class="flex gap-2 mt-2.5">
+                <div class="flex-1 bg-[#FF6600] text-white text-[10px] font-bold py-1 text-center rounded-lg">Follow</div>
+                <div class="flex-1 bg-slate-800 text-white text-[10px] font-bold py-1 text-center rounded-lg">Message</div>
+              </div>
+
+              <!-- Grid Feed Preview -->
+              <div class="grid grid-cols-3 gap-1.5 mt-3">
+                <div class="aspect-square bg-slate-800 rounded overflow-hidden">
+                  <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=150&q=80" class="w-full h-full object-cover">
+                </div>
+                <div class="aspect-square bg-slate-800 rounded overflow-hidden">
+                  <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=150&q=80" class="w-full h-full object-cover">
+                </div>
+                <div class="aspect-square bg-slate-800 rounded overflow-hidden">
+                  <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=150&q=80" class="w-full h-full object-cover">
+                </div>
+                <div class="aspect-square bg-slate-800 rounded overflow-hidden">
+                  <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=150&q=80" class="w-full h-full object-cover">
+                </div>
+                <div class="aspect-square bg-slate-800 rounded overflow-hidden">
+                  <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=150&q=80" class="w-full h-full object-cover">
+                </div>
+                <div class="aspect-square bg-[#FF6600] rounded flex items-center justify-center text-white font-extrabold text-xs">
+                  DU
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- WHAT WE DO SECTION -->
+  <section class="py-16 lg:py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-14 reveal">
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
+          What We Do
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-6">
+        
+        <div class="reveal delay-1 hover-lift bg-slate-50/70 p-6 rounded-2xl border border-slate-100 flex flex-col items-center text-center">
+          <div class="w-12 h-12 rounded-xl bg-orange-100 flex items-center justify-center text-[#FF6600] mb-3">
+            <i data-lucide="palette" class="w-6 h-6"></i>
+          </div>
+          <h4 class="font-bold text-slate-900 text-sm">Content Creation</h4>
+          <p class="text-xs text-slate-500 mt-1">High-quality posts that represent your brand.</p>
+        </div>
+
+        <div class="reveal delay-2 hover-lift bg-slate-50/70 p-6 rounded-2xl border border-slate-100 flex flex-col items-center text-center">
+          <div class="w-12 h-12 rounded-xl bg-orange-100 flex items-center justify-center text-[#FF6600] mb-3">
+            <i data-lucide="calendar" class="w-6 h-6"></i>
+          </div>
+          <h4 class="font-bold text-slate-900 text-sm">Platform Management</h4>
+          <p class="text-xs text-slate-500 mt-1">Regular posting and page optimization.</p>
+        </div>
+
+        <div class="reveal delay-3 hover-lift bg-slate-50/70 p-6 rounded-2xl border border-slate-100 flex flex-col items-center text-center">
+          <div class="w-12 h-12 rounded-xl bg-orange-100 flex items-center justify-center text-[#FF6600] mb-3">
+            <i data-lucide="message-circle" class="w-6 h-6"></i>
+          </div>
+          <h4 class="font-bold text-slate-900 text-sm">Audience Engagement</h4>
+          <p class="text-xs text-slate-500 mt-1">Reply to messages, comments and build connections.</p>
+        </div>
+
+        <div class="reveal delay-4 hover-lift bg-slate-50/70 p-6 rounded-2xl border border-slate-100 flex flex-col items-center text-center">
+          <div class="w-12 h-12 rounded-xl bg-orange-100 flex items-center justify-center text-[#FF6600] mb-3">
+            <i data-lucide="trending-up" class="w-6 h-6"></i>
+          </div>
+          <h4 class="font-bold text-slate-900 text-sm">Growth Strategy</h4>
+          <p class="text-xs text-slate-500 mt-1">Increase reach, engagement and brand awareness.</p>
+        </div>
+
+        <div class="reveal delay-5 hover-lift bg-slate-50/70 p-6 rounded-2xl border border-slate-100 flex flex-col items-center text-center">
+          <div class="w-12 h-12 rounded-xl bg-orange-100 flex items-center justify-center text-[#FF6600] mb-3">
+            <i data-lucide="file-text" class="w-6 h-6"></i>
+          </div>
+          <h4 class="font-bold text-slate-900 text-sm">Monthly Reports</h4>
+          <p class="text-xs text-slate-500 mt-1">Clear insights on performance and what's working.</p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- DARK CTA BANNER WITH ANALYTICS VISUAL -->
+  <section class="py-12 pb-20 bg-white">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="reveal relative bg-[#0B0F19] rounded-3xl p-8 sm:p-12 text-white border border-slate-800 shadow-2xl overflow-hidden">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          
+          <div class="lg:col-span-8 space-y-4">
+            <h3 class="text-2xl sm:text-3xl font-extrabold leading-tight">
+              Let us handle your social media while you focus on running your business.
+            </h3>
+            <div class="pt-4">
+              <button class="btn-get-started btn-shine inline-flex items-center gap-2 px-7 py-3 rounded-full bg-[#FF6600] hover:bg-[#EA580C] text-white font-bold text-sm shadow-xl orange-glow transition-all">
+                <span>Get Started Today</span>
+                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Analytics Chart Visual -->
+          <div class="lg:col-span-4 flex justify-center">
+            <div class="w-full max-w-[240px] bg-slate-900/90 rounded-2xl border border-slate-700/80 p-4 shadow-xl">
+              <div class="text-[10px] text-slate-400 font-bold mb-2">Monthly Reach Growth</div>
+              <div class="flex items-end gap-2 h-24 pt-4 border-b border-slate-800">
+                <div class="w-1/5 bg-[#FF6600]/30 h-10 rounded-t"></div>
+                <div class="w-1/5 bg-[#FF6600]/50 h-14 rounded-t"></div>
+                <div class="w-1/5 bg-[#FF6600]/70 h-18 rounded-t"></div>
+                <div class="w-1/5 bg-[#FF6600] h-24 rounded-t shadow-lg"></div>
+                <div class="w-1/5 bg-emerald-500 h-28 rounded-t shadow-lg animate-pulse"></div>
+              </div>
+              <div class="flex items-center justify-between text-[9px] text-emerald-400 font-bold mt-2">
+                <span>+240% Growth</span>
+                <span>Active</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-[#0B0F19] text-slate-400 pt-16 pb-12 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-slate-800">
+        <div class="lg:col-span-2 space-y-4">
+          <a href="index.html" class="inline-block group mb-2"><img src="assets/images/logo-dark.png" alt="Digital Ustad" class="h-9 sm:h-10 w-auto object-contain transition-transform duration-300 group-hover:scale-105"></a>
+          <p class="text-xs sm:text-sm text-slate-400 leading-relaxed max-w-sm">
+            Pakistan's leading digital partner for small & medium businesses.
+          </p>
+        </div>
+        <div class="space-y-3">
+          <h4 class="text-sm font-bold text-white uppercase tracking-wider">Services</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="service-web-development.html" class="hover:text-[#FF6600]">Web Development</a></li>
+            <li><a href="service-social-media.html" class="text-[#FF6600] font-bold">Social Media Marketing</a></li>
+            <li><a href="service-graphic-design.html" class="hover:text-[#FF6600]">Graphic Design</a></li>
+            <li><a href="service-meta-google-ads.html" class="hover:text-[#FF6600]">Meta & Google Ads</a></li>
+            <li><a href="service-seo-google-business.html" class="hover:text-[#FF6600]">SEO & Google Business</a></li>
+            <li><a href="service-whatsapp-automation.html" class="hover:text-[#FF6600]">WhatsApp Automation</a></li>
+          </ul>
+        </div>
+        <div class="space-y-3">
+          <h4 class="text-sm font-bold text-white uppercase tracking-wider">Quick Links</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="index.html" class="hover:text-[#FF6600]">Home</a></li>
+            <li><a href="solutions.html" class="hover:text-[#FF6600]">Solutions</a></li>
+            <li><a href="how-it-works.html" class="hover:text-[#FF6600]">How It Works</a></li>
+            <li><a href="about.html" class="hover:text-[#FF6600]">About Us</a></li>
+            <li><a href="contact.html" class="hover:text-[#FF6600]">Contact</a></li>
+          </ul>
+        </div>
+        <div class="space-y-3">
+          <h4 class="text-sm font-bold text-white uppercase tracking-wider">Contact</h4>
+          <p class="text-xs text-slate-300">+92 300 1234567<br>contact@digitalustad.com<br>Lahore, Pakistan</p>
+        </div>
+      </div>
+      <div class="pt-8 text-center text-xs text-slate-500">© 2026 Digital Ustad. All Rights Reserved.</div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/923001234567?text=Hello%20Digital%20Ustad,%20I%20want%20Social%20Media%20Management!" target="_blank" class="fixed bottom-6 right-6 z-40 w-14 h-14 rounded-full bg-emerald-500 hover:bg-emerald-600 text-white flex items-center justify-center shadow-2xl hover:scale-110 transition-all">
+    <div class="radar-ring"></div>
+    <i data-lucide="message-circle" class="w-7 h-7"></i>
+  </a>
+
+  <script src="js/main.js"></script>
+  <script>lucide.createIcons();</script>
+</body>
+</html>
+

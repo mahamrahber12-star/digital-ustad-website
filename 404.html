@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page Not Found (404) | Digital Ustad</title>
+  <link rel="icon" type="image/png" href="assets/images/favicon.png">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-[#0B0F19] text-slate-100 min-h-screen flex flex-col justify-between selection:bg-[#FF6600] selection:text-white">
+
+  <!-- Header -->
+  <header class="py-6 px-4 sm:px-8 border-b border-slate-800/80 bg-[#0B0F19]/90 backdrop-blur-md">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      <a href="index.html" class="flex items-center group">
+        <img src="assets/images/logo-dark.png" alt="Digital Ustad" class="h-10 sm:h-11 w-auto object-contain transition-transform duration-300 group-hover:scale-105">
+      </a>
+      <a href="index.html" class="text-sm font-semibold text-slate-300 hover:text-[#FF6600] transition-colors flex items-center gap-1.5">
+        <i data-lucide="arrow-left" class="w-4 h-4"></i>
+        <span>Back to Home</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- 404 Hero Content -->
+  <main class="flex-1 flex items-center justify-center p-6 text-center">
+    <div class="max-w-md w-full space-y-6">
+      <div class="relative mx-auto w-24 h-24 rounded-3xl bg-slate-900 border border-slate-700/80 flex items-center justify-center shadow-2xl">
+        <span class="text-5xl font-black text-[#FF6600]">404</span>
+        <div class="absolute -top-1 -right-1 w-4 h-4 rounded-full bg-[#FF6600] animate-ping"></div>
+      </div>
+
+      <div class="space-y-2">
+        <h1 class="text-3xl sm:text-4xl font-extrabold text-white">Page Not Found</h1>
+        <p class="text-sm text-slate-400">The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.</p>
+      </div>
+
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-3 pt-2">
+        <a href="index.html" class="w-full sm:w-auto px-6 py-3 rounded-full bg-[#FF6600] hover:bg-[#EA580C] text-white text-sm font-bold shadow-lg transition-all flex items-center justify-center gap-2">
+          <i data-lucide="home" class="w-4 h-4"></i>
+          <span>Go to Homepage</span>
+        </a>
+        <a href="contact.html" class="w-full sm:w-auto px-6 py-3 rounded-full bg-slate-800 hover:bg-slate-700 text-slate-200 text-sm font-bold transition-all flex items-center justify-center gap-2">
+          <i data-lucide="mail" class="w-4 h-4"></i>
+          <span>Contact Support</span>
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="py-6 border-t border-slate-800 text-center text-xs text-slate-500">
+    © 2026 Digital Ustad. All Rights Reserved.
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>lucide.createIcons();</script>
+</body>
+</html>

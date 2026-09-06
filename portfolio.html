@@ -1,0 +1,272 @@
+﻿<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Portfolio & Work | Digital Ustad</title>
+  <meta name="description" content="Explore our client projects and verified results: Spice Bistro, Glow & Shine Salon, HealthCare Clinic, Dream Homes, FitZone Gym, and Bright Future Academy.">
+  <link rel="icon" type="image/png" href="assets/images/favicon.png">
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              orange: '#FF6600',
+              orangeHover: '#EA580C',
+              orangeLight: '#FFF7ED',
+              dark: '#0B0F19',
+              darkCard: '#111827',
+              slateText: '#94A3B8'
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            inter: ['"Inter"', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-white text-slate-800 antialiased selection:bg-[#FF6600] selection:text-white relative">
+
+  <div id="scroll-progress"></div>
+
+  <!-- NAVBAR -->
+  <header class="sticky top-0 z-50 bg-[#0B0F19]/95 backdrop-blur-md border-b border-slate-800/80 transition-all">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <a href="index.html" class="flex items-center group">
+          <img src="assets/images/logo-dark.png" alt="Digital Ustad" class="h-10 sm:h-11 w-auto object-contain transition-transform duration-300 group-hover:scale-105">
+        </a>
+
+        <nav class="hidden md:flex items-center gap-8">
+          <a href="index.html" class="text-sm font-semibold text-slate-300 hover:text-[#FF6600] transition-colors">Home</a>
+          <a href="services.html" class="text-sm font-semibold text-slate-300 hover:text-[#FF6600] transition-colors">Services</a>
+          <a href="solutions.html" class="text-sm font-semibold text-slate-300 hover:text-[#FF6600] transition-colors">Solutions</a>
+          <a href="how-it-works.html" class="text-sm font-semibold text-slate-300 hover:text-[#FF6600] transition-colors">How It Works</a>
+          <a href="portfolio.html" class="text-sm font-semibold text-white hover:text-[#FF6600] transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-[#FF6600]">Portfolio</a>
+          <a href="about.html" class="text-sm font-semibold text-slate-300 hover:text-[#FF6600] transition-colors">About Us</a>
+          <a href="contact.html" class="text-sm font-semibold text-slate-300 hover:text-[#FF6600] transition-colors">Contact</a>
+        </nav>
+
+        <div class="flex items-center gap-4">
+          <button class="btn-get-started btn-shine hidden sm:inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-full bg-[#FF6600] hover:bg-[#EA580C] text-white text-sm font-bold shadow-lg orange-glow-sm hover:scale-105 transition-all">
+            <span>Get Started</span>
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </button>
+          <button id="mobile-menu-btn" class="md:hidden p-2.5 rounded-xl text-slate-300 hover:text-white">
+            <i data-lucide="menu" class="w-6 h-6"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="bg-[#0B0F19] text-white py-16 lg:py-24 relative overflow-hidden">
+    <div class="absolute inset-0 bg-hero-glow pointer-events-none"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+      <span class="text-xs font-extrabold uppercase tracking-widest text-[#FF6600] bg-slate-900 border border-slate-700/80 px-4 py-1.5 rounded-full inline-block mb-4">
+        OUR RECENT WORK
+      </span>
+      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight">
+        Work That <span class="text-[#FF6600]">Speaks For Us</span>
+      </h1>
+      <p class="text-slate-300 text-base sm:text-lg max-w-2xl mx-auto mt-4 leading-relaxed">
+        Click any project below to inspect the design, performance metrics, and live impact we generated for our partners.
+      </p>
+    </div>
+  </section>
+
+  <!-- PORTFOLIO GRID (6 DETAILED CASE STUDIES WITH MODAL TRIGGERS) -->
+  <section class="py-16 lg:py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <!-- 1. Spice Bistro -->
+        <div class="project-card reveal delay-1 hover-lift cursor-pointer bg-white rounded-3xl overflow-hidden border border-slate-200/80 shadow-md group flex flex-col" data-project-id="spice-bistro">
+          <div class="relative h-60 bg-slate-900 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80" alt="Spice Bistro" class="w-full h-full object-cover card-image-zoom">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+            <div class="absolute top-4 right-4 px-3 py-1 rounded-full bg-[#FF6600] text-white text-xs font-bold shadow-md">
+              Restaurant
+            </div>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="text-xl font-extrabold text-slate-900 group-hover:text-[#FF6600] transition-colors">Spice Bistro</h3>
+              <p class="text-slate-600 text-xs mt-2 leading-relaxed">
+                Full-featured online dining experience with QR menu, table reservation engine, and 1-click WhatsApp delivery order flow.
+              </p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-[#FF6600]">
+              <span>View Case Study & Metrics</span>
+              <i data-lucide="arrow-right" class="w-4 h-4 transform group-hover:translate-x-1 transition-transform"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. Glow & Shine Salon -->
+        <div class="project-card reveal delay-2 hover-lift cursor-pointer bg-white rounded-3xl overflow-hidden border border-slate-200/80 shadow-md group flex flex-col" data-project-id="glow-shine">
+          <div class="relative h-60 bg-slate-900 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=800&q=80" alt="Glow & Shine" class="w-full h-full object-cover card-image-zoom">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+            <div class="absolute top-4 right-4 px-3 py-1 rounded-full bg-[#FF6600] text-white text-xs font-bold shadow-md">
+              Salon & Beauty
+            </div>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="text-xl font-extrabold text-slate-900 group-hover:text-[#FF6600] transition-colors">Glow & Shine Salon</h3>
+              <p class="text-slate-600 text-xs mt-2 leading-relaxed">
+                Aesthetic booking portal featuring bridal service packages, stylist availability calendars, and automated appointment reminders.
+              </p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-[#FF6600]">
+              <span>View Case Study & Metrics</span>
+              <i data-lucide="arrow-right" class="w-4 h-4 transform group-hover:translate-x-1 transition-transform"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. HealthCare Clinic -->
+        <div class="project-card reveal delay-3 hover-lift cursor-pointer bg-white rounded-3xl overflow-hidden border border-slate-200/80 shadow-md group flex flex-col" data-project-id="healthcare-clinic">
+          <div class="relative h-60 bg-slate-900 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=800&q=80" alt="HealthCare Clinic" class="w-full h-full object-cover card-image-zoom">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+            <div class="absolute top-4 right-4 px-3 py-1 rounded-full bg-[#FF6600] text-white text-xs font-bold shadow-md">
+              Medical & Clinic
+            </div>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="text-xl font-extrabold text-slate-900 group-hover:text-[#FF6600] transition-colors">HealthCare Clinic</h3>
+              <p class="text-slate-600 text-xs mt-2 leading-relaxed">
+                Patient-centric medical platform designed for trust, highlighting specialist profiles, OPD timings, and online consultations.
+              </p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-[#FF6600]">
+              <span>View Case Study & Metrics</span>
+              <i data-lucide="arrow-right" class="w-4 h-4 transform group-hover:translate-x-1 transition-transform"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. Dream Homes -->
+        <div class="project-card reveal delay-4 hover-lift cursor-pointer bg-white rounded-3xl overflow-hidden border border-slate-200/80 shadow-md group flex flex-col" data-project-id="dream-homes">
+          <div class="relative h-60 bg-slate-900 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" alt="Dream Homes" class="w-full h-full object-cover card-image-zoom">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+            <div class="absolute top-4 right-4 px-3 py-1 rounded-full bg-[#FF6600] text-white text-xs font-bold shadow-md">
+              Real Estate
+            </div>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="text-xl font-extrabold text-slate-900 group-hover:text-[#FF6600] transition-colors">Dream Homes</h3>
+              <p class="text-slate-600 text-xs mt-2 leading-relaxed">
+                Luxury property showcase featuring interactive property listings, virtual tours, and automated investor lead capture.
+              </p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-[#FF6600]">
+              <span>View Case Study & Metrics</span>
+              <i data-lucide="arrow-right" class="w-4 h-4 transform group-hover:translate-x-1 transition-transform"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5. FitZone Gym -->
+        <div class="project-card reveal delay-5 hover-lift cursor-pointer bg-white rounded-3xl overflow-hidden border border-slate-200/80 shadow-md group flex flex-col" data-project-id="fitzone-gym">
+          <div class="relative h-60 bg-slate-900 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=800&q=80" alt="FitZone Gym" class="w-full h-full object-cover card-image-zoom">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+            <div class="absolute top-4 right-4 px-3 py-1 rounded-full bg-[#FF6600] text-white text-xs font-bold shadow-md">
+              Gym & Fitness
+            </div>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="text-xl font-extrabold text-slate-900 group-hover:text-[#FF6600] transition-colors">FitZone Gym</h3>
+              <p class="text-slate-600 text-xs mt-2 leading-relaxed">
+                Dynamic fitness website driving membership package signups, personal training schedules, and free trial pass funnels.
+              </p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-[#FF6600]">
+              <span>View Case Study & Metrics</span>
+              <i data-lucide="arrow-right" class="w-4 h-4 transform group-hover:translate-x-1 transition-transform"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- 6. Bright Future Academy -->
+        <div class="project-card reveal delay-6 hover-lift cursor-pointer bg-white rounded-3xl overflow-hidden border border-slate-200/80 shadow-md group flex flex-col" data-project-id="bright-future">
+          <div class="relative h-60 bg-slate-900 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=800&q=80" alt="Bright Future" class="w-full h-full object-cover card-image-zoom">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+            <div class="absolute top-4 right-4 px-3 py-1 rounded-full bg-[#FF6600] text-white text-xs font-bold shadow-md">
+              Education
+            </div>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="text-xl font-extrabold text-slate-900 group-hover:text-[#FF6600] transition-colors">Bright Future Academy</h3>
+              <p class="text-slate-600 text-xs mt-2 leading-relaxed">
+                Comprehensive training institute portal offering syllabus downloads, admission inquiry forms, and online course registration.
+              </p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-[#FF6600]">
+              <span>View Case Study & Metrics</span>
+              <i data-lucide="arrow-right" class="w-4 h-4 transform group-hover:translate-x-1 transition-transform"></i>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- PORTFOLIO DETAILS MODAL -->
+  <div id="project-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/80 modal-backdrop hidden p-4">
+    <div class="modal-box bg-white rounded-3xl max-w-2xl w-full p-6 sm:p-8 shadow-2xl relative scale-95 opacity-0 transition-all duration-200 max-h-[90vh] overflow-y-auto">
+      <button id="close-project-modal" class="absolute top-5 right-5 w-8 h-8 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-500 flex items-center justify-center"><i data-lucide="x" class="w-5 h-5"></i></button>
+      <div class="space-y-4">
+        <div class="rounded-2xl overflow-hidden h-60 bg-slate-900 border border-slate-200">
+          <img id="project-modal-img" src="" alt="Project Preview" class="w-full h-full object-cover">
+        </div>
+        <div>
+          <span id="project-modal-category" class="text-xs font-bold uppercase tracking-wider text-[#FF6600]"></span>
+          <h3 id="project-modal-title" class="text-2xl font-extrabold text-slate-900 mt-1"></h3>
+          <p id="project-modal-desc" class="text-sm text-slate-600 mt-2 leading-relaxed"></p>
+        </div>
+        <div class="p-4 rounded-xl bg-orange-50 border border-orange-100">
+          <div class="text-xs font-bold uppercase text-[#FF6600] mb-1">Key Impact</div>
+          <div id="project-modal-stats" class="text-base font-extrabold text-slate-900"></div>
+        </div>
+        <div>
+          <div class="text-xs font-bold uppercase text-slate-800 mb-2">Core Features:</div>
+          <ul id="project-modal-features" class="grid grid-cols-1 sm:grid-cols-2 gap-2"></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="bg-[#0B0F19] text-slate-400 pt-16 pb-12 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-xs text-slate-500">
+      © 2026 Digital Ustad. All Rights Reserved.
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>lucide.createIcons();</script>
+</body>
+</html>
+
