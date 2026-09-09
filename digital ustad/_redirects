@@ -1,0 +1,14 @@
+/services                 /services.html                 200
+/pricing                  /pricing.html                  200
+/solutions                /solutions.html                200
+/how-it-works             /how-it-works.html             200
+/portfolio                /portfolio.html                200
+/about                    /about.html                    200
+/contact                  /contact.html                  200
+/service-web-development  /service-web-development.html  200
+/service-social-media     /service-social-media.html     200
+/service-graphic-design   /service-graphic-design.html   200
+/service-meta-google-ads  /service-meta-google-ads.html  200
+/service-seo-google-business /service-seo-google-business.html 200
+/service-whatsapp-automation /service-whatsapp-automation.html 200
+/*                        /404.html                      404

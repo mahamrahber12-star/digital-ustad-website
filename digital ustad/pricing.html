@@ -1,0 +1,1518 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pricing & Packages | Digital Ustad</title>
+  <meta name="description" content="Transparent pricing for Digital Ustad services. 3-Page Website from PKR 17,999, 5-Page Website from PKR 30,000 with Flex Payment (40/30/30), Social Media, Ads, and SEO.">
+  <link rel="icon" type="image/png" href="assets/images/favicon.png">
+  
+  <!-- Theme Init (Prevents FOUC) -->
+  <script>
+    (function() {
+      const savedTheme = localStorage.getItem('du_theme');
+      const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      if (savedTheme === 'dark' || (!savedTheme && systemDark)) {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+      }
+    })();
+  </script>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              orange: '#FF6600',
+              orangeHover: '#EA580C',
+              orangeLight: '#FFF7ED',
+              dark: '#0B0F19',
+              darkCard: '#111827',
+              slateText: '#94A3B8'
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            inter: ['"Inter"', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-white text-slate-800 antialiased selection:bg-[#FF6600] selection:text-white relative">
+
+  <div id="scroll-progress"></div>
+
+  <!-- NAVBAR -->
+  <header class="sticky top-0 z-50 bg-[#0B0F19]/95 backdrop-blur-md border-b border-slate-800/80 transition-all">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <a href="index.html" class="flex items-center group">
+          <img src="assets/images/logo-dark.png" alt="Digital Ustad" class="h-10 sm:h-11 w-auto object-contain transition-transform duration-300 group-hover:scale-105">
+        </a>
+
+        <nav class="hidden md:flex items-center gap-7">
+          <a href="index.html" class="text-sm font-semibold text-slate-300 hover:text-[#FF6600] transition-colors">Home</a>
+          <a href="services.html" class="text-sm font-semibold text-slate-300 hover:text-[#FF6600] transition-colors">Services</a>
+          <a href="pricing.html" class="text-sm font-semibold text-white hover:text-[#FF6600] transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-[#FF6600]">Pricing</a>
+          <a href="solutions.html" class="text-sm font-semibold text-slate-300 hover:text-[#FF6600] transition-colors">Solutions</a>
+          <a href="how-it-works.html" class="text-sm font-semibold text-slate-300 hover:text-[#FF6600] transition-colors">How It Works</a>
+          <a href="portfolio.html" class="text-sm font-semibold text-slate-300 hover:text-[#FF6600] transition-colors">Portfolio</a>
+          <a href="about.html" class="text-sm font-semibold text-slate-300 hover:text-[#FF6600] transition-colors">About Us</a>
+          <a href="contact.html" class="text-sm font-semibold text-slate-300 hover:text-[#FF6600] transition-colors">Contact</a>
+        </nav>
+
+        <div class="flex items-center gap-3 sm:gap-4">
+          <!-- Theme Toggle Button -->
+          <button type="button" class="theme-toggle-btn rounded-full text-slate-300 hover:text-white bg-slate-800/80 hover:bg-slate-700 border border-slate-700/70 transition-all flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-[#FF6600]/40 shadow-sm" aria-label="Toggle light/dark theme" title="Switch Theme">
+            <i data-lucide="moon" class="w-4 h-4 text-amber-300 theme-icon-moon"></i>
+            <i data-lucide="sun" class="w-4 h-4 text-amber-400 theme-icon-sun"></i>
+          </button>
+
+          <button class="btn-get-started btn-shine hidden sm:inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-full bg-[#FF6600] hover:bg-[#EA580C] text-white text-sm font-bold shadow-lg orange-glow-sm hover:scale-105 transition-all">
+            <span>Get Started</span>
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </button>
+          <button id="mobile-menu-btn" class="md:hidden p-2.5 rounded-xl text-slate-300 hover:text-white">
+            <i data-lucide="menu" class="w-6 h-6"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- MOBILE NAVIGATION DRAWER -->
+  <div id="mobile-drawer" class="fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-sm hidden flex-col justify-end transition-all">
+    <div class="bg-[#0B0F19] border-t border-slate-800 rounded-t-3xl p-6 space-y-6 max-h-[85vh] overflow-y-auto">
+      <div class="flex items-center justify-between border-b border-slate-800 pb-4">
+        <img src="assets/images/logo-dark.png" alt="Digital Ustad" class="h-8 w-auto">
+        <div class="flex items-center gap-3">
+          <button type="button" class="theme-toggle-btn rounded-full text-slate-300 hover:text-white bg-slate-800/80 p-2 border border-slate-700/70" aria-label="Toggle theme">
+            <i data-lucide="moon" class="w-4 h-4 text-amber-300 theme-icon-moon"></i>
+            <i data-lucide="sun" class="w-4 h-4 text-amber-400 theme-icon-sun"></i>
+          </button>
+          <button id="close-drawer-btn" class="text-slate-400 hover:text-white p-2">
+            <i data-lucide="x" class="w-6 h-6"></i>
+          </button>
+        </div>
+      </div>
+      <div class="flex flex-col space-y-4">
+        <a href="index.html" class="mobile-nav-link text-lg font-semibold text-slate-300 hover:text-[#FF6600]">Home</a>
+        <a href="services.html" class="mobile-nav-link text-lg font-semibold text-slate-300 hover:text-[#FF6600]">Services</a>
+        <a href="pricing.html" class="mobile-nav-link text-lg font-semibold text-white hover:text-[#FF6600]">Pricing</a>
+        <a href="solutions.html" class="mobile-nav-link text-lg font-semibold text-slate-300 hover:text-[#FF6600]">Solutions</a>
+        <a href="how-it-works.html" class="mobile-nav-link text-lg font-semibold text-slate-300 hover:text-[#FF6600]">How It Works</a>
+        <a href="portfolio.html" class="mobile-nav-link text-lg font-semibold text-slate-300 hover:text-[#FF6600]">Portfolio</a>
+        <a href="about.html" class="mobile-nav-link text-lg font-semibold text-slate-300 hover:text-[#FF6600]">About Us</a>
+        <a href="contact.html" class="mobile-nav-link text-lg font-semibold text-slate-300 hover:text-[#FF6600]">Contact</a>
+      </div>
+      <div class="pt-4 border-t border-slate-800 space-y-3">
+        <button class="btn-get-started w-full py-3.5 rounded-full bg-[#FF6600] text-white font-bold flex items-center justify-center gap-2 shadow-lg">
+          <span>Get Started Now</span>
+          <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- HERO SECTION -->
+  <section class="bg-[#0B0F19] text-white py-16 lg:py-24 relative overflow-hidden">
+    <div class="aurora-orb-1 top-0 right-10"></div>
+    <div class="aurora-orb-2 bottom-0 left-10"></div>
+    <div class="absolute inset-0 hero-grid-pattern opacity-30 pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+      <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-slate-900/80 border border-slate-700/80 backdrop-blur-md shadow-inner mb-6 reveal">
+        <span class="w-2 h-2 rounded-full bg-[#FF6600] animate-ping"></span>
+        <span class="text-xs font-extrabold uppercase tracking-widest text-[#FF6600]">
+          TRANSPARENT SERVICE PRICING
+        </span>
+      </div>
+
+      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight reveal">
+        Simple, Honest Pricing.<br>
+        <span class="text-gradient-orange">Zero Hidden Retainers.</span>
+      </h1>
+
+      <p class="text-slate-300 text-base sm:text-lg max-w-2xl mx-auto mt-6 leading-relaxed reveal">
+        Affordable entry packages for solopreneurs to comprehensive digital growth suites. Every package backed by clear deliverables, milestone accountability, and our flexible payment structure.
+      </p>
+
+      <!-- Trust Badges -->
+      <div class="flex flex-wrap items-center justify-center gap-3 sm:gap-4 mt-8 reveal">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-900/90 border border-slate-800 text-xs text-slate-300">
+          <i data-lucide="check-circle" class="w-4 h-4 text-emerald-400"></i>
+          <span><strong>Flex Payment (40/30/30)</strong> on 5-Page+</span>
+        </div>
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-900/90 border border-slate-800 text-xs text-slate-300">
+          <i data-lucide="check-circle" class="w-4 h-4 text-emerald-400"></i>
+          <span><strong>100% Upfront</strong> on 3-Page Lite</span>
+        </div>
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-900/90 border border-slate-800 text-xs text-slate-300">
+          <i data-lucide="check-circle" class="w-4 h-4 text-emerald-400"></i>
+          <span><strong>Website Care</strong> Hosting & Backups</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CATEGORY SWITCHER TABS -->
+  <section class="py-8 bg-slate-50 border-b border-slate-200/80 sticky top-20 z-40 backdrop-blur-md bg-slate-50/95">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-start lg:justify-center gap-2 overflow-x-auto pb-2 scrollbar-none" id="pricing-tabs-container">
+        <button class="pricing-tab-btn active px-5 py-2.5 rounded-full text-xs sm:text-sm font-bold transition-all whitespace-nowrap bg-[#FF6600] text-white shadow-md" data-target="tab-websites">
+          Websites & Hosting
+        </button>
+        <button class="pricing-tab-btn px-5 py-2.5 rounded-full text-xs sm:text-sm font-bold transition-all whitespace-nowrap bg-white text-slate-700 hover:bg-slate-100 border border-slate-200" data-target="tab-social">
+          Social Media
+        </button>
+        <button class="pricing-tab-btn px-5 py-2.5 rounded-full text-xs sm:text-sm font-bold transition-all whitespace-nowrap bg-white text-slate-700 hover:bg-slate-100 border border-slate-200" data-target="tab-design">
+          Graphic Design
+        </button>
+        <button class="pricing-tab-btn px-5 py-2.5 rounded-full text-xs sm:text-sm font-bold transition-all whitespace-nowrap bg-white text-slate-700 hover:bg-slate-100 border border-slate-200" data-target="tab-ads">
+          Meta & Google Ads
+        </button>
+        <button class="pricing-tab-btn px-5 py-2.5 rounded-full text-xs sm:text-sm font-bold transition-all whitespace-nowrap bg-white text-slate-700 hover:bg-slate-100 border border-slate-200" data-target="tab-seo">
+          SEO & Google Business
+        </button>
+        <button class="pricing-tab-btn px-5 py-2.5 rounded-full text-xs sm:text-sm font-bold transition-all whitespace-nowrap bg-white text-slate-700 hover:bg-slate-100 border border-slate-200" data-target="tab-automation">
+          WhatsApp Automation
+        </button>
+        <button class="pricing-tab-btn px-5 py-2.5 rounded-full text-xs sm:text-sm font-bold transition-all whitespace-nowrap bg-white text-slate-700 hover:bg-slate-100 border border-slate-200" data-target="tab-retainers">
+          All-in-One Retainers
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- TAB CONTENTS CONTAINER -->
+  <main class="py-14 sm:py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <!-- ================= 01. WEBSITES TAB ================= -->
+      <div id="tab-websites" class="pricing-tab-content space-y-16">
+        
+        <div class="text-center max-w-3xl mx-auto space-y-3">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-50 text-[#FF6600] text-xs font-bold uppercase tracking-wider">
+            Web Development Packages
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900">Modern, High-Converting Business Websites</h2>
+          <p class="text-slate-600 text-sm">Ultra-fast loading, mobile-first design, interactive WhatsApp integration, and automated forms.</p>
+        </div>
+
+        <!-- 3 Core Packages Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
+          
+          <!-- 1. LITE (3 Pages) -->
+          <div class="hover-lift bg-white rounded-3xl p-8 border border-slate-200 shadow-sm flex flex-col justify-between relative">
+            <div class="space-y-4">
+              <div class="inline-flex items-center px-3 py-1 rounded-full bg-slate-100 text-slate-700 text-xs font-bold">
+                Entry Tier • Solopreneurs
+              </div>
+              <h3 class="text-2xl font-extrabold text-slate-900">LITE — 3 Pages</h3>
+              <p class="text-xs text-slate-500 leading-relaxed">
+                Best for solopreneurs, single-service businesses, and micro-SMBs wanting a clean online presence.
+              </p>
+              
+              <div class="pt-2">
+                <div class="text-3xl sm:text-4xl font-black text-slate-900 font-outfit">PKR 17,999</div>
+                <div class="text-[11px] text-slate-500 font-semibold mt-1">One-time investment • 2 Revisions</div>
+              </div>
+
+              <!-- Payment terms -->
+              <div class="p-3.5 rounded-2xl bg-slate-50 border border-slate-200/80 text-xs space-y-1">
+                <div class="font-bold text-slate-800 flex items-center justify-between">
+                  <span class="flex items-center gap-1.5"><i data-lucide="wallet" class="w-3.5 h-3.5 text-[#FF6600]"></i>Payment Terms:</span>
+                  <span class="text-[10px] bg-amber-100 text-amber-800 px-2 py-0.5 rounded font-bold">100% Upfront</span>
+                </div>
+                <div class="text-slate-600 text-[11px]">
+                  • Full payment on kickoff: <strong>PKR 17,999</strong><br>
+                  • No installments or Flex plans on Lite tiers
+                </div>
+              </div>
+
+              <ul class="space-y-2.5 text-xs text-slate-700 pt-2 border-t border-slate-100">
+                <li class="flex items-start gap-2">
+                  <i data-lucide="check" class="w-4 h-4 text-emerald-500 flex-shrink-0 mt-0.5"></i>
+                  <span><strong>Up to 3 Pages</strong> (Home, About/Services, Contact)</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <i data-lucide="check" class="w-4 h-4 text-emerald-500 flex-shrink-0 mt-0.5"></i>
+                  <span>Mobile & Tablet Responsive Layout</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <i data-lucide="check" class="w-4 h-4 text-emerald-500 flex-shrink-0 mt-0.5"></i>
+                  <span>WhatsApp 1-Click Order / Chat Button</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <i data-lucide="check" class="w-4 h-4 text-emerald-500 flex-shrink-0 mt-0.5"></i>
+                  <span>Interactive Google Maps Location</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <i data-lucide="check" class="w-4 h-4 text-emerald-500 flex-shrink-0 mt-0.5"></i>
+                  <span>Lead Contact Form & Social Links</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <i data-lucide="check" class="w-4 h-4 text-emerald-500 flex-shrink-0 mt-0.5"></i>
+                  <span>Basic SEO (Meta tags & titles)</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <i data-lucide="clock" class="w-4 h-4 text-slate-400 flex-shrink-0 mt-0.5"></i>
+                  <span>Delivery in <strong>5–7 working days</strong></span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="pt-6 mt-6 border-t border-slate-100">
+              <a href="https://wa.me/923001234567?text=Hello%20Digital%20Ustad,%20I%20want%20the%20LITE%203-Page%20Website%20Package%20(PKR%2017,999)!" target="_blank" class="w-full py-3.5 rounded-full bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs flex items-center justify-center gap-2 transition-all">
+                <span>Select 3-Page Lite</span>
+                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- 2. STARTER (5 Pages) - HERO OFFER ⭐ -->
+          <div class="hover-lift bg-[#0B0F19] text-white rounded-3xl p-8 border-2 border-[#FF6600] shadow-2xl flex flex-col justify-between relative scale-[1.02] z-10">
+            <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-[#FF6600] text-white text-[11px] font-black uppercase tracking-wider shadow-lg flex items-center gap-1.5">
+              <span>⭐ RECOMMENDED • HERO OFFER</span>
+            </div>
+
+            <div class="space-y-4 pt-1">
+              <div class="inline-flex items-center px-3 py-1 rounded-full bg-slate-800 text-[#FF6600] text-xs font-bold">
+                Most Popular for Local Businesses
+              </div>
+              <h3 class="text-2xl font-extrabold text-white">STARTER — 5 Pages</h3>
+              <p class="text-xs text-slate-300 leading-relaxed">
+                Best for restaurants, salons, clinics, retail shops, and professional service providers.
+              </p>
+              
+              <div class="pt-2">
+                <div class="text-4xl sm:text-5xl font-black text-[#FF6600] font-outfit">PKR 30,000</div>
+                <div class="text-[11px] text-slate-400 font-semibold mt-1">Complete setup • 3 Revisions</div>
+              </div>
+
+              <!-- Flex Payment Breakdown Box -->
+              <div class="p-3.5 rounded-2xl bg-slate-900/90 border border-[#FF6600]/40 text-xs space-y-2">
+                <div class="font-bold text-amber-400 flex items-center justify-between text-[11px]">
+                  <span>FLEX PAYMENT (40/30/30)</span>
+                  <span class="px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-400 text-[10px]">Zero Interest</span>
+                </div>
+                <div class="grid grid-cols-3 gap-1.5 text-center text-[10px]">
+                  <div class="p-1.5 rounded-xl bg-slate-800/80">
+                    <div class="text-slate-400">Kickoff (40%)</div>
+                    <div class="font-bold text-white text-xs mt-0.5">PKR 12,000</div>
+                  </div>
+                  <div class="p-1.5 rounded-xl bg-slate-800/80">
+                    <div class="text-slate-400">Approval (30%)</div>
+                    <div class="font-bold text-white text-xs mt-0.5">PKR 9,000</div>
+                  </div>
+                  <div class="p-1.5 rounded-xl bg-slate-800/80">
+                    <div class="text-slate-400">30-Day (30%)</div>
+                    <div class="font-bold text-white text-xs mt-0.5">PKR 9,000</div>
+                  </div>
+                </div>
+              </div>
+
+              <ul class="space-y-2.5 text-xs text-slate-200 pt-2 border-t border-slate-800">
+                <li class="flex items-start gap-2">
+                  <i data-lucide="check" class="w-4 h-4 text-[#FF6600] flex-shrink-0 mt-0.5"></i>
+                  <span><strong>Up to 5 Pages</strong> (Home, About, Services, Gallery, Contact)</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <i data-lucide="check" class="w-4 h-4 text-[#FF6600] flex-shrink-0 mt-0.5"></i>
+                  <span>Photo Gallery / Portfolio Showcase Section</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <i data-lucide="check" class="w-4 h-4 text-[#FF6600] flex-shrink-0 mt-0.5"></i>
+                  <span>Digital Menu (Restaurants) or Doctor/Team Section</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <i data-lucide="check" class="w-4 h-4 text-[#FF6600] flex-shrink-0 mt-0.5"></i>
+                  <span>Dedicated Service Detail Sub-Pages</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <i data-lucide="check" class="w-4 h-4 text-[#FF6600] flex-shrink-0 mt-0.5"></i>
+                  <span>WhatsApp Chat Widget with pre-filled message</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <i data-lucide="check" class="w-4 h-4 text-[#FF6600] flex-shrink-0 mt-0.5"></i>
+                  <span>On-Page SEO + Google Search Console Setup</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <i data-lucide="clock" class="w-4 h-4 text-slate-400 flex-shrink-0 mt-0.5"></i>
+                  <span>Delivery in <strong>7–10 working days</strong></span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="pt-6 mt-6 border-t border-slate-800">
+              <a href="https://wa.me/923001234567?text=Hello%20Digital%20Ustad,%20I%20want%20the%20STARTER%205-Page%20Website%20Package%20(PKR%2030,000)%20with%20Flex%20Payment!" target="_blank" class="btn-shine w-full py-4 rounded-full bg-[#FF6600] hover:bg-[#EA580C] text-white font-bold text-xs flex items-center justify-center gap-2 shadow-xl orange-glow transition-all">
+                <span>Choose 5-Page Starter</span>
+                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- 3. GROWTH (7 Pages) -->
+          <div class="hover-lift bg-white rounded-3xl p-8 border border-slate-200 shadow-sm flex flex-col justify-between relative">
+            <div class="space-y-4">
+              <div class="inline-flex items-center px-3 py-1 rounded-full bg-slate-100 text-slate-700 text-xs font-bold">
+                Advanced • Multi-Service Brands
+              </div>
+              <h3 class="text-2xl font-extrabold text-slate-900">GROWTH — 7 Pages</h3>
+              <p class="text-xs text-slate-500 leading-relaxed">
+                Best for real estate agencies, gyms, academies, clinics with multiple doctors, and multi-service firms.
+              </p>
+              
+              <div class="pt-2">
+                <div class="text-3xl sm:text-4xl font-black text-slate-900 font-outfit">PKR 42,999</div>
+                <div class="text-[11px] text-slate-500 font-semibold mt-1">4 Revisions • 1 Month Support Included</div>
+              </div>
+
+              <!-- Flex Payment Breakdown Box -->
+              <div class="p-3.5 rounded-2xl bg-slate-50 border border-slate-200/80 text-xs space-y-2">
+                <div class="font-bold text-slate-800 flex items-center justify-between text-[11px]">
+                  <span>FLEX PAYMENT (40/30/30)</span>
+                  <span class="px-2 py-0.5 rounded bg-emerald-100 text-emerald-700 text-[10px] font-bold">Split Payments</span>
+                </div>
+                <div class="grid grid-cols-3 gap-1.5 text-center text-[10px]">
+                  <div class="p-1.5 rounded-xl bg-white border border-slate-200">
+                    <div class="text-slate-400">Kickoff (40%)</div>
+                    <div class="font-bold text-slate-900 text-xs mt-0.5">PKR 17,200</div>
+                  </div>
+                  <div class="p-1.5 rounded-xl bg-white border border-slate-200">
+                    <div class="text-slate-400">Approval (30%)</div>
+                    <div class="font-bold text-slate-900 text-xs mt-0.5">PKR 12,900</div>
+                  </div>
+                  <div class="p-1.5 rounded-xl bg-white border border-slate-200">
+                    <div class="text-slate-400">30-Day (30%)</div>
+                    <div class="font-bold text-slate-900 text-xs mt-0.5">PKR 12,900</div>
+                  </div>
+                </div>
+              </div>
+
+              <ul class="space-y-2.5 text-xs text-slate-700 pt-2 border-t border-slate-100">
+                <li class="flex items-start gap-2">
+                  <i data-lucide="check" class="w-4 h-4 text-emerald-500 flex-shrink-0 mt-0.5"></i>
+                  <span><strong>Up to 7 Pages</strong> with custom layouts</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <i data-lucide="check" class="w-4 h-4 text-emerald-500 flex-shrink-0 mt-0.5"></i>
+                  <span>Blog / News Section (Architecture & setup)</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <i data-lucide="check" class="w-4 h-4 text-emerald-500 flex-shrink-0 mt-0.5"></i>
+                  <span>Multiple Service / Product Detail Pages</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <i data-lucide="check" class="w-4 h-4 text-emerald-500 flex-shrink-0 mt-0.5"></i>
+                  <span>Advanced Lead Funnel & Inquiry Forms</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <i data-lucide="check" class="w-4 h-4 text-emerald-500 flex-shrink-0 mt-0.5"></i>
+                  <span>Interactive FAQ Accordion & Testimonials</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <i data-lucide="check" class="w-4 h-4 text-emerald-500 flex-shrink-0 mt-0.5"></i>
+                  <span>Enhanced SEO + Google Analytics GA4 Setup</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <i data-lucide="shield-check" class="w-4 h-4 text-[#FF6600] flex-shrink-0 mt-0.5"></i>
+                  <span><strong>1 Month Free Post-Launch Support</strong></span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <i data-lucide="clock" class="w-4 h-4 text-slate-400 flex-shrink-0 mt-0.5"></i>
+                  <span>Delivery in <strong>12–15 working days</strong></span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="pt-6 mt-6 border-t border-slate-100">
+              <a href="https://wa.me/923001234567?text=Hello%20Digital%20Ustad,%20I%20want%20the%20GROWTH%207-Page%20Website%20Package%20(PKR%2042,999)%20with%20Flex%20Payment!" target="_blank" class="w-full py-3.5 rounded-full bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs flex items-center justify-center gap-2 transition-all">
+                <span>Select 7-Page Growth</span>
+                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Custom Solutions & Website Care Banner -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch pt-4">
+          
+          <!-- Custom Architecture Card -->
+          <div class="lg:col-span-6 bg-slate-50 rounded-3xl p-8 border border-slate-200/80 flex flex-col justify-between">
+            <div class="space-y-3">
+              <div class="inline-flex items-center gap-1.5 text-xs font-bold text-[#FF6600] uppercase tracking-wider">
+                <i data-lucide="layers" class="w-4 h-4"></i>
+                <span>Enterprise & E-Commerce</span>
+              </div>
+              <h3 class="text-2xl font-extrabold text-slate-900">Custom Web Applications & E-Commerce</h3>
+              <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                For online stores, multi-vendor marketplaces, booking platforms, real estate portals with dynamic MLS/filters, LMS education portals, and membership sites.
+              </p>
+              <div class="pt-2 text-xs text-slate-700 space-y-1.5">
+                <div class="flex items-center gap-2 font-semibold">
+                  <i data-lucide="check-circle" class="w-4 h-4 text-emerald-500"></i>
+                  <span>Milestone-based payment (30% Kickoff / 40% Working Demo / 30% Deployment)</span>
+                </div>
+                <div class="flex items-center gap-2 font-semibold">
+                  <i data-lucide="check-circle" class="w-4 h-4 text-emerald-500"></i>
+                  <span>Full database, payment gateways (PayFast, JazzCash, Stripe) & API integrations</span>
+                </div>
+              </div>
+            </div>
+            <div class="pt-6 mt-4">
+              <button class="btn-get-started px-6 py-3 rounded-full bg-slate-900 hover:bg-[#FF6600] text-white text-xs font-bold transition-all">
+                Request Custom Scope & Quote
+              </button>
+            </div>
+          </div>
+
+          <!-- Website Care (Hosting + Maintenance) Card -->
+          <div class="lg:col-span-6 bg-[#0B0F19] text-white rounded-3xl p-8 border border-slate-800 flex flex-col justify-between">
+            <div class="space-y-3">
+              <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-800 text-emerald-400 text-xs font-bold uppercase tracking-wider">
+                <i data-lucide="shield" class="w-3.5 h-3.5"></i>
+                <span>Managed Cloud Hosting & Protection</span>
+              </div>
+              <div class="flex items-baseline justify-between">
+                <h3 class="text-2xl font-extrabold">Website Care</h3>
+                <div class="text-2xl font-black text-[#FF6600]">PKR 3,000<span class="text-xs text-slate-400 font-normal">/month</span></div>
+              </div>
+              <p class="text-xs text-slate-300 leading-relaxed">
+                Hands-off managed hosting so you never worry about servers, downtime, security hacks, or broken code.
+              </p>
+              <div class="grid grid-cols-2 gap-2 text-[11px] text-slate-300 pt-1">
+                <div class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-[#FF6600]"></i> 99.9% Uptime Monitoring</div>
+                <div class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-[#FF6600]"></i> SSL Certificate Included</div>
+                <div class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-[#FF6600]"></i> Weekly Cloud Backups</div>
+                <div class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-[#FF6600]"></i> 2 Minor Content Updates/mo</div>
+              </div>
+              <p class="text-[10px] text-slate-400 pt-1">
+                *Mandatory for Flex clients during the active balance window. Optional thereafter.
+              </p>
+            </div>
+            <div class="pt-6 mt-4">
+              <a href="https://wa.me/923001234567?text=Hello%20Digital%20Ustad,%20I%20want%20to%20inquire%20about%20Website%20Care%20(PKR%203,000/mo)!" target="_blank" class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold transition-all">
+                <span>Inquire About Website Care</span>
+                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- ================= 02. SOCIAL MEDIA TAB ================= -->
+      <div id="tab-social" class="pricing-tab-content space-y-16 hidden">
+        
+        <div class="text-center max-w-3xl mx-auto space-y-3">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-50 text-[#FF6600] text-xs font-bold uppercase tracking-wider">
+            Monthly Retainer • Upfront Billing
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900">Social Media Management</h2>
+          <p class="text-slate-600 text-sm">Consistent branding, audience engagement, and scheduled posting across Facebook, Instagram & WhatsApp Business.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
+          
+          <!-- BASIC -->
+          <div class="hover-lift bg-white rounded-3xl p-8 border border-slate-200 shadow-sm flex flex-col justify-between">
+            <div class="space-y-4">
+              <div class="inline-flex items-center px-3 py-1 rounded-full bg-slate-100 text-slate-700 text-xs font-bold">
+                Consistency Starter
+              </div>
+              <h3 class="text-2xl font-extrabold text-slate-900">BASIC</h3>
+              <p class="text-xs text-slate-500">For small businesses maintaining an active, professional presence.</p>
+              
+              <div class="pt-2">
+                <div class="text-3xl sm:text-4xl font-black text-slate-900 font-outfit">PKR 18,000<span class="text-xs font-semibold text-slate-500">/mo</span></div>
+                <div class="text-[11px] text-slate-500 font-semibold mt-1">Monthly upfront • No flex</div>
+              </div>
+
+              <ul class="space-y-2.5 text-xs text-slate-700 pt-3 border-t border-slate-100">
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-500"></i> <strong>10 Posts / month</strong> (Static graphics)</li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-500"></i> Captions in English or Roman Urdu</li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-500"></i> 2 Platforms (Instagram + Facebook)</li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-500"></i> Basic Hashtag Strategy & Research</li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-500"></i> Timely Post Scheduling</li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-500"></i> Monthly Content Calendar Review</li>
+              </ul>
+            </div>
+
+            <div class="pt-6 mt-6 border-t border-slate-100">
+              <a href="https://wa.me/923001234567?text=Hello%20Digital%20Ustad,%20I%20want%20the%20BASIC%20Social%20Media%20Package%20(PKR%2018,000/mo)!" target="_blank" class="w-full py-3.5 rounded-full bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs flex items-center justify-center gap-2 transition-all">
+                <span>Start Basic Social</span>
+                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- GROWTH ⭐ -->
+          <div class="hover-lift bg-[#0B0F19] text-white rounded-3xl p-8 border-2 border-[#FF6600] shadow-2xl flex flex-col justify-between relative scale-[1.02]">
+            <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-[#FF6600] text-white text-[11px] font-black uppercase tracking-wider shadow-lg">
+              ⭐ BEST VALUE • GROWTH
+            </div>
+
+            <div class="space-y-4 pt-1">
+              <div class="inline-flex items-center px-3 py-1 rounded-full bg-slate-800 text-[#FF6600] text-xs font-bold">
+                Engagement & Reels
+              </div>
+              <h3 class="text-2xl font-extrabold text-white">GROWTH</h3>
+              <p class="text-xs text-slate-300">For businesses that want active engagement, Reels reach, and community management.</p>
+              
+              <div class="pt-2">
+                <div class="text-4xl sm:text-5xl font-black text-[#FF6600] font-outfit">PKR 28,000<span class="text-xs font-semibold text-slate-300">/mo</span></div>
+                <div class="text-[11px] text-slate-400 font-semibold mt-1">Monthly upfront • Most popular</div>
+              </div>
+
+              <ul class="space-y-2.5 text-xs text-slate-200 pt-3 border-t border-slate-800">
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-[#FF6600]"></i> <strong>16 Posts / month</strong> (Static + 2 Reels/Videos)</li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-[#FF6600]"></i> Compelling sales & storytelling captions</li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-[#FF6600]"></i> 2 Platforms + WhatsApp Business Status</li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-[#FF6600]"></i> <strong>4 Stories / month</strong> included</li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-[#FF6600]"></i> <strong>Community Management</strong> (Mon–Sat response within 4 hrs)</li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-[#FF6600]"></i> Monthly ROI & Performance Report</li>
+              </ul>
+            </div>
+
+            <div class="pt-6 mt-6 border-t border-slate-800">
+              <a href="https://wa.me/923001234567?text=Hello%20Digital%20Ustad,%20I%20want%20the%20GROWTH%20Social%20Media%20Package%20(PKR%2028,000/mo)!" target="_blank" class="btn-shine w-full py-4 rounded-full bg-[#FF6600] hover:bg-[#EA580C] text-white font-bold text-xs flex items-center justify-center gap-2 shadow-xl orange-glow transition-all">
+                <span>Start Growth Social</span>
+                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- PRO -->
+          <div class="hover-lift bg-white rounded-3xl p-8 border border-slate-200 shadow-sm flex flex-col justify-between">
+            <div class="space-y-4">
+              <div class="inline-flex items-center px-3 py-1 rounded-full bg-slate-100 text-slate-700 text-xs font-bold">
+                Heavy Content & 7-Day Support
+              </div>
+              <h3 class="text-2xl font-extrabold text-slate-900">PRO</h3>
+              <p class="text-xs text-slate-500">For ambitious brands scaling fast across multiple social channels.</p>
+              
+              <div class="pt-2">
+                <div class="text-3xl sm:text-4xl font-black text-slate-900 font-outfit">PKR 45,000<span class="text-xs font-semibold text-slate-500">/mo</span></div>
+                <div class="text-[11px] text-slate-500 font-semibold mt-1">Monthly upfront • Dedicated Manager</div>
+              </div>
+
+              <ul class="space-y-2.5 text-xs text-slate-700 pt-3 border-t border-slate-100">
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-500"></i> <strong>24 Posts / month</strong></li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-500"></i> <strong>4 Reels + 8 Stories</strong> included</li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-500"></i> 3 Platforms Management (IG, FB, LinkedIn/TikTok)</li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-500"></i> <strong>Full Community Management (7 Days)</strong></li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-500"></i> Monthly Competitor Analysis</li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-500"></i> Ad Creative Support for paid campaigns</li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-500"></i> Bi-weekly Reporting & Strategy Call</li>
+              </ul>
+            </div>
+
+            <div class="pt-6 mt-6 border-t border-slate-100">
+              <a href="https://wa.me/923001234567?text=Hello%20Digital%20Ustad,%20I%20want%20the%20PRO%20Social%20Media%20Package%20(PKR%2045,000/mo)!" target="_blank" class="w-full py-3.5 rounded-full bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs flex items-center justify-center gap-2 transition-all">
+                <span>Start Pro Social</span>
+                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- ================= 03. GRAPHIC DESIGN TAB ================= -->
+      <div id="tab-design" class="pricing-tab-content space-y-16 hidden">
+        
+        <div class="text-center max-w-3xl mx-auto space-y-3">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-50 text-[#FF6600] text-xs font-bold uppercase tracking-wider">
+            Retainers & Per-Project Menu
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900">Graphic Design & Creative Assets</h2>
+          <p class="text-slate-600 text-sm">Choose a monthly design subscription for ongoing creative needs or order individual project assets as needed.</p>
+        </div>
+
+        <!-- Monthly Retainer Tiers -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
+          
+          <!-- Starter Retainer -->
+          <div class="hover-lift bg-white rounded-3xl p-8 border border-slate-200 shadow-sm flex flex-col justify-between">
+            <div class="space-y-4">
+              <div class="inline-flex items-center px-3 py-1 rounded-full bg-slate-100 text-slate-700 text-xs font-bold">
+                Starter Retainer
+              </div>
+              <h3 class="text-2xl font-extrabold text-slate-900">Starter Design</h3>
+              <div class="text-3xl font-black text-slate-900 font-outfit">PKR 10,000<span class="text-xs font-semibold text-slate-500">/mo</span></div>
+              <ul class="space-y-2 text-xs text-slate-700 pt-3 border-t border-slate-100">
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-500"></i> <strong>8 Social Media Creatives</strong></li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-500"></i> Standard formats (Feed post & Story)</li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-500"></i> 2 Revision rounds per batch</li>
+              </ul>
+            </div>
+            <div class="pt-6 mt-6 border-t border-slate-100">
+              <a href="https://wa.me/923001234567?text=Hello%20Digital%20Ustad,%20I%20want%20the%20Starter%20Design%20Retainer%20(PKR%2010,000/mo)!" target="_blank" class="w-full py-3.5 rounded-full bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs flex items-center justify-center gap-2 transition-all">
+                <span>Select Starter</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Standard Retainer -->
+          <div class="hover-lift bg-[#0B0F19] text-white rounded-3xl p-8 border-2 border-[#FF6600] shadow-2xl flex flex-col justify-between relative scale-[1.02]">
+            <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-[#FF6600] text-white text-[11px] font-black uppercase tracking-wider">
+              ⭐ RECOMMENDED
+            </div>
+            <div class="space-y-4 pt-1">
+              <div class="inline-flex items-center px-3 py-1 rounded-full bg-slate-800 text-[#FF6600] text-xs font-bold">
+                Standard Retainer
+              </div>
+              <h3 class="text-2xl font-extrabold text-white">Standard Design</h3>
+              <div class="text-4xl font-black text-[#FF6600] font-outfit">PKR 18,000<span class="text-xs font-semibold text-slate-300">/mo</span></div>
+              <ul class="space-y-2 text-xs text-slate-200 pt-3 border-t border-slate-800">
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-[#FF6600]"></i> <strong>15 Creatives / month</strong></li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-[#FF6600]"></i> Multiple formats (Feed, Story, WhatsApp)</li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-[#FF6600]"></i> Brand consistency maintained</li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-[#FF6600]"></i> 3 Revision rounds</li>
+              </ul>
+            </div>
+            <div class="pt-6 mt-6 border-t border-slate-800">
+              <a href="https://wa.me/923001234567?text=Hello%20Digital%20Ustad,%20I%20want%20the%20Standard%20Design%20Retainer%20(PKR%2018,000/mo)!" target="_blank" class="btn-shine w-full py-4 rounded-full bg-[#FF6600] hover:bg-[#EA580C] text-white font-bold text-xs flex items-center justify-center gap-2 transition-all">
+                <span>Select Standard</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Full Retainer -->
+          <div class="hover-lift bg-white rounded-3xl p-8 border border-slate-200 shadow-sm flex flex-col justify-between">
+            <div class="space-y-4">
+              <div class="inline-flex items-center px-3 py-1 rounded-full bg-slate-100 text-slate-700 text-xs font-bold">
+                Full Retainer
+              </div>
+              <h3 class="text-2xl font-extrabold text-slate-900">Full Design Suite</h3>
+              <div class="text-3xl font-black text-slate-900 font-outfit">PKR 28,000<span class="text-xs font-semibold text-slate-500">/mo</span></div>
+              <ul class="space-y-2 text-xs text-slate-700 pt-3 border-t border-slate-100">
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-500"></i> <strong>25+ Creatives / month</strong></li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-500"></i> All formats including print-ready assets</li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-500"></i> Unlimited revision rounds (reasonable use)</li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-500"></i> Priority 24–48h turnaround</li>
+              </ul>
+            </div>
+            <div class="pt-6 mt-6 border-t border-slate-100">
+              <a href="https://wa.me/923001234567?text=Hello%20Digital%20Ustad,%20I%20want%20the%20Full%20Design%20Suite%20(PKR%2028,000/mo)!" target="_blank" class="w-full py-3.5 rounded-full bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs flex items-center justify-center gap-2 transition-all">
+                <span>Select Full Suite</span>
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Per-Project Design Rate Card Table -->
+        <div class="bg-slate-50 rounded-3xl p-8 border border-slate-200/80">
+          <div class="max-w-2xl mb-6">
+            <h3 class="text-xl font-extrabold text-slate-900">Per-Project Design Menu</h3>
+            <p class="text-xs text-slate-500 mt-1">Need individual design assets instead of a monthly subscription? Transparent per-asset pricing below:</p>
+          </div>
+
+          <div class="overflow-x-auto">
+            <table class="w-full text-left text-xs border-collapse">
+              <thead>
+                <tr class="border-b border-slate-200 text-slate-400 font-bold uppercase tracking-wider">
+                  <th class="py-3 px-4">Design Item</th>
+                  <th class="py-3 px-4">Scope / Deliverables</th>
+                  <th class="py-3 px-4 text-right">Standard Price</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-slate-200/60 font-medium text-slate-700">
+                <tr>
+                  <td class="py-3.5 px-4 font-bold text-slate-900">Social Media Post (1 Design)</td>
+                  <td class="py-3.5 px-4 text-slate-500">Instagram/FB custom feed graphic with source files</td>
+                  <td class="py-3.5 px-4 text-right font-bold text-[#FF6600]">PKR 800 – 1,500</td>
+                </tr>
+                <tr>
+                  <td class="py-3.5 px-4 font-bold text-slate-900">Story / Reel Cover</td>
+                  <td class="py-3.5 px-4 text-slate-500">Vertical high-impact layout for highlights or reel cover</td>
+                  <td class="py-3.5 px-4 text-right font-bold text-[#FF6600]">PKR 600 – 1,000</td>
+                </tr>
+                <tr>
+                  <td class="py-3.5 px-4 font-bold text-slate-900">Flyer / Poster</td>
+                  <td class="py-3.5 px-4 text-slate-500">High-resolution print-ready CMYK + digital distribution</td>
+                  <td class="py-3.5 px-4 text-right font-bold text-[#FF6600]">PKR 2,000 – 4,000</td>
+                </tr>
+                <tr>
+                  <td class="py-3.5 px-4 font-bold text-slate-900">Business Card Design</td>
+                  <td class="py-3.5 px-4 text-slate-500">Double-sided modern card design + print-ready vector files</td>
+                  <td class="py-3.5 px-4 text-right font-bold text-[#FF6600]">PKR 3,000 – 5,000</td>
+                </tr>
+                <tr>
+                  <td class="py-3.5 px-4 font-bold text-slate-900">Email Header / Banner</td>
+                  <td class="py-3.5 px-4 text-slate-500">Web header banner or promotional newsletter creative</td>
+                  <td class="py-3.5 px-4 text-right font-bold text-[#FF6600]">PKR 2,000 – 3,500</td>
+                </tr>
+                <tr>
+                  <td class="py-3.5 px-4 font-bold text-slate-900">Brochure (2–4 Pages)</td>
+                  <td class="py-3.5 px-4 text-slate-500">Bi-fold or tri-fold company profile/catalog layout</td>
+                  <td class="py-3.5 px-4 text-right font-bold text-[#FF6600]">PKR 8,000 – 15,000</td>
+                </tr>
+                <tr>
+                  <td class="py-3.5 px-4 font-bold text-slate-900">Brand Identity Suite</td>
+                  <td class="py-3.5 px-4 text-slate-500">Logo marks + typography + color palette + brand guidelines</td>
+                  <td class="py-3.5 px-4 text-right font-bold text-[#FF6600]">PKR 25,000 – 45,000</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ================= 04. META & GOOGLE ADS TAB ================= -->
+      <div id="tab-ads" class="pricing-tab-content space-y-16 hidden">
+        
+        <div class="text-center max-w-3xl mx-auto space-y-3">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-50 text-[#FF6600] text-xs font-bold uppercase tracking-wider">
+            Management Fee Only • Ad Spend Direct
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900">Paid Advertising Management</h2>
+          <p class="text-slate-600 text-sm">Target high-intent buyers and get profitable leads. Ad spend is always billed directly to your own card for 100% transparency.</p>
+        </div>
+
+        <!-- Meta Ads Grid -->
+        <div class="space-y-6">
+          <div class="flex items-center justify-between border-b border-slate-200 pb-3">
+            <h3 class="text-xl font-bold text-slate-900 flex items-center gap-2">
+              <i data-lucide="megaphone" class="w-5 h-5 text-[#FF6600]"></i>
+              <span>Meta Ads Management (Facebook & Instagram)</span>
+            </h3>
+            <span class="text-xs text-slate-500 font-semibold">*Onboarding fee: PKR 5,000 one-time</span>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
+            
+            <div class="hover-lift bg-white rounded-3xl p-8 border border-slate-200 shadow-sm flex flex-col justify-between">
+              <div class="space-y-4">
+                <div class="text-xs font-bold text-slate-500 uppercase">Starter Tier</div>
+                <h4 class="text-2xl font-extrabold text-slate-900">Meta Starter</h4>
+                <div class="text-3xl font-black text-slate-900 font-outfit">PKR 15,000<span class="text-xs text-slate-500 font-normal">/mo</span></div>
+                <p class="text-xs text-slate-500">Rec. Spend: <strong>PKR 20,000 – 60,000/mo</strong></p>
+                <ul class="space-y-2 text-xs text-slate-700 pt-3 border-t border-slate-100">
+                  <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-500"></i> 1–2 Active Campaigns</li>
+                  <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-500"></i> Campaign setup & audience targeting</li>
+                  <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-500"></i> Basic creative curation</li>
+                  <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-500"></i> Weekly performance monitoring</li>
+                  <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-500"></i> Monthly Report</li>
+                </ul>
+              </div>
+              <div class="pt-6 mt-6 border-t border-slate-100">
+                <a href="https://wa.me/923001234567?text=Hello%20Digital%20Ustad,%20I%20want%20Meta%20Ads%20Starter%20(PKR%2015,000/mo)!" target="_blank" class="w-full py-3.5 rounded-full bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs flex items-center justify-center gap-2">
+                  <span>Start Meta Starter</span>
+                </a>
+              </div>
+            </div>
+
+            <div class="hover-lift bg-[#0B0F19] text-white rounded-3xl p-8 border-2 border-[#FF6600] shadow-2xl flex flex-col justify-between relative scale-[1.02]">
+              <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-[#FF6600] text-white text-[11px] font-black uppercase tracking-wider">
+                ⭐ RECOMMENDED
+              </div>
+              <div class="space-y-4 pt-1">
+                <div class="text-xs font-bold text-[#FF6600] uppercase">Growth Tier</div>
+                <h4 class="text-2xl font-extrabold text-white">Meta Growth</h4>
+                <div class="text-4xl font-black text-[#FF6600] font-outfit">PKR 25,000<span class="text-xs text-slate-300 font-normal">/mo</span></div>
+                <p class="text-xs text-slate-300">Rec. Spend: <strong>PKR 60,000 – 150,000/mo</strong></p>
+                <ul class="space-y-2 text-xs text-slate-200 pt-3 border-t border-slate-800">
+                  <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-[#FF6600]"></i> 3–5 Active Campaigns</li>
+                  <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-[#FF6600]"></i> Creative A/B Testing</li>
+                  <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-[#FF6600]"></i> Pixel Setup + Custom Event Tracking</li>
+                  <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-[#FF6600]"></i> Warm Retargeting Audiences</li>
+                  <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-[#FF6600]"></i> Bi-weekly Reporting & Strategy Call</li>
+                </ul>
+              </div>
+              <div class="pt-6 mt-6 border-t border-slate-800">
+                <a href="https://wa.me/923001234567?text=Hello%20Digital%20Ustad,%20I%20want%20Meta%20Ads%20Growth%20(PKR%2025,000/mo)!" target="_blank" class="btn-shine w-full py-4 rounded-full bg-[#FF6600] text-white font-bold text-xs flex items-center justify-center gap-2">
+                  <span>Start Meta Growth</span>
+                </a>
+              </div>
+            </div>
+
+            <div class="hover-lift bg-white rounded-3xl p-8 border border-slate-200 shadow-sm flex flex-col justify-between">
+              <div class="space-y-4">
+                <div class="text-xs font-bold text-slate-500 uppercase">Scale Tier</div>
+                <h4 class="text-2xl font-extrabold text-slate-900">Meta Scale</h4>
+                <div class="text-3xl font-black text-slate-900 font-outfit">PKR 40,000<span class="text-xs text-slate-500 font-normal">/mo</span></div>
+                <p class="text-xs text-slate-500">Rec. Spend: <strong>PKR 150,000+/mo</strong></p>
+                <ul class="space-y-2 text-xs text-slate-700 pt-3 border-t border-slate-100">
+                  <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-500"></i> Full Funnel (Awareness → Conversion)</li>
+                  <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-500"></i> Lookalikes & Customer List Sync</li>
+                  <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-500"></i> Catalogue / Dynamic Product Ads</li>
+                  <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-500"></i> Weekly Optimization & Strategy Call</li>
+                  <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-500"></i> Landing Page Conversion Consultation</li>
+                </ul>
+              </div>
+              <div class="pt-6 mt-6 border-t border-slate-100">
+                <a href="https://wa.me/923001234567?text=Hello%20Digital%20Ustad,%20I%20want%20Meta%20Ads%20Scale%20(PKR%2040,000/mo)!" target="_blank" class="w-full py-3.5 rounded-full bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs flex items-center justify-center gap-2">
+                  <span>Start Meta Scale</span>
+                </a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Google Ads Grid -->
+        <div class="space-y-6 pt-6">
+          <div class="flex items-center justify-between border-b border-slate-200 pb-3">
+            <h3 class="text-xl font-bold text-slate-900 flex items-center gap-2">
+              <i data-lucide="search" class="w-5 h-5 text-[#FF6600]"></i>
+              <span>Google Ads Management (Search, Maps & Display)</span>
+            </h3>
+            <span class="text-xs text-slate-500 font-semibold">*Onboarding fee: PKR 6,000 one-time</span>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
+            
+            <div class="hover-lift bg-white rounded-3xl p-8 border border-slate-200 shadow-sm flex flex-col justify-between">
+              <div class="space-y-4">
+                <div class="text-xs font-bold text-slate-500 uppercase">Search Only</div>
+                <h4 class="text-2xl font-extrabold text-slate-900">Google Starter</h4>
+                <div class="text-3xl font-black text-slate-900 font-outfit">PKR 15,000<span class="text-xs text-slate-500 font-normal">/mo</span></div>
+                <p class="text-xs text-slate-500">Rec. Spend: <strong>PKR 20,000 – 50,000/mo</strong></p>
+                <ul class="space-y-2 text-xs text-slate-700 pt-3 border-t border-slate-100">
+                  <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-500"></i> High-Intent Search Campaigns</li>
+                  <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-500"></i> Keyword Research & Negative Keywords</li>
+                  <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-500"></i> Compelling Ad Copywriting</li>
+                  <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-500"></i> Monthly Performance Report</li>
+                </ul>
+              </div>
+              <div class="pt-6 mt-6 border-t border-slate-100">
+                <a href="https://wa.me/923001234567?text=Hello%20Digital%20Ustad,%20I%20want%20Google%20Ads%20Starter%20(PKR%2015,000/mo)!" target="_blank" class="w-full py-3.5 rounded-full bg-slate-900 text-white font-bold text-xs flex items-center justify-center gap-2">
+                  <span>Select Google Starter</span>
+                </a>
+              </div>
+            </div>
+
+            <div class="hover-lift bg-white rounded-3xl p-8 border border-slate-200 shadow-sm flex flex-col justify-between">
+              <div class="space-y-4">
+                <div class="text-xs font-bold text-slate-500 uppercase">Search + Display</div>
+                <h4 class="text-2xl font-extrabold text-slate-900">Google Growth</h4>
+                <div class="text-3xl font-black text-slate-900 font-outfit">PKR 25,000<span class="text-xs text-slate-500 font-normal">/mo</span></div>
+                <p class="text-xs text-slate-500">Rec. Spend: <strong>PKR 50,000 – 150,000/mo</strong></p>
+                <ul class="space-y-2 text-xs text-slate-700 pt-3 border-t border-slate-100">
+                  <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-500"></i> Search + Display Campaigns</li>
+                  <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-500"></i> Conversion Tracking Setup</li>
+                  <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-500"></i> Audience Layering & Smart Bidding</li>
+                  <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-500"></i> Bi-weekly Optimization & Call</li>
+                </ul>
+              </div>
+              <div class="pt-6 mt-6 border-t border-slate-100">
+                <a href="https://wa.me/923001234567?text=Hello%20Digital%20Ustad,%20I%20want%20Google%20Ads%20Growth%20(PKR%2025,000/mo)!" target="_blank" class="w-full py-3.5 rounded-full bg-slate-900 text-white font-bold text-xs flex items-center justify-center gap-2">
+                  <span>Select Google Growth</span>
+                </a>
+              </div>
+            </div>
+
+            <div class="hover-lift bg-white rounded-3xl p-8 border border-slate-200 shadow-sm flex flex-col justify-between">
+              <div class="space-y-4">
+                <div class="text-xs font-bold text-slate-500 uppercase">Omni-Channel</div>
+                <h4 class="text-2xl font-extrabold text-slate-900">Google Scale</h4>
+                <div class="text-3xl font-black text-slate-900 font-outfit">PKR 40,000<span class="text-xs text-slate-500 font-normal">/mo</span></div>
+                <p class="text-xs text-slate-500">Rec. Spend: <strong>PKR 150,000+/mo</strong></p>
+                <ul class="space-y-2 text-xs text-slate-700 pt-3 border-t border-slate-100">
+                  <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-500"></i> Full Campaign Access (Performance Max, Video)</li>
+                  <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-500"></i> Weekly Bid & Keyword Optimization</li>
+                  <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-500"></i> Competitor In-Market Analysis</li>
+                  <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-500"></i> Landing Page CRO Consultation</li>
+                </ul>
+              </div>
+              <div class="pt-6 mt-6 border-t border-slate-100">
+                <a href="https://wa.me/923001234567?text=Hello%20Digital%20Ustad,%20I%20want%20Google%20Ads%20Scale%20(PKR%2040,000/mo)!" target="_blank" class="w-full py-3.5 rounded-full bg-slate-900 text-white font-bold text-xs flex items-center justify-center gap-2">
+                  <span>Select Google Scale</span>
+                </a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ================= 05. SEO & GOOGLE BUSINESS TAB ================= -->
+      <div id="tab-seo" class="pricing-tab-content space-y-16 hidden">
+        
+        <div class="text-center max-w-3xl mx-auto space-y-3">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-50 text-[#FF6600] text-xs font-bold uppercase tracking-wider">
+            Minimum 3-Month Commitment
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900">SEO & Google Maps Ranking</h2>
+          <p class="text-slate-600 text-sm">Dominate local map searches and rank on Page 1 when nearby customers search for your products and services.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
+          
+          <div class="hover-lift bg-white rounded-3xl p-8 border border-slate-200 shadow-sm flex flex-col justify-between">
+            <div class="space-y-4">
+              <div class="text-xs font-bold text-slate-500 uppercase">Local Retail & Services</div>
+              <h3 class="text-2xl font-extrabold text-slate-900">Local SEO</h3>
+              <div class="text-3xl font-black text-slate-900 font-outfit">PKR 15,000<span class="text-xs text-slate-500 font-normal">/mo</span></div>
+              <p class="text-xs text-slate-500">Best for: restaurants, salons, clinics, local shops</p>
+              <ul class="space-y-2.5 text-xs text-slate-700 pt-3 border-t border-slate-100">
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-500"></i> Google Business Profile Optimization</li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-500"></i> 5 Target High-Intent Keywords</li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-500"></i> On-Page SEO for existing pages</li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-500"></i> Local Business Directory Submissions</li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-500"></i> Monthly Ranking Report</li>
+              </ul>
+            </div>
+            <div class="pt-6 mt-6 border-t border-slate-100">
+              <a href="https://wa.me/923001234567?text=Hello%20Digital%20Ustad,%20I%20want%20Local%20SEO%20(PKR%2015,000/mo)!" target="_blank" class="w-full py-3.5 rounded-full bg-slate-900 text-white font-bold text-xs flex items-center justify-center gap-2">
+                <span>Start Local SEO</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="hover-lift bg-[#0B0F19] text-white rounded-3xl p-8 border-2 border-[#FF6600] shadow-2xl flex flex-col justify-between relative scale-[1.02]">
+            <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-[#FF6600] text-white text-[11px] font-black uppercase tracking-wider">
+              ⭐ RECOMMENDED
+            </div>
+            <div class="space-y-4 pt-1">
+              <div class="text-xs font-bold text-[#FF6600] uppercase">City-Wide Growth</div>
+              <h3 class="text-2xl font-extrabold text-white">Growth SEO</h3>
+              <div class="text-4xl font-black text-[#FF6600] font-outfit">PKR 25,000<span class="text-xs text-slate-300 font-normal">/mo</span></div>
+              <p class="text-xs text-slate-300">Best for: competitive niches, academies, real estate</p>
+              <ul class="space-y-2.5 text-xs text-slate-200 pt-3 border-t border-slate-800">
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-[#FF6600]"></i> 10–15 Target Keywords</li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-[#FF6600]"></i> Complete On-Page Technical Optimization</li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-[#FF6600]"></i> Monthly Blog Content (1 optimized post)</li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-[#FF6600]"></i> Basic Backlink Outreach</li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-[#FF6600]"></i> Technical Audit & Competitor Gap Analysis</li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-[#FF6600]"></i> Bi-monthly Report + Consultation Call</li>
+              </ul>
+            </div>
+            <div class="pt-6 mt-6 border-t border-slate-800">
+              <a href="https://wa.me/923001234567?text=Hello%20Digital%20Ustad,%20I%20want%20Growth%20SEO%20(PKR%2025,000/mo)!" target="_blank" class="btn-shine w-full py-4 rounded-full bg-[#FF6600] text-white font-bold text-xs flex items-center justify-center gap-2">
+                <span>Start Growth SEO</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="hover-lift bg-white rounded-3xl p-8 border border-slate-200 shadow-sm flex flex-col justify-between">
+            <div class="space-y-4">
+              <div class="text-xs font-bold text-slate-500 uppercase">National Authority</div>
+              <h3 class="text-2xl font-extrabold text-slate-900">Authority SEO</h3>
+              <div class="text-3xl font-black text-slate-900 font-outfit">PKR 40,000<span class="text-xs text-slate-500 font-normal">/mo</span></div>
+              <p class="text-xs text-slate-500">Best for: national e-commerce & high-volume search</p>
+              <ul class="space-y-2.5 text-xs text-slate-700 pt-3 border-t border-slate-100">
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-500"></i> 25+ Target High-Volume Keywords</li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-500"></i> Full Content Strategy + 2–3 Blog Posts/mo</li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-500"></i> Active Quality Backlink Building</li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-500"></i> Continuous Technical SEO Monitoring</li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-500"></i> Weekly Rank Tracking & Monthly Strategy Call</li>
+              </ul>
+            </div>
+            <div class="pt-6 mt-6 border-t border-slate-100">
+              <a href="https://wa.me/923001234567?text=Hello%20Digital%20Ustad,%20I%20want%20Authority%20SEO%20(PKR%2040,000/mo)!" target="_blank" class="w-full py-3.5 rounded-full bg-slate-900 text-white font-bold text-xs flex items-center justify-center gap-2">
+                <span>Start Authority SEO</span>
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Google Business Profile Standalone Section -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 pt-4">
+          <div class="p-8 rounded-3xl bg-slate-50 border border-slate-200 space-y-4">
+            <span class="text-xs font-bold text-[#FF6600] uppercase tracking-wider">ONE-TIME SERVICE</span>
+            <div class="flex items-baseline justify-between">
+              <h4 class="text-xl font-extrabold text-slate-900">Google Business Setup & Audit</h4>
+              <div class="text-2xl font-black text-slate-900">PKR 8,000</div>
+            </div>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              Complete profile setup, category optimization, business description, photo uploads, services listing, Q&A setup, and review generation strategy document.
+            </p>
+          </div>
+
+          <div class="p-8 rounded-3xl bg-slate-50 border border-slate-200 space-y-4">
+            <span class="text-xs font-bold text-emerald-600 uppercase tracking-wider">MONTHLY ADD-ON</span>
+            <div class="flex items-baseline justify-between">
+              <h4 class="text-xl font-extrabold text-slate-900">GBP Monthly Management</h4>
+              <div class="text-2xl font-black text-slate-900">PKR 4,000<span class="text-xs text-slate-400 font-normal">/mo</span></div>
+            </div>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              Weekly posts on Google Business Profile, review monitoring with customized responses (up to 20/month), photo updates, and monthly map search insights.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ================= 06. WHATSAPP AUTOMATION TAB ================= -->
+      <div id="tab-automation" class="pricing-tab-content space-y-16 hidden">
+        
+        <div class="text-center max-w-3xl mx-auto space-y-3">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-50 text-[#FF6600] text-xs font-bold uppercase tracking-wider">
+            Project-Based Milestones • 24/7 Automated Bot
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900">WhatsApp Automation Workflows</h2>
+          <p class="text-slate-600 text-sm">Automate catalog sharing, customer queries, appointment bookings, and lead follow-ups on the platform Pakistan uses most.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
+          
+          <div class="hover-lift bg-white rounded-3xl p-8 border border-slate-200 shadow-sm flex flex-col justify-between">
+            <div class="space-y-4">
+              <div class="text-xs font-bold text-slate-500 uppercase">Tier 01 • FAQ & Quick Replies</div>
+              <h3 class="text-2xl font-extrabold text-slate-900">BASIC AUTOMATION</h3>
+              <div class="text-3xl font-black text-slate-900 font-outfit">PKR 25k–35k</div>
+              <div class="text-[11px] text-slate-500 font-semibold mt-1">Payment: 50% Kickoff / 50% Delivery</div>
+
+              <ul class="space-y-2.5 text-xs text-slate-700 pt-3 border-t border-slate-100">
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-500"></i> WhatsApp Business API Setup</li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-500"></i> Automated Greeting & Away Message</li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-500"></i> FAQ Response Flows (Up to 10 topics)</li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-500"></i> Business Hours Auto-Reply</li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-500"></i> Basic Lead Capture (Name, Phone, Query)</li>
+              </ul>
+            </div>
+            <div class="pt-6 mt-6 border-t border-slate-100">
+              <a href="https://wa.me/923001234567?text=Hello%20Digital%20Ustad,%20I%20want%20Basic%20WhatsApp%20Automation!" target="_blank" class="w-full py-3.5 rounded-full bg-slate-900 text-white font-bold text-xs flex items-center justify-center gap-2">
+                <span>Inquire Basic</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="hover-lift bg-[#0B0F19] text-white rounded-3xl p-8 border-2 border-[#FF6600] shadow-2xl flex flex-col justify-between relative scale-[1.02]">
+            <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-[#FF6600] text-white text-[11px] font-black uppercase tracking-wider">
+              ⭐ RECOMMENDED
+            </div>
+            <div class="space-y-4 pt-1">
+              <div class="text-xs font-bold text-[#FF6600] uppercase">Tier 02 • Lead Funnels</div>
+              <h3 class="text-2xl font-extrabold text-white">GROWTH AUTOMATION</h3>
+              <div class="text-4xl font-black text-[#FF6600] font-outfit">PKR 45k–65k</div>
+              <div class="text-[11px] text-slate-300 font-semibold mt-1">40% Kickoff / 30% Demo / 30% Live</div>
+
+              <ul class="space-y-2.5 text-xs text-slate-200 pt-3 border-t border-slate-800">
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-[#FF6600]"></i> Everything in Basic Automation</li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-[#FF6600]"></i> Interactive Lead Capture Sequence</li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-[#FF6600]"></i> Automated Follow-Up Flow (3–5 messages)</li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-[#FF6600]"></i> Appointment Request Workflow</li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-[#FF6600]"></i> Google Sheets / Basic CRM Integration</li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-[#FF6600]"></i> Categorization of Enquiry Types</li>
+              </ul>
+            </div>
+            <div class="pt-6 mt-6 border-t border-slate-800">
+              <a href="https://wa.me/923001234567?text=Hello%20Digital%20Ustad,%20I%20want%20Growth%20WhatsApp%20Automation!" target="_blank" class="btn-shine w-full py-4 rounded-full bg-[#FF6600] text-white font-bold text-xs flex items-center justify-center gap-2">
+                <span>Inquire Growth</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="hover-lift bg-white rounded-3xl p-8 border border-slate-200 shadow-sm flex flex-col justify-between">
+            <div class="space-y-4">
+              <div class="text-xs font-bold text-slate-500 uppercase">Tier 03 • Enterprise CRM</div>
+              <h3 class="text-2xl font-extrabold text-slate-900">ADVANCED AUTOMATION</h3>
+              <div class="text-3xl font-black text-slate-900 font-outfit">PKR 75,000+</div>
+              <div class="text-[11px] text-slate-500 font-semibold mt-1">30% Kickoff / 40% Milestone / 30% Delivery</div>
+
+              <ul class="space-y-2.5 text-xs text-slate-700 pt-3 border-t border-slate-100">
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-500"></i> Everything in Growth Automation</li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-500"></i> Multi-step Lead Qualification Flows</li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-500"></i> Real-time Booking Engine Sync</li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-500"></i> Multi-Agent Team Routing</li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-500"></i> Live Analytics Dashboard & Staff Training</li>
+              </ul>
+            </div>
+            <div class="pt-6 mt-6 border-t border-slate-100">
+              <a href="https://wa.me/923001234567?text=Hello%20Digital%20Ustad,%20I%20want%20Advanced%20WhatsApp%20Automation!" target="_blank" class="w-full py-3.5 rounded-full bg-slate-900 text-white font-bold text-xs flex items-center justify-center gap-2">
+                <span>Inquire Advanced</span>
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 text-center text-xs text-slate-600">
+          *Monthly WhatsApp API / Bot hosting maintenance is PKR 3,000–5,000/month depending on message volume.
+        </div>
+
+      </div>
+
+      <!-- ================= 07. ALL-IN-ONE RETAINERS TAB ================= -->
+      <div id="tab-retainers" class="pricing-tab-content space-y-16 hidden">
+        
+        <div class="text-center max-w-3xl mx-auto space-y-3">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-50 text-[#FF6600] text-xs font-bold uppercase tracking-wider">
+            Outsourced Digital Team
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900">Monthly All-in-One Retainers</h2>
+          <p class="text-slate-600 text-sm">Have Digital Ustad act as your dedicated digital team — handling website, creative, social media, ads, and SEO under one predictable monthly invoice.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
+          
+          <div class="hover-lift bg-white rounded-3xl p-8 border border-slate-200 shadow-sm flex flex-col justify-between">
+            <div class="space-y-4">
+              <div class="text-xs font-bold text-slate-500 uppercase">Tier 01 • Local Essential</div>
+              <h3 class="text-2xl font-extrabold text-slate-900">ESSENTIAL</h3>
+              <p class="text-xs text-slate-500">Best for: salons, small restaurants, and local services</p>
+              <div class="text-3xl font-black text-slate-900 font-outfit">PKR 45,000<span class="text-xs text-slate-500 font-normal">/mo</span></div>
+              <ul class="space-y-2.5 text-xs text-slate-700 pt-3 border-t border-slate-100">
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-500"></i> Social Media: 10 Posts / month</li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-500"></i> Graphic Design: 8 Custom Creatives</li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-500"></i> <strong>Website Care Included</strong> (Hosting & Backups)</li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-500"></i> Google Business: Monthly Posts & Review Monitoring</li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-500"></i> Basic Monthly Progress Report</li>
+              </ul>
+            </div>
+            <div class="pt-6 mt-6 border-t border-slate-100">
+              <a href="https://wa.me/923001234567?text=Hello%20Digital%20Ustad,%20I%20want%20the%20ESSENTIAL%20Monthly%20Retainer%20(PKR%2045,000/mo)!" target="_blank" class="w-full py-3.5 rounded-full bg-slate-900 text-white font-bold text-xs flex items-center justify-center gap-2">
+                <span>Select Essential</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="hover-lift bg-[#0B0F19] text-white rounded-3xl p-8 border-2 border-[#FF6600] shadow-2xl flex flex-col justify-between relative scale-[1.02]">
+            <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-[#FF6600] text-white text-[11px] font-black uppercase tracking-wider">
+              ⭐ RECOMMENDED RETAINER
+            </div>
+            <div class="space-y-4 pt-1">
+              <div class="text-xs font-bold text-[#FF6600] uppercase">Tier 02 • High Growth</div>
+              <h3 class="text-2xl font-extrabold text-white">GROWTH</h3>
+              <p class="text-xs text-slate-300">Best for: clinics, gyms, real estate, academies</p>
+              <div class="text-4xl font-black text-[#FF6600] font-outfit">PKR 75,000<span class="text-xs text-slate-300 font-normal">/mo</span></div>
+              <ul class="space-y-2.5 text-xs text-slate-200 pt-3 border-t border-slate-800">
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-[#FF6600]"></i> Social Media: 16 Posts + Stories</li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-[#FF6600]"></i> Graphic Design: 15 Custom Creatives</li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-[#FF6600]"></i> <strong>Website Care Included</strong></li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-[#FF6600]"></i> Meta Ads Management (Ad spend separate)</li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-[#FF6600]"></i> Local SEO + Google Business Management</li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-[#FF6600]"></i> Bi-weekly Reporting + Strategy Call</li>
+              </ul>
+            </div>
+            <div class="pt-6 mt-6 border-t border-slate-800">
+              <a href="https://wa.me/923001234567?text=Hello%20Digital%20Ustad,%20I%20want%20the%20GROWTH%20Monthly%20Retainer%20(PKR%2075,000/mo)!" target="_blank" class="btn-shine w-full py-4 rounded-full bg-[#FF6600] text-white font-bold text-xs flex items-center justify-center gap-2">
+                <span>Select Growth Retainer</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="hover-lift bg-white rounded-3xl p-8 border border-slate-200 shadow-sm flex flex-col justify-between">
+            <div class="space-y-4">
+              <div class="text-xs font-bold text-slate-500 uppercase">Tier 03 • Enterprise Omnichannel</div>
+              <h3 class="text-2xl font-extrabold text-slate-900">COMPLETE</h3>
+              <p class="text-xs text-slate-500">Best for: established brands wanting a full outsourced department</p>
+              <div class="text-3xl font-black text-slate-900 font-outfit">PKR 120,000+<span class="text-xs text-slate-500 font-normal">/mo</span></div>
+              <ul class="space-y-2.5 text-xs text-slate-700 pt-3 border-t border-slate-100">
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-500"></i> Full Social Media Management (3 platforms)</li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-500"></i> Unlimited / Priority Graphic Design</li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-500"></i> Meta + Google Ads Campaign Optimization</li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-500"></i> Complete SEO & Organic Growth</li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-500"></i> WhatsApp Automation Maintenance</li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-500"></i> Dedicated Account Manager & Weekly Calls</li>
+              </ul>
+            </div>
+            <div class="pt-6 mt-6 border-t border-slate-100">
+              <a href="https://wa.me/923001234567?text=Hello%20Digital%20Ustad,%20I%20want%20to%20discuss%20the%20COMPLETE%20Monthly%20Retainer%20(PKR%20120k+)!" target="_blank" class="w-full py-3.5 rounded-full bg-slate-900 text-white font-bold text-xs flex items-center justify-center gap-2">
+                <span>Contact For Scope</span>
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+  <!-- PAYMENT & HOSTING POLICIES ACCORDION -->
+  <section class="py-16 bg-slate-50 border-t border-slate-200/80">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+      <div class="text-center space-y-2">
+        <h3 class="text-2xl sm:text-3xl font-extrabold text-slate-900">Payment & Hosting Transparency Policy</h3>
+        <p class="text-xs sm:text-sm text-slate-500">Clear guidelines so expectations are crystal clear before kickoff.</p>
+      </div>
+
+      <div class="space-y-4 text-xs sm:text-sm">
+        <!-- 1. Flex Payment Table -->
+        <div class="bg-white p-6 rounded-3xl border border-slate-200 space-y-3 shadow-sm">
+          <div class="font-extrabold text-slate-900 text-base flex items-center gap-2">
+            <i data-lucide="calculator" class="w-5 h-5 text-[#FF6600]"></i>
+            <span>Flex Payment (40/30/30) Breakdown</span>
+          </div>
+          <p class="text-slate-600 text-xs leading-relaxed">
+            Available on <strong>5-Page Websites and above only</strong>. Allows you to spread project investment over milestones with zero interest:
+          </p>
+          <div class="overflow-x-auto">
+            <table class="w-full text-left text-xs">
+              <thead class="border-b border-slate-200 text-slate-400 uppercase">
+                <tr>
+                  <th class="py-2">Stage</th>
+                  <th class="py-2">%</th>
+                  <th class="py-2">5-Page (PKR 30,000)</th>
+                  <th class="py-2">7-Page (PKR 42,999)</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-slate-100 font-semibold text-slate-700">
+                <tr>
+                  <td class="py-2.5">Kickoff</td>
+                  <td class="py-2.5">40%</td>
+                  <td class="py-2.5 text-[#FF6600]">PKR 12,000</td>
+                  <td class="py-2.5 text-[#FF6600]">PKR 17,200</td>
+                </tr>
+                <tr>
+                  <td class="py-2.5">Website Approval</td>
+                  <td class="py-2.5">30%</td>
+                  <td class="py-2.5">PKR 9,000</td>
+                  <td class="py-2.5">PKR 12,900</td>
+                </tr>
+                <tr>
+                  <td class="py-2.5">30-Day Balance</td>
+                  <td class="py-2.5">30%</td>
+                  <td class="py-2.5">PKR 9,000</td>
+                  <td class="py-2.5">PKR 12,900</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="text-[11px] text-slate-500 pt-1">
+            *3-Page Lite has no installments: 100% full upfront payment only (PKR 17,999). Flex Payment is exclusively available on 5-Page and above.
+          </div>
+        </div>
+
+        <!-- 2. Website Care & Hosting Leverage -->
+        <div class="bg-white p-6 rounded-3xl border border-slate-200 space-y-3 shadow-sm">
+          <div class="font-extrabold text-slate-900 text-base flex items-center gap-2">
+            <i data-lucide="server" class="w-5 h-5 text-[#FF6600]"></i>
+            <span>Hosting & Website Care Policy</span>
+          </div>
+          <p class="text-slate-600 text-xs leading-relaxed">
+            Digital Ustad hosts and manages client websites on ultra-fast cloud servers. Website Care (PKR 3,000/mo) covers uptime monitoring, SSL certificates, weekly automated backups, and 2 minor monthly edits.
+          </p>
+          <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-100 text-slate-700 text-xs italic">
+            "Digital Ustad hosts and manages your website as part of Website Care. Hosting remains active while your account is in good standing. In the event of an outstanding balance beyond the agreed window, website availability may be paused until the account is resolved."
+          </div>
+        </div>
+
+        <!-- 3. Ad Spend Rule -->
+        <div class="bg-white p-6 rounded-3xl border border-slate-200 space-y-2 shadow-sm">
+          <div class="font-extrabold text-slate-900 text-base flex items-center gap-2">
+            <i data-lucide="credit-card" class="w-5 h-5 text-[#FF6600]"></i>
+            <span>Ad Spend Transparency Rule</span>
+          </div>
+          <p class="text-slate-600 text-xs leading-relaxed">
+            Our pricing quotes are <strong>management fees only</strong>. Actual ad spend is paid directly by you to Meta (Facebook/Instagram) or Google via your own debit/credit card. We never run ads from our card, ensuring 100% financial transparency and direct access to your analytics.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BANNER -->
+  <section class="py-14 sm:py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="reveal relative bg-[#0B0F19] rounded-3xl p-8 sm:p-12 lg:p-16 overflow-hidden shadow-2xl border border-slate-800">
+        <div class="flex flex-col sm:flex-row items-center justify-between gap-8">
+          <div class="space-y-3 text-center sm:text-left">
+            <span class="text-xs font-extrabold uppercase tracking-widest text-[#FF6600]">READY TO SCALE?</span>
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-white">Let's Discuss Your Custom Package</h2>
+            <p class="text-slate-300 text-sm max-w-xl">Tell us your goals, and we'll craft the right bundle with clear milestones and immediate kickoff.</p>
+          </div>
+          <div class="flex flex-wrap gap-4">
+            <button class="btn-get-started btn-shine px-8 py-3.5 rounded-full bg-[#FF6600] hover:bg-[#EA580C] text-white font-bold text-sm shadow-xl orange-glow transition-all">
+              <span>Get Free Proposal</span>
+            </button>
+            <a href="https://wa.me/923001234567?text=Hello%20Digital%20Ustad,%20I%20have%20questions%20about%20your%20pricing%20packages!" target="_blank" class="px-7 py-3.5 rounded-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm shadow-lg flex items-center gap-2 transition-all">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12.012 2c-5.506 0-9.989 4.478-9.99 9.984a9.964 9.964 0 0 0 1.333 4.993L2 22l5.233-1.237a9.994 9.994 0 0 0 4.779 1.217h.004c5.505 0 9.988-4.478 9.989-9.984 0-2.669-1.037-5.176-2.925-7.062A9.925 9.925 0 0 0 12.012 2zm5.835 14.198c-.244.688-1.227 1.26-1.786 1.32-.472.052-1.077.08-3.155-.783-2.658-1.102-4.363-3.807-4.496-3.983-.133-.176-1.076-1.433-1.076-2.733 0-1.3.68-1.94.92-2.203.24-.263.523-.328.698-.328.174 0 .349.002.502.01.163.008.382-.062.597.455.22.531.75 1.83.815 1.963.065.133.109.288.022.463-.087.175-.131.284-.262.437-.13.153-.275.342-.393.459-.13.13-.266.27-.115.53.151.26 1.002 1.65 2.148 2.671 1.472 1.312 2.71 1.718 3.097 1.91.387.192.613.16.84-.102.228-.263.974-1.134 1.235-1.523.26-.39.522-.325.872-.196.35.13 2.22 1.047 2.602 1.238.382.19.637.284.73.444.093.16.093.928-.151 1.616z"/></svg>
+              <span>WhatsApp Us</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= COMPREHENSIVE FOOTER ================= -->
+  <footer class="bg-[#0B0F19] text-slate-400 pt-16 pb-12 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-slate-800">
+        
+        <!-- Col 1: Brand & About (Spans 2 cols on desktop) -->
+        <div class="lg:col-span-2 space-y-4">
+          <a href="index.html" class="inline-block group">
+            <img src="assets/images/logo-dark.png" alt="Digital Ustad" class="h-10 sm:h-11 w-auto object-contain transition-transform duration-300 group-hover:scale-105">
+          </a>
+          <p class="text-xs sm:text-sm text-slate-400 leading-relaxed max-w-sm">
+            Pakistan's leading digital partner for small & medium businesses. We build fast, beautiful websites, run ROI-driven marketing, and automate operations.
+          </p>
+          <div class="flex items-center gap-3 text-slate-400 pt-2">
+            <a href="https://wa.me/923001234567" target="_blank" class="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center hover:bg-[#FF6600] hover:text-white transition-colors" title="WhatsApp">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12.012 2c-5.506 0-9.989 4.478-9.99 9.984a9.964 9.964 0 0 0 1.333 4.993L2 22l5.233-1.237a9.994 9.994 0 0 0 4.779 1.217h.004c5.505 0 9.988-4.478 9.989-9.984 0-2.669-1.037-5.176-2.925-7.062A9.925 9.925 0 0 0 12.012 2zm5.835 14.198c-.244.688-1.227 1.26-1.786 1.32-.472.052-1.077.08-3.155-.783-2.658-1.102-4.363-3.807-4.496-3.983-.133-.176-1.076-1.433-1.076-2.733 0-1.3.68-1.94.92-2.203.24-.263.523-.328.698-.328.174 0 .349.002.502.01.163.008.382-.062.597.455.22.531.75 1.83.815 1.963.065.133.109.288.022.463-.087.175-.131.284-.262.437-.13.153-.275.342-.393.459-.13.13-.266.27-.115.53.151.26 1.002 1.65 2.148 2.671 1.472 1.312 2.71 1.718 3.097 1.91.387.192.613.16.84-.102.228-.263.974-1.134 1.235-1.523.26-.39.522-.325.872-.196.35.13 2.22 1.047 2.602 1.238.382.19.637.284.73.444.093.16.093.928-.151 1.616z"/></svg>
+            </a>
+            <a href="mailto:contact@digitalustad.com" class="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center hover:bg-[#FF6600] hover:text-white transition-colors" title="Email">
+              <i data-lucide="mail" class="w-4 h-4"></i>
+            </a>
+            <a href="tel:+923001234567" class="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center hover:bg-[#FF6600] hover:text-white transition-colors" title="Phone">
+              <i data-lucide="phone" class="w-4 h-4"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Col 2: Services -->
+        <div class="space-y-3">
+          <h4 class="text-sm font-bold text-white uppercase tracking-wider">Services</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="service-web-development.html" class="hover:text-[#FF6600] transition-colors">Web Development</a></li>
+            <li><a href="service-social-media.html" class="hover:text-[#FF6600] transition-colors">Social Media Marketing</a></li>
+            <li><a href="service-graphic-design.html" class="hover:text-[#FF6600] transition-colors">Graphic & Brand Identity</a></li>
+            <li><a href="service-meta-google-ads.html" class="hover:text-[#FF6600] transition-colors">Meta & Google Ads</a></li>
+            <li><a href="service-seo-google-business.html" class="hover:text-[#FF6600] transition-colors">SEO & Google Maps</a></li>
+            <li><a href="service-whatsapp-automation.html" class="hover:text-[#FF6600] transition-colors">WhatsApp Automation</a></li>
+            <li><a href="pricing.html" class="text-[#FF6600] font-semibold hover:underline">Pricing & Packages</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Quick Links -->
+        <div class="space-y-3">
+          <h4 class="text-sm font-bold text-white uppercase tracking-wider">Quick Links</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="index.html" class="hover:text-[#FF6600] transition-colors">Home</a></li>
+            <li><a href="about.html" class="hover:text-[#FF6600] transition-colors">About Us</a></li>
+            <li><a href="services.html" class="hover:text-[#FF6600] transition-colors">All Services</a></li>
+            <li><a href="pricing.html" class="text-[#FF6600] font-bold">Pricing & Plans</a></li>
+            <li><a href="solutions.html" class="hover:text-[#FF6600] transition-colors">Industries & Solutions</a></li>
+            <li><a href="how-it-works.html" class="hover:text-[#FF6600] transition-colors">How It Works</a></li>
+            <li><a href="portfolio.html" class="hover:text-[#FF6600] transition-colors">Our Portfolio</a></li>
+            <li><a href="contact.html" class="hover:text-[#FF6600] transition-colors">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Get In Touch -->
+        <div class="space-y-3">
+          <h4 class="text-sm font-bold text-white uppercase tracking-wider">Get In Touch</h4>
+          <ul class="space-y-2.5 text-xs text-slate-300">
+            <li class="flex items-start gap-2">
+              <i data-lucide="map-pin" class="w-4 h-4 text-[#FF6600] flex-shrink-0 mt-0.5"></i>
+              <span>Lahore, Pakistan & Worldwide Remote</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <i data-lucide="phone" class="w-4 h-4 text-[#FF6600] flex-shrink-0"></i>
+              <span>+92 300 1234567</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <i data-lucide="mail" class="w-4 h-4 text-[#FF6600] flex-shrink-0"></i>
+              <span>contact@digitalustad.com</span>
+            </li>
+            <li class="flex items-center gap-2 text-emerald-400 font-semibold">
+              <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+              <span>24/7 WhatsApp Assistance</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Bottom Copyright & Legal -->
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
+        <div>
+          © 2026 Digital Ustad. All Rights Reserved. Designed for High Performance.
+        </div>
+        <div class="flex items-center gap-6">
+          <a href="#" class="hover:text-slate-400 transition-colors">Privacy Policy</a>
+          <a href="#" class="hover:text-slate-400 transition-colors">Terms of Service</a>
+          <a href="#" class="hover:text-slate-400 transition-colors">Refund Policy</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ================= FLOATING WHATSAPP BUTTON WITH RADAR PULSE ================= -->
+  <a href="https://wa.me/923001234567?text=Hello%20Digital%20Ustad,%20I%20have%20questions%20about%20your%20pricing%20packages!" target="_blank" class="fixed bottom-6 right-6 z-40 w-14 h-14 rounded-full bg-emerald-500 hover:bg-emerald-600 text-white flex items-center justify-center shadow-2xl hover:scale-110 active:scale-95 transition-all group" title="Chat on WhatsApp">
+    <div class="radar-ring"></div>
+    <span class="absolute -top-9 right-0 bg-slate-900 text-white text-[11px] font-semibold px-2.5 py-1 rounded-md shadow-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">Chat with us</span>
+    <svg class="w-7 h-7 fill-current" viewBox="0 0 24 24"><path d="M12.012 2c-5.506 0-9.989 4.478-9.99 9.984a9.964 9.964 0 0 0 1.333 4.993L2 22l5.233-1.237a9.994 9.994 0 0 0 4.779 1.217h.004c5.505 0 9.988-4.478 9.989-9.984 0-2.669-1.037-5.176-2.925-7.062A9.925 9.925 0 0 0 12.012 2zm5.835 14.198c-.244.688-1.227 1.26-1.786 1.32-.472.052-1.077.08-3.155-.783-2.658-1.102-4.363-3.807-4.496-3.983-.133-.176-1.076-1.433-1.076-2.733 0-1.3.68-1.94.92-2.203.24-.263.523-.328.698-.328.174 0 .349.002.502.01.163.008.382-.062.597.455.22.531.75 1.83.815 1.963.065.133.109.288.022.463-.087.175-.131.284-.262.437-.13.153-.275.342-.393.459-.13.13-.266.27-.115.53.151.26 1.002 1.65 2.148 2.671 1.472 1.312 2.71 1.718 3.097 1.91.387.192.613.16.84-.102.228-.263.974-1.134 1.235-1.523.26-.39.522-.325.872-.196.35.13 2.22 1.047 2.602 1.238.382.19.637.284.73.444.093.16.093.928-.151 1.616z"/></svg>
+  </a>
+
+  <!-- ================= QUOTATION / GET STARTED MODAL ================= -->
+  <div id="quote-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/80 modal-backdrop hidden p-4">
+    <div class="modal-box bg-white rounded-3xl max-w-lg w-full p-6 sm:p-8 shadow-2xl relative scale-95 opacity-0 transition-all duration-200">
+      
+      <button id="close-quote-modal" class="absolute top-5 right-5 w-8 h-8 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-500 flex items-center justify-center transition-colors">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+
+      <div class="mb-6">
+        <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-orange-100 text-[#FF6600] text-xs font-bold mb-2">
+          <span>Get Free Proposal</span>
+        </div>
+        <h3 class="text-2xl font-extrabold text-slate-900">Start Your Project With Us</h3>
+        <p class="text-xs sm:text-sm text-slate-500 mt-1">Select your desired service package to receive an instant proposal.</p>
+      </div>
+
+      <form id="quote-form" class="space-y-4">
+        <div>
+          <label for="client-name" class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">Your Name *</label>
+          <input type="text" id="client-name" required placeholder="e.g. Ali Khan" class="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:border-[#FF6600] focus:ring-2 focus:ring-[#FF6600]/20 transition-all">
+        </div>
+
+        <div>
+          <label for="client-phone" class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">WhatsApp Number *</label>
+          <input type="tel" id="client-phone" required placeholder="e.g. 0300 1234567" class="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:border-[#FF6600] focus:ring-2 focus:ring-[#FF6600]/20 transition-all">
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label for="client-service" class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">Service Package</label>
+            <select id="client-service" class="w-full px-3 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:border-[#FF6600] bg-white">
+              <option value="5-Page Website Starter (PKR 30,000)">5-Page Website Starter (PKR 30k) ⭐</option>
+              <option value="3-Page Website Lite (PKR 17,999)">3-Page Website Lite (PKR 17,999)</option>
+              <option value="7-Page Website Growth (PKR 42,999)">7-Page Website Growth (PKR 42,999)</option>
+              <option value="Custom E-commerce / Web App">Custom Web / E-commerce</option>
+              <option value="Social Media Growth (PKR 28,000/mo)">Social Media Management</option>
+              <option value="Meta & Google Ads Campaign">Meta & Google Ads</option>
+              <option value="SEO & Google Maps Ranking">SEO & Google Business</option>
+              <option value="WhatsApp Automation Setup">WhatsApp Automation</option>
+              <option value="All-in-One Monthly Retainer">Monthly Digital Retainer</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="client-budget" class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">Estimated Budget</label>
+            <select id="client-budget" class="w-full px-3 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:border-[#FF6600] bg-white">
+              <option value="PKR 20,000 - 35,000">PKR 20,000 - 35,000</option>
+              <option value="Under PKR 20,000">Under PKR 20,000</option>
+              <option value="PKR 35,000 - 60,000">PKR 35,000 - 60,000</option>
+              <option value="PKR 60,000 - 100,000">PKR 60,000 - 100,000</option>
+              <option value="PKR 100,000+">PKR 100,000+</option>
+            </select>
+          </div>
+        </div>
+
+        <div>
+          <label for="client-message" class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">Brief Details About Your Business</label>
+          <textarea id="client-message" rows="3" placeholder="Tell us about your brand or any reference website..." class="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:border-[#FF6600] focus:ring-2 focus:ring-[#FF6600]/20 transition-all"></textarea>
+        </div>
+
+        <button type="submit" class="btn-shine w-full py-3.5 rounded-xl bg-[#FF6600] hover:bg-[#EA580C] text-white font-bold text-sm shadow-xl orange-glow-sm flex items-center justify-center gap-2 hover:scale-[1.01] active:scale-[0.99] transition-all">
+          <i data-lucide="send" class="w-4 h-4"></i>
+          <span>Send Proposal Request (Direct WhatsApp)</span>
+        </button>
+      </form>
+
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>

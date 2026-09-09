@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meta & Google Ads | Digital Ustad</title>
+  <meta name="description" content="Target the right audience, get more leads and grow your business with paid advertising.">
+  <link rel="icon" type="image/png" href="assets/images/favicon.png">
+  
+  <!-- Theme Init (Prevents FOUC) -->
+  <script>
+    (function() {
+      const savedTheme = localStorage.getItem('du_theme');
+      const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      if (savedTheme === 'dark' || (!savedTheme && systemDark)) {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+      }
+    })();
+  </script>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              orange: '#FF6600',
+              orangeHover: '#EA580C',
+              orangeLight: '#FFF7ED',
+              dark: '#0B0F19',
+              darkCard: '#111827',
+              slateText: '#94A3B8'
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            inter: ['"Inter"', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-white text-slate-800 antialiased selection:bg-[#FF6600] selection:text-white relative">
+
+  <div id="scroll-progress"></div>
+
+  <!-- NAVBAR -->
+  <header class="sticky top-0 z-50 bg-[#0B0F19]/95 backdrop-blur-md border-b border-slate-800/80 transition-all">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <a href="index.html" class="flex items-center group">
+          <img src="assets/images/logo-dark.png" alt="Digital Ustad" class="h-10 sm:h-11 w-auto object-contain transition-transform duration-300 group-hover:scale-105">
+        </a>
+
+        <nav class="hidden md:flex items-center gap-8">
+          <a href="index.html" class="text-sm font-semibold text-slate-300 hover:text-[#FF6600] transition-colors">Home</a>
+          <a href="services.html" class="text-sm font-semibold text-white hover:text-[#FF6600] transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-[#FF6600]">Services</a>
+          <a href="pricing.html" class="text-sm font-semibold text-slate-300 hover:text-[#FF6600] transition-colors">Pricing</a>
+          <a href="solutions.html" class="text-sm font-semibold text-slate-300 hover:text-[#FF6600] transition-colors">Solutions</a>
+          <a href="how-it-works.html" class="text-sm font-semibold text-slate-300 hover:text-[#FF6600] transition-colors">How It Works</a>
+          <a href="about.html" class="text-sm font-semibold text-slate-300 hover:text-[#FF6600] transition-colors">About Us</a>
+          <a href="contact.html" class="text-sm font-semibold text-slate-300 hover:text-[#FF6600] transition-colors">Contact</a>
+        </nav>
+
+        <div class="flex items-center gap-3 sm:gap-4">
+          <!-- Theme Toggle Button -->
+          <button type="button" class="theme-toggle-btn rounded-full text-slate-300 hover:text-white bg-slate-800/80 hover:bg-slate-700 border border-slate-700/70 transition-all flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-[#FF6600]/40 shadow-sm" aria-label="Toggle light/dark theme" title="Switch Theme">
+            <i data-lucide="moon" class="w-4 h-4 text-amber-300 theme-icon-moon"></i>
+            <i data-lucide="sun" class="w-4 h-4 text-amber-400 theme-icon-sun"></i>
+          </button>
+
+          <button class="btn-get-started btn-shine hidden sm:inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-full bg-[#FF6600] hover:bg-[#EA580C] text-white text-sm font-bold shadow-lg orange-glow-sm hover:scale-105 transition-all">
+            <span>Get Started</span>
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </button>
+          <button id="mobile-menu-btn" class="md:hidden p-2.5 rounded-xl text-slate-300 hover:text-white">
+            <i data-lucide="menu" class="w-6 h-6"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- MOBILE DRAWER -->
+  <div id="mobile-drawer" class="fixed inset-0 z-50 bg-[#0B0F19]/95 backdrop-blur-xl transition-all duration-300 hidden opacity-0 pointer-events-none md:hidden">
+    <div class="flex flex-col h-full p-6">
+      <div class="flex items-center justify-between pb-6 border-b border-slate-800">
+        <a href="index.html" class="flex items-center"><img src="assets/images/logo-dark.png" alt="Digital Ustad" class="h-9 w-auto object-contain"></a>
+        <div class="flex items-center gap-2">
+          <button type="button" class="theme-toggle-btn rounded-full text-slate-300 hover:text-white bg-slate-800/80 hover:bg-slate-700 border border-slate-700/70 transition-all flex items-center justify-center focus:outline-none" aria-label="Toggle light/dark theme" title="Switch Theme">
+            <i data-lucide="moon" class="w-4 h-4 text-amber-300 theme-icon-moon"></i>
+            <i data-lucide="sun" class="w-4 h-4 text-amber-400 theme-icon-sun"></i>
+          </button>
+          <button id="close-mobile-menu" class="p-2 text-slate-400 hover:text-white"><i data-lucide="x" class="w-7 h-7"></i></button>
+        </div>
+      </div>
+      <div class="flex flex-col gap-5 py-8 flex-1">
+        <a href="index.html" class="mobile-nav-link text-lg font-semibold text-slate-300 hover:text-[#FF6600]">Home</a>
+        <a href="services.html" class="mobile-nav-link text-lg font-semibold text-white hover:text-[#FF6600]">Services</a>
+        <a href="pricing.html" class="mobile-nav-link text-lg font-semibold text-slate-300 hover:text-[#FF6600]">Pricing</a>
+        <a href="solutions.html" class="mobile-nav-link text-lg font-semibold text-slate-300 hover:text-[#FF6600]">Solutions</a>
+        <a href="how-it-works.html" class="mobile-nav-link text-lg font-semibold text-slate-300 hover:text-[#FF6600]">How It Works</a>
+        <a href="about.html" class="mobile-nav-link text-lg font-semibold text-slate-300 hover:text-[#FF6600]">About Us</a>
+        <a href="contact.html" class="mobile-nav-link text-lg font-semibold text-slate-300 hover:text-[#FF6600]">Contact</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- BREADCRUMB & HERO -->
+  <section class="relative bg-white pt-8 pb-16 lg:pt-12 lg:pb-24 overflow-hidden border-b border-slate-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <nav class="flex items-center gap-2 text-xs font-semibold text-slate-400 mb-8 reveal">
+        <a href="index.html" class="hover:text-[#FF6600]">Home</a>
+        <span>&gt;</span>
+        <a href="services.html" class="hover:text-[#FF6600]">Services</a>
+        <span>&gt;</span>
+        <span class="text-slate-800">Meta & Google Ads</span>
+      </nav>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Left Content -->
+        <div class="lg:col-span-6 space-y-6 reveal reveal-left active">
+          <h1 class="text-4xl sm:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight">
+            Meta & Google Ads
+          </h1>
+          <p class="text-slate-600 text-base sm:text-lg leading-relaxed max-w-xl">
+            Target the right audience, get more leads and grow your business with paid advertising.
+          </p>
+
+          <!-- 5 Checkmark List -->
+          <ul class="space-y-3.5 pt-2">
+            <li class="flex items-center gap-3 text-sm font-semibold text-slate-700">
+              <span class="w-5 h-5 rounded-full bg-orange-100 flex items-center justify-center text-[#FF6600] flex-shrink-0">
+                <i data-lucide="check" class="w-3.5 h-3.5 stroke-[3]"></i>
+              </span>
+              <span>Targeted Ad Campaigns</span>
+            </li>
+            <li class="flex items-center gap-3 text-sm font-semibold text-slate-700">
+              <span class="w-5 h-5 rounded-full bg-orange-100 flex items-center justify-center text-[#FF6600] flex-shrink-0">
+                <i data-lucide="check" class="w-3.5 h-3.5 stroke-[3]"></i>
+              </span>
+              <span>High Quality Leads</span>
+            </li>
+            <li class="flex items-center gap-3 text-sm font-semibold text-slate-700">
+              <span class="w-5 h-5 rounded-full bg-orange-100 flex items-center justify-center text-[#FF6600] flex-shrink-0">
+                <i data-lucide="check" class="w-3.5 h-3.5 stroke-[3]"></i>
+              </span>
+              <span>Conversion Focused Strategy</span>
+            </li>
+            <li class="flex items-center gap-3 text-sm font-semibold text-slate-700">
+              <span class="w-5 h-5 rounded-full bg-orange-100 flex items-center justify-center text-[#FF6600] flex-shrink-0">
+                <i data-lucide="check" class="w-3.5 h-3.5 stroke-[3]"></i>
+              </span>
+              <span>Budget Optimization</span>
+            </li>
+            <li class="flex items-center gap-3 text-sm font-semibold text-slate-700">
+              <span class="w-5 h-5 rounded-full bg-orange-100 flex items-center justify-center text-[#FF6600] flex-shrink-0">
+                <i data-lucide="check" class="w-3.5 h-3.5 stroke-[3]"></i>
+              </span>
+              <span>Performance Reports</span>
+            </li>
+          </ul>
+
+          <!-- Action Buttons -->
+          <div class="flex flex-wrap items-center gap-4 pt-4">
+            <button class="btn-get-started btn-shine inline-flex items-center gap-2.5 px-7 py-3.5 rounded-full bg-[#FF6600] hover:bg-[#EA580C] text-white font-bold text-sm shadow-xl orange-glow hover:scale-105 active:scale-95 transition-all">
+              <span>Start Your Campaign</span>
+              <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </button>
+
+            <a href="https://wa.me/923001234567?text=Hello%20Digital%20Ustad,%20I%20want%20Meta%20and%20Google%20Ads!" target="_blank" class="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-full bg-slate-900 hover:bg-slate-800 text-white font-bold text-sm shadow-md hover:scale-105 active:scale-95 transition-all">
+              <svg class="w-4 h-4 fill-emerald-400" viewBox="0 0 24 24"><path d="M12.012 2c-5.506 0-9.989 4.478-9.99 9.984a9.964 9.964 0 0 0 1.333 4.993L2 22l5.233-1.237a9.994 9.994 0 0 0 4.779 1.217h.004c5.505 0 9.988-4.478 9.989-9.984 0-2.669-1.037-5.176-2.925-7.062A9.925 9.925 0 0 0 12.012 2zm5.835 14.198c-.244.688-1.227 1.26-1.786 1.32-.472.052-1.077.08-3.155-.783-2.658-1.102-4.363-3.807-4.496-3.983-.133-.176-1.076-1.433-1.076-2.733 0-1.3.68-1.94.92-2.203.24-.263.523-.328.698-.328.174 0 .349.002.502.01.163.008.382-.062.597.455.22.531.75 1.83.815 1.963.065.133.109.288.022.463-.087.175-.131.284-.262.437-.13.153-.275.342-.393.459-.13.13-.266.27-.115.53.151.26 1.002 1.65 2.148 2.671 1.472 1.312 2.71 1.718 3.097 1.91.387.192.613.16.84-.102.228-.263.974-1.134 1.235-1.523.26-.39.522-.325.872-.196.35.13 2.22 1.047 2.602 1.238.382.19.637.284.73.444.093.16.093.928-.151 1.616z"/></svg>
+              <span>WhatsApp Us</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right Hero Mockup (Laptop Dashboard with Meta & Google Floating Badges) -->
+        <div class="lg:col-span-6 relative flex justify-center items-center reveal reveal-right active">
+          <div class="hero-mockup-wrapper relative w-full max-w-[500px]">
+            
+            <!-- Floating Meta & Google Badges -->
+            <div class="absolute -right-4 -top-6 w-14 h-14 rounded-full bg-white shadow-xl flex items-center justify-center border border-slate-100 z-30 animate-float">
+              <!-- Meta Logo SVG -->
+              <svg viewBox="0 0 24 24" class="w-8 h-8 text-blue-600 fill-current">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm3.88 13.88c-1.08 0-2.04-.54-2.61-1.37-.4.5-.95.87-1.58 1.07-.63.2-1.31.2-1.94-.02-.85-.3-1.52-.94-1.87-1.78l1.45-.63c.2.49.59.86 1.08 1.03.49.17 1.03.11 1.48-.16.45-.27.76-.73.85-1.25.09-.52-.05-1.05-.38-1.46-.48-.6-1.21-.95-1.98-.95h-.8v-1.5h.8c.63 0 1.22-.27 1.63-.73.41-.46.57-1.08.43-1.68-.13-.59-.55-1.07-1.12-1.29-.57-.22-1.22-.16-1.74.16-.52.32-.85.87-.89 1.48l-1.5-.2c.08-.94.59-1.8 1.39-2.3 1-.62 2.25-.66 3.28-.11 1.03.55 1.68 1.6 1.68 2.76 0 .74-.29 1.45-.81 1.98.67.43 1.15 1.1 1.35 1.88.27 1.04-.04 2.15-.82 2.92-.61.6-1.44.95-2.31.95z"/>
+              </svg>
+            </div>
+            <div class="absolute -right-2 top-24 w-12 h-12 rounded-full bg-white shadow-xl flex items-center justify-center border border-slate-100 z-30 animate-float" style="animation-delay: 1.5s;">
+              <svg viewBox="0 0 24 24" class="w-6 h-6">
+                <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+                <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+                <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/>
+                <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/>
+              </svg>
+            </div>
+
+            <!-- Laptop Frame -->
+            <div class="laptop-frame bg-slate-900 border border-slate-700 shadow-2xl relative z-10 w-full">
+              <div class="h-6 bg-slate-800/90 px-3 flex items-center justify-between border-b border-slate-700">
+                <div class="flex items-center gap-1.5">
+                  <div class="w-2.5 h-2.5 rounded-full bg-red-500"></div>
+                  <div class="w-2.5 h-2.5 rounded-full bg-amber-500"></div>
+                  <div class="w-2.5 h-2.5 rounded-full bg-emerald-500"></div>
+                </div>
+                <div class="text-[10px] text-slate-400 font-mono">ads.google.com/campaigns</div>
+                <div class="w-6"></div>
+              </div>
+              
+              <!-- Dashboard Screen -->
+              <div class="bg-white p-4 text-slate-800 min-h-[220px]">
+                <div class="flex items-center justify-between border-b pb-2">
+                  <span class="text-xs font-extrabold text-slate-900">Campaign Overview</span>
+                  <span class="text-[10px] text-emerald-600 font-bold bg-emerald-50 px-2 py-0.5 rounded">● Live ROI</span>
+                </div>
+                
+                <!-- 4 Metrics -->
+                <div class="grid grid-cols-4 gap-2 my-3 text-center">
+                  <div class="bg-slate-50 p-2 rounded border">
+                    <div class="text-[9px] text-slate-400">Clicks</div>
+                    <div class="text-xs font-extrabold text-slate-900">1,250</div>
+                  </div>
+                  <div class="bg-slate-50 p-2 rounded border">
+                    <div class="text-[9px] text-slate-400">Conversions</div>
+                    <div class="text-xs font-extrabold text-[#FF6600]">320</div>
+                  </div>
+                  <div class="bg-slate-50 p-2 rounded border">
+                    <div class="text-[9px] text-slate-400">Cost/Conv.</div>
+                    <div class="text-xs font-extrabold text-slate-900">Rs. 156</div>
+                  </div>
+                  <div class="bg-slate-50 p-2 rounded border">
+                    <div class="text-[9px] text-slate-400">Spend</div>
+                    <div class="text-xs font-extrabold text-slate-900">Rs. 49,920</div>
+                  </div>
+                </div>
+
+                <!-- Growth Graph Line -->
+                <div class="h-16 w-full flex items-end gap-1 pt-2">
+                  <div class="w-1/12 bg-blue-100 h-4 rounded-t"></div>
+                  <div class="w-1/12 bg-blue-200 h-6 rounded-t"></div>
+                  <div class="w-1/12 bg-blue-300 h-8 rounded-t"></div>
+                  <div class="w-1/12 bg-blue-400 h-7 rounded-t"></div>
+                  <div class="w-1/12 bg-blue-500 h-10 rounded-t"></div>
+                  <div class="w-1/12 bg-[#FF6600]/60 h-12 rounded-t"></div>
+                  <div class="w-1/12 bg-[#FF6600] h-14 rounded-t"></div>
+                  <div class="w-1/12 bg-[#FF6600] h-16 rounded-t"></div>
+                </div>
+              </div>
+            </div>
+            <div class="laptop-base relative z-10 w-[104%] -ml-[2%]"></div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- WHAT WE OFFER -->
+  <section class="py-16 lg:py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-14 reveal">
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
+          What We Offer
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <div class="reveal delay-1 hover-lift bg-slate-50/70 p-6 rounded-2xl border border-slate-100 flex flex-col items-center text-center">
+          <div class="w-12 h-12 rounded-xl bg-orange-100 flex items-center justify-center text-[#FF6600] mb-3">
+            <i data-lucide="facebook" class="w-6 h-6"></i>
+          </div>
+          <h4 class="font-bold text-slate-900 text-base">Meta (Facebook & Instagram)</h4>
+          <p class="text-xs text-slate-500 mt-2 leading-relaxed">Reach your ideal audience with engaging ads.</p>
+        </div>
+
+        <div class="reveal delay-2 hover-lift bg-slate-50/70 p-6 rounded-2xl border border-slate-100 flex flex-col items-center text-center">
+          <div class="w-12 h-12 rounded-xl bg-orange-100 flex items-center justify-center text-[#FF6600] mb-3">
+            <i data-lucide="search" class="w-6 h-6"></i>
+          </div>
+          <h4 class="font-bold text-slate-900 text-base">Google Ads</h4>
+          <p class="text-xs text-slate-500 mt-2 leading-relaxed">Get found on Google and reach customers actively searching for your services.</p>
+        </div>
+
+        <div class="reveal delay-3 hover-lift bg-slate-50/70 p-6 rounded-2xl border border-slate-100 flex flex-col items-center text-center">
+          <div class="w-12 h-12 rounded-xl bg-orange-100 flex items-center justify-center text-[#FF6600] mb-3">
+            <i data-lucide="refresh-cw" class="w-6 h-6"></i>
+          </div>
+          <h4 class="font-bold text-slate-900 text-base">Remarketing</h4>
+          <p class="text-xs text-slate-500 mt-2 leading-relaxed">Bring back interested visitors and turn them into paying customers.</p>
+        </div>
+
+        <div class="reveal delay-4 hover-lift bg-slate-50/70 p-6 rounded-2xl border border-slate-100 flex flex-col items-center text-center">
+          <div class="w-12 h-12 rounded-xl bg-orange-100 flex items-center justify-center text-[#FF6600] mb-3">
+            <i data-lucide="sliders" class="w-6 h-6"></i>
+          </div>
+          <h4 class="font-bold text-slate-900 text-base">Ad Management</h4>
+          <p class="text-xs text-slate-500 mt-2 leading-relaxed">We manage everything so you can focus on running your business.</p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- PRICING SECTION -->
+  <section id="pricing" class="py-20 bg-slate-50 border-t border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-14 reveal">
+        <span class="inline-block px-3.5 py-1.5 rounded-full bg-orange-100 text-[#FF6600] text-xs font-bold uppercase tracking-wider mb-3">
+          Zero Commission Markup • 100% Direct Spend
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+          Meta & Google Ads Pricing
+        </h2>
+        <p class="text-slate-600 text-sm sm:text-base mt-3">
+          Fixed management retainers. Ad spend is billed directly to your debit/credit card by Meta & Google for complete financial transparency.
+        </p>
+      </div>
+
+      <!-- Pricing Cards -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch mb-12">
+        
+        <!-- 1. ADS STARTER -->
+        <div class="hover-lift bg-white rounded-3xl p-8 border border-slate-200 shadow-sm flex flex-col justify-between reveal">
+          <div class="space-y-4">
+            <div class="inline-flex items-center px-3 py-1 rounded-full bg-slate-100 text-slate-700 text-xs font-bold">
+              Local Leads & WhatsApp
+            </div>
+            <h3 class="text-2xl font-extrabold text-slate-900">ADS STARTER</h3>
+            <p class="text-xs text-slate-500 leading-relaxed">
+              For local service providers, doctors, and retailers starting paid customer acquisition.
+            </p>
+            <div class="pt-2">
+              <div class="text-4xl sm:text-5xl font-black text-slate-900 font-outfit">PKR 15,000</div>
+              <div class="text-[11px] text-slate-400 font-semibold mt-1">Per Month • Monthly Upfront</div>
+            </div>
+
+            <div class="p-3 rounded-2xl bg-slate-50 border border-slate-200 text-xs">
+              <div class="text-slate-500 text-[11px]">Recommended Ad Budget:</div>
+              <div class="font-bold text-slate-900">Up to PKR 50,000 / month</div>
+            </div>
+
+            <ul class="space-y-2.5 text-xs text-slate-600 pt-3 border-t border-slate-100">
+              <li class="flex items-start gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-emerald-500 flex-shrink-0 mt-0.5"></i>
+                <span><strong>1 Active Campaign</strong> (Lead Gen or WhatsApp Ads)</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-emerald-500 flex-shrink-0 mt-0.5"></i>
+                <span><strong>2 Ad Creatives Included</strong> (designed by our team)</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-emerald-500 flex-shrink-0 mt-0.5"></i>
+                <span>Audience Demographics & Interest Targeting</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-emerald-500 flex-shrink-0 mt-0.5"></i>
+                <span>Basic Meta Pixel Setup & Verification</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-emerald-500 flex-shrink-0 mt-0.5"></i>
+                <span>Bi-Weekly ROI & Cost-Per-Lead Report</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="pt-6 mt-6 border-t border-slate-100">
+            <a href="https://wa.me/923001234567?text=Hello%20Digital%20Ustad,%20I%20want%20the%20ADS%20STARTER%20Package%20(PKR%2015,000/mo)!" target="_blank" class="w-full py-3.5 rounded-full bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs flex items-center justify-center gap-2 transition-all">
+              <span>Choose Starter Ads</span>
+              <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- 2. ADS GROWTH ⭐ HERO -->
+        <div class="hover-lift bg-[#0B0F19] text-white rounded-3xl p-8 border-2 border-[#FF6600] shadow-2xl flex flex-col justify-between relative scale-[1.02] z-10 reveal delay-2">
+          <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-[#FF6600] text-white text-[11px] font-black uppercase tracking-wider shadow-lg flex items-center gap-1.5 whitespace-nowrap">
+            <span>⭐ MOST POPULAR • BEST ROI</span>
+          </div>
+
+          <div class="space-y-4 pt-1">
+            <div class="inline-flex items-center px-3 py-1 rounded-full bg-slate-800 text-[#FF6600] text-xs font-bold">
+              Full Lead Engine & E-Commerce
+            </div>
+            <h3 class="text-2xl font-extrabold text-white">ADS GROWTH</h3>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              Best for businesses seeking steady qualified leads and profitable direct sales.
+            </p>
+            <div class="pt-2">
+              <div class="text-4xl sm:text-5xl font-black text-[#FF6600] font-outfit">PKR 25,000</div>
+              <div class="text-[11px] text-slate-400 font-semibold mt-1">Per Month • Monthly Upfront</div>
+            </div>
+
+            <div class="p-3 rounded-2xl bg-slate-900/90 border border-[#FF6600]/40 text-xs">
+              <div class="text-slate-400 text-[11px]">Recommended Ad Budget:</div>
+              <div class="font-bold text-[#FF6600]">PKR 50,000 – PKR 150,000 / month</div>
+            </div>
+
+            <ul class="space-y-2.5 text-xs text-slate-200 pt-3 border-t border-slate-800">
+              <li class="flex items-start gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-[#FF6600] flex-shrink-0 mt-0.5"></i>
+                <span><strong>Up to 3 Campaigns</strong> (Awareness, Lead Gen, Retargeting)</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-[#FF6600] flex-shrink-0 mt-0.5"></i>
+                <span><strong>4 Ad Creatives / month Included</strong> (Static + Carousel)</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-[#FF6600] flex-shrink-0 mt-0.5"></i>
+                <span>Systematic A/B Testing (Headlines, Media, Audiences)</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-[#FF6600] flex-shrink-0 mt-0.5"></i>
+                <span><strong>Pixel + Conversions API (CAPI)</strong> Server Setup</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-[#FF6600] flex-shrink-0 mt-0.5"></i>
+                <span>Weekly Analytics + Dedicated WhatsApp Group</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="pt-6 mt-6 border-t border-slate-800">
+            <a href="https://wa.me/923001234567?text=Hello%20Digital%20Ustad,%20I%20want%20the%20ADS%20GROWTH%20Package%20(PKR%2025,000/mo)!" target="_blank" class="w-full py-3.5 rounded-full bg-[#FF6600] hover:bg-[#EA580C] text-white font-bold text-xs flex items-center justify-center gap-2 shadow-lg orange-glow transition-all">
+              <span>Start Growth Retainer</span>
+              <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- 3. ADS SCALE -->
+        <div class="hover-lift bg-white rounded-3xl p-8 border border-slate-200 shadow-sm flex flex-col justify-between reveal delay-3">
+          <div class="space-y-4">
+            <div class="inline-flex items-center px-3 py-1 rounded-full bg-slate-100 text-slate-700 text-xs font-bold">
+              Multi-Channel Aggressive Scale
+            </div>
+            <h3 class="text-2xl font-extrabold text-slate-900">ADS SCALE</h3>
+            <p class="text-xs text-slate-500 leading-relaxed">
+              For established brands, schools, clinics, and multi-product stores scaling spend.
+            </p>
+            <div class="pt-2">
+              <div class="text-4xl sm:text-5xl font-black text-slate-900 font-outfit">PKR 40,000</div>
+              <div class="text-[11px] text-slate-400 font-semibold mt-1">Per Month • Monthly Upfront</div>
+            </div>
+
+            <div class="p-3 rounded-2xl bg-slate-50 border border-slate-200 text-xs">
+              <div class="text-slate-500 text-[11px]">Recommended Ad Budget:</div>
+              <div class="font-bold text-slate-900">PKR 150,000 – PKR 350,000 / month</div>
+            </div>
+
+            <ul class="space-y-2.5 text-xs text-slate-600 pt-3 border-t border-slate-100">
+              <li class="flex items-start gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-emerald-500 flex-shrink-0 mt-0.5"></i>
+                <span><strong>Full Funnel Strategy</strong> (TOF Cold, MOF Warm, BOF Hot)</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-emerald-500 flex-shrink-0 mt-0.5"></i>
+                <span><strong>8 Ad Creatives / month</strong> (Static + Motion/Video Ads)</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-emerald-500 flex-shrink-0 mt-0.5"></i>
+                <span>Advanced Custom Lookalike Audiences</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-emerald-500 flex-shrink-0 mt-0.5"></i>
+                <span>Weekly In-Depth Audits + Monthly Strategy Call</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-emerald-500 flex-shrink-0 mt-0.5"></i>
+                <span><strong>Senior Media Buyer Assigned</strong></span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="pt-6 mt-6 border-t border-slate-100">
+            <a href="https://wa.me/923001234567?text=Hello%20Digital%20Ustad,%20I%20want%20the%20ADS%20SCALE%20Package%20(PKR%2040,000/mo)!" target="_blank" class="w-full py-3.5 rounded-full bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs flex items-center justify-center gap-2 transition-all">
+              <span>Choose Scale Ads</span>
+              <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Google Ads & Combo Options -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8 reveal">
+        <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="inline-flex items-center px-2.5 py-1 rounded bg-blue-50 text-blue-700 text-[11px] font-bold mb-2">Google Search Ads Only</div>
+            <h4 class="text-lg font-bold text-slate-900">Google Search & Intent Ads</h4>
+            <p class="text-xs text-slate-500 mt-1">Capture high-intent searches ("best salon near me", "emergency plumber"). Includes keyword research, negative keywords, ad extensions, and call tracking.</p>
+          </div>
+          <div class="mt-4 pt-4 border-t border-slate-100 flex items-center justify-between">
+            <div class="text-2xl font-black text-slate-900 font-outfit">PKR 18,000 <span class="text-xs font-normal text-slate-500">/ mo</span></div>
+            <a href="https://wa.me/923001234567?text=Hello%20Digital%20Ustad,%20I%20want%20Google%20Search%20Ads!" target="_blank" class="px-4 py-2 rounded-xl bg-slate-900 text-white text-xs font-bold hover:bg-slate-800">Inquire</a>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-2xl p-6 border-2 border-emerald-500/60 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="inline-flex items-center px-2.5 py-1 rounded bg-emerald-50 text-emerald-700 text-[11px] font-bold mb-2">Omni-Channel Power Combo</div>
+            <h4 class="text-lg font-bold text-slate-900">Meta + Google Ads Dual Engine</h4>
+            <p class="text-xs text-slate-500 mt-1">Full management of both Meta (FB + IG) and Google Search Ads. Up to PKR 150,000 spend managed across both networks with synchronized retargeting.</p>
+          </div>
+          <div class="mt-4 pt-4 border-t border-slate-100 flex items-center justify-between">
+            <div>
+              <div class="text-2xl font-black text-emerald-600 font-outfit">PKR 35,000 <span class="text-xs font-normal text-slate-500">/ mo</span></div>
+              <span class="text-[10px] text-slate-400">Save PKR 8,000/mo vs separate retainers</span>
+            </div>
+            <a href="https://wa.me/923001234567?text=Hello%20Digital%20Ustad,%20I%20want%20Meta%20+%20Google%20Ads%20Combo!" target="_blank" class="px-4 py-2 rounded-xl bg-emerald-600 text-white text-xs font-bold hover:bg-emerald-700 shadow-md">Get Combo</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Critical Policy Alert Box -->
+      <div class="reveal p-5 rounded-2xl bg-amber-500/10 border border-amber-500/30 text-xs text-slate-700 flex items-start gap-3">
+        <i data-lucide="info" class="w-5 h-5 text-amber-500 flex-shrink-0 mt-0.5"></i>
+        <div class="space-y-1">
+          <div class="font-bold text-slate-900">Important Ads Policy:</div>
+          <p class="text-slate-600 leading-relaxed">
+            <strong>Ad Spend:</strong> The amounts listed above are management service fees. Your advertising budget is paid directly to Meta or Google via your business debit/credit card. Digital Ustad never handles client ad budgets directly, ensuring 100% financial transparency.<br>
+            <strong>Setup Fee:</strong> One-time account setup and tracking pixel integration fee is <strong>PKR 5,000</strong> (Waived completely with a 3-month upfront commitment).
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- DARK CTA BANNER -->
+  <section class="py-12 pb-20 bg-white">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="reveal relative bg-[#0B0F19] rounded-3xl p-8 sm:p-12 text-white border border-slate-800 shadow-2xl overflow-hidden">
+        <div class="flex flex-col sm:flex-row items-center justify-between gap-8">
+          <div class="space-y-2 text-center sm:text-left">
+            <h3 class="text-2xl sm:text-3xl font-extrabold">Ready to get more leads and sales?</h3>
+            <p class="text-slate-400 text-sm">Let's create a campaign that works.</p>
+          </div>
+          <div class="flex items-center gap-4">
+            <button class="btn-get-started btn-shine px-7 py-3.5 rounded-full bg-[#FF6600] hover:bg-[#EA580C] text-white font-bold text-sm shadow-xl orange-glow transition-all">
+              <span>Get Started</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= COMPREHENSIVE FOOTER ================= -->
+  <footer class="bg-[#0B0F19] text-slate-400 pt-16 pb-12 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-slate-800">
+        
+        <!-- Col 1: Brand & About (Spans 2 cols on desktop) -->
+        <div class="lg:col-span-2 space-y-4">
+          <a href="index.html" class="inline-block group">
+            <img src="assets/images/logo-dark.png" alt="Digital Ustad" class="h-10 sm:h-11 w-auto object-contain transition-transform duration-300 group-hover:scale-105">
+          </a>
+          <p class="text-xs sm:text-sm text-slate-400 leading-relaxed max-w-sm">
+            Pakistan's leading digital partner for small & medium businesses. We build fast, beautiful websites, run ROI-driven marketing, and automate operations.
+          </p>
+          <div class="flex items-center gap-3 text-slate-400 pt-2">
+            <a href="https://wa.me/923001234567" target="_blank" class="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center hover:bg-[#FF6600] hover:text-white transition-colors" title="WhatsApp">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12.012 2c-5.506 0-9.989 4.478-9.99 9.984a9.964 9.964 0 0 0 1.333 4.993L2 22l5.233-1.237a9.994 9.994 0 0 0 4.779 1.217h.004c5.505 0 9.988-4.478 9.989-9.984 0-2.669-1.037-5.176-2.925-7.062A9.925 9.925 0 0 0 12.012 2zm5.835 14.198c-.244.688-1.227 1.26-1.786 1.32-.472.052-1.077.08-3.155-.783-2.658-1.102-4.363-3.807-4.496-3.983-.133-.176-1.076-1.433-1.076-2.733 0-1.3.68-1.94.92-2.203.24-.263.523-.328.698-.328.174 0 .349.002.502.01.163.008.382-.062.597.455.22.531.75 1.83.815 1.963.065.133.109.288.022.463-.087.175-.131.284-.262.437-.13.153-.275.342-.393.459-.13.13-.266.27-.115.53.151.26 1.002 1.65 2.148 2.671 1.472 1.312 2.71 1.718 3.097 1.91.387.192.613.16.84-.102.228-.263.974-1.134 1.235-1.523.26-.39.522-.325.872-.196.35.13 2.22 1.047 2.602 1.238.382.19.637.284.73.444.093.16.093.928-.151 1.616z"/></svg>
+            </a>
+            <a href="mailto:contact@digitalustad.com" class="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center hover:bg-[#FF6600] hover:text-white transition-colors" title="Email">
+              <i data-lucide="mail" class="w-4 h-4"></i>
+            </a>
+            <a href="tel:+923001234567" class="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center hover:bg-[#FF6600] hover:text-white transition-colors" title="Phone">
+              <i data-lucide="phone" class="w-4 h-4"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Col 2: Services -->
+        <div class="space-y-3">
+          <h4 class="text-sm font-bold text-white uppercase tracking-wider">Services</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="service-web-development.html" class="hover:text-[#FF6600] transition-colors">Web Development</a></li>
+            <li><a href="service-social-media.html" class="hover:text-[#FF6600] transition-colors">Social Media Marketing</a></li>
+            <li><a href="service-graphic-design.html" class="hover:text-[#FF6600] transition-colors">Graphic & Brand Identity</a></li>
+            <li><a href="service-meta-google-ads.html" class="text-[#FF6600] font-bold">Meta & Google Ads</a></li>
+            <li><a href="service-seo-google-business.html" class="hover:text-[#FF6600] transition-colors">SEO & Google Maps</a></li>
+            <li><a href="service-whatsapp-automation.html" class="hover:text-[#FF6600] transition-colors">WhatsApp Automation</a></li>
+            <li><a href="pricing.html" class="text-[#FF6600] font-semibold hover:underline">Pricing & Packages</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Quick Links -->
+        <div class="space-y-3">
+          <h4 class="text-sm font-bold text-white uppercase tracking-wider">Quick Links</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="index.html" class="hover:text-[#FF6600] transition-colors">Home</a></li>
+            <li><a href="about.html" class="hover:text-[#FF6600] transition-colors">About Us</a></li>
+            <li><a href="services.html" class="hover:text-[#FF6600] transition-colors">All Services</a></li>
+            <li><a href="pricing.html" class="hover:text-[#FF6600] transition-colors">Pricing & Plans</a></li>
+            <li><a href="solutions.html" class="hover:text-[#FF6600] transition-colors">Industries & Solutions</a></li>
+            <li><a href="how-it-works.html" class="hover:text-[#FF6600] transition-colors">How It Works</a></li>
+            <li><a href="portfolio.html" class="hover:text-[#FF6600] transition-colors">Our Portfolio</a></li>
+            <li><a href="contact.html" class="hover:text-[#FF6600] transition-colors">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Get In Touch -->
+        <div class="space-y-3">
+          <h4 class="text-sm font-bold text-white uppercase tracking-wider">Get In Touch</h4>
+          <ul class="space-y-2.5 text-xs text-slate-300">
+            <li class="flex items-start gap-2">
+              <i data-lucide="map-pin" class="w-4 h-4 text-[#FF6600] flex-shrink-0 mt-0.5"></i>
+              <span>Lahore, Pakistan & Worldwide Remote</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <i data-lucide="phone" class="w-4 h-4 text-[#FF6600] flex-shrink-0"></i>
+              <span>+92 300 1234567</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <i data-lucide="mail" class="w-4 h-4 text-[#FF6600] flex-shrink-0"></i>
+              <span>contact@digitalustad.com</span>
+            </li>
+            <li class="flex items-center gap-2 text-emerald-400 font-semibold">
+              <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+              <span>24/7 WhatsApp Assistance</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Bottom Copyright & Legal -->
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
+        <div>
+          © 2026 Digital Ustad. All Rights Reserved. Designed for High Performance.
+        </div>
+        <div class="flex items-center gap-6">
+          <a href="#" class="hover:text-slate-400 transition-colors">Privacy Policy</a>
+          <a href="#" class="hover:text-slate-400 transition-colors">Terms of Service</a>
+          <a href="#" class="hover:text-slate-400 transition-colors">Refund Policy</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <a href="https://wa.me/923001234567?text=Hello%20Digital%20Ustad,%20I%20want%20Meta%20and%20Google%20Ads!" target="_blank" class="fixed bottom-6 right-6 z-40 w-14 h-14 rounded-full bg-emerald-500 hover:bg-emerald-600 text-white flex items-center justify-center shadow-2xl hover:scale-110 active:scale-95 transition-all group" title="Chat on WhatsApp">
+    <div class="radar-ring"></div>
+    <svg class="w-7 h-7 fill-current" viewBox="0 0 24 24"><path d="M12.012 2c-5.506 0-9.989 4.478-9.99 9.984a9.964 9.964 0 0 0 1.333 4.993L2 22l5.233-1.237a9.994 9.994 0 0 0 4.779 1.217h.004c5.505 0 9.988-4.478 9.989-9.984 0-2.669-1.037-5.176-2.925-7.062A9.925 9.925 0 0 0 12.012 2zm5.835 14.198c-.244.688-1.227 1.26-1.786 1.32-.472.052-1.077.08-3.155-.783-2.658-1.102-4.363-3.807-4.496-3.983-.133-.176-1.076-1.433-1.076-2.733 0-1.3.68-1.94.92-2.203.24-.263.523-.328.698-.328.174 0 .349.002.502.01.163.008.382-.062.597.455.22.531.75 1.83.815 1.963.065.133.109.288.022.463-.087.175-.131.284-.262.437-.13.153-.275.342-.393.459-.13.13-.266.27-.115.53.151.26 1.002 1.65 2.148 2.671 1.472 1.312 2.71 1.718 3.097 1.91.387.192.613.16.84-.102.228-.263.974-1.134 1.235-1.523.26-.39.522-.325.872-.196.35.13 2.22 1.047 2.602 1.238.382.19.637.284.73.444.093.16.093.928-.151 1.616z"/></svg>
+  </a>
+
+  <!-- QUOTATION MODAL -->
+  <div id="quote-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/80 modal-backdrop hidden p-4">
+    <div class="modal-box bg-white rounded-3xl max-w-lg w-full p-6 sm:p-8 shadow-2xl relative scale-95 opacity-0 transition-all duration-200">
+      <button id="close-quote-modal" class="absolute top-5 right-5 w-8 h-8 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-500 flex items-center justify-center"><i data-lucide="x" class="w-5 h-5"></i></button>
+      <div class="mb-6">
+        <h3 class="text-2xl font-extrabold text-slate-900">Get Paid Advertising Quote</h3>
+        <p class="text-xs text-slate-500 mt-1">Scale your revenue with high-performing Meta & Google Ad campaigns.</p>
+      </div>
+      <form id="quote-form" class="space-y-4">
+        <div>
+          <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Your Name *</label>
+          <input type="text" id="client-name" required placeholder="Ali Khan" class="w-full px-4 py-2.5 rounded-xl border text-sm">
+        </div>
+        <div>
+          <label class="block text-xs font-bold text-slate-700 uppercase mb-1">WhatsApp Number *</label>
+          <input type="tel" id="client-phone" required placeholder="0300 1234567" class="w-full px-4 py-2.5 rounded-xl border text-sm">
+        </div>
+        <div>
+          <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Ads Package</label>
+          <select id="client-service" class="w-full px-3 py-2.5 rounded-xl border text-sm bg-white">
+            <option value="Ads Growth Retainer (PKR 25,000/mo)">Ads Growth Retainer (PKR 25,000/mo) ⭐</option>
+            <option value="Ads Starter Retainer (PKR 15,000/mo)">Ads Starter Retainer (PKR 15,000/mo)</option>
+            <option value="Ads Scale Retainer (PKR 40,000/mo)">Ads Scale Retainer (PKR 40,000/mo)</option>
+            <option value="Meta + Google Combo (PKR 35,000/mo)">Meta + Google Combo (PKR 35,000/mo)</option>
+            <option value="Google Search Ads (PKR 18,000/mo)">Google Search Ads (PKR 18,000/mo)</option>
+          </select>
+        </div>
+        <button type="submit" class="btn-shine w-full py-3.5 rounded-xl bg-[#FF6600] text-white font-bold text-sm shadow-xl flex items-center justify-center gap-2">
+          <span>Send via WhatsApp</span>
+          <i data-lucide="send" class="w-4 h-4"></i>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+  <script>lucide.createIcons();</script>
+</body>
+</html>
+
