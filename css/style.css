@@ -380,3 +380,226 @@ body {
   transform: scale(1.08);
   filter: brightness(1.05);
 }
+
+/* ==========================================================================
+   LIGHT & DARK MODE STYLING ENGINE
+   ========================================================================== */
+
+/* Theme transitions */
+body, section, div, header, footer, input, textarea, select, button {
+  transition: background-color 0.25s ease, border-color 0.25s ease, color 0.2s ease, box-shadow 0.25s ease;
+}
+
+/* Base dark styles */
+html.dark {
+  color-scheme: dark;
+}
+
+html.dark body {
+  background-color: #0B0F19 !important;
+  color: #F1F5F9 !important;
+}
+
+/* Dark mode section backgrounds */
+html.dark section.bg-white,
+html.dark section.bg-\[\#FAFAFA\],
+html.dark section.bg-slate-50,
+html.dark section.bg-gray-50 {
+  background-color: #0B0F19 !important;
+}
+
+/* Bento & Card containers in dark mode */
+html.dark .bento-card {
+  background: rgba(17, 24, 39, 0.88) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.6), 0 0 20px rgba(0, 0, 0, 0.3) !important;
+}
+
+html.dark .bento-card:hover {
+  border-color: rgba(255, 102, 0, 0.35) !important;
+  box-shadow: 0 20px 40px -15px rgba(255, 102, 0, 0.2), 0 0 25px rgba(255, 102, 0, 0.1) !important;
+}
+
+/* Cards & Elevated Containers in Dark Mode */
+html.dark .hover-lift,
+html.dark .rounded-3xl.bg-white,
+html.dark .rounded-2xl.bg-white,
+html.dark .rounded-xl.bg-white,
+html.dark .rounded-3xl.bg-\[\#FAFAFA\],
+html.dark .rounded-2xl.bg-\[\#FAFAFA\],
+html.dark .rounded-xl.bg-\[\#FAFAFA\],
+html.dark .bg-white:not(section):not(header):not(body),
+html.dark .bg-\[\#FAFAFA\]:not(section):not(header):not(body),
+html.dark .bg-slate-50:not(section):not(header):not(body) {
+  background-color: #111827 !important;
+  border-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+/* Dark mode text colors */
+html.dark .text-slate-900,
+html.dark .text-slate-800,
+html.dark .text-gray-900,
+html.dark .text-gray-800 {
+  color: #F8FAFC !important;
+}
+
+html.dark .text-slate-700,
+html.dark .text-gray-700 {
+  color: #E2E8F0 !important;
+}
+
+html.dark .text-slate-600,
+html.dark .text-slate-500,
+html.dark .text-gray-600,
+html.dark .text-gray-500 {
+  color: #94A3B8 !important;
+}
+
+/* Dark mode borders */
+html.dark .border-slate-100,
+html.dark .border-slate-200,
+html.dark .border-slate-200\/70,
+html.dark .border-slate-200\/80,
+html.dark .border-slate-200\/90,
+html.dark .border-slate-300,
+html.dark .border-gray-100,
+html.dark .border-gray-200 {
+  border-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+html.dark .border-t,
+html.dark .border-b,
+html.dark .border-y {
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+/* Light badges / pills in dark mode */
+html.dark .bg-slate-100,
+html.dark .bg-slate-200 {
+  background-color: #1E293B !important;
+  color: #E2E8F0 !important;
+}
+
+html.dark .bg-orange-50,
+html.dark .bg-orange-50\/60,
+html.dark .bg-orange-100 {
+  background-color: rgba(255, 102, 0, 0.12) !important;
+}
+
+html.dark .bg-emerald-50,
+html.dark .bg-emerald-100 {
+  background-color: rgba(16, 185, 129, 0.12) !important;
+}
+
+html.dark .bg-blue-50,
+html.dark .bg-blue-100 {
+  background-color: rgba(59, 130, 246, 0.12) !important;
+}
+
+html.dark .bg-purple-50,
+html.dark .bg-purple-100 {
+  background-color: rgba(168, 85, 247, 0.12) !important;
+}
+
+/* Form Inputs & Controls in Dark Mode */
+html.dark input[type="text"],
+html.dark input[type="email"],
+html.dark input[type="tel"],
+html.dark textarea,
+html.dark select {
+  background-color: #161F30 !important;
+  color: #F8FAFC !important;
+  border-color: #2D3B53 !important;
+}
+
+html.dark input::placeholder,
+html.dark textarea::placeholder {
+  color: #64748B !important;
+}
+
+html.dark input:focus,
+html.dark textarea:focus,
+html.dark select:focus {
+  border-color: #FF6600 !important;
+  box-shadow: 0 0 0 2px rgba(255, 102, 0, 0.25) !important;
+}
+
+html.dark select option {
+  background-color: #161F30;
+  color: #F8FAFC;
+}
+
+/* Modals in Dark Mode */
+html.dark .modal-box {
+  background-color: #111827 !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  color: #F8FAFC !important;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.8) !important;
+}
+
+html.dark #close-project-modal,
+html.dark #close-quote-modal {
+  background-color: #1E293B !important;
+  color: #CBD5E1 !important;
+}
+
+html.dark #close-project-modal:hover,
+html.dark #close-quote-modal:hover {
+  background-color: #334155 !important;
+  color: #FFFFFF !important;
+}
+
+/* Filter buttons in portfolio */
+html.dark .filter-btn:not(.bg-\[\#FF6600\]) {
+  background-color: #1E293B !important;
+  color: #94A3B8 !important;
+}
+
+html.dark .filter-btn:not(.bg-\[\#FF6600\]):hover {
+  background-color: #2D3B53 !important;
+  color: #FFFFFF !important;
+}
+
+/* Theme Toggle Button */
+.theme-toggle-btn {
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+  width: 40px;
+  height: 40px;
+}
+
+.theme-toggle-btn:hover {
+  transform: scale(1.08);
+}
+
+.theme-toggle-btn:active {
+  transform: scale(0.92);
+}
+
+/* Icon visibility control */
+html.dark .theme-icon-moon {
+  display: none !important;
+}
+html.dark .theme-icon-sun {
+  display: block !important;
+}
+html:not(.dark) .theme-icon-moon {
+  display: block !important;
+}
+html:not(.dark) .theme-icon-sun {
+  display: none !important;
+}
+
+/* Pricing Tab Buttons in Dark Mode */
+html.dark .pricing-tab-btn:not(.active) {
+  background-color: #1E293B !important;
+  color: #94A3B8 !important;
+  border-color: #334155 !important;
+}
+
+html.dark .pricing-tab-btn:not(.active):hover {
+  background-color: #2D3B53 !important;
+  color: #F8FAFC !important;
+}
+

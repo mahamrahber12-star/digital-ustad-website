@@ -3,6 +3,37 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
+  // 0. Theme Toggle & Persistence Engine
+  const themeToggleBtns = document.querySelectorAll('.theme-toggle-btn');
+
+  const updateTheme = (isDark) => {
+    if (isDark) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+    if (window.lucide && typeof window.lucide.createIcons === 'function') {
+      window.lucide.createIcons();
+    }
+  };
+
+  themeToggleBtns.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const isCurrentlyDark = document.documentElement.classList.contains('dark');
+      const newDark = !isCurrentlyDark;
+      localStorage.setItem('du_theme', newDark ? 'dark' : 'light');
+      updateTheme(newDark);
+    });
+  });
+
+  // Listen for OS system theme changes if user hasn't explicitly set a preference
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+    if (!localStorage.getItem('du_theme')) {
+      updateTheme(e.matches);
+    }
+  });
+
   // 1. Scroll Progress Bar & Back To Top Button
   const scrollProgress = document.getElementById('scroll-progress');
   const backToTopBtn = document.getElementById('back-to-top');
@@ -348,5 +379,58 @@ document.addEventListener('DOMContentLoaded', () => {
     projectModal.addEventListener('click', (e) => {
       if (e.target === projectModal) closeProjectModal();
     });
+  }
+
+  // 10. Interactive Pricing Category Tabs Switcher
+  const pricingTabBtns = document.querySelectorAll('.pricing-tab-btn');
+  const pricingTabContents = document.querySelectorAll('.pricing-tab-content');
+
+  if (pricingTabBtns.length > 0 && pricingTabContents.length > 0) {
+    const activateTab = (targetId) => {
+      const btn = Array.from(pricingTabBtns).find(b => b.getAttribute('data-target') === targetId);
+      if (!btn) return;
+
+      // Reset button states
+      pricingTabBtns.forEach(b => {
+        b.classList.remove('active', 'bg-[#FF6600]', 'text-white', 'shadow-md');
+        b.classList.add('bg-white', 'text-slate-700', 'hover:bg-slate-100', 'border', 'border-slate-200');
+      });
+
+      // Activate target button
+      btn.classList.add('active', 'bg-[#FF6600]', 'text-white', 'shadow-md');
+      btn.classList.remove('bg-white', 'text-slate-700', 'hover:bg-slate-100', 'border', 'border-slate-200');
+
+      // Toggle matching content
+      pricingTabContents.forEach(content => {
+        if (content.id === targetId) {
+          content.classList.remove('hidden');
+        } else {
+          content.classList.add('hidden');
+        }
+      });
+
+      if (window.lucide && typeof window.lucide.createIcons === 'function') {
+        window.lucide.createIcons();
+      }
+    };
+
+    pricingTabBtns.forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        const targetId = btn.getAttribute('data-target');
+        if (targetId) {
+          activateTab(targetId);
+          if (window.history && window.history.replaceState) {
+            window.history.replaceState(null, null, '#' + targetId);
+          }
+        }
+      });
+    });
+
+    // Check if initial hash matches a tab
+    if (window.location.hash) {
+      const hashId = window.location.hash.replace('#', '');
+      activateTab(hashId);
+    }
   }
 });
