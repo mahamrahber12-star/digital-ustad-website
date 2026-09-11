@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy | Digital Ustad</title>
+  <meta name="description" content="Digital Ustad Privacy Policy. Transparent data handling, client confidentiality, and WhatsApp communication standards for Pakistani businesses.">
+  <link rel="icon" type="image/png" href="assets/images/favicon.png">
+  
+  <script>
+    (function() {
+      const savedTheme = localStorage.getItem('du_theme');
+      const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      if (savedTheme === 'dark' || (!savedTheme && systemDark)) {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+      }
+    })();
+  </script>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              orange: '#FF6600',
+              orangeHover: '#EA580C',
+              orangeLight: '#FFF7ED',
+              dark: '#0B0F19',
+              darkCard: '#111827',
+              slateText: '#94A3B8'
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            outfit: ['"Outfit"', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-white dark:bg-[#0B0F19] text-slate-800 dark:text-slate-100 antialiased selection:bg-[#FF6600] selection:text-white relative">
+
+  <div id="scroll-progress"></div>
+
+  <!-- NAVBAR -->
+  <header class="sticky top-0 z-50 bg-[#0B0F19]/95 backdrop-blur-md border-b border-slate-800/80 transition-all">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <a href="index.html" class="flex items-center group">
+          <img src="assets/images/logo-dark.png" alt="Digital Ustad" class="h-10 sm:h-11 w-auto object-contain transition-transform duration-300 group-hover:scale-105">
+        </a>
+
+        <nav class="hidden md:flex items-center gap-7">
+          <a href="index.html" class="text-sm font-semibold text-slate-300 hover:text-[#FF6600] transition-colors">Home</a>
+          <a href="services.html" class="text-sm font-semibold text-slate-300 hover:text-[#FF6600] transition-colors">Services</a>
+          <a href="pricing.html" class="text-sm font-semibold text-slate-300 hover:text-[#FF6600] transition-colors">Pricing</a>
+          <a href="solutions.html" class="text-sm font-semibold text-slate-300 hover:text-[#FF6600] transition-colors">Solutions</a>
+          <a href="how-it-works.html" class="text-sm font-semibold text-slate-300 hover:text-[#FF6600] transition-colors">How It Works</a>
+          <a href="portfolio.html" class="text-sm font-semibold text-slate-300 hover:text-[#FF6600] transition-colors">Portfolio</a>
+          <a href="about.html" class="text-sm font-semibold text-slate-300 hover:text-[#FF6600] transition-colors">About Us</a>
+          <a href="contact.html" class="text-sm font-semibold text-slate-300 hover:text-[#FF6600] transition-colors">Contact</a>
+        </nav>
+
+        <div class="flex items-center gap-3 sm:gap-4">
+          <button type="button" class="theme-toggle-btn rounded-full text-slate-300 hover:text-white bg-slate-800/80 hover:bg-slate-700 border border-slate-700/70 transition-all flex items-center justify-center focus:outline-none" aria-label="Toggle theme">
+            <i data-lucide="moon" class="w-4 h-4 text-amber-300 theme-icon-moon"></i>
+            <i data-lucide="sun" class="w-4 h-4 text-amber-400 theme-icon-sun"></i>
+          </button>
+          <a href="contact.html" class="btn-shine hidden sm:inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-[#FF6600] text-white text-sm font-bold shadow-lg">
+            <span>Get Started</span>
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </a>
+          <button id="mobile-menu-btn" class="md:hidden p-2.5 rounded-xl text-slate-300 hover:text-white">
+            <i data-lucide="menu" class="w-6 h-6"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- MOBILE DRAWER -->
+  <div id="mobile-drawer" class="fixed inset-0 z-50 bg-[#0B0F19]/95 backdrop-blur-xl transition-all duration-300 hidden opacity-0 pointer-events-none md:hidden">
+    <div class="flex flex-col h-full p-6">
+      <div class="flex items-center justify-between pb-6 border-b border-slate-800">
+        <a href="index.html"><img src="assets/images/logo-dark.png" alt="Digital Ustad" class="h-9 w-auto"></a>
+        <button id="close-mobile-menu" class="p-2 text-slate-400 hover:text-white"><i data-lucide="x" class="w-7 h-7"></i></button>
+      </div>
+      <div class="flex flex-col gap-5 py-8 flex-1">
+        <a href="index.html" class="mobile-nav-link text-lg font-semibold text-slate-300 hover:text-[#FF6600]">Home</a>
+        <a href="services.html" class="mobile-nav-link text-lg font-semibold text-slate-300 hover:text-[#FF6600]">Services</a>
+        <a href="pricing.html" class="mobile-nav-link text-lg font-semibold text-slate-300 hover:text-[#FF6600]">Pricing</a>
+        <a href="solutions.html" class="mobile-nav-link text-lg font-semibold text-slate-300 hover:text-[#FF6600]">Solutions</a>
+        <a href="how-it-works.html" class="mobile-nav-link text-lg font-semibold text-slate-300 hover:text-[#FF6600]">How It Works</a>
+        <a href="portfolio.html" class="mobile-nav-link text-lg font-semibold text-slate-300 hover:text-[#FF6600]">Portfolio</a>
+        <a href="about.html" class="mobile-nav-link text-lg font-semibold text-slate-300 hover:text-[#FF6600]">About Us</a>
+        <a href="contact.html" class="mobile-nav-link text-lg font-semibold text-slate-300 hover:text-[#FF6600]">Contact</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- PAGE HEADER -->
+  <section class="bg-[#0B0F19] text-white py-14 lg:py-20 relative border-b border-slate-800">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <span class="text-xs font-extrabold uppercase tracking-widest text-[#FF6600] bg-slate-900 border border-slate-700/80 px-4 py-1.5 rounded-full inline-block mb-3">
+        LEGAL & COMPLIANCE
+      </span>
+      <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight font-outfit">
+        Privacy Policy
+      </h1>
+      <p class="text-slate-400 text-xs sm:text-sm mt-3">
+        Effective Date: January 1, 2026 • Last Updated: September 2026 • Digital Ustad, Lahore, Pakistan
+      </p>
+    </div>
+  </section>
+
+  <!-- CONTENT -->
+  <main class="py-14 sm:py-20 bg-white dark:bg-[#0B0F19]">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10 text-slate-700 dark:text-slate-300 text-sm leading-relaxed">
+      
+      <section class="space-y-3">
+        <h2 class="text-xl font-bold text-slate-900 dark:text-white">1. Introduction & Overview</h2>
+        <p>
+          At <strong>Digital Ustad</strong> ("we", "our", or "us"), we value the trust placed in us by Pakistani small-and-medium businesses, entrepreneurs, and international clients. This Privacy Policy explains what information we collect, how it is utilized, and how we ensure the utmost confidentiality of your business data, WhatsApp communications, and digital credentials.
+        </p>
+      </section>
+
+      <section class="space-y-3">
+        <h2 class="text-xl font-bold text-slate-900 dark:text-white">2. Information We Collect</h2>
+        <p>We only collect data strictly necessary to deliver high-quality digital agency services:</p>
+        <ul class="list-disc pl-5 space-y-1.5">
+          <li><strong>Contact & Business Identification:</strong> Name, WhatsApp phone number, business email, city of operation (e.g. Lahore, Karachi, Islamabad), and business vertical.</li>
+          <li><strong>Project Specifications:</strong> Brand guidelines, design preferences, website reference links, menu files, inventory listings, and text copy provided for website creation.</li>
+          <li><strong>Technical Access Credentials:</strong> Hosting server logins, domain registrar DNS credentials, Meta Business Manager access, or Google Search Console permissions required to deploy your website or manage ad campaigns.</li>
+        </ul>
+      </section>
+
+      <section class="space-y-3">
+        <h2 class="text-xl font-bold text-slate-900 dark:text-white">3. How We Use Your Information</h2>
+        <p>Your information is used solely for commercial and technical execution, including:</p>
+        <ul class="list-disc pl-5 space-y-1.5">
+          <li>Preparing proposals, milestone scopes, and quotation estimates.</li>
+          <li>Direct communication via WhatsApp, telephone, or email regarding project revisions and delivery milestones.</li>
+          <li>Deploying websites to Netlify/servers, configuring DNS records, and setting up Google Business Profiles.</li>
+          <li>We never sell, rent, or trade your phone number, customer databases, or business assets to third-party telemarketers or advertisers.</li>
+        </ul>
+      </section>
+
+      <section class="space-y-3">
+        <h2 class="text-xl font-bold text-slate-900 dark:text-white">4. Credential Security & Handover Protocol</h2>
+        <p>
+          We take credential security seriously. Any temporary hosting or domain passwords shared with our engineering team are stored in encrypted vaults during development and deleted upon project completion and final payment handover. We urge clients to reset access passwords once our handover documentation is provided.
+        </p>
+      </section>
+
+      <section class="space-y-3">
+        <h2 class="text-xl font-bold text-slate-900 dark:text-white">5. Third-Party Services & Integrations</h2>
+        <p>
+          Depending on your service package, your project may integrate third-party infrastructure such as Meta Cloud API, WhatsApp Business API, Google Cloud / Search Console, or Netlify hosting. These providers maintain their own privacy standards and data policies.
+        </p>
+      </section>
+
+      <section class="space-y-3">
+        <h2 class="text-xl font-bold text-slate-900 dark:text-white">6. Inquiries & Contact</h2>
+        <p>
+          For questions regarding our privacy practices or to request data deletion, contact our administrative team:
+        </p>
+        <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 space-y-1 text-xs">
+          <div><strong>Digital Ustad Legal & Administrative Office</strong></div>
+          <div>Location: Lahore, Punjab, Pakistan</div>
+          <div>Official Email: <a href="mailto:contact@digitalustad.com" class="text-[#FF6600] font-bold">contact@digitalustad.com</a></div>
+          <div>WhatsApp Inquiries: +92 300 1234567</div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-[#0B0F19] text-slate-400 pt-12 pb-10 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col sm:flex-row items-center justify-between text-xs gap-4">
+        <div>© 2026 Digital Ustad. All Rights Reserved. Registered Digital Agency in Lahore, Pakistan.</div>
+        <div class="flex items-center gap-6">
+          <a href="privacy.html" class="text-[#FF6600] font-bold">Privacy Policy</a>
+          <a href="terms.html" class="hover:text-slate-300 transition-colors">Terms of Service</a>
+          <a href="refund.html" class="hover:text-slate-300 transition-colors">Refund Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>lucide.createIcons();</script>
+</body>
+</html>

@@ -1,6 +1,18 @@
 /**
  * Digital Ustad - Interactive Engine & Premium Animations
+ * Configured for Pakistan SMB Market (WhatsApp-First, Mobile-Dominant)
  */
+
+// Central Brand Configuration
+const DU_CONFIG = {
+  whatsappNumber: '923001234567', // Replace with live WhatsApp (E.164 without +)
+  displayPhone: '+92 300 1234567',
+  officialEmail: 'contact@digitalustad.com',
+  officeLocation: 'Lahore, Pakistan',
+  verifiedWebsites: '10+',
+  verifiedClients: '5+',
+  yearsActive: '2+'
+};
 
 document.addEventListener('DOMContentLoaded', () => {
   // 0. Theme Toggle & Persistence Engine
@@ -83,10 +95,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
   revealElements.forEach(el => revealObserver.observe(el));
 
-  // 3. Mobile Navigation Drawer Toggle
+  // 3. Mobile Navigation Drawer Toggle (Handles both IDs for cross-page consistency)
   const mobileMenuBtn = document.getElementById('mobile-menu-btn');
   const mobileMenuDrawer = document.getElementById('mobile-drawer');
-  const closeMobileMenuBtn = document.getElementById('close-mobile-menu');
+  const closeMobileMenuBtns = document.querySelectorAll('#close-mobile-menu, #close-drawer-btn');
   const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
 
   if (mobileMenuBtn && mobileMenuDrawer) {
@@ -104,26 +116,37 @@ document.addEventListener('DOMContentLoaded', () => {
       }, 300);
     };
 
-    if (closeMobileMenuBtn) closeMobileMenuBtn.addEventListener('click', closeDrawer);
+    closeMobileMenuBtns.forEach(btn => btn.addEventListener('click', closeDrawer));
     mobileNavLinks.forEach(link => link.addEventListener('click', closeDrawer));
   }
 
-  // 4. Counter Animation on Scroll
+  // 4. Counter Animation on Scroll (DU-HOME-001 Fix: Instant fallback + smooth animation)
   const statNumbers = document.querySelectorAll('.stat-number');
-  let statsAnimated = false;
+  
+  // Immediately initialize with target value so counters NEVER sit at "0+"
+  statNumbers.forEach(stat => {
+    const target = stat.getAttribute('data-target');
+    const suffix = stat.getAttribute('data-suffix') || '';
+    if (target) {
+      stat.textContent = target + suffix;
+    }
+  });
 
+  let statsAnimated = false;
   const animateCounters = () => {
     statNumbers.forEach(stat => {
       const target = parseInt(stat.getAttribute('data-target'), 10);
       const suffix = stat.getAttribute('data-suffix') || '';
-      const duration = 2000;
+      if (isNaN(target)) return;
+
+      const duration = 1600;
       const startTime = performance.now();
 
       const updateCount = (currentTime) => {
         const elapsed = currentTime - startTime;
         const progress = Math.min(elapsed / duration, 1);
         const ease = 1 - Math.pow(1 - progress, 4);
-        const currentVal = Math.floor(ease * target);
+        const currentVal = Math.max(1, Math.floor(ease * target));
         
         stat.textContent = currentVal + suffix;
 
@@ -147,7 +170,7 @@ document.addEventListener('DOMContentLoaded', () => {
           animateCounters();
         }
       });
-    }, { threshold: 0.25 });
+    }, { threshold: 0.15 });
 
     statsObserver.observe(statsSection);
   }
@@ -198,7 +221,6 @@ document.addEventListener('DOMContentLoaded', () => {
     if (btn && answer) {
       btn.addEventListener('click', () => {
         const isOpen = !answer.classList.contains('hidden');
-        // Close all
         document.querySelectorAll('.faq-answer').forEach(a => a.classList.add('hidden'));
         document.querySelectorAll('.faq-icon').forEach(i => i.style.transform = 'rotate(0deg)');
 
@@ -210,11 +232,124 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // 8. Quotation / Get Started Modal
+  // 8. Phone Validation & Unified WhatsApp Proposal Flow (FORM-01 to FORM-10)
+  const isValidPakistanPhone = (phone) => {
+    if (!phone) return false;
+    const cleaned = phone.replace(/[\s\-\(\)\.]/g, '');
+    // Accepts 03XXXXXXXXX, +923XXXXXXXXX, 00923XXXXXXXXX, 923XXXXXXXXX (JazzCash, EasyPaisa, Mobile)
+    const pkRegex = /^((\+92)|(0092)|(92)|(0))?3[0-9]{9}$/;
+    return pkRegex.test(cleaned);
+  };
+
+  const handleProposalSubmission = (form) => {
+    const nameInput = form.querySelector('[id*="name"]') || form.querySelector('input[name="name"]');
+    const phoneInput = form.querySelector('[id*="phone"]') || form.querySelector('input[name="phone"]');
+    const serviceSelect = form.querySelector('[id*="service"]') || form.querySelector('select[name="service"]');
+    const budgetSelect = form.querySelector('[id*="budget"]') || form.querySelector('select[name="budget"]');
+    const messageInput = form.querySelector('[id*="message"]') || form.querySelector('textarea');
+    const submitBtn = form.querySelector('button[type="submit"]');
+
+    const name = nameInput?.value.trim() || '';
+    const phone = phoneInput?.value.trim() || '';
+    const service = serviceSelect?.value || 'Website Development';
+    const budget = budgetSelect?.value || 'Standard Business Budget';
+    let message = messageInput?.value.trim() || '';
+
+    // Clear previous inline errors
+    form.querySelectorAll('.du-form-error').forEach(el => el.remove());
+    [nameInput, phoneInput].forEach(inp => inp?.classList.remove('border-red-500', 'ring-2', 'ring-red-400'));
+
+    let hasError = false;
+
+    // FORM-01: Name validation
+    if (!name || name.length < 2) {
+      hasError = true;
+      if (nameInput) {
+        nameInput.classList.add('border-red-500', 'ring-2', 'ring-red-400');
+        const err = document.createElement('p');
+        err.className = 'du-form-error text-[11px] text-red-500 font-semibold mt-1';
+        err.textContent = 'Please provide your full name.';
+        nameInput.parentNode.appendChild(err);
+      }
+    }
+
+    // FORM-02 & FORM-10: Phone validation (Accepts JazzCash, EasyPaisa, 03xx, +92)
+    if (!phone || !isValidPakistanPhone(phone)) {
+      hasError = true;
+      if (phoneInput) {
+        phoneInput.classList.add('border-red-500', 'ring-2', 'ring-red-400');
+        const err = document.createElement('p');
+        err.className = 'du-form-error text-[11px] text-red-500 font-semibold mt-1';
+        err.textContent = 'Please enter a valid Pakistan WhatsApp number (e.g. 0300 1234567).';
+        phoneInput.parentNode.appendChild(err);
+      }
+    }
+
+    if (hasError) return false;
+
+    // FORM-06: Long description safeguard (Clean truncation if > 500 chars)
+    if (message.length > 500) {
+      message = message.substring(0, 500) + '... [details continue in chat]';
+    }
+
+    // FORM-09: Double submit prevention
+    if (submitBtn) {
+      submitBtn.disabled = true;
+      submitBtn.setAttribute('data-original-text', submitBtn.innerHTML);
+      submitBtn.innerHTML = `
+        <svg class="animate-spin -ml-1 mr-2 h-4 w-4 text-white inline" fill="none" viewBox="0 0 24 24">
+          <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+          <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+        </svg>
+        <span>Connecting to WhatsApp...</span>
+      `;
+    }
+
+    // FORM-03, 04, 05, 08: Full formatted WhatsApp message with UTF-8 Urdu & emoji preservation
+    const whatsappText = encodeURIComponent(
+      `Assalam-o-Alaikum Digital Ustad! 🚀\n\nI would like to discuss a project inquiry for my business.\n\n*Name:* ${name}\n*Phone:* ${phone}\n*Service Interested:* ${service}\n*Budget:* ${budget}\n*Project Details:* ${message || 'No additional details provided'}\n\nPlease share your proposal, payment terms (Installments / Full), and estimated timeline.`
+    );
+
+    const whatsappUrl = `https://wa.me/${DU_CONFIG.whatsappNumber}?text=${whatsappText}`;
+
+    // FORM-07: Open WhatsApp (wa.me natively opens app on mobile)
+    window.open(whatsappUrl, '_blank');
+
+    // Reset button after 3.5s
+    setTimeout(() => {
+      if (submitBtn) {
+        submitBtn.disabled = false;
+        const originalText = submitBtn.getAttribute('data-original-text');
+        if (originalText) submitBtn.innerHTML = originalText;
+      }
+    }, 3500);
+
+    return true;
+  };
+
+  // Attach submission handler to ALL proposal forms (modal and page-level)
+  const allProposalForms = document.querySelectorAll('#quote-form, form.proposal-form');
+  allProposalForms.forEach(form => {
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const success = handleProposalSubmission(form);
+      if (success) {
+        // If inside modal, close it cleanly
+        const modal = form.closest('#quote-modal');
+        if (modal) {
+          setTimeout(() => {
+            const closeBtn = document.getElementById('close-quote-modal');
+            if (closeBtn) closeBtn.click();
+          }, 600);
+        }
+      }
+    });
+  });
+
+  // Modal Open/Close Controls
   const getStartedBtns = document.querySelectorAll('.btn-get-started');
   const quoteModal = document.getElementById('quote-modal');
   const closeQuoteModalBtn = document.getElementById('close-quote-modal');
-  const quoteForm = document.getElementById('quote-form');
 
   if (quoteModal) {
     const openModal = () => {
@@ -247,75 +382,116 @@ document.addEventListener('DOMContentLoaded', () => {
     quoteModal.addEventListener('click', (e) => {
       if (e.target === quoteModal) closeModal();
     });
-
-    if (quoteForm) {
-      quoteForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-        const name = document.getElementById('client-name')?.value || 'Valued Client';
-        const phone = document.getElementById('client-phone')?.value || '';
-        const service = document.getElementById('client-service')?.value || 'Website Development';
-        const budget = document.getElementById('client-budget')?.value || 'PKR 30,000+';
-        const message = document.getElementById('client-message')?.value || '';
-
-        const whatsappNumber = '923001234567';
-        const text = encodeURIComponent(
-          `Hello Digital Ustad! 🚀\n\nI want to discuss a new project.\n\n*Name:* ${name}\n*Phone:* ${phone}\n*Service Interested:* ${service}\n*Budget:* ${budget}\n*Details:* ${message}\n\nPlease share proposal & timeline.`
-        );
-
-        window.open(`https://wa.me/${whatsappNumber}?text=${text}`, '_blank');
-        closeModal();
-      });
-    }
   }
 
-  // 9. Portfolio Project Details Lightbox Modal
+  // 9. Portfolio Detailed Case Study Modal (DU-PORT-001 & DU-PORT-002 Fix)
   const portfolioData = {
     'spice-bistro': {
-      title: 'Spice Bistro',
-      category: 'Restaurant & Fine Dining Website',
-      description: 'A complete digital presence for a premium restaurant featuring modern online menu exploration, table reservations, live WhatsApp ordering integration, and high-speed mobile UX.',
-      features: ['Digital QR & Online Menu', 'Table Booking Management', 'WhatsApp 1-Click Ordering', 'Local SEO & Google Maps Sync'],
-      stats: '340% increase in online reservations in 60 days',
+      title: 'Spice Bistro — Lahore',
+      category: 'Restaurant & Hospitality Website',
+      typeBadge: 'Sample Website Concept',
+      industry: 'Food & Dining (Gulberg, Lahore)',
+      deliverables: '5-Page Custom Web Experience + Digital QR Menu + 1-Click WhatsApp Ordering Flow',
+      description: 'A complete digital presence engineered for high-end dining. Designed to eliminate expensive third-party delivery commission fees by routing customer reservations and takeout orders directly into WhatsApp.',
+      features: [
+        'Live Digital QR & Visual Food Menu',
+        'Direct 1-Click WhatsApp Delivery & Takeout Flow',
+        'Online Table Reservation Form',
+        'Local SEO & Google Maps Sync Architecture',
+        '100% Mobile Optimized for 360px+ Smartphones'
+      ],
+      stats: 'Delivered in 8 Working Days • Direct WhatsApp Orders Active',
+      status: 'Live Concept Showcase',
       image: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=80'
     },
     'glow-shine': {
-      title: 'Glow & Shine Salon',
-      category: 'Luxury Salon & Spa Website',
-      description: 'Elegant, pastel-themed booking portal for an upscale salon. Customers can choose stylists, view bridal/party packages, and book appointment slots easily.',
-      features: ['Real-time Appointment Calendar', 'Service Package Catalog', 'Stylist Portfolio Gallery', 'SMS & WhatsApp Reminders'],
-      stats: '500+ monthly appointments booked online',
+      title: 'Glow & Shine Salon — Karachi',
+      category: 'Beauty, Salon & Spa Booking Portal',
+      typeBadge: 'Sample Website Concept',
+      industry: 'Aesthetics & Wellness (DHA, Karachi)',
+      deliverables: 'Custom Booking Portal + Service Menu + Stylist Portfolio Gallery + WhatsApp Bot',
+      description: 'An elegant pastel-toned showcase designed to convert casual Instagram visitors into confirmed appointments. Enables clients to browse bridal tiers, facial treatments, and select stylist availability.',
+      features: [
+        'Interactive Bridal & Party Service Catalog',
+        'Direct WhatsApp Slot Booking System',
+        'Stylist Work Gallery with Before/After Showcase',
+        'Google Business Profile Integration',
+        'Fast 0.9s Load Speed on Mobile Connections'
+      ],
+      stats: 'Delivered in 7 Working Days • 360px Responsive Layout',
+      status: 'Live Concept Showcase',
       image: 'https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1200&q=80'
     },
     'healthcare-clinic': {
-      title: 'HealthCare Clinic',
-      category: 'Medical & Diagnostic Clinic',
-      description: 'A clean, patient-friendly medical portal designed to build trust. Features doctor profiles, appointment scheduling, timings, and location navigation.',
-      features: ['Doctor Profiles & Specialties', 'Online Appointment Request', 'Clinic Timings & Branch Info', 'Patient Testimonials & Reviews'],
-      stats: '2.5x increase in new patient appointments',
+      title: 'HealthCare Clinic — Islamabad',
+      category: 'Medical & Diagnostic Healthcare Portal',
+      typeBadge: 'Sample Website Concept',
+      industry: 'Healthcare (Blue Area, Islamabad)',
+      deliverables: 'Patient Information Portal + Doctor OPD Timings + Online Appointment Inquiry',
+      description: 'A clean, HIPAA-conscious medical website engineered to establish patient trust. Features clear doctor specializations, clinic timings, branch locations, and instant appointment booking.',
+      features: [
+        'Physician Profiles & Specialty Directory',
+        'Interactive OPD Schedule & Timings Table',
+        'Direct WhatsApp Doctor Appointment Booking',
+        'Google Maps Direction & Contact Locator',
+        'Emergency 24/7 Helpline Quick-Tap Integration'
+      ],
+      stats: 'Delivered in 9 Working Days • Clean Accessibility & Trust Architecture',
+      status: 'Live Concept Showcase',
       image: 'https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1200&q=80'
     },
     'dream-homes': {
-      title: 'Dream Homes Real Estate',
-      category: 'Real Estate & Property Portal',
-      description: 'High-converting real estate showcase with property listings, HD photo galleries, virtual tour links, and WhatsApp lead capture for interested buyers and investors.',
-      features: ['Interactive Property Listings', 'WhatsApp Direct Inquiry Buttons', 'Filter by Location & Price', 'Lead Generation Meta Ads Integration'],
-      stats: 'Over PKR 45M+ worth of property leads generated',
+      title: 'Dream Homes Real Estate — Lahore',
+      category: 'Real Estate & Property Consultancy',
+      typeBadge: 'Sample Website Concept',
+      industry: 'Property & Investments (DHA & Bahria Town)',
+      deliverables: 'High-Converting Property Catalog + Virtual Video Showcase + WhatsApp Lead Funnel',
+      description: 'A high-converting real estate showcase designed for local and overseas Pakistani property investors. Integrates high-res image galleries, location filter tags, and direct lead routing to sales agents.',
+      features: [
+        'Featured Residential & Commercial Listings',
+        'Filter by Sector, Price & Category',
+        '1-Tap WhatsApp Lead Capture on Every Property',
+        'Meta Ads Lead Funnel Integration',
+        'Overseas Investor Direct Inquiry Form'
+      ],
+      stats: 'Delivered in 10 Working Days • Fast Lead Capture Architecture',
+      status: 'Live Concept Showcase',
       image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80'
     },
     'fitzone-gym': {
-      title: 'FitZone Gym & Fitness',
-      category: 'Fitness Center & Gym Website',
-      description: 'High-energy, dynamic website built for a top-tier gym. Promotes membership packages, personal training schedules, and free trial workout signups.',
-      features: ['Membership Tier Pricing Tables', 'Free Trial Pass Lead Funnel', 'Trainer Bios & Workout Schedule', 'Instagram Feed Auto-Sync'],
-      stats: '85+ new active gym memberships in month one',
+      title: 'FitZone Gym & Fitness — Lahore',
+      category: 'Fitness Center & Club Website',
+      typeBadge: 'Sample Website Concept',
+      industry: 'Health & Fitness (Johar Town, Lahore)',
+      deliverables: 'Dynamic Club Website + Membership Tier Tables + Free Trial Funnel',
+      description: 'A high-impact, dark-mode fitness portal built to convert local neighborhood foot traffic into paying members. Highlights equipment, personal training packages, and class timetables.',
+      features: [
+        'Transparent Membership Pricing Comparison',
+        'Free 1-Day Trial Pass WhatsApp Lead Magnet',
+        'Trainer Bios & Specialty Coaching Badges',
+        'Class Schedule & Gym Facility Virtual Tour',
+        'Integrated Instagram Social Proof Reel'
+      ],
+      stats: 'Delivered in 8 Working Days • Optimized for Mobile Inquiries',
+      status: 'Live Concept Showcase',
       image: 'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1200&q=80'
     },
     'bright-future': {
-      title: 'Bright Future Academy',
-      category: 'Education & Training Institute',
-      description: 'Comprehensive academic portal for an institute offering professional courses and coaching. Features course catalogs, syllabus downloads, and student admission forms.',
-      features: ['Course Curriculum & Syllabus', 'Online Admission Application', 'Student Portal Login Gateway', 'Fee Calculator & Inquiry Form'],
-      stats: '1,200+ course inquiries and admissions collected',
+      title: 'Bright Future Academy — Islamabad',
+      category: 'Education & Professional Training Institute',
+      typeBadge: 'Sample Website Concept',
+      industry: 'Education & Skills (Islamabad / Rawalpindi)',
+      deliverables: 'Academic Course Catalog + Syllabus PDF Downloads + Online Admission Forms',
+      description: 'An educational portal for a professional training institute. Provides comprehensive syllabus guides, batch schedules, certification credentials, and online enrollment forms.',
+      features: [
+        'Course Syllabus & Curriculum Directory',
+        'Direct WhatsApp Course Advisor Consultation',
+        'Online Admission & Batch Registration Form',
+        'Faculty Credentials & Certification Badges',
+        'Student Testimonials & Career Outcomes'
+      ],
+      stats: 'Delivered in 9 Working Days • Complete Lead Funnel Integrated',
+      status: 'Live Concept Showcase',
       image: 'https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=1200&q=80'
     }
   };
@@ -329,18 +505,28 @@ document.addEventListener('DOMContentLoaded', () => {
       const data = portfolioData[projectId];
       if (!data) return;
 
-      document.getElementById('project-modal-title').textContent = data.title;
-      document.getElementById('project-modal-category').textContent = data.category;
-      document.getElementById('project-modal-desc').textContent = data.description;
-      document.getElementById('project-modal-stats').textContent = data.stats;
-      document.getElementById('project-modal-img').src = data.image;
+      const titleEl = document.getElementById('project-modal-title');
+      const catEl = document.getElementById('project-modal-category');
+      const descEl = document.getElementById('project-modal-desc');
+      const statsEl = document.getElementById('project-modal-stats');
+      const imgEl = document.getElementById('project-modal-img');
+      const badgeEl = document.getElementById('project-modal-badge');
+      const deliverablesEl = document.getElementById('project-modal-deliverables');
+
+      if (titleEl) titleEl.textContent = data.title;
+      if (catEl) catEl.textContent = data.category;
+      if (descEl) descEl.textContent = data.description;
+      if (statsEl) statsEl.textContent = data.stats;
+      if (imgEl) imgEl.src = data.image;
+      if (badgeEl) badgeEl.textContent = data.typeBadge;
+      if (deliverablesEl) deliverablesEl.textContent = data.deliverables;
 
       const featuresList = document.getElementById('project-modal-features');
       if (featuresList) {
         featuresList.innerHTML = data.features.map(f => `
-          <li class="flex items-center text-slate-700 text-sm">
-            <span class="w-2 h-2 rounded-full bg-[#FF6600] mr-2 flex-shrink-0"></span>
-            ${f}
+          <li class="flex items-start text-slate-700 dark:text-slate-300 text-xs sm:text-sm">
+            <span class="w-2 h-2 rounded-full bg-[#FF6600] mr-2.5 mt-1.5 flex-shrink-0"></span>
+            <span>${f}</span>
           </li>
         `).join('');
       }
@@ -390,17 +576,14 @@ document.addEventListener('DOMContentLoaded', () => {
       const btn = Array.from(pricingTabBtns).find(b => b.getAttribute('data-target') === targetId);
       if (!btn) return;
 
-      // Reset button states
       pricingTabBtns.forEach(b => {
         b.classList.remove('active', 'bg-[#FF6600]', 'text-white', 'shadow-md');
         b.classList.add('bg-white', 'text-slate-700', 'hover:bg-slate-100', 'border', 'border-slate-200');
       });
 
-      // Activate target button
       btn.classList.add('active', 'bg-[#FF6600]', 'text-white', 'shadow-md');
       btn.classList.remove('bg-white', 'text-slate-700', 'hover:bg-slate-100', 'border', 'border-slate-200');
 
-      // Toggle matching content
       pricingTabContents.forEach(content => {
         if (content.id === targetId) {
           content.classList.remove('hidden');
@@ -427,7 +610,6 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
 
-    // Check if initial hash matches a tab
     if (window.location.hash) {
       const hashId = window.location.hash.replace('#', '');
       activateTab(hashId);
