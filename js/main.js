@@ -5,9 +5,11 @@
 
 // Central Brand Configuration
 const DU_CONFIG = {
-  whatsappNumber: '923001234567', // Replace with live WhatsApp (E.164 without +)
-  displayPhone: '+92 300 1234567',
-  officialEmail: 'contact@digitalustad.com',
+  // Operational Digital Ustad WhatsApp Business Number (E.164 format without +)
+  // CENTRALIZED CONFIGURATION: Replace this value with the operational business number
+  whatsappNumber: '923000000000', 
+  displayPhone: '+92 300 0000000',
+  officialEmail: 'contact@digitalustad.co',
   officeLocation: 'Lahore, Pakistan',
   verifiedWebsites: '10+',
   verifiedClients: '5+',
@@ -280,7 +282,7 @@ document.addEventListener('DOMContentLoaded', () => {
         phoneInput.classList.add('border-red-500', 'ring-2', 'ring-red-400');
         const err = document.createElement('p');
         err.className = 'du-form-error text-[11px] text-red-500 font-semibold mt-1';
-        err.textContent = 'Please enter a valid Pakistan WhatsApp number (e.g. 0300 1234567).';
+        err.textContent = 'Please enter a valid Pakistan WhatsApp number (e.g. 0300 1122334).';
         phoneInput.parentNode.appendChild(err);
       }
     }
@@ -385,12 +387,13 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // 9. Portfolio Detailed Case Study Modal (DU-PORT-001 & DU-PORT-002 Fix)
+  // Kept strictly to 4 relevant sample concept industries (Restaurants, Salons, Clinics, Real Estate)
   const portfolioData = {
     'spice-bistro': {
       title: 'Spice Bistro — Lahore',
       category: 'Restaurant & Hospitality Website',
       typeBadge: 'Sample Website Concept',
-      industry: 'Food & Dining (Gulberg, Lahore)',
+      industry: 'Food & Dining — Lahore, Pakistan',
       deliverables: '5-Page Custom Web Experience + Digital QR Menu + 1-Click WhatsApp Ordering Flow',
       description: 'A complete digital presence engineered for high-end dining. Designed to eliminate expensive third-party delivery commission fees by routing customer reservations and takeout orders directly into WhatsApp.',
       features: [
@@ -400,15 +403,15 @@ document.addEventListener('DOMContentLoaded', () => {
         'Local SEO & Google Maps Sync Architecture',
         '100% Mobile Optimized for 360px+ Smartphones'
       ],
-      stats: 'Delivered in 8 Working Days • Direct WhatsApp Orders Active',
-      status: 'Live Concept Showcase',
+      stats: 'Designed in 8 Working Days • Fast WhatsApp Ordering Architecture',
+      status: 'Sample Concept Showcase',
       image: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=80'
     },
     'glow-shine': {
-      title: 'Glow & Shine Salon — Karachi',
+      title: 'Glow & Shine Salon — Lahore',
       category: 'Beauty, Salon & Spa Booking Portal',
       typeBadge: 'Sample Website Concept',
-      industry: 'Aesthetics & Wellness (DHA, Karachi)',
+      industry: 'Aesthetics & Wellness — Lahore, Pakistan',
       deliverables: 'Custom Booking Portal + Service Menu + Stylist Portfolio Gallery + WhatsApp Bot',
       description: 'An elegant pastel-toned showcase designed to convert casual Instagram visitors into confirmed appointments. Enables clients to browse bridal tiers, facial treatments, and select stylist availability.',
       features: [
@@ -418,81 +421,45 @@ document.addEventListener('DOMContentLoaded', () => {
         'Google Business Profile Integration',
         'Fast 0.9s Load Speed on Mobile Connections'
       ],
-      stats: 'Delivered in 7 Working Days • 360px Responsive Layout',
-      status: 'Live Concept Showcase',
+      stats: 'Designed in 7 Working Days • 360px Responsive Layout',
+      status: 'Sample Concept Showcase',
       image: 'https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1200&q=80'
     },
     'healthcare-clinic': {
-      title: 'HealthCare Clinic — Islamabad',
+      title: 'HealthCare Clinic — Lahore',
       category: 'Medical & Diagnostic Healthcare Portal',
       typeBadge: 'Sample Website Concept',
-      industry: 'Healthcare (Blue Area, Islamabad)',
+      industry: 'Healthcare & Diagnostics — Lahore, Pakistan',
       deliverables: 'Patient Information Portal + Doctor OPD Timings + Online Appointment Inquiry',
-      description: 'A clean, HIPAA-conscious medical website engineered to establish patient trust. Features clear doctor specializations, clinic timings, branch locations, and instant appointment booking.',
+      description: 'A clean, patient-centric medical website engineered to establish patient trust. Features clear doctor specializations, clinic timings, branch locations, and instant appointment booking.',
       features: [
         'Physician Profiles & Specialty Directory',
         'Interactive OPD Schedule & Timings Table',
         'Direct WhatsApp Doctor Appointment Booking',
         'Google Maps Direction & Contact Locator',
-        'Emergency 24/7 Helpline Quick-Tap Integration'
+        'Emergency Helpline Quick-Tap Integration'
       ],
-      stats: 'Delivered in 9 Working Days • Clean Accessibility & Trust Architecture',
-      status: 'Live Concept Showcase',
+      stats: 'Designed in 9 Working Days • Clean Accessibility & Trust Architecture',
+      status: 'Sample Concept Showcase',
       image: 'https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1200&q=80'
     },
     'dream-homes': {
       title: 'Dream Homes Real Estate — Lahore',
       category: 'Real Estate & Property Consultancy',
       typeBadge: 'Sample Website Concept',
-      industry: 'Property & Investments (DHA & Bahria Town)',
+      industry: 'Property & Investments — Lahore, Pakistan',
       deliverables: 'High-Converting Property Catalog + Virtual Video Showcase + WhatsApp Lead Funnel',
       description: 'A high-converting real estate showcase designed for local and overseas Pakistani property investors. Integrates high-res image galleries, location filter tags, and direct lead routing to sales agents.',
       features: [
         'Featured Residential & Commercial Listings',
-        'Filter by Sector, Price & Category',
+        'Filter by Category, Price & Area',
         '1-Tap WhatsApp Lead Capture on Every Property',
         'Meta Ads Lead Funnel Integration',
         'Overseas Investor Direct Inquiry Form'
       ],
-      stats: 'Delivered in 10 Working Days • Fast Lead Capture Architecture',
-      status: 'Live Concept Showcase',
+      stats: 'Designed in 10 Working Days • Fast Lead Capture Architecture',
+      status: 'Sample Concept Showcase',
       image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80'
-    },
-    'fitzone-gym': {
-      title: 'FitZone Gym & Fitness — Lahore',
-      category: 'Fitness Center & Club Website',
-      typeBadge: 'Sample Website Concept',
-      industry: 'Health & Fitness (Johar Town, Lahore)',
-      deliverables: 'Dynamic Club Website + Membership Tier Tables + Free Trial Funnel',
-      description: 'A high-impact, dark-mode fitness portal built to convert local neighborhood foot traffic into paying members. Highlights equipment, personal training packages, and class timetables.',
-      features: [
-        'Transparent Membership Pricing Comparison',
-        'Free 1-Day Trial Pass WhatsApp Lead Magnet',
-        'Trainer Bios & Specialty Coaching Badges',
-        'Class Schedule & Gym Facility Virtual Tour',
-        'Integrated Instagram Social Proof Reel'
-      ],
-      stats: 'Delivered in 8 Working Days • Optimized for Mobile Inquiries',
-      status: 'Live Concept Showcase',
-      image: 'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1200&q=80'
-    },
-    'bright-future': {
-      title: 'Bright Future Academy — Islamabad',
-      category: 'Education & Professional Training Institute',
-      typeBadge: 'Sample Website Concept',
-      industry: 'Education & Skills (Islamabad / Rawalpindi)',
-      deliverables: 'Academic Course Catalog + Syllabus PDF Downloads + Online Admission Forms',
-      description: 'An educational portal for a professional training institute. Provides comprehensive syllabus guides, batch schedules, certification credentials, and online enrollment forms.',
-      features: [
-        'Course Syllabus & Curriculum Directory',
-        'Direct WhatsApp Course Advisor Consultation',
-        'Online Admission & Batch Registration Form',
-        'Faculty Credentials & Certification Badges',
-        'Student Testimonials & Career Outcomes'
-      ],
-      stats: 'Delivered in 9 Working Days • Complete Lead Funnel Integrated',
-      status: 'Live Concept Showcase',
-      image: 'https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=1200&q=80'
     }
   };
 

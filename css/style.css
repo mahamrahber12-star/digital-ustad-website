@@ -633,15 +633,3 @@ html.dark .pricing-tab-btn:not(.active):hover {
   }
 }
 
-/* Palette Tokens Swatch Card */
-.palette-token-chip {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.375rem;
-  padding: 0.25rem 0.5rem;
-  border-radius: 9999px;
-  font-size: 0.65rem;
-  font-weight: 700;
-  font-family: ui-monospace, monospace;
-}
-
