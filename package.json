@@ -1,0 +1,25 @@
+{
+  "name": "digital-ustad",
+  "version": "1.0.0",
+  "description": "> **Build • Grow • Automate**   > Complete digital solutions, web development, ROI-driven marketing, and business automation.",
+  "main": "index.js",
+  "scripts": {
+    "build:css": "tailwindcss -i ./src/input.css -o ./css/tailwind.min.css --minify",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Qadeer7777/digital_ustad.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Qadeer7777/digital_ustad/issues"
+  },
+  "homepage": "https://github.com/Qadeer7777/digital_ustad#readme",
+  "devDependencies": {
+    "tailwindcss": "^3.4.17"
+  }
+}

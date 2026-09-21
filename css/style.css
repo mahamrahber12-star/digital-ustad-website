@@ -633,3 +633,67 @@ html.dark .pricing-tab-btn:not(.active):hover {
   }
 }
 
+/* ==========================================================================
+   ACCESSIBILITY & WCAG AA ENHANCEMENTS (QA-17, QA-18, QA-19)
+   ========================================================================== */
+
+/* WCAG AA Accessible Contrast for Primary Orange Buttons (QA-18)
+   Contrast ratio of #0B0F19 dark slate against #FF6600 vibrant orange is 6.52:1 (exceeds 4.5:1 AA requirement) */
+.btn-get-started,
+.btn-orange-contrast {
+  background-color: #FF6600 !important;
+  color: #0B0F19 !important;
+  font-weight: 800 !important;
+}
+
+.btn-get-started:hover,
+.btn-orange-contrast:hover {
+  background-color: #FFA14A !important;
+  color: #0B0F19 !important;
+}
+
+.btn-get-started i,
+.btn-get-started svg,
+.btn-orange-contrast i,
+.btn-orange-contrast svg {
+  color: #0B0F19 !important;
+  stroke: #0B0F19 !important;
+}
+
+/* Skip Navigation Link (QA-19) */
+.skip-to-content {
+  position: fixed;
+  top: -100px;
+  left: 1rem;
+  z-index: 100;
+  background-color: #FF6600;
+  color: #0B0F19;
+  font-weight: 800;
+  padding: 0.75rem 1.25rem;
+  border-radius: 9999px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+  text-decoration: none;
+  transition: top 0.2s ease-in-out;
+}
+
+.skip-to-content:focus {
+  top: 1rem;
+  outline: 3px solid #FFFFFF;
+  outline-offset: 2px;
+}
+
+/* Accessible Focus States for Keyboard Navigation (QA-17) */
+.project-card:focus-visible,
+.view-concept-btn:focus-visible {
+  outline: 3px solid #FF6600 !important;
+  outline-offset: 3px;
+}
+
+/* Form Inline Validation Feedback (QA-24) */
+.phone-feedback-msg {
+  font-size: 11px;
+  margin-top: 0.25rem;
+  font-weight: 600;
+  display: block;
+}
+
