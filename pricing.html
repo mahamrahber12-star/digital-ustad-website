@@ -1450,7 +1450,7 @@
             </li>
             <li class="flex items-center gap-2">
               <i data-lucide="phone" class="w-4 h-4 text-[#FF6600] flex-shrink-0"></i>
-              <span>+92 300 0000000</span>
+              <span data-du-phone>+92 300 0000000</span>
             </li>
             <li class="flex items-center gap-2">
               <i data-lucide="mail" class="w-4 h-4 text-[#FF6600] flex-shrink-0"></i>
@@ -1496,8 +1496,11 @@
       </button>
 
       <div class="mb-6">
-        <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-orange-100 text-[#FF6600] text-xs font-bold mb-2">
-          <span>Get Free Proposal</span>
+        <div class="flex items-center justify-between mb-2">
+          <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-orange-100 text-[#FF6600] text-xs font-bold">
+            <span>Get Free Proposal</span>
+          </div>
+          <span id="payment-milestone-badge" class="text-[11px] font-bold text-orange-800 bg-orange-100 px-3 py-1 rounded-full transition-colors">25/50/25 Installments</span>
         </div>
         <h3 class="text-2xl font-extrabold text-slate-900">Start Your Project With Us</h3>
         <p class="text-xs sm:text-sm text-slate-500 mt-1">Select your desired service package to receive an instant proposal.</p>
@@ -1522,10 +1525,12 @@
               <option value="3-Page Website Lite (PKR 17,999)">3-Page Website Lite (PKR 17,999)</option>
               <option value="7-Page Website Growth (PKR 42,999)">7-Page Website Growth (PKR 42,999)</option>
               <option value="Custom E-commerce / Web App">Custom Web / E-commerce</option>
+              <option value="Growth WhatsApp Workflow (PKR 45K-65K)">Growth WhatsApp Workflow (PKR 45k-65k) 🤖</option>
+              <option value="Basic WhatsApp Bot (PKR 25K-35K)">Basic WhatsApp Bot (PKR 25k-35k)</option>
+              <option value="Advanced AI & Custom API Bot (PKR 75K+)">Advanced AI & Custom API Bot (PKR 75k+)</option>
               <option value="Social Media Growth (PKR 28,000/mo)">Social Media Management</option>
               <option value="Meta & Google Ads Campaign">Meta & Google Ads</option>
               <option value="SEO & Google Maps Ranking">SEO & Google Business</option>
-              <option value="WhatsApp Automation Setup">WhatsApp Automation</option>
               <option value="All-in-One Monthly Retainer">Monthly Digital Retainer</option>
             </select>
           </div>
@@ -1551,11 +1556,16 @@
           <i data-lucide="send" class="w-4 h-4"></i>
           <span>Send Proposal Request (Direct WhatsApp)</span>
         </button>
+
+        <div id="payment-milestone-text" class="text-[11px] text-slate-500 text-center pt-1 leading-relaxed">
+          🔒 Privacy guaranteed. Zero spam. <strong>Payment Milestones: 25% kickoff, 50% approval on staging, 25% within 30 days of launch.</strong>
+        </div>
       </form>
 
     </div>
   </div>
 
+  <script src="js/config.js"></script>
   <script src="js/main.js"></script>
   <script>
     lucide.createIcons();

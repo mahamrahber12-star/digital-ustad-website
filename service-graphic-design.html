@@ -635,7 +635,7 @@
             </li>
             <li class="flex items-center gap-2">
               <i data-lucide="phone" class="w-4 h-4 text-[#FF6600] flex-shrink-0"></i>
-              <span>+92 300 0000000</span>
+              <span data-du-phone>+92 300 0000000</span>
             </li>
             <li class="flex items-center gap-2">
               <i data-lucide="mail" class="w-4 h-4 text-[#FF6600] flex-shrink-0"></i>
@@ -675,7 +675,10 @@
     <div class="modal-box bg-white rounded-3xl max-w-lg w-full p-6 sm:p-8 shadow-2xl relative scale-95 opacity-0 transition-all duration-200">
       <button id="close-quote-modal" class="absolute top-5 right-5 w-8 h-8 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-500 flex items-center justify-center"><i data-lucide="x" class="w-5 h-5"></i></button>
       <div class="mb-6">
-        <h3 class="text-2xl font-extrabold text-slate-900">Get Graphic Design Quote</h3>
+        <div class="flex items-center justify-between mb-2">
+          <h3 class="text-2xl font-extrabold text-slate-900">Get Graphic Design Quote</h3>
+          <span id="payment-milestone-badge" class="text-[11px] font-bold text-emerald-800 bg-emerald-100 px-3 py-1 rounded-full transition-colors">Advance Monthly Retainer</span>
+        </div>
         <p class="text-xs text-slate-500 mt-1">Get an instant quote for design retainers or custom branding assets.</p>
       </div>
       <form id="quote-form" class="space-y-4">
@@ -703,10 +706,15 @@
           <span>Send via WhatsApp</span>
           <i data-lucide="send" class="w-4 h-4"></i>
         </button>
+
+        <div id="payment-milestone-text" class="text-[11px] text-slate-500 text-center pt-1 leading-relaxed">
+          🔒 Privacy guaranteed. Zero spam. <strong>Payment Milestones: Advance monthly creative retainer for continuous design assets (Per-project: 50/50).</strong>
+        </div>
       </form>
     </div>
   </div>
 
+  <script src="js/config.js"></script>
   <script src="js/main.js"></script>
   <script>lucide.createIcons();</script>
 </body>

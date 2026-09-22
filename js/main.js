@@ -3,11 +3,10 @@
  * Configured for Pakistan SMB Market (WhatsApp-First, Mobile-Dominant)
  */
 
-// Central Brand Configuration
-const DU_CONFIG = {
-  // Operational Digital Ustad WhatsApp Business Number (E.164 format without +)
-  // CENTRALIZED CONFIGURATION: Replace this value with the operational business number
+// Central Brand Configuration - Reads from js/config.js (Single Source of Truth)
+const DU_ACTIVE_CONFIG = (typeof window !== 'undefined' && window.DU_CONFIG) ? window.DU_CONFIG : {
   whatsappNumber: '923000000000', 
+  telPhone: '+923000000000',
   displayPhone: '+92 300 0000000',
   officialEmail: 'contact@digitalustad.co',
   officeLocation: 'Lahore, Pakistan',
@@ -15,6 +14,9 @@ const DU_CONFIG = {
   verifiedClients: '5+',
   yearsActive: '2+'
 };
+if (typeof window !== 'undefined' && !window.DU_CONFIG) {
+  window.DU_CONFIG = DU_ACTIVE_CONFIG;
+}
 
 document.addEventListener('DOMContentLoaded', () => {
   // 0. Theme Toggle & Persistence Engine
@@ -234,13 +236,159 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // 8. Phone Validation & Unified WhatsApp Proposal Flow (FORM-01 to FORM-10)
+  // 8. Phone Validation & Unified WhatsApp Proposal Flow (QA-01, QA-08, FORM-01 to FORM-10)
+  const getActiveConfig = () => window.DU_CONFIG || DU_ACTIVE_CONFIG;
+
   const isValidPakistanPhone = (phone) => {
     if (!phone) return false;
     const cleaned = phone.replace(/[\s\-\(\)\.]/g, '');
     // Accepts 03XXXXXXXXX, +923XXXXXXXXX, 00923XXXXXXXXX, 923XXXXXXXXX (JazzCash, EasyPaisa, Mobile)
     const pkRegex = /^((\+92)|(0092)|(92)|(0))?3[0-9]{9}$/;
     return pkRegex.test(cleaned);
+  };
+
+  // Helper: Map service name string to authoritative payment milestone schedule (QA-08)
+  const getPaymentTermsForService = (serviceText) => {
+    const config = getActiveConfig();
+    const termsMap = config.paymentTerms || {};
+    const text = (serviceText || '').toLowerCase();
+
+    if (text.includes('lite') || text.includes('3-page')) {
+      return termsMap.lite || {
+        badge: '100% Upfront (5% Off)',
+        note: 'Payment Milestones: 100% advance on kickoff. Single-batch delivery within 5–7 days. (5% early-payment discount applies).',
+        draftTerms: '100% Upfront Advance (with 5% early discount)'
+      };
+    }
+    if (text.includes('starter') || text.includes('5-page')) {
+      return termsMap.starter || {
+        badge: '25/50/25 Flex Installments',
+        note: 'Payment Milestones: 25% kickoff, 50% approval on staging, 25% within 30 days of launch.',
+        draftTerms: '25/50/25 Flex Installments (25% kickoff, 50% staging approval, 25% in 30 days)'
+      };
+    }
+    if (text.includes('7-page') || text.includes('growth web') || text.includes('website growth')) {
+      return termsMap.growthWeb || {
+        badge: '25/50/25 Flex Installments',
+        note: 'Payment Milestones: 25% kickoff, 50% approval on staging, 25% within 30 days of launch.',
+        draftTerms: '25/50/25 Flex Installments (25% kickoff, 50% staging approval, 25% in 30 days)'
+      };
+    }
+    if (text.includes('custom web') || text.includes('e-commerce') || text.includes('custom e-commerce') || text.includes('web app') || text.includes('portal')) {
+      return termsMap.customWeb || {
+        badge: '25/50/25 Milestones (Deployment Final)',
+        note: 'Payment Milestones: 25% kickoff, 50% staging demo approval, 25% at final launch & deployment.',
+        draftTerms: '25/50/25 Milestone Plan (25% kickoff, 50% staging demo, 25% at final launch/deployment)'
+      };
+    }
+    if (text.includes('basic') && (text.includes('bot') || text.includes('whatsapp') || text.includes('automation'))) {
+      return termsMap.basicBot || {
+        badge: '50/50 Milestones',
+        note: 'Payment Milestones: 50% kickoff, 50% upon live signoff & handover.',
+        draftTerms: '50/50 Milestone Plan (50% kickoff, 50% upon live signoff/handover)'
+      };
+    }
+    if (text.includes('advanced') && (text.includes('bot') || text.includes('ai') || text.includes('api'))) {
+      return termsMap.advancedBot || {
+        badge: '25/50/25 Milestones (Live Final)',
+        note: 'Payment Milestones: 25% kickoff, 50% staging demo, 25% upon final live deployment.',
+        draftTerms: '25/50/25 Milestone Plan (25% kickoff, 50% staging demo, 25% upon live deployment)'
+      };
+    }
+    if (text.includes('growth') && (text.includes('bot') || text.includes('workflow') || text.includes('whatsapp'))) {
+      return termsMap.growthBot || {
+        badge: '25/50/25 Milestones (Live Final)',
+        note: 'Payment Milestones: 25% kickoff, 50% staging demo, 25% at final live launch.',
+        draftTerms: '25/50/25 Milestone Plan (25% kickoff, 50% staging demo, 25% at live launch)'
+      };
+    }
+    if (text.includes('whatsapp') || text.includes('automation')) {
+      // General bot inquiry default
+      return termsMap.growthBot || {
+        badge: '25/50/25 Milestones (Live Final)',
+        note: 'Payment Milestones: 25% kickoff, 50% staging demo, 25% at final live launch (Basic bot: 50/50).',
+        draftTerms: 'Service-Specific Milestone Plan (25/50/25 or 50/50)'
+      };
+    }
+    if (text.includes('seo') || text.includes('google maps') || text.includes('google business')) {
+      return termsMap.seoRetainer || {
+        badge: 'Advance Monthly Retainer',
+        note: 'Payment Milestones: Advance monthly retainer (100% at start of each monthly cycle). No lock-in contract.',
+        draftTerms: 'Advance Monthly Retainer (100% at start of monthly cycle)'
+      };
+    }
+    if (text.includes('social media') || text.includes('social')) {
+      return termsMap.socialRetainer || {
+        badge: 'Advance Monthly Retainer',
+        note: 'Payment Milestones: Advance monthly retainer (100% at start of each monthly cycle).',
+        draftTerms: 'Advance Monthly Retainer (100% at start of monthly cycle)'
+      };
+    }
+    if (text.includes('ads') || text.includes('meta') || text.includes('google ads')) {
+      return termsMap.adsRetainer || {
+        badge: 'Advance Monthly Retainer',
+        note: 'Payment Milestones: Advance management fee only. Ad spend billed directly to client debit/credit card.',
+        draftTerms: 'Advance Monthly Retainer (Ad spend direct to client card)'
+      };
+    }
+    if (text.includes('all-in-one') || text.includes('bundle') || text.includes('suite')) {
+      return termsMap.allInOneBundle || {
+        badge: 'Advance Monthly Retainer',
+        note: 'Payment Milestones: Advance monthly billing (100% at start of each 30-day growth cycle).',
+        draftTerms: 'Advance Monthly Retainer (100% at cycle start)'
+      };
+    }
+    if (text.includes('graphic') && text.includes('retainer') || text.includes('design') && text.includes('retainer')) {
+      return termsMap.designRetainer || {
+        badge: 'Advance Monthly Retainer',
+        note: 'Payment Milestones: Advance monthly creative retainer for continuous design assets.',
+        draftTerms: 'Advance Monthly Creative Retainer'
+      };
+    }
+    if (text.includes('graphic') || text.includes('design') || text.includes('brand') || text.includes('logo')) {
+      return termsMap.designProject || {
+        badge: '50/50 Milestones',
+        note: 'Payment Milestones: 50% deposit on kickoff, 50% upon final creative delivery.',
+        draftTerms: '50/50 Milestone Plan (50% kickoff deposit, 50% upon final delivery)'
+      };
+    }
+
+    // Default fallback
+    return termsMap.starter || {
+      badge: '25/50/25 Flex Installments',
+      note: 'Payment Milestones: 25% kickoff, 50% approval on staging, 25% within 30 days.',
+      draftTerms: '25/50/25 Flex Installments'
+    };
+  };
+
+  // Helper: Dynamically update milestone badge & text bound to selected service (QA-08)
+  const updateFormMilestoneDisplay = (form) => {
+    if (!form) return;
+    const serviceSelect = form.querySelector('[id*="service"]') || form.querySelector('select[name="service"]');
+    if (!serviceSelect) return;
+
+    const terms = getPaymentTermsForService(serviceSelect.value);
+
+    // Update milestone badge container
+    const badgeEl = form.querySelector('#payment-milestone-badge') || 
+                    form.closest('.p-8, .p-10, section, div')?.querySelector('#payment-milestone-badge') || 
+                    document.querySelector('#payment-milestone-badge') || 
+                    form.querySelector('.milestone-badge');
+    if (badgeEl) {
+      badgeEl.textContent = terms.badge;
+      if (terms.badgeClass) {
+        badgeEl.className = `text-[11px] font-bold px-3 py-1 rounded-full transition-colors ${terms.badgeClass}`;
+      }
+    }
+
+    // Update milestone text note
+    const noteEl = form.querySelector('#payment-milestone-text') || 
+                   form.closest('.p-8, .p-10, section, div')?.querySelector('#payment-milestone-text') || 
+                   document.querySelector('#payment-milestone-text') || 
+                   form.querySelector('.milestone-note');
+    if (noteEl) {
+      noteEl.innerHTML = `🔒 Privacy guaranteed. Zero spam. <strong>${terms.note}</strong>`;
+    }
   };
 
   const handleProposalSubmission = (form) => {
@@ -307,12 +455,15 @@ document.addEventListener('DOMContentLoaded', () => {
       `;
     }
 
-    // FORM-03, 04, 05, 08: Full formatted WhatsApp message with UTF-8 Urdu & emoji preservation
+    const config = getActiveConfig();
+    const serviceTerms = getPaymentTermsForService(service);
+
+    // FORM-03, 04, 05, 08: Full formatted WhatsApp message with UTF-8 Urdu & package-specific terms (QA-08)
     const whatsappText = encodeURIComponent(
-      `Assalam-o-Alaikum Digital Ustad! 🚀\n\nI would like to discuss a project inquiry for my business.\n\n*Name:* ${name}\n*Phone:* ${phone}\n*Service Interested:* ${service}\n*Budget:* ${budget}\n*Project Details:* ${message || 'No additional details provided'}\n\nPlease share your proposal, payment terms (Installments / Full), and estimated timeline.`
+      `Assalam-o-Alaikum Digital Ustad! 🚀\n\nI would like to discuss a project inquiry for my business.\n\n*Name:* ${name}\n*Phone:* ${phone}\n*Service Interested:* ${service}\n*Budget:* ${budget}\n*Payment Schedule:* ${serviceTerms.draftTerms}\n*Project Details:* ${message || 'No additional details provided'}\n\nPlease share your proposal and estimated delivery timeline.`
     );
 
-    const whatsappUrl = `https://wa.me/${DU_CONFIG.whatsappNumber}?text=${whatsappText}`;
+    const whatsappUrl = `https://wa.me/${config.whatsappNumber}?text=${whatsappText}`;
 
     // FORM-07: Open WhatsApp (wa.me natively opens app on mobile)
     window.open(whatsappUrl, '_blank');
@@ -329,9 +480,17 @@ document.addEventListener('DOMContentLoaded', () => {
     return true;
   };
 
-  // Attach submission handler to ALL proposal forms (modal and page-level)
+  // Attach submission handler & dynamic change listener to ALL proposal forms (modal and page-level)
   const allProposalForms = document.querySelectorAll('#quote-form, form.proposal-form');
   allProposalForms.forEach(form => {
+    // Dynamic payment milestone binding (QA-08)
+    const serviceSelect = form.querySelector('[id*="service"]') || form.querySelector('select[name="service"]');
+    if (serviceSelect) {
+      serviceSelect.addEventListener('change', () => updateFormMilestoneDisplay(form));
+      // Initialize milestone display on page load
+      updateFormMilestoneDisplay(form);
+    }
+
     form.addEventListener('submit', (e) => {
       e.preventDefault();
       const success = handleProposalSubmission(form);
@@ -348,13 +507,46 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Modal Open/Close Controls
-  const getStartedBtns = document.querySelectorAll('.btn-get-started');
+  // Modal Open/Close Controls & WhatsApp Automation CTA Integration
+  const getStartedBtns = document.querySelectorAll('.btn-get-started, [data-open-quote]');
   const quoteModal = document.getElementById('quote-modal');
   const closeQuoteModalBtn = document.getElementById('close-quote-modal');
 
+  // Bot packages list for WhatsApp Automation CTA
+  const BOT_PACKAGES_OPTIONS = `
+    <option value="Growth WhatsApp Workflow (PKR 45K-65K)">Growth WhatsApp Workflow (PKR 45K-65K) ⭐</option>
+    <option value="Basic WhatsApp Bot (PKR 25K-35K)">Basic WhatsApp Bot (PKR 25K-35K)</option>
+    <option value="Advanced AI & Custom API Bot (PKR 75K+)">Advanced AI & Custom API Bot (PKR 75K+)</option>
+  `;
+
+  const configureModalForService = (serviceType) => {
+    if (!quoteModal) return;
+    const modalForm = quoteModal.querySelector('form');
+    const serviceSelect = quoteModal.querySelector('#client-service') || quoteModal.querySelector('select[name="service"]');
+    if (!serviceSelect) return;
+
+    if (serviceType === 'whatsapp-automation' || serviceType === 'bot') {
+      // If modal doesn't already have bot packages only, populate or select
+      const hasBotOption = Array.from(serviceSelect.options).some(o => o.value.includes('Growth WhatsApp'));
+      if (!hasBotOption) {
+        serviceSelect.setAttribute('data-original-options', serviceSelect.innerHTML);
+        serviceSelect.innerHTML = BOT_PACKAGES_OPTIONS;
+      }
+      serviceSelect.value = "Growth WhatsApp Workflow (PKR 45K-65K)";
+    } else if (serviceSelect.hasAttribute('data-original-options')) {
+      serviceSelect.innerHTML = serviceSelect.getAttribute('data-original-options');
+    }
+
+    if (modalForm) {
+      updateFormMilestoneDisplay(modalForm);
+    }
+  };
+
   if (quoteModal) {
-    const openModal = () => {
+    const openModal = (serviceType = null) => {
+      if (serviceType) {
+        configureModalForService(serviceType);
+      }
       quoteModal.classList.remove('hidden');
       document.body.style.overflow = 'hidden';
       setTimeout(() => {
@@ -378,13 +570,66 @@ document.addEventListener('DOMContentLoaded', () => {
       }, 200);
     };
 
-    getStartedBtns.forEach(btn => btn.addEventListener('click', openModal));
+    getStartedBtns.forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        const serviceType = btn.getAttribute('data-service') || null;
+        openModal(serviceType);
+      });
+    });
+
+    // Special WhatsApp Automation Bot Quote Triggers across pages
+    const botQuoteBtns = document.querySelectorAll('.btn-whatsapp-bot-quote, [data-service="whatsapp-automation"]');
+    botQuoteBtns.forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        openModal('whatsapp-automation');
+      });
+    });
+
     if (closeQuoteModalBtn) closeQuoteModalBtn.addEventListener('click', closeModal);
 
     quoteModal.addEventListener('click', (e) => {
       if (e.target === quoteModal) closeModal();
     });
   }
+
+  // 8B. Centralized Contact Links & Display Synchronizer (QA-01)
+  const syncContactLinks = () => {
+    const config = getActiveConfig();
+    if (!config || !config.whatsappNumber) return;
+
+    // 1. Synchronize all wa.me links preserving query params (prefilled draft text & context)
+    document.querySelectorAll('a[href*="wa.me"]').forEach(link => {
+      const rawHref = link.getAttribute('href') || '';
+      try {
+        // Extract query parameter ?text= if present
+        const queryIndex = rawHref.indexOf('?');
+        const queryPart = queryIndex !== -1 ? rawHref.substring(queryIndex) : '';
+        link.href = `https://wa.me/${config.whatsappNumber}${queryPart}`;
+      } catch (err) {
+        link.href = rawHref.replace(/wa\.me\/[0-9]+/, `wa.me/${config.whatsappNumber}`);
+      }
+
+      // If the link text itself displays a phone number, update to displayPhone
+      const textTrim = link.textContent.trim();
+      if (textTrim.startsWith('+92') || textTrim.startsWith('0300')) {
+        link.textContent = config.displayPhone;
+      }
+    });
+
+    // 2. Synchronize all tel: links
+    document.querySelectorAll('a[href^="tel:"]').forEach(link => {
+      link.href = `tel:${config.telPhone || ('+' + config.whatsappNumber)}`;
+    });
+
+    // 3. Synchronize all display phone elements
+    document.querySelectorAll('[data-du-phone], .du-phone-display').forEach(el => {
+      el.textContent = config.displayPhone;
+    });
+  };
+
+  // Run contact synchronization on load
+  syncContactLinks();
 
   // 9. Portfolio Detailed Case Study Modal (DU-PORT-001 & DU-PORT-002 Fix)
   // Kept strictly to 4 relevant sample concept industries (Restaurants, Salons, Clinics, Real Estate)

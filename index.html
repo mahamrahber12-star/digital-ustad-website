@@ -980,7 +980,11 @@
           <h4 class="text-xl font-extrabold text-slate-900">Need Social Media, Meta Ads, SEO, or Automation?</h4>
           <p class="text-xs text-slate-500">Explore our full pricing matrix with transparent monthly retainers and per-project options.</p>
         </div>
-        <div class="flex-shrink-0">
+        <div class="flex-shrink-0 flex flex-wrap items-center gap-3">
+          <button type="button" data-service="whatsapp-automation" class="btn-whatsapp-bot-quote inline-flex items-center gap-2 px-5 py-3 rounded-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs transition-all shadow-md">
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12.012 2c-5.506 0-9.989 4.478-9.99 9.984a9.964 9.964 0 0 0 1.333 4.993L2 22l5.233-1.237a9.994 9.994 0 0 0 4.779 1.217h.004c5.505 0 9.988-4.478 9.989-9.984 0-2.669-1.037-5.176-2.925-7.062A9.925 9.925 0 0 0 12.012 2zm5.835 14.198c-.244.688-1.227 1.26-1.786 1.32-.472.052-1.077.08-3.155-.783-2.658-1.102-4.363-3.807-4.496-3.983-.133-.176-1.076-1.433-1.076-2.733 0-1.3.68-1.94.92-2.203.24-.263.523-.328.698-.328.174 0 .349.002.502.01.163.008.382-.062.597.455.22.531.75 1.83.815 1.963.065.133.109.288.022.463-.087.175-.131.284-.262.437-.13.153-.275.342-.393.459-.13.13-.266.27-.115.53.151.26 1.002 1.65 2.148 2.671 1.472 1.312 2.71 1.718 3.097 1.91.387.192.613.16.84-.102.228-.263.974-1.134 1.235-1.523.26-.39.522-.325.872-.196.35.13 2.22 1.047 2.602 1.238.382.19.637.284.73.444.093.16.093.928-.151 1.616z"/></svg>
+            <span>WhatsApp Bot Quote</span>
+          </button>
           <a href="pricing.html" class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-slate-900 hover:bg-[#FF6600] text-white font-bold text-xs transition-all shadow-md">
             <span>View Full Pricing Matrix</span>
             <i data-lucide="arrow-right" class="w-4 h-4"></i>
@@ -1246,8 +1250,11 @@
       </button>
 
       <div class="mb-6">
-        <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-orange-100 text-[#FF6600] text-xs font-bold mb-2">
-          <span>Get Free Proposal</span>
+        <div class="flex items-center justify-between mb-2">
+          <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-orange-100 text-[#FF6600] text-xs font-bold">
+            <span>Get Free Proposal</span>
+          </div>
+          <span id="payment-milestone-badge" class="text-[11px] font-bold text-orange-800 bg-orange-100 px-3 py-1 rounded-full transition-colors">25/50/25 Installments</span>
         </div>
         <h3 class="text-2xl font-extrabold text-slate-900">Start Your Project With Us</h3>
         <p class="text-xs sm:text-sm text-slate-500 mt-1">Fill this quick form to receive an instant proposal & WhatsApp quote.</p>
@@ -1272,10 +1279,12 @@
               <option value="3-Page Website Lite (PKR 17,999)">3-Page Website Lite (PKR 17,999)</option>
               <option value="7-Page Website Growth (PKR 42,999)">7-Page Website Growth (PKR 42,999)</option>
               <option value="Custom Web / E-Commerce">Custom Web / E-Commerce</option>
+              <option value="Growth WhatsApp Workflow (PKR 45K-65K)">Growth WhatsApp Workflow (PKR 45k-65k) 🤖</option>
+              <option value="Basic WhatsApp Bot (PKR 25K-35K)">Basic WhatsApp Bot (PKR 25k-35k)</option>
+              <option value="Advanced AI & Custom API Bot (PKR 75K+)">Advanced AI & Custom API Bot (PKR 75k+)</option>
               <option value="Social Media Management (from PKR 18k/mo)">Social Media Management</option>
               <option value="Meta & Google Ads Management (from PKR 15k/mo)">Meta & Google Ads</option>
-              <option value="SEO & Google Maps Ranking (from PKR 15k/mo)">SEO & Google Business</option>
-              <option value="WhatsApp Automation System (from PKR 25k)">WhatsApp Automation</option>
+              <option value="SEO & Google Business (from PKR 15k/mo)">SEO & Google Business</option>
               <option value="Monthly All-in-One Retainer (from PKR 45k/mo)">Monthly Digital Retainer</option>
             </select>
           </div>
@@ -1301,6 +1310,10 @@
           <i data-lucide="send" class="w-4 h-4"></i>
           <span>Send Proposal Request (Direct WhatsApp)</span>
         </button>
+
+        <div id="payment-milestone-text" class="text-[11px] text-slate-500 text-center pt-1 leading-relaxed">
+          🔒 Privacy guaranteed. Zero spam. <strong>Payment Milestones: 25% kickoff, 50% approval on staging, 25% within 30 days of launch.</strong>
+        </div>
       </form>
 
     </div>
@@ -1355,6 +1368,7 @@
   </div>
 
   <!-- Scripts -->
+  <script src="js/config.js"></script>
   <script src="js/main.js"></script>
   <script>
     lucide.createIcons();
