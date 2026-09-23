@@ -4,7 +4,45 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Privacy Policy | Digital Ustad</title>
-  <meta name="description" content="Digital Ustad Privacy Policy. Transparent data handling, client confidentiality, and WhatsApp communication standards for Pakistani businesses.">
+  <meta name="description" content="Digital Ustad Privacy Policy. Transparent data handling, client confidentiality, and data protection standards for Pakistani businesses.">
+  <link rel="canonical" href="https://digitalustad.co/privacy">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Digital Ustad">
+  <meta property="og:title" content="Privacy Policy | Digital Ustad">
+  <meta property="og:description" content="Digital Ustad Privacy Policy. Transparent data handling, client confidentiality, and data protection standards for Pakistani businesses.">
+  <meta property="og:url" content="https://digitalustad.co/privacy">
+  <meta property="og:image" content="https://digitalustad.co/assets/images/logo-original.png">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Privacy Policy | Digital Ustad">
+  <meta name="twitter:description" content="Digital Ustad Privacy Policy. Transparent data handling, client confidentiality, and data protection standards for Pakistani businesses.">
+  <meta name="twitter:image" content="https://digitalustad.co/assets/images/logo-original.png">
+
+  <!-- Breadcrumb Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://digitalustad.co/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Privacy Policy",
+        "item": "https://digitalustad.co/privacy"
+      }
+    ]
+  }
+  </script>
+
   <link rel="icon" type="image/png" href="assets/images/favicon.png">
   
   <script>
@@ -19,34 +57,14 @@
     })();
   </script>
 
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      darkMode: 'class',
-      theme: {
-        extend: {
-          colors: {
-            brand: {
-              orange: '#FF6600',
-              orangeHover: '#EA580C',
-              orangeLight: '#FFF7ED',
-              dark: '#0B0F19',
-              darkCard: '#111827',
-              slateText: '#94A3B8'
-            }
-          },
-          fontFamily: {
-            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
-            outfit: ['"Outfit"', 'sans-serif']
-          }
-        }
-      }
-    }
-  </script>
+  <!-- Production Compiled Tailwind CSS -->
+  <link rel="stylesheet" href="css/tailwind.min.css">
   <script src="https://unpkg.com/lucide@latest"></script>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="bg-white dark:bg-[#0B0F19] text-slate-800 dark:text-slate-100 antialiased selection:bg-[#FF6600] selection:text-white relative">
+  <!-- Skip to Content Link -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
 
   <div id="scroll-progress"></div>
 
@@ -54,11 +72,11 @@
   <header class="sticky top-0 z-50 bg-[#0B0F19]/95 backdrop-blur-md border-b border-slate-800/80 transition-all">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-20">
-        <a href="index.html" class="flex items-center group">
-          <img src="assets/images/logo-dark.png" alt="Digital Ustad" class="h-10 sm:h-11 w-auto object-contain transition-transform duration-300 group-hover:scale-105">
+        <a href="index.html" class="flex items-center group" aria-label="Digital Ustad Home">
+          <img src="assets/images/logo-dark.png" alt="Digital Ustad" width="168" height="44" class="h-10 sm:h-11 w-auto object-contain transition-transform duration-300 group-hover:scale-105">
         </a>
 
-        <nav class="hidden md:flex items-center gap-7">
+        <nav class="hidden md:flex items-center gap-7" aria-label="Main Navigation">
           <a href="index.html" class="text-sm font-semibold text-slate-300 hover:text-[#FF6600] transition-colors">Home</a>
           <a href="services.html" class="text-sm font-semibold text-slate-300 hover:text-[#FF6600] transition-colors">Services</a>
           <a href="pricing.html" class="text-sm font-semibold text-slate-300 hover:text-[#FF6600] transition-colors">Pricing</a>
@@ -70,15 +88,15 @@
         </nav>
 
         <div class="flex items-center gap-3 sm:gap-4">
-          <button type="button" class="theme-toggle-btn rounded-full text-slate-300 hover:text-white bg-slate-800/80 hover:bg-slate-700 border border-slate-700/70 transition-all flex items-center justify-center focus:outline-none" aria-label="Toggle theme">
+          <button type="button" class="theme-toggle-btn rounded-full text-slate-300 hover:text-white bg-slate-800/80 hover:bg-slate-700 border border-slate-700/70 transition-all flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-[#FF6600]/40 shadow-sm" aria-label="Toggle light/dark theme" title="Switch Theme">
             <i data-lucide="moon" class="w-4 h-4 text-amber-300 theme-icon-moon"></i>
             <i data-lucide="sun" class="w-4 h-4 text-amber-400 theme-icon-sun"></i>
           </button>
           <a href="contact.html" class="btn-shine hidden sm:inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-[#FF6600] text-white text-sm font-bold shadow-lg">
-            <span>Get Started</span>
+            <span>Get a Free Consultation</span>
             <i data-lucide="arrow-right" class="w-4 h-4"></i>
           </a>
-          <button id="mobile-menu-btn" class="md:hidden p-2.5 rounded-xl text-slate-300 hover:text-white">
+          <button id="mobile-menu-btn" class="md:hidden p-2.5 rounded-xl text-slate-300 hover:text-white" aria-label="Open navigation menu" aria-controls="mobile-drawer" aria-expanded="false">
             <i data-lucide="menu" class="w-6 h-6"></i>
           </button>
         </div>
@@ -87,13 +105,13 @@
   </header>
 
   <!-- MOBILE DRAWER -->
-  <div id="mobile-drawer" class="fixed inset-0 z-50 bg-[#0B0F19]/95 backdrop-blur-xl transition-all duration-300 hidden opacity-0 pointer-events-none md:hidden">
+  <div id="mobile-drawer" class="fixed inset-0 z-50 bg-[#0B0F19]/95 backdrop-blur-xl transition-all duration-300 hidden opacity-0 pointer-events-none md:hidden" role="dialog" aria-modal="true" aria-label="Mobile Navigation Menu">
     <div class="flex flex-col h-full p-6">
       <div class="flex items-center justify-between pb-6 border-b border-slate-800">
-        <a href="index.html"><img src="assets/images/logo-dark.png" alt="Digital Ustad" class="h-9 w-auto"></a>
-        <button id="close-mobile-menu" class="p-2 text-slate-400 hover:text-white"><i data-lucide="x" class="w-7 h-7"></i></button>
+        <a href="index.html" aria-label="Digital Ustad Home"><img src="assets/images/logo-dark.png" alt="Digital Ustad" width="168" height="44" class="h-9 w-auto"></a>
+        <button id="close-mobile-menu" class="p-2 text-slate-400 hover:text-white" aria-label="Close navigation menu"><i data-lucide="x" class="w-7 h-7"></i></button>
       </div>
-      <div class="flex flex-col gap-5 py-8 flex-1">
+      <nav class="flex flex-col gap-5 py-8 flex-1" aria-label="Mobile Navigation Links">
         <a href="index.html" class="mobile-nav-link text-lg font-semibold text-slate-300 hover:text-[#FF6600]">Home</a>
         <a href="services.html" class="mobile-nav-link text-lg font-semibold text-slate-300 hover:text-[#FF6600]">Services</a>
         <a href="pricing.html" class="mobile-nav-link text-lg font-semibold text-slate-300 hover:text-[#FF6600]">Pricing</a>
@@ -122,7 +140,7 @@
   </section>
 
   <!-- CONTENT -->
-  <main class="py-14 sm:py-20 bg-white dark:bg-[#0B0F19]">
+  <main id="main-content" class="py-14 sm:py-20 bg-white dark:bg-[#0B0F19]">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10 text-slate-700 dark:text-slate-300 text-sm leading-relaxed">
       
       <section class="space-y-3">
@@ -199,6 +217,7 @@
 
   <script src="js/config.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/clonvo-chat.js" defer></script>
   <script>lucide.createIcons();</script>
 </body>
 </html>

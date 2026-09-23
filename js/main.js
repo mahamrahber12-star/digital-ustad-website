@@ -99,33 +99,84 @@ document.addEventListener('DOMContentLoaded', () => {
 
   revealElements.forEach(el => revealObserver.observe(el));
 
-  // 3. Mobile Navigation Drawer Toggle (Handles both IDs for cross-page consistency)
+  // 3. Mobile Navigation Drawer Toggle (Full ARIA + Focus Trap + Return Focus)
   const mobileMenuBtn = document.getElementById('mobile-menu-btn');
   const mobileMenuDrawer = document.getElementById('mobile-drawer');
   const closeMobileMenuBtns = document.querySelectorAll('#close-mobile-menu, #close-drawer-btn');
   const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
 
   if (mobileMenuBtn && mobileMenuDrawer) {
-    mobileMenuBtn.addEventListener('click', () => {
-      mobileMenuDrawer.classList.remove('hidden');
-      setTimeout(() => {
-        mobileMenuDrawer.classList.remove('opacity-0', 'pointer-events-none');
-      }, 10);
-    });
+    mobileMenuBtn.setAttribute('aria-expanded', 'false');
+    mobileMenuBtn.setAttribute('aria-controls', 'mobile-drawer');
+    if (!mobileMenuBtn.getAttribute('aria-label')) {
+      mobileMenuBtn.setAttribute('aria-label', 'Open navigation menu');
+    }
+    mobileMenuDrawer.setAttribute('role', 'dialog');
+    mobileMenuDrawer.setAttribute('aria-modal', 'true');
+    mobileMenuDrawer.setAttribute('aria-label', 'Mobile Navigation Menu');
 
-    const closeDrawer = () => {
-      mobileMenuDrawer.classList.add('opacity-0', 'pointer-events-none');
-      setTimeout(() => {
-        mobileMenuDrawer.classList.add('hidden');
-      }, 300);
+    const handleDrawerKeyDown = (e) => {
+      if (mobileMenuDrawer.classList.contains('hidden')) return;
+      if (e.key === 'Escape') {
+        e.preventDefault();
+        closeDrawer();
+        return;
+      }
+      if (e.key === 'Tab') {
+        const focusables = Array.from(mobileMenuDrawer.querySelectorAll(
+          'button:not([disabled]), [href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])'
+        )).filter(el => el.offsetWidth > 0 || el.offsetHeight > 0 || el === document.activeElement);
+        if (focusables.length === 0) return;
+        const first = focusables[0];
+        const last = focusables[focusables.length - 1];
+        if (e.shiftKey) {
+          if (document.activeElement === first) {
+            e.preventDefault();
+            last.focus();
+          }
+        } else {
+          if (document.activeElement === last) {
+            e.preventDefault();
+            first.focus();
+          }
+        }
+      }
     };
 
+    const openDrawer = () => {
+      mobileMenuDrawer.classList.remove('hidden');
+      mobileMenuBtn.setAttribute('aria-expanded', 'true');
+      document.body.style.overflow = 'hidden';
+      window.addEventListener('keydown', handleDrawerKeyDown);
+
+      setTimeout(() => {
+        mobileMenuDrawer.classList.remove('opacity-0', 'pointer-events-none');
+        const firstFocus = mobileMenuDrawer.querySelector('button, a');
+        if (firstFocus) firstFocus.focus();
+      }, 50);
+    };
+
+    const closeDrawer = () => {
+      window.removeEventListener('keydown', handleDrawerKeyDown);
+      mobileMenuDrawer.classList.add('opacity-0', 'pointer-events-none');
+      mobileMenuBtn.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+      setTimeout(() => {
+        mobileMenuDrawer.classList.add('hidden');
+        if (mobileMenuBtn && typeof mobileMenuBtn.focus === 'function') {
+          mobileMenuBtn.focus();
+        }
+      }, 250);
+    };
+
+    mobileMenuBtn.addEventListener('click', openDrawer);
     closeMobileMenuBtns.forEach(btn => btn.addEventListener('click', closeDrawer));
     mobileNavLinks.forEach(link => link.addEventListener('click', closeDrawer));
   }
 
-  // 4. Counter Animation on Scroll (DU-HOME-001 Fix: Instant fallback + smooth animation)
+  // 4. Counter Animation on Scroll (Respects prefers-reduced-motion)
   const statNumbers = document.querySelectorAll('.stat-number');
+  const userPrefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   
   // Immediately initialize with target value so counters NEVER sit at "0+"
   statNumbers.forEach(stat => {
@@ -138,6 +189,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   let statsAnimated = false;
   const animateCounters = () => {
+    if (userPrefersReducedMotion) return; // Respect prefers-reduced-motion
+
     statNumbers.forEach(stat => {
       const target = parseInt(stat.getAttribute('data-target'), 10);
       const suffix = stat.getAttribute('data-suffix') || '';
@@ -166,7 +219,7 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   const statsSection = document.getElementById('stats-section');
-  if (statsSection) {
+  if (statsSection && !userPrefersReducedMotion) {
     const statsObserver = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting && !statsAnimated) {
@@ -179,9 +232,9 @@ document.addEventListener('DOMContentLoaded', () => {
     statsObserver.observe(statsSection);
   }
 
-  // 5. 3D Subtle Tilt Effect on Hero Device Mockup
+  // 5. 3D Subtle Tilt Effect on Hero Device Mockup (Disabled under prefers-reduced-motion)
   const heroMockupContainer = document.querySelector('.hero-mockup-wrapper');
-  if (heroMockupContainer && window.innerWidth > 1024) {
+  if (heroMockupContainer && window.innerWidth > 1024 && !userPrefersReducedMotion) {
     heroMockupContainer.addEventListener('mousemove', (e) => {
       const rect = heroMockupContainer.getBoundingClientRect();
       const x = e.clientX - rect.left - rect.width / 2;
@@ -391,6 +444,81 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   };
 
+  // Helper: Open Digital Ustad contextual chat (prepared for Clonvo.chat integration)
+  const openDigitalUstadChat = (context) => {
+    context = context || {};
+    const chatContext = {
+      intent: context.intent || 'general_consultation',
+      service: context.service || null,
+      packageId: context.packageId || null,
+      sourcePage: context.sourcePage || (typeof window !== 'undefined' ? window.location.pathname : '')
+    };
+
+    if (typeof window !== 'undefined') {
+      window.dispatchEvent(new CustomEvent('digitalustad:chat:open', { detail: chatContext }));
+    }
+
+    if (typeof window !== 'undefined' && window.Clonvo && typeof window.Clonvo.open === 'function') {
+      window.Clonvo.open(chatContext);
+      return;
+    }
+
+    // Fallback: route to contact page with context parameters so visitor inquiry is seamlessly captured
+    const params = new URLSearchParams();
+    if (chatContext.service) params.set('service', chatContext.service);
+    if (chatContext.packageId) params.set('package', chatContext.packageId);
+    if (chatContext.intent) params.set('intent', chatContext.intent);
+
+    const queryStr = params.toString() ? '?' + params.toString() : '';
+
+    if (typeof window !== 'undefined') {
+      const isContactPage = window.location.pathname.endsWith('contact.html') || window.location.pathname.endsWith('/contact');
+      if (isContactPage) {
+        const serviceSelect = document.getElementById('client-service');
+        if (serviceSelect && chatContext.service) {
+          const matchTerm = chatContext.service.toLowerCase().replace(/[-_]/g, ' ');
+          for (let i = 0; i < serviceSelect.options.length; i++) {
+            if (serviceSelect.options[i].value.toLowerCase().includes(matchTerm)) {
+              serviceSelect.selectedIndex = i;
+              serviceSelect.dispatchEvent(new Event('change'));
+              break;
+            }
+          }
+        }
+        const quoteForm = document.getElementById('quote-form');
+        if (quoteForm) {
+          quoteForm.scrollIntoView({ behavior: 'smooth' });
+        }
+      } else {
+        window.location.href = 'contact.html' + queryStr;
+      }
+    }
+  };
+
+  // Expose helper globally
+  if (typeof window !== 'undefined') {
+    window.openDigitalUstadChat = openDigitalUstadChat;
+  }
+
+  // Pre-select service on contact page if passed via URL parameters
+  if (typeof window !== 'undefined') {
+    const urlParams = new URLSearchParams(window.location.search);
+    const requestedService = urlParams.get('service') || urlParams.get('package');
+    if (requestedService) {
+      const matchTerm = requestedService.toLowerCase().replace(/[-_]/g, ' ');
+      const serviceSelects = document.querySelectorAll('#client-service, select[name="service"]');
+      serviceSelects.forEach(sel => {
+        const matchIdx = Array.from(sel.options).findIndex(opt => 
+          opt.value.toLowerCase().includes(matchTerm)
+        );
+        if (matchIdx !== -1) {
+          sel.selectedIndex = matchIdx;
+          sel.dispatchEvent(new Event('change'));
+        }
+      });
+    }
+  }
+
   const handleProposalSubmission = (form) => {
     const nameInput = form.querySelector('[id*="name"]') || form.querySelector('input[name="name"]');
     const phoneInput = form.querySelector('[id*="phone"]') || form.querySelector('input[name="phone"]');
@@ -437,12 +565,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (hasError) return false;
 
-    // FORM-06: Long description safeguard (Clean truncation if > 500 chars)
+    // FORM-06: Long description safeguard
     if (message.length > 500) {
-      message = message.substring(0, 500) + '... [details continue in chat]';
+      message = message.substring(0, 500) + '...';
     }
 
-    // FORM-09: Double submit prevention
+    // FORM-09: Double submit prevention & loading state
     if (submitBtn) {
       submitBtn.disabled = true;
       submitBtn.setAttribute('data-original-text', submitBtn.innerHTML);
@@ -451,31 +579,56 @@ document.addEventListener('DOMContentLoaded', () => {
           <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
           <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
         </svg>
-        <span>Connecting to WhatsApp...</span>
+        <span>Submitting Project Brief...</span>
       `;
     }
 
-    const config = getActiveConfig();
-    const serviceTerms = getPaymentTermsForService(service);
+    // Standard website form lead handling (zero WhatsApp draft, on-page confirmation)
+    const leadPayload = {
+      name,
+      phone,
+      service,
+      budget,
+      message,
+      submittedAt: new Date().toISOString(),
+      sourcePage: window.location.pathname
+    };
 
-    // FORM-03, 04, 05, 08: Full formatted WhatsApp message with UTF-8 Urdu & package-specific terms (QA-08)
-    const whatsappText = encodeURIComponent(
-      `Assalam-o-Alaikum Digital Ustad! 🚀\n\nI would like to discuss a project inquiry for my business.\n\n*Name:* ${name}\n*Phone:* ${phone}\n*Service Interested:* ${service}\n*Budget:* ${budget}\n*Payment Schedule:* ${serviceTerms.draftTerms}\n*Project Details:* ${message || 'No additional details provided'}\n\nPlease share your proposal and estimated delivery timeline.`
-    );
+    try {
+      const existingLeads = JSON.parse(localStorage.getItem('du_project_briefs') || '[]');
+      existingLeads.push(leadPayload);
+      localStorage.setItem('du_project_briefs', JSON.stringify(existingLeads));
+    } catch (e) {}
 
-    const whatsappUrl = `https://wa.me/${config.whatsappNumber}?text=${whatsappText}`;
+    window.dispatchEvent(new CustomEvent('digitalustad:lead:submitted', { detail: leadPayload }));
 
-    // FORM-07: Open WhatsApp (wa.me natively opens app on mobile)
-    window.open(whatsappUrl, '_blank');
-
-    // Reset button after 3.5s
     setTimeout(() => {
+      // Clear previous success alert if any
+      form.querySelectorAll('.du-form-success').forEach(el => el.remove());
+
+      const successAlert = document.createElement('div');
+      successAlert.className = 'du-form-success p-4 mt-3 rounded-2xl bg-emerald-50 border border-emerald-200 text-emerald-900 text-xs leading-relaxed space-y-1';
+      successAlert.innerHTML = `
+        <div class="flex items-center gap-2 font-bold text-emerald-800 text-sm">
+          <svg class="w-5 h-5 text-emerald-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+          <span>Project Brief Submitted Successfully!</span>
+        </div>
+        <p class="text-slate-600">Thank you, <strong>${name}</strong>. Our team has received your brief for <strong>${service}</strong> and will contact you directly at <strong>${phone}</strong> within 24 hours.</p>
+      `;
+
+      form.appendChild(successAlert);
+
+      // Clear input fields
+      if (nameInput) nameInput.value = '';
+      if (phoneInput) phoneInput.value = '';
+      if (messageInput) messageInput.value = '';
+
       if (submitBtn) {
         submitBtn.disabled = false;
         const originalText = submitBtn.getAttribute('data-original-text');
         if (originalText) submitBtn.innerHTML = originalText;
       }
-    }, 3500);
+    }, 700);
 
     return true;
   };
@@ -495,13 +648,13 @@ document.addEventListener('DOMContentLoaded', () => {
       e.preventDefault();
       const success = handleProposalSubmission(form);
       if (success) {
-        // If inside modal, close it cleanly
+        // If inside modal, close it cleanly after user sees confirmation
         const modal = form.closest('#quote-modal');
         if (modal) {
           setTimeout(() => {
             const closeBtn = document.getElementById('close-quote-modal');
             if (closeBtn) closeBtn.click();
-          }, 600);
+          }, 2400);
         }
       }
     });
@@ -526,7 +679,6 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!serviceSelect) return;
 
     if (serviceType === 'whatsapp-automation' || serviceType === 'bot') {
-      // If modal doesn't already have bot packages only, populate or select
       const hasBotOption = Array.from(serviceSelect.options).some(o => o.value.includes('Growth WhatsApp'));
       if (!hasBotOption) {
         serviceSelect.setAttribute('data-original-options', serviceSelect.innerHTML);
@@ -543,22 +695,66 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   if (quoteModal) {
-    const openModal = (serviceType = null) => {
+    let lastFocusedQuoteTrigger = null;
+
+    quoteModal.setAttribute('role', 'dialog');
+    quoteModal.setAttribute('aria-modal', 'true');
+    quoteModal.setAttribute('aria-label', 'Project Consultation & Proposal Request');
+
+    const handleQuoteModalKeyDown = (e) => {
+      if (quoteModal.classList.contains('hidden')) return;
+
+      if (e.key === 'Escape') {
+        e.preventDefault();
+        closeModal();
+        return;
+      }
+
+      if (e.key === 'Tab') {
+        const focusables = Array.from(quoteModal.querySelectorAll(
+          'button:not([disabled]), [href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])'
+        )).filter(el => el.offsetWidth > 0 || el.offsetHeight > 0 || el === document.activeElement);
+        if (focusables.length === 0) return;
+        const first = focusables[0];
+        const last = focusables[focusables.length - 1];
+
+        if (e.shiftKey) {
+          if (document.activeElement === first) {
+            e.preventDefault();
+            last.focus();
+          }
+        } else {
+          if (document.activeElement === last) {
+            e.preventDefault();
+            first.focus();
+          }
+        }
+      }
+    };
+
+    const openModal = (serviceType = null, triggerEl = null) => {
+      lastFocusedQuoteTrigger = triggerEl || document.activeElement;
       if (serviceType) {
         configureModalForService(serviceType);
       }
       quoteModal.classList.remove('hidden');
       document.body.style.overflow = 'hidden';
+      window.addEventListener('keydown', handleQuoteModalKeyDown);
+
       setTimeout(() => {
         const modalContent = quoteModal.querySelector('.modal-box');
         if (modalContent) {
           modalContent.classList.remove('scale-95', 'opacity-0');
           modalContent.classList.add('scale-100', 'opacity-100');
         }
-      }, 10);
+        // Focus first form input or close button
+        const firstInput = quoteModal.querySelector('input:not([disabled]), select:not([disabled]), button');
+        if (firstInput) firstInput.focus();
+      }, 50);
     };
 
     const closeModal = () => {
+      window.removeEventListener('keydown', handleQuoteModalKeyDown);
       const modalContent = quoteModal.querySelector('.modal-box');
       if (modalContent) {
         modalContent.classList.remove('scale-100', 'opacity-100');
@@ -567,13 +763,16 @@ document.addEventListener('DOMContentLoaded', () => {
       setTimeout(() => {
         quoteModal.classList.add('hidden');
         document.body.style.overflow = '';
+        if (lastFocusedQuoteTrigger && typeof lastFocusedQuoteTrigger.focus === 'function') {
+          lastFocusedQuoteTrigger.focus();
+        }
       }, 200);
     };
 
     getStartedBtns.forEach(btn => {
       btn.addEventListener('click', (e) => {
         const serviceType = btn.getAttribute('data-service') || null;
-        openModal(serviceType);
+        openModal(serviceType, btn);
       });
     });
 
@@ -582,11 +781,16 @@ document.addEventListener('DOMContentLoaded', () => {
     botQuoteBtns.forEach(btn => {
       btn.addEventListener('click', (e) => {
         e.preventDefault();
-        openModal('whatsapp-automation');
+        openModal('whatsapp-automation', btn);
       });
     });
 
-    if (closeQuoteModalBtn) closeQuoteModalBtn.addEventListener('click', closeModal);
+    if (closeQuoteModalBtn) {
+      if (!closeQuoteModalBtn.getAttribute('aria-label')) {
+        closeQuoteModalBtn.setAttribute('aria-label', 'Close quotation request modal');
+      }
+      closeQuoteModalBtn.addEventListener('click', closeModal);
+    }
 
     quoteModal.addEventListener('click', (e) => {
       if (e.target === quoteModal) closeModal();
@@ -598,24 +802,29 @@ document.addEventListener('DOMContentLoaded', () => {
     const config = getActiveConfig();
     if (!config || !config.whatsappNumber) return;
 
-    // 1. Synchronize all wa.me links preserving query params (prefilled draft text & context)
-    document.querySelectorAll('a[href*="wa.me"]').forEach(link => {
-      const rawHref = link.getAttribute('href') || '';
-      try {
-        // Extract query parameter ?text= if present
-        const queryIndex = rawHref.indexOf('?');
-        const queryPart = queryIndex !== -1 ? rawHref.substring(queryIndex) : '';
-        link.href = `https://wa.me/${config.whatsappNumber}${queryPart}`;
-      } catch (err) {
-        link.href = rawHref.replace(/wa\.me\/[0-9]+/, `wa.me/${config.whatsappNumber}`);
-      }
+    // 1. Synchronize wa.me links ONLY on the contact page
+    const isContactPage = typeof window !== 'undefined' && (
+      window.location.pathname.endsWith('contact.html') || 
+      window.location.pathname.endsWith('/contact')
+    );
 
-      // If the link text itself displays a phone number, update to displayPhone
-      const textTrim = link.textContent.trim();
-      if (textTrim.startsWith('+92') || textTrim.startsWith('0300')) {
-        link.textContent = config.displayPhone;
-      }
-    });
+    if (isContactPage) {
+      document.querySelectorAll('a[href*="wa.me"]').forEach(link => {
+        const rawHref = link.getAttribute('href') || '';
+        try {
+          const queryIndex = rawHref.indexOf('?');
+          const queryPart = queryIndex !== -1 ? rawHref.substring(queryIndex) : '';
+          link.href = `https://wa.me/${config.whatsappNumber}${queryPart}`;
+        } catch (err) {
+          link.href = rawHref.replace(/wa\.me\/[0-9]+/, `wa.me/${config.whatsappNumber}`);
+        }
+
+        const textTrim = link.textContent.trim();
+        if (textTrim.startsWith('+92') || textTrim.startsWith('0300')) {
+          link.textContent = config.displayPhone;
+        }
+      });
+    }
 
     // 2. Synchronize all tel: links
     document.querySelectorAll('a[href^="tel:"]').forEach(link => {
@@ -713,7 +922,45 @@ document.addEventListener('DOMContentLoaded', () => {
   const projectCards = document.querySelectorAll('.project-card');
 
   if (projectModal) {
-    const openProjectModal = (projectId) => {
+    let lastFocusedProjectTrigger = null;
+
+    projectModal.setAttribute('role', 'dialog');
+    projectModal.setAttribute('aria-modal', 'true');
+    projectModal.setAttribute('aria-label', 'Project Case Study Details');
+
+    const handleProjectModalKeyDown = (e) => {
+      if (projectModal.classList.contains('hidden')) return;
+
+      if (e.key === 'Escape') {
+        e.preventDefault();
+        closeProjectModal();
+        return;
+      }
+
+      if (e.key === 'Tab') {
+        const focusables = Array.from(projectModal.querySelectorAll(
+          'button:not([disabled]), [href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])'
+        )).filter(el => el.offsetWidth > 0 || el.offsetHeight > 0 || el === document.activeElement);
+        if (focusables.length === 0) return;
+        const first = focusables[0];
+        const last = focusables[focusables.length - 1];
+
+        if (e.shiftKey) {
+          if (document.activeElement === first) {
+            e.preventDefault();
+            last.focus();
+          }
+        } else {
+          if (document.activeElement === last) {
+            e.preventDefault();
+            first.focus();
+          }
+        }
+      }
+    };
+
+    const openProjectModal = (projectId, triggerEl = null) => {
+      lastFocusedProjectTrigger = triggerEl || document.activeElement;
       const data = portfolioData[projectId];
       if (!data) return;
 
@@ -729,7 +976,10 @@ document.addEventListener('DOMContentLoaded', () => {
       if (catEl) catEl.textContent = data.category;
       if (descEl) descEl.textContent = data.description;
       if (statsEl) statsEl.textContent = data.stats;
-      if (imgEl) imgEl.src = data.image;
+      if (imgEl) {
+        imgEl.src = data.image;
+        imgEl.alt = data.title + ' Project Preview';
+      }
       if (badgeEl) badgeEl.textContent = data.typeBadge;
       if (deliverablesEl) deliverablesEl.textContent = data.deliverables;
 
@@ -745,16 +995,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
       projectModal.classList.remove('hidden');
       document.body.style.overflow = 'hidden';
+      window.addEventListener('keydown', handleProjectModalKeyDown);
+
       setTimeout(() => {
         const box = projectModal.querySelector('.modal-box');
         if (box) {
           box.classList.remove('scale-95', 'opacity-0');
           box.classList.add('scale-100', 'opacity-100');
         }
-      }, 10);
+        if (closeProjectModalBtn) {
+          closeProjectModalBtn.focus();
+        }
+      }, 50);
     };
 
     const closeProjectModal = () => {
+      window.removeEventListener('keydown', handleProjectModalKeyDown);
       const box = projectModal.querySelector('.modal-box');
       if (box) {
         box.classList.remove('scale-100', 'opacity-100');
@@ -763,68 +1019,169 @@ document.addEventListener('DOMContentLoaded', () => {
       setTimeout(() => {
         projectModal.classList.add('hidden');
         document.body.style.overflow = '';
+        if (lastFocusedProjectTrigger && typeof lastFocusedProjectTrigger.focus === 'function') {
+          lastFocusedProjectTrigger.focus();
+        }
       }, 200);
     };
 
     projectCards.forEach(card => {
       card.addEventListener('click', () => {
         const id = card.getAttribute('data-project-id');
-        openProjectModal(id);
+        openProjectModal(id, card);
       });
+      // Allow Enter/Space activation on project cards
+      card.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          const id = card.getAttribute('data-project-id');
+          openProjectModal(id, card);
+        }
+      });
+      if (!card.getAttribute('tabindex')) {
+        card.setAttribute('tabindex', '0');
+        card.setAttribute('role', 'button');
+        card.setAttribute('aria-haspopup', 'dialog');
+      }
     });
 
-    if (closeProjectModalBtn) closeProjectModalBtn.addEventListener('click', closeProjectModal);
+    if (closeProjectModalBtn) {
+      if (!closeProjectModalBtn.getAttribute('aria-label')) {
+        closeProjectModalBtn.setAttribute('aria-label', 'Close project details modal');
+      }
+      closeProjectModalBtn.addEventListener('click', closeProjectModal);
+    }
+
     projectModal.addEventListener('click', (e) => {
       if (e.target === projectModal) closeProjectModal();
     });
   }
 
-  // 10. Interactive Pricing Category Tabs Switcher
+  // 10. Interactive Pricing Category Tabs Switcher (Full A11y, Keyboard Roving Tabindex & Browser Navigation)
   const pricingTabBtns = document.querySelectorAll('.pricing-tab-btn');
   const pricingTabContents = document.querySelectorAll('.pricing-tab-content');
+  const pricingTabsContainer = document.getElementById('pricing-tabs-container');
 
   if (pricingTabBtns.length > 0 && pricingTabContents.length > 0) {
-    const activateTab = (targetId) => {
-      const btn = Array.from(pricingTabBtns).find(b => b.getAttribute('data-target') === targetId);
-      if (!btn) return;
+    if (pricingTabsContainer) {
+      pricingTabsContainer.setAttribute('role', 'tablist');
+      pricingTabsContainer.setAttribute('aria-label', 'Pricing Categories');
+    }
 
-      pricingTabBtns.forEach(b => {
-        b.classList.remove('active', 'bg-[#FF6600]', 'text-white', 'shadow-md');
-        b.classList.add('bg-white', 'text-slate-700', 'hover:bg-slate-100', 'border', 'border-slate-200');
+    const tabList = Array.from(pricingTabBtns);
+
+    const activateTab = (targetId, updateUrl = false) => {
+      const activeBtn = tabList.find(b => b.getAttribute('data-target') === targetId) || tabList[0];
+      if (!activeBtn) return;
+      const effectiveTargetId = activeBtn.getAttribute('data-target');
+
+      tabList.forEach(b => {
+        const isCurrent = b === activeBtn;
+        b.setAttribute('role', 'tab');
+        b.setAttribute('aria-selected', isCurrent ? 'true' : 'false');
+        b.setAttribute('tabindex', isCurrent ? '0' : '-1');
+        const cId = b.getAttribute('data-target');
+        b.setAttribute('aria-controls', cId);
+        if (!b.id) b.id = 'tab-btn-' + cId;
+
+        if (isCurrent) {
+          b.classList.add('active', 'bg-[#FF6600]', 'text-white', 'shadow-md');
+          b.classList.remove('bg-white', 'text-slate-700', 'hover:bg-slate-100', 'border', 'border-slate-200');
+        } else {
+          b.classList.remove('active', 'bg-[#FF6600]', 'text-white', 'shadow-md');
+          b.classList.add('bg-white', 'text-slate-700', 'hover:bg-slate-100', 'border', 'border-slate-200');
+        }
       });
 
-      btn.classList.add('active', 'bg-[#FF6600]', 'text-white', 'shadow-md');
-      btn.classList.remove('bg-white', 'text-slate-700', 'hover:bg-slate-100', 'border', 'border-slate-200');
-
       pricingTabContents.forEach(content => {
-        if (content.id === targetId) {
+        const isMatch = content.id === effectiveTargetId;
+        content.setAttribute('role', 'tabpanel');
+        content.setAttribute('aria-labelledby', activeBtn.id || ('tab-btn-' + effectiveTargetId));
+        content.setAttribute('tabindex', '0');
+        if (isMatch) {
           content.classList.remove('hidden');
         } else {
           content.classList.add('hidden');
         }
       });
 
+      if (updateUrl && window.history && window.history.pushState) {
+        if (window.location.hash !== '#' + effectiveTargetId) {
+          window.history.pushState(null, '', '#' + effectiveTargetId);
+        }
+      }
+
       if (window.lucide && typeof window.lucide.createIcons === 'function') {
         window.lucide.createIcons();
       }
     };
 
-    pricingTabBtns.forEach(btn => {
+    // Setup initial attributes and keyboard arrow listeners
+    tabList.forEach((btn, index) => {
+      const targetId = btn.getAttribute('data-target');
+      btn.setAttribute('role', 'tab');
+      btn.setAttribute('aria-controls', targetId);
+      btn.id = 'tab-btn-' + targetId;
+      const isInitialActive = btn.classList.contains('active') || index === 0;
+      btn.setAttribute('aria-selected', isInitialActive ? 'true' : 'false');
+      btn.setAttribute('tabindex', isInitialActive ? '0' : '-1');
+
       btn.addEventListener('click', (e) => {
         e.preventDefault();
-        const targetId = btn.getAttribute('data-target');
-        if (targetId) {
-          activateTab(targetId);
-          if (window.history && window.history.replaceState) {
-            window.history.replaceState(null, null, '#' + targetId);
+        activateTab(targetId, true);
+      });
+
+      btn.addEventListener('keydown', (e) => {
+        let newIndex = null;
+        if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
+          e.preventDefault();
+          newIndex = (index + 1) % tabList.length;
+        } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+          e.preventDefault();
+          newIndex = (index - 1 + tabList.length) % tabList.length;
+        } else if (e.key === 'Home') {
+          e.preventDefault();
+          newIndex = 0;
+        } else if (e.key === 'End') {
+          e.preventDefault();
+          newIndex = tabList.length - 1;
+        }
+
+        if (newIndex !== null) {
+          const nextBtn = tabList[newIndex];
+          nextBtn.focus();
+          const nextTarget = nextBtn.getAttribute('data-target');
+          if (nextTarget) {
+            activateTab(nextTarget, true);
           }
         }
       });
     });
 
+    // Support browser Back/Forward navigation
+    window.addEventListener('popstate', () => {
+      if (window.location.hash) {
+        const hashId = window.location.hash.replace('#', '');
+        activateTab(hashId, false);
+      } else if (tabList.length > 0) {
+        const defaultTarget = tabList[0].getAttribute('data-target');
+        activateTab(defaultTarget, false);
+      }
+    });
+
+    window.addEventListener('hashchange', () => {
+      if (window.location.hash) {
+        const hashId = window.location.hash.replace('#', '');
+        activateTab(hashId, false);
+      }
+    });
+
     if (window.location.hash) {
       const hashId = window.location.hash.replace('#', '');
-      activateTab(hashId);
+      activateTab(hashId, false);
+    } else if (tabList.length > 0) {
+      const defaultTarget = tabList[0].getAttribute('data-target');
+      activateTab(defaultTarget, false);
     }
   }
 });

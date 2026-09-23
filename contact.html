@@ -5,7 +5,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact Us | Digital Ustad</title>
   <meta name="description" content="Get in touch with Digital Ustad for a free website or digital marketing quotation. Instant WhatsApp chat available.">
+  <link rel="canonical" href="https://digitalustad.co/contact">
   <link rel="icon" type="image/png" href="assets/images/favicon.png">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://digitalustad.co/contact">
+  <meta property="og:title" content="Contact Us | Digital Ustad">
+  <meta property="og:description" content="Get in touch with Digital Ustad for a free website or digital marketing quotation. Instant WhatsApp chat available.">
+  <meta property="og:image" content="https://digitalustad.co/assets/images/logo-dark.png">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://digitalustad.co/contact">
+  <meta name="twitter:title" content="Contact Us | Digital Ustad">
+  <meta name="twitter:description" content="Get in touch with Digital Ustad for a free website or digital marketing quotation. Instant WhatsApp chat available.">
+  <meta name="twitter:image" content="https://digitalustad.co/assets/images/logo-dark.png">
   
   <!-- Theme Init (Prevents FOUC) -->
   <script>
@@ -20,34 +35,55 @@
     })();
   </script>
 
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      darkMode: 'class',
-      theme: {
-        extend: {
-          colors: {
-            brand: {
-              orange: '#FF6600',
-              orangeHover: '#EA580C',
-              orangeLight: '#FFF7ED',
-              dark: '#0B0F19',
-              darkCard: '#111827',
-              slateText: '#94A3B8'
-            }
-          },
-          fontFamily: {
-            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
-            inter: ['"Inter"', 'sans-serif']
-          }
-        }
-      }
-    }
-  </script>
+  <link rel="stylesheet" href="css/tailwind.min.css">
   <script src="https://unpkg.com/lucide@latest"></script>
   <link rel="stylesheet" href="css/style.css">
+
+  <!-- Structured Data: ContactPage & Breadcrumbs -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "ContactPage",
+        "@id": "https://digitalustad.co/contact#webpage",
+        "url": "https://digitalustad.co/contact",
+        "name": "Contact Us | Digital Ustad",
+        "description": "Get in touch with Digital Ustad for a free website or digital marketing quotation. Instant WhatsApp chat available.",
+        "isPartOf": {
+          "@type": "WebSite",
+          "@id": "https://digitalustad.co/#website",
+          "name": "Digital Ustad",
+          "url": "https://digitalustad.co/"
+        },
+        "breadcrumb": {
+          "@id": "https://digitalustad.co/contact#breadcrumb"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://digitalustad.co/contact#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://digitalustad.co/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Contact",
+            "item": "https://digitalustad.co/contact"
+          }
+        ]
+      }
+    ]
+  }
+  </script>
 </head>
 <body class="bg-white text-slate-800 antialiased selection:bg-[#FF6600] selection:text-white relative">
+  <a href="#main-content" class="skip-link">Skip to main content</a>
 
   <div id="scroll-progress"></div>
 
@@ -56,10 +92,10 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-20">
         <a href="index.html" class="flex items-center group">
-          <img src="assets/images/logo-dark.png" alt="Digital Ustad" class="h-10 sm:h-11 w-auto object-contain transition-transform duration-300 group-hover:scale-105">
+          <img src="assets/images/logo-dark.png" alt="Digital Ustad" width="160" height="40" class="h-10 sm:h-11 w-auto object-contain transition-transform duration-300 group-hover:scale-105">
         </a>
 
-        <nav class="hidden md:flex items-center gap-8">
+        <nav class="hidden md:flex items-center gap-8" aria-label="Main Navigation">
           <a href="index.html" class="text-sm font-semibold text-slate-300 hover:text-[#FF6600] transition-colors">Home</a>
           <a href="services.html" class="text-sm font-semibold text-slate-300 hover:text-[#FF6600] transition-colors">Services</a>
           <a href="pricing.html" class="text-sm font-semibold text-slate-300 hover:text-[#FF6600] transition-colors">Pricing</a>
@@ -77,11 +113,11 @@
             <i data-lucide="sun" class="w-4 h-4 text-amber-400 theme-icon-sun"></i>
           </button>
 
-          <a href="https://wa.me/923000000000" target="_blank" class="hidden sm:inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-emerald-600 hover:bg-emerald-700 text-white text-sm font-bold shadow-md transition-all">
-            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12.012 2c-5.506 0-9.989 4.478-9.99 9.984a9.964 9.964 0 0 0 1.333 4.993L2 22l5.233-1.237a9.994 9.994 0 0 0 4.779 1.217h.004c5.505 0 9.988-4.478 9.989-9.984 0-2.669-1.037-5.176-2.925-7.062A9.925 9.925 0 0 0 12.012 2zm5.835 14.198c-.244.688-1.227 1.26-1.786 1.32-.472.052-1.077.08-3.155-.783-2.658-1.102-4.363-3.807-4.496-3.983-.133-.176-1.076-1.433-1.076-2.733 0-1.3.68-1.94.92-2.203.24-.263.523-.328.698-.328.174 0 .349.002.502.01.163.008.382-.062.597.455.22.531.75 1.83.815 1.963.065.133.109.288.022.463-.087.175-.131.284-.262.437-.13.153-.275.342-.393.459-.13.13-.266.27-.115.53.151.26 1.002 1.65 2.148 2.671 1.472 1.312 2.71 1.718 3.097 1.91.387.192.613.16.84-.102.228-.263.974-1.134 1.235-1.523.26-.39.522-.325.872-.196.35.13 2.22 1.047 2.602 1.238.382.19.637.284.73.444.093.16.093.928-.151 1.616z"/></svg>
-            <span>WhatsApp Us</span>
+          <a href="#quote-form" class="btn-shine hidden sm:inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-full bg-[#FF6600] hover:bg-[#EA580C] text-white text-sm font-bold shadow-lg orange-glow-sm hover:scale-105 active:scale-95 transition-all">
+            <span>Get a Free Consultation</span>
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
           </a>
-          <button id="mobile-menu-btn" class="md:hidden p-2.5 rounded-xl text-slate-300 hover:text-white">
+          <button id="mobile-menu-btn" aria-label="Open mobile menu" class="md:hidden p-2.5 rounded-xl text-slate-300 hover:text-white">
             <i data-lucide="menu" class="w-6 h-6"></i>
           </button>
         </div>
@@ -90,19 +126,19 @@
   </header>
 
   <!-- MOBILE DRAWER -->
-  <div id="mobile-drawer" class="fixed inset-0 z-50 bg-[#0B0F19]/95 backdrop-blur-xl transition-all duration-300 hidden opacity-0 pointer-events-none md:hidden">
+  <div id="mobile-drawer" class="fixed inset-0 z-50 bg-[#0B0F19]/95 backdrop-blur-xl transition-all duration-300 hidden opacity-0 pointer-events-none md:hidden" role="dialog" aria-modal="true" aria-label="Mobile Navigation Menu">
     <div class="flex flex-col h-full p-6">
       <div class="flex items-center justify-between pb-6 border-b border-slate-800">
-        <a href="index.html" class="flex items-center"><img src="assets/images/logo-dark.png" alt="Digital Ustad" class="h-9 w-auto object-contain"></a>
+        <a href="index.html" class="flex items-center"><img src="assets/images/logo-dark.png" alt="Digital Ustad" width="144" height="36" class="h-9 w-auto object-contain"></a>
         <div class="flex items-center gap-2">
           <button type="button" class="theme-toggle-btn rounded-full text-slate-300 hover:text-white bg-slate-800/80 hover:bg-slate-700 border border-slate-700/70 transition-all flex items-center justify-center focus:outline-none" aria-label="Toggle light/dark theme" title="Switch Theme">
             <i data-lucide="moon" class="w-4 h-4 text-amber-300 theme-icon-moon"></i>
             <i data-lucide="sun" class="w-4 h-4 text-amber-400 theme-icon-sun"></i>
           </button>
-          <button id="close-mobile-menu" class="p-2 text-slate-400 hover:text-white"><i data-lucide="x" class="w-7 h-7"></i></button>
+          <button id="close-mobile-menu" aria-label="Close mobile menu" class="p-2 text-slate-400 hover:text-white"><i data-lucide="x" class="w-7 h-7"></i></button>
         </div>
       </div>
-      <div class="flex flex-col gap-5 py-8 flex-1">
+      <nav class="flex flex-col gap-5 py-8 flex-1" aria-label="Mobile Navigation">
         <a href="index.html" class="mobile-nav-link text-lg font-semibold text-slate-300 hover:text-[#FF6600]">Home</a>
         <a href="services.html" class="mobile-nav-link text-lg font-semibold text-slate-300 hover:text-[#FF6600]">Services</a>
         <a href="pricing.html" class="mobile-nav-link text-lg font-semibold text-slate-300 hover:text-[#FF6600]">Pricing</a>
@@ -111,169 +147,177 @@
         <a href="portfolio.html" class="mobile-nav-link text-lg font-semibold text-slate-300 hover:text-[#FF6600]">Portfolio</a>
         <a href="about.html" class="mobile-nav-link text-lg font-semibold text-slate-300 hover:text-[#FF6600]">About Us</a>
         <a href="contact.html" class="mobile-nav-link text-lg font-semibold text-white hover:text-[#FF6600]">Contact</a>
-      </div>
+      </nav>
     </div>
   </div>
 
-  <!-- HERO -->
-  <section class="bg-[#0B0F19] text-white py-16 lg:py-24 relative overflow-hidden">
-    <div class="absolute inset-0 bg-hero-glow pointer-events-none"></div>
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-      <span class="text-xs font-extrabold uppercase tracking-widest text-[#FF6600] bg-slate-900 border border-slate-700/80 px-4 py-1.5 rounded-full inline-block mb-4">
-        LET'S CONNECT
-      </span>
-      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight">
-        Let's Build Something <span class="text-[#FF6600]">Amazing Together</span>
-      </h1>
-      <p class="text-slate-300 text-base sm:text-lg max-w-2xl mx-auto mt-4 leading-relaxed">
-        Have questions or need a quotation? Send us a message or connect directly with our founders on WhatsApp.
-      </p>
-    </div>
-  </section>
+  <main id="main-content">
+    <!-- HERO -->
+    <section class="bg-[#0B0F19] text-white py-16 lg:py-24 relative overflow-hidden">
+      <div class="absolute inset-0 bg-hero-glow pointer-events-none"></div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+        <span class="text-xs font-extrabold uppercase tracking-widest text-[#FF6600] bg-slate-900 border border-slate-700/80 px-4 py-1.5 rounded-full inline-block mb-4">
+          LET'S CONNECT
+        </span>
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight">
+          Let's Build Something <span class="text-[#FF6600]">Amazing Together</span>
+        </h1>
+        <p class="text-slate-300 text-base sm:text-lg max-w-2xl mx-auto mt-4 leading-relaxed">
+          Have questions or need a quotation? Send us a message or connect directly with our founders on WhatsApp.
+        </p>
+      </div>
+    </section>
 
-  <!-- CONTACT FORM & DIRECT INFO -->
-  <section class="py-16 lg:py-24 bg-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+    <!-- CONTACT FORM & DIRECT INFO -->
+    <section class="py-16 lg:py-24 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <!-- Left: Contact Details & Fast WhatsApp -->
-        <div class="lg:col-span-5 space-y-8 reveal reveal-left active">
-          <div>
-            <h2 class="text-2xl font-extrabold text-slate-900">Get In Touch Directly</h2>
-            <p class="text-slate-600 text-sm mt-2 leading-relaxed">
-              We respond promptly to all new project inquiries. We can set up an online meeting or discuss requirements on WhatsApp.
-            </p>
-          </div>
-
-          <div class="space-y-4 text-sm font-semibold text-slate-800">
-            <div class="flex items-center gap-4 p-4 rounded-2xl bg-slate-50 border border-slate-100">
-              <div class="w-12 h-12 rounded-xl bg-emerald-100 flex items-center justify-center text-emerald-600 flex-shrink-0">
-                <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M12.012 2c-5.506 0-9.989 4.478-9.99 9.984a9.964 9.964 0 0 0 1.333 4.993L2 22l5.233-1.237a9.994 9.994 0 0 0 4.779 1.217h.004c5.505 0 9.988-4.478 9.989-9.984 0-2.669-1.037-5.176-2.925-7.062A9.925 9.925 0 0 0 12.012 2zm5.835 14.198c-.244.688-1.227 1.26-1.786 1.32-.472.052-1.077.08-3.155-.783-2.658-1.102-4.363-3.807-4.496-3.983-.133-.176-1.076-1.433-1.076-2.733 0-1.3.68-1.94.92-2.203.24-.263.523-.328.698-.328.174 0 .349.002.502.01.163.008.382-.062.597.455.22.531.75 1.83.815 1.963.065.133.109.288.022.463-.087.175-.131.284-.262.437-.13.153-.275.342-.393.459-.13.13-.266.27-.115.53.151.26 1.002 1.65 2.148 2.671 1.472 1.312 2.71 1.718 3.097 1.91.387.192.613.16.84-.102.228-.263.974-1.134 1.235-1.523.26-.39.522-.325.872-.196.35.13 2.22 1.047 2.602 1.238.382.19.637.284.73.444.093.16.093.928-.151 1.616z"/></svg>
-              </div>
-              <div>
-                <div class="text-xs text-slate-400 font-bold uppercase">Fastest Response</div>
-                <a href="https://wa.me/923000000000" target="_blank" data-du-contact="whatsapp" class="text-emerald-600 font-extrabold text-base hover:underline"><span data-du-phone>+92 300 0000000</span></a>
-              </div>
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+          
+          <!-- Left: Contact Details & Fast WhatsApp -->
+          <div class="lg:col-span-5 space-y-8 reveal reveal-left active">
+            <div>
+              <h2 class="text-2xl font-extrabold text-slate-900">Get In Touch Directly</h2>
+              <p class="text-slate-600 text-sm mt-2 leading-relaxed">
+                We respond promptly to all new project inquiries. We can set up an online meeting or discuss requirements on WhatsApp.
+              </p>
             </div>
 
-            <div class="flex items-center gap-4 p-4 rounded-2xl bg-slate-50 border border-slate-100">
-              <div class="w-12 h-12 rounded-xl bg-orange-100 flex items-center justify-center text-[#FF6600] flex-shrink-0">
-                <i data-lucide="mail" class="w-6 h-6"></i>
-              </div>
-              <div>
-                <div class="text-xs text-slate-400 font-bold uppercase">Official Email</div>
-                <a href="mailto:contact@digitalustad.co" class="text-slate-900 font-bold hover:text-[#FF6600]">contact@digitalustad.co</a>
-              </div>
-            </div>
-
-            <div class="flex items-center gap-4 p-4 rounded-2xl bg-slate-50 border border-slate-100">
-              <div class="w-12 h-12 rounded-xl bg-orange-100 flex items-center justify-center text-[#FF6600] flex-shrink-0">
-                <i data-lucide="map-pin" class="w-6 h-6"></i>
-              </div>
-              <div>
-                <div class="text-xs text-slate-400 font-bold uppercase">Office Location</div>
-                <div class="text-slate-900 font-bold">Lahore, Punjab, Pakistan</div>
-              </div>
-            </div>
-          </div>
-
-          <div class="p-6 rounded-3xl bg-[#0B0F19] text-white border border-slate-800 space-y-3">
-            <div class="flex items-center justify-between">
-              <span class="text-xs font-bold text-[#FF6600] uppercase tracking-wider">Working Hours & Response</span>
-              <span class="text-[11px] font-semibold text-emerald-400 bg-emerald-950/60 border border-emerald-800/80 px-2.5 py-0.5 rounded-full flex items-center gap-1.5">
-                <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
-                Active on WhatsApp
-              </span>
-            </div>
-            <div class="text-sm font-semibold">Monday – Saturday: 9:00 AM – 9:00 PM (PKT)</div>
-            <div class="text-xs text-slate-400 leading-relaxed">24/7 automated WhatsApp intake & emergency server monitoring for active retainer clients.</div>
-            
-            <div class="pt-3 border-t border-slate-800">
-              <div class="text-[11px] font-bold uppercase tracking-wider text-slate-400 mb-1.5">Accepted Payment Methods</div>
-              <div class="flex flex-wrap gap-1.5 text-[11px] font-medium text-slate-300">
-                <span class="px-2 py-0.5 rounded-md bg-slate-800 border border-slate-700">EasyPaisa</span>
-                <span class="px-2 py-0.5 rounded-md bg-slate-800 border border-slate-700">JazzCash</span>
-                <span class="px-2 py-0.5 rounded-md bg-slate-800 border border-slate-700">Raast / Bank Transfer</span>
-                <span class="px-2 py-0.5 rounded-md bg-slate-800 border border-slate-700">Online / IBFT</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Right: Instant Quote Form -->
-        <div class="lg:col-span-7 reveal reveal-right active">
-          <div class="bg-white rounded-3xl p-8 sm:p-10 border border-slate-200/90 shadow-xl">
-            <div class="flex items-center justify-between mb-2">
-              <h3 class="text-2xl font-extrabold text-slate-900">Request Free Proposal</h3>
-              <span id="payment-milestone-badge" class="text-[11px] font-bold text-orange-800 bg-orange-100 px-3 py-1 rounded-full transition-colors">25/50/25 Installments</span>
-            </div>
-            <p class="text-slate-500 text-xs sm:text-sm mb-6">Fill out your project requirements to receive a customized estimate and timeline via WhatsApp.</p>
-
-            <form id="quote-form" class="space-y-4">
-              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div>
-                  <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Your Name *</label>
-                  <input type="text" id="client-name" required placeholder="e.g. Ali Khan" class="w-full px-4 py-3 rounded-xl border text-sm focus:outline-none focus:border-[#FF6600]">
+            <div class="space-y-4 text-sm font-semibold text-slate-800">
+              <div class="flex items-center gap-4 p-4 rounded-2xl bg-slate-50 border border-slate-100">
+                <div class="w-12 h-12 rounded-xl bg-emerald-100 flex items-center justify-center text-emerald-600 flex-shrink-0">
+                  <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24" aria-hidden="true"><path d="M12.012 2c-5.506 0-9.989 4.478-9.99 9.984a9.964 9.964 0 0 0 1.333 4.993L2 22l5.233-1.237a9.994 9.994 0 0 0 4.779 1.217h.004c5.505 0 9.988-4.478 9.989-9.984 0-2.669-1.037-5.176-2.925-7.062A9.925 9.925 0 0 0 12.012 2zm5.835 14.198c-.244.688-1.227 1.26-1.786 1.32-.472.052-1.077.08-3.155-.783-2.658-1.102-4.363-3.807-4.496-3.983-.133-.176-1.076-1.433-1.076-2.733 0-1.3.68-1.94.92-2.203.24-.263.523-.328.698-.328.174 0 .349.002.502.01.163.008.382-.062.597.455.22.531.75 1.83.815 1.963.065.133.109.288.022.463-.087.175-.131.284-.262.437-.13.153-.275.342-.393.459-.13.13-.266.27-.115.53.151.26 1.002 1.65 2.148 2.671 1.472 1.312 2.71 1.718 3.097 1.91.387.192.613.16.84-.102.228-.263.974-1.134 1.235-1.523.26-.39.522-.325.872-.196.35.13 2.22 1.047 2.602 1.238.382.19.637.284.73.444.093.16.093.928-.151 1.616z"/></svg>
                 </div>
-                <div>
-                  <label class="block text-xs font-bold text-slate-700 uppercase mb-1">WhatsApp Phone *</label>
-                  <input type="tel" id="client-phone" required placeholder="e.g. 0300 1122334" class="w-full px-4 py-3 rounded-xl border text-sm focus:outline-none focus:border-[#FF6600]">
+                <div class="flex-1">
+                  <div class="text-xs text-slate-400 font-bold uppercase">Fastest Response</div>
+                  <a href="https://wa.me/923000000000" target="_blank" data-du-contact="whatsapp" class="text-emerald-600 font-extrabold text-base hover:underline"><span data-du-phone>+92 300 0000000</span></a>
                 </div>
               </div>
 
-              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div>
-                  <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Primary Service Needed</label>
-                  <select id="client-service" class="w-full px-4 py-3 rounded-xl border text-sm bg-white focus:outline-none focus:border-[#FF6600]">
-                    <option value="5-Page Website Starter (PKR 30,000)">5-Page Website Starter (PKR 30,000) ⭐</option>
-                    <option value="3-Page Website Lite (PKR 17,999)">3-Page Website Lite (PKR 17,999)</option>
-                    <option value="7-Page Website Growth (PKR 42,999)">7-Page Website Growth (PKR 42,999)</option>
-                    <option value="Custom Web / E-Commerce / Web App">Custom Web / E-Commerce / Web App</option>
-                    <option value="Basic WhatsApp Bot (PKR 25K-35K)">Basic WhatsApp Bot (PKR 25K-35K)</option>
-                    <option value="Growth WhatsApp Workflow (PKR 45K-65K)">Growth WhatsApp Workflow (PKR 45K-65K)</option>
-                    <option value="Advanced AI & Custom API Bot (PKR 75K+)">Advanced AI & Custom API Bot (PKR 75K+)</option>
-                    <option value="Growth SEO & Google Business (PKR 25,000/mo)">Growth SEO & Google Business (PKR 25,000/mo)</option>
-                    <option value="Growth Social Media Retainer (PKR 28,000/mo)">Growth Social Media (PKR 28,000/mo)</option>
-                    <option value="Basic Social Media (PKR 18,000/mo)">Basic Social Media (PKR 18,000/mo)</option>
-                    <option value="Meta & Google Ads Retainer (PKR 25,000/mo)">Meta & Google Ads Retainer (PKR 25,000/mo)</option>
-                    <option value="Graphic Design Retainer (PKR 18,000/mo)">Graphic Design Retainer (PKR 18,000/mo)</option>
-                    <option value="Per-Project Graphic Design / Branding">Per-Project Graphic Design / Branding</option>
-                    <option value="All-in-One Growth Bundle (PKR 75,000/mo)">All-in-One Growth Suite (PKR 75,000/mo)</option>
-                  </select>
+              <!-- Primary Approved WhatsApp Action -->
+              <a href="https://wa.me/923000000000" target="_blank" class="w-full py-3.5 rounded-2xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm shadow-md flex items-center justify-center gap-2.5 transition-all">
+                <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" aria-hidden="true"><path d="M12.012 2c-5.506 0-9.989 4.478-9.99 9.984a9.964 9.964 0 0 0 1.333 4.993L2 22l5.233-1.237a9.994 9.994 0 0 0 4.779 1.217h.004c5.505 0 9.988-4.478 9.989-9.984 0-2.669-1.037-5.176-2.925-7.062A9.925 9.925 0 0 0 12.012 2zm5.835 14.198c-.244.688-1.227 1.26-1.786 1.32-.472.052-1.077.08-3.155-.783-2.658-1.102-4.363-3.807-4.496-3.983-.133-.176-1.076-1.433-1.076-2.733 0-1.3.68-1.94.92-2.203.24-.263.523-.328.698-.328.174 0 .349.002.502.01.163.008.382-.062.597.455.22.531.75 1.83.815 1.963.065.133.109.288.022.463-.087.175-.131.284-.262.437-.13.153-.275.342-.393.459-.13.13-.266.27-.115.53.151.26 1.002 1.65 2.148 2.671 1.472 1.312 2.71 1.718 3.097 1.91.387.192.613.16.84-.102.228-.263.974-1.134 1.235-1.523.26-.39.522-.325.872-.196.35.13 2.22 1.047 2.602 1.238.382.19.637.284.73.444.093.16.093.928-.151 1.616z"/></svg>
+                <span>Chat on WhatsApp</span>
+              </a>
+
+              <div class="flex items-center gap-4 p-4 rounded-2xl bg-slate-50 border border-slate-100">
+                <div class="w-12 h-12 rounded-xl bg-orange-100 flex items-center justify-center text-[#FF6600] flex-shrink-0">
+                  <i data-lucide="mail" class="w-6 h-6"></i>
                 </div>
                 <div>
-                  <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Estimated Budget</label>
-                  <select id="client-budget" class="w-full px-4 py-3 rounded-xl border text-sm bg-white focus:outline-none focus:border-[#FF6600]">
-                    <option value="PKR 17,999 - 30,000">PKR 17,999 – 30,000 (Entry / Starter)</option>
-                    <option value="PKR 30,000 - 50,000">PKR 30,000 – 50,000 (Growth Sites & Retainers)</option>
-                    <option value="PKR 50,000 - 100,000">PKR 50,000 – 100,000 (Full Stack & Automation)</option>
-                    <option value="PKR 100,000+">PKR 100,000+ (Omni-Channel Scale / Custom)</option>
-                  </select>
+                  <div class="text-xs text-slate-400 font-bold uppercase">Official Email</div>
+                  <a href="mailto:contact@digitalustad.co" class="text-slate-900 font-bold hover:text-[#FF6600]">contact@digitalustad.co</a>
                 </div>
               </div>
 
-              <div>
-                <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Project Notes / Website References</label>
-                <textarea id="client-message" rows="4" placeholder="Tell us about your business, what you want to achieve, or paste links to websites you like..." class="w-full px-4 py-3 rounded-xl border text-sm focus:outline-none focus:border-[#FF6600]"></textarea>
+              <div class="flex items-center gap-4 p-4 rounded-2xl bg-slate-50 border border-slate-100">
+                <div class="w-12 h-12 rounded-xl bg-orange-100 flex items-center justify-center text-[#FF6600] flex-shrink-0">
+                  <i data-lucide="map-pin" class="w-6 h-6"></i>
+                </div>
+                <div>
+                  <div class="text-xs text-slate-400 font-bold uppercase">Office Location</div>
+                  <div class="text-slate-900 font-bold">Lahore, Punjab, Pakistan</div>
+                </div>
               </div>
+            </div>
 
-              <button type="submit" class="btn-shine w-full py-4 rounded-xl bg-[#FF6600] hover:bg-[#EA580C] text-white font-bold text-sm shadow-xl orange-glow flex items-center justify-center gap-2 transition-all">
-                <i data-lucide="send" class="w-4 h-4"></i>
-                <span>Send Proposal Request (Direct WhatsApp)</span>
-              </button>
+            <div class="p-6 rounded-3xl bg-[#0B0F19] text-white border border-slate-800 space-y-3">
+              <div class="flex items-center justify-between">
+                <span class="text-xs font-bold text-[#FF6600] uppercase tracking-wider">Working Hours & Response</span>
+                <span class="text-[11px] font-semibold text-emerald-400 bg-emerald-950/60 border border-emerald-800/80 px-2.5 py-0.5 rounded-full flex items-center gap-1.5">
+                  <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                  Active on WhatsApp
+                </span>
+              </div>
+              <div class="text-sm font-semibold">Monday – Saturday: 9:00 AM – 9:00 PM (PKT)</div>
+              <div class="text-xs text-slate-400 leading-relaxed">24/7 automated WhatsApp intake & emergency server monitoring for active retainer clients.</div>
               
-              <div id="payment-milestone-text" class="text-[11px] text-slate-500 text-center pt-1 leading-relaxed">
-                🔒 Privacy guaranteed. Zero spam. <strong>Payment Milestones: 25% kickoff, 50% approval on staging, 25% within 30 days of launch.</strong>
+              <div class="pt-3 border-t border-slate-800">
+                <div class="text-[11px] font-bold uppercase tracking-wider text-slate-400 mb-1.5">Accepted Payment Methods</div>
+                <div class="flex flex-wrap gap-1.5 text-[11px] font-medium text-slate-300">
+                  <span class="px-2 py-0.5 rounded-md bg-slate-800 border border-slate-700">EasyPaisa</span>
+                  <span class="px-2 py-0.5 rounded-md bg-slate-800 border border-slate-700">JazzCash</span>
+                  <span class="px-2 py-0.5 rounded-md bg-slate-800 border border-slate-700">Raast / Bank Transfer</span>
+                  <span class="px-2 py-0.5 rounded-md bg-slate-800 border border-slate-700">Online / IBFT</span>
+                </div>
               </div>
-            </form>
+            </div>
           </div>
+
+          <!-- Right: Instant Quote Form -->
+          <div class="lg:col-span-7 reveal reveal-right active">
+            <div class="bg-white rounded-3xl p-8 sm:p-10 border border-slate-200/90 shadow-xl">
+              <div class="flex items-center justify-between mb-2">
+                <h2 class="text-2xl font-extrabold text-slate-900">Request Free Proposal</h2>
+                <span id="payment-milestone-badge" class="text-[11px] font-bold text-orange-800 bg-orange-100 px-3 py-1 rounded-full transition-colors">25/50/25 Installments</span>
+              </div>
+              <p class="text-slate-500 text-xs sm:text-sm mb-6">Fill out your project requirements to receive a customized estimate and timeline from our team.</p>
+
+              <form id="quote-form" class="space-y-4">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div>
+                    <label for="client-name" class="block text-xs font-bold text-slate-700 uppercase mb-1">Your Name *</label>
+                    <input type="text" id="client-name" required placeholder="e.g. Ali Khan" class="w-full px-4 py-3 rounded-xl border text-sm focus:outline-none focus:border-[#FF6600]">
+                  </div>
+                  <div>
+                    <label for="client-phone" class="block text-xs font-bold text-slate-700 uppercase mb-1">WhatsApp Phone *</label>
+                    <input type="tel" id="client-phone" required placeholder="e.g. 0300 1122334" class="w-full px-4 py-3 rounded-xl border text-sm focus:outline-none focus:border-[#FF6600]">
+                  </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div>
+                    <label for="client-service" class="block text-xs font-bold text-slate-700 uppercase mb-1">Primary Service Needed</label>
+                    <select id="client-service" class="w-full px-4 py-3 rounded-xl border text-sm bg-white focus:outline-none focus:border-[#FF6600]">
+                      <option value="5-Page Website Starter (PKR 30,000)">5-Page Website Starter (PKR 30,000) ⭐</option>
+                      <option value="3-Page Website Lite (PKR 17,999)">3-Page Website Lite (PKR 17,999)</option>
+                      <option value="7-Page Website Growth (PKR 42,999)">7-Page Website Growth (PKR 42,999)</option>
+                      <option value="Custom Web / E-Commerce / Web App">Custom Web / E-Commerce / Web App</option>
+                      <option value="Basic WhatsApp Bot (PKR 25K-35K)">Basic WhatsApp Bot (PKR 25K-35K)</option>
+                      <option value="Growth WhatsApp Workflow (PKR 45K-65K)">Growth WhatsApp Workflow (PKR 45K-65K)</option>
+                      <option value="Advanced AI & Custom API Bot (PKR 75K+)">Advanced AI & Custom API Bot (PKR 75K+)</option>
+                      <option value="Growth SEO & Google Business (PKR 25,000/mo)">Growth SEO & Google Business (PKR 25,000/mo)</option>
+                      <option value="Growth Social Media Retainer (PKR 28,000/mo)">Growth Social Media (PKR 28,000/mo)</option>
+                      <option value="Basic Social Media (PKR 18,000/mo)">Basic Social Media (PKR 18,000/mo)</option>
+                      <option value="Meta & Google Ads Retainer (PKR 25,000/mo)">Meta & Google Ads Retainer (PKR 25,000/mo)</option>
+                      <option value="Graphic Design Retainer (PKR 18,000/mo)">Graphic Design Retainer (PKR 18,000/mo)</option>
+                      <option value="Per-Project Graphic Design / Branding">Per-Project Graphic Design / Branding</option>
+                      <option value="All-in-One Growth Bundle (PKR 75,000/mo)">All-in-One Growth Suite (PKR 75,000/mo)</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label for="client-budget" class="block text-xs font-bold text-slate-700 uppercase mb-1">Estimated Budget</label>
+                    <select id="client-budget" class="w-full px-4 py-3 rounded-xl border text-sm bg-white focus:outline-none focus:border-[#FF6600]">
+                      <option value="PKR 17,999 - 30,000">PKR 17,999 – 30,000 (Entry / Starter)</option>
+                      <option value="PKR 30,000 - 50,000">PKR 30,000 – 50,000 (Growth Sites & Retainers)</option>
+                      <option value="PKR 50,000 - 100,000">PKR 50,000 – 100,000 (Full Stack & Automation)</option>
+                      <option value="PKR 100,000+">PKR 100,000+ (Omni-Channel Scale / Custom)</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div>
+                  <label for="client-message" class="block text-xs font-bold text-slate-700 uppercase mb-1">Project Notes / Website References</label>
+                  <textarea id="client-message" rows="4" placeholder="Tell us about your business, what you want to achieve, or paste links to websites you like..." class="w-full px-4 py-3 rounded-xl border text-sm focus:outline-none focus:border-[#FF6600]"></textarea>
+                </div>
+
+                <button type="submit" class="btn-shine w-full py-4 rounded-xl bg-[#FF6600] hover:bg-[#EA580C] text-white font-bold text-sm shadow-xl orange-glow flex items-center justify-center gap-2 transition-all">
+                  <i data-lucide="send" class="w-4 h-4"></i>
+                  <span>Submit Project Brief</span>
+                </button>
+                
+                <div id="payment-milestone-text" class="text-[11px] text-slate-500 text-center pt-1 leading-relaxed">
+                  🔒 Privacy guaranteed. Zero spam. <strong>Payment Milestones: 25% kickoff, 50% approval on staging, 25% within 30 days of launch.</strong>
+                </div>
+              </form>
+            </div>
+          </div>
+
         </div>
 
       </div>
-
-    </div>
-  </section>
+    </section>
+  </main>
 
   <!-- ================= COMPREHENSIVE FOOTER ================= -->
   <footer class="bg-[#0B0F19] text-slate-400 pt-16 pb-12 border-t border-slate-800">
@@ -284,19 +328,16 @@
         <!-- Col 1: Brand & About (Spans 2 cols on desktop) -->
         <div class="lg:col-span-2 space-y-4">
           <a href="index.html" class="inline-block group">
-            <img src="assets/images/logo-dark.png" alt="Digital Ustad" class="h-10 sm:h-11 w-auto object-contain transition-transform duration-300 group-hover:scale-105">
+            <img src="assets/images/logo-dark.png" alt="Digital Ustad" width="160" height="40" class="h-10 sm:h-11 w-auto object-contain transition-transform duration-300 group-hover:scale-105">
           </a>
           <p class="text-xs sm:text-sm text-slate-400 leading-relaxed max-w-sm">
             A digital partner for small & medium businesses across Pakistan. We build fast, modern websites, run ROI-focused marketing, and streamline operations.
           </p>
           <div class="flex items-center gap-3 text-slate-400 pt-2">
-            <a href="https://wa.me/923000000000" target="_blank" class="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center hover:bg-[#FF6600] hover:text-white transition-colors" title="WhatsApp">
-              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12.012 2c-5.506 0-9.989 4.478-9.99 9.984a9.964 9.964 0 0 0 1.333 4.993L2 22l5.233-1.237a9.994 9.994 0 0 0 4.779 1.217h.004c5.505 0 9.988-4.478 9.989-9.984 0-2.669-1.037-5.176-2.925-7.062A9.925 9.925 0 0 0 12.012 2zm5.835 14.198c-.244.688-1.227 1.26-1.786 1.32-.472.052-1.077.08-3.155-.783-2.658-1.102-4.363-3.807-4.496-3.983-.133-.176-1.076-1.433-1.076-2.733 0-1.3.68-1.94.92-2.203.24-.263.523-.328.698-.328.174 0 .349.002.502.01.163.008.382-.062.597.455.22.531.75 1.83.815 1.963.065.133.109.288.022.463-.087.175-.131.284-.262.437-.13.153-.275.342-.393.459-.13.13-.266.27-.115.53.151.26 1.002 1.65 2.148 2.671 1.472 1.312 2.71 1.718 3.097 1.91.387.192.613.16.84-.102.228-.263.974-1.134 1.235-1.523.26-.39.522-.325.872-.196.35.13 2.22 1.047 2.602 1.238.382.19.637.284.73.444.093.16.093.928-.151 1.616z"/></svg>
-            </a>
-            <a href="mailto:contact@digitalustad.co" class="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center hover:bg-[#FF6600] hover:text-white transition-colors" title="Email">
+            <a href="mailto:contact@digitalustad.co" class="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center hover:bg-[#FF6600] hover:text-white transition-colors" aria-label="Email" title="Email">
               <i data-lucide="mail" class="w-4 h-4"></i>
             </a>
-            <a href="tel:+923000000000" class="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center hover:bg-[#FF6600] hover:text-white transition-colors" title="Phone">
+            <a href="tel:+923000000000" class="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center hover:bg-[#FF6600] hover:text-white transition-colors" aria-label="Phone" title="Phone">
               <i data-lucide="phone" class="w-4 h-4"></i>
             </a>
           </div>
@@ -304,7 +345,7 @@
 
         <!-- Col 2: Services -->
         <div class="space-y-3">
-          <h4 class="text-sm font-bold text-white uppercase tracking-wider">Services</h4>
+          <h2 class="text-sm font-bold text-white uppercase tracking-wider">Services</h2>
           <ul class="space-y-2 text-xs">
             <li><a href="service-web-development.html" class="hover:text-[#FF6600] transition-colors">Web Development</a></li>
             <li><a href="service-social-media.html" class="hover:text-[#FF6600] transition-colors">Social Media Marketing</a></li>
@@ -318,7 +359,7 @@
 
         <!-- Col 3: Quick Links -->
         <div class="space-y-3">
-          <h4 class="text-sm font-bold text-white uppercase tracking-wider">Quick Links</h4>
+          <h2 class="text-sm font-bold text-white uppercase tracking-wider">Quick Links</h2>
           <ul class="space-y-2 text-xs">
             <li><a href="index.html" class="hover:text-[#FF6600] transition-colors">Home</a></li>
             <li><a href="about.html" class="hover:text-[#FF6600] transition-colors">About Us</a></li>
@@ -333,7 +374,7 @@
 
         <!-- Col 4: Get In Touch -->
         <div class="space-y-3">
-          <h4 class="text-sm font-bold text-white uppercase tracking-wider">Get In Touch</h4>
+          <h2 class="text-sm font-bold text-white uppercase tracking-wider">Get In Touch</h2>
           <ul class="space-y-2.5 text-xs text-slate-300">
             <li class="flex items-start gap-2">
               <i data-lucide="map-pin" class="w-4 h-4 text-[#FF6600] flex-shrink-0 mt-0.5"></i>
@@ -371,15 +412,9 @@
     </div>
   </footer>
 
-  <!-- ================= FLOATING WHATSAPP BUTTON WITH RADAR PULSE ================= -->
-  <a href="https://wa.me/923000000000?text=Hello%20Digital%20Ustad,%20I%20need%20a%20website%20quotation!" target="_blank" class="fixed bottom-6 right-6 z-40 w-14 h-14 rounded-full bg-emerald-500 hover:bg-emerald-600 text-white flex items-center justify-center shadow-2xl hover:scale-110 active:scale-95 transition-all group" title="Chat on WhatsApp">
-    <div class="radar-ring"></div>
-    <span class="absolute -top-9 right-0 bg-slate-900 text-white text-[11px] font-semibold px-2.5 py-1 rounded-md shadow-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">Chat with us</span>
-    <svg class="w-7 h-7 fill-current" viewBox="0 0 24 24"><path d="M12.012 2c-5.506 0-9.989 4.478-9.99 9.984a9.964 9.964 0 0 0 1.333 4.993L2 22l5.233-1.237a9.994 9.994 0 0 0 4.779 1.217h.004c5.505 0 9.988-4.478 9.989-9.984 0-2.669-1.037-5.176-2.925-7.062A9.925 9.925 0 0 0 12.012 2zm5.835 14.198c-.244.688-1.227 1.26-1.786 1.32-.472.052-1.077.08-3.155-.783-2.658-1.102-4.363-3.807-4.496-3.983-.133-.176-1.076-1.433-1.076-2.733 0-1.3.68-1.94.92-2.203.24-.263.523-.328.698-.328.174 0 .349.002.502.01.163.008.382-.062.597.455.22.531.75 1.83.815 1.963.065.133.109.288.022.463-.087.175-.131.284-.262.437-.13.153-.275.342-.393.459-.13.13-.266.27-.115.53.151.26 1.002 1.65 2.148 2.671 1.472 1.312 2.71 1.718 3.097 1.91.387.192.613.16.84-.102.228-.263.974-1.134 1.235-1.523.26-.39.522-.325.872-.196.35.13 2.22 1.047 2.602 1.238.382.19.637.284.73.444.093.16.093.928-.151 1.616z"/></svg>
-  </a>
-
   <script src="js/config.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/clonvo-chat.js" defer></script>
   <script>lucide.createIcons();</script>
 </body>
 </html>

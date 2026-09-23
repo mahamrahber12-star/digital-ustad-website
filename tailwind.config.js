@@ -13,6 +13,11 @@ module.exports = {
           orangeHover: '#EA580C',
           orangeLight: '#FFF7ED',
           dark: '#0B0F19',
+          navy: '#0B1220',
+          btnOrange: '#C2410C',
+          warmAccent: '#F97316',
+          trustTeal: '#0F766E',
+          surfaceLight: '#F8FAFC',
           darkCard: '#111827',
           slateText: '#94A3B8'
         }

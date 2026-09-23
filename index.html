@@ -3,9 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Digital Ustad | We Handle the Digital. You Handle the Business.</title>
-  <meta name="description" content="Websites, marketing, creative and automation solutions that help local businesses build, grow and operate online.">
+  <title>Digital Ustad | Accountable Digital Growth Partner for Pakistani Businesses</title>
+  <meta name="description" content="Digital Ustad helps growing businesses across Pakistan with high-performance websites, performance marketing, local SEO, branding and business automation - delivered by one accountable team.">
+  <link rel="canonical" href="https://digitalustad.co/">
   <link rel="icon" type="image/png" href="assets/images/favicon.png">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://digitalustad.co/">
+  <meta property="og:title" content="Digital Ustad | Accountable Digital Growth Partner for Pakistani Businesses">
+  <meta property="og:description" content="Digital Ustad helps growing businesses across Pakistan with high-performance websites, performance marketing, local SEO, branding and business automation - delivered by one accountable team.">
+  <meta property="og:image" content="https://digitalustad.co/assets/images/logo-dark.png">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://digitalustad.co/">
+  <meta name="twitter:title" content="Digital Ustad | Accountable Digital Growth Partner for Pakistani Businesses">
+  <meta name="twitter:description" content="Digital Ustad helps growing businesses across Pakistan with high-performance websites, performance marketing, local SEO, branding and business automation - delivered by one accountable team.">
+  <meta name="twitter:image" content="https://digitalustad.co/assets/images/logo-dark.png">
   
   <!-- Theme Init (Prevents FOUC) -->
   <script>
@@ -20,80 +35,142 @@
     })();
   </script>
 
-  <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      darkMode: 'class',
-      theme: {
-        extend: {
-          colors: {
-            brand: {
-              orange: '#FF6600',
-              orangeHover: '#EA580C',
-              orangeLight: '#FFF7ED',
-              dark: '#0B0F19',
-              darkCard: '#111827',
-              slateText: '#94A3B8'
+  <link rel="stylesheet" href="css/tailwind.min.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Structured Data: WebSite, ProfessionalService, FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://digitalustad.co/#website",
+        "url": "https://digitalustad.co/",
+        "name": "Digital Ustad",
+        "description": "Accountable Digital Growth Partner for Pakistani Businesses",
+        "inLanguage": "en"
+      },
+      {
+        "@type": "ProfessionalService",
+        "@id": "https://digitalustad.co/#organization",
+        "name": "Digital Ustad",
+        "url": "https://digitalustad.co/",
+        "logo": "https://digitalustad.co/assets/images/logo-dark.png",
+        "image": "https://digitalustad.co/assets/images/logo-dark.png",
+        "description": "Digital Ustad helps growing businesses across Pakistan with high-performance websites, performance marketing, local SEO, branding and business automation.",
+        "telephone": "+923000000000",
+        "email": "contact@digitalustad.co",
+        "priceRange": "PKR 17,999 - PKR 75,000+",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Lahore",
+          "addressRegion": "Punjab",
+          "addressCountry": "PK"
+        },
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+            "opens": "09:00",
+            "closes": "21:00"
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://digitalustad.co/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Website kitne din mein tayar aur live ho jati hai?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Hmari standard 5-Page Business Website aam tor par 7 se 10 working days mein tayar aur live ho jati hai (3-Page Lite package 5 se 7 working days mein, aur 7-Page Growth package 10 se 14 working days mein). Requirements aur content time par milne par timeline bilkul ensure ki jati hai."
             }
           },
-          fontFamily: {
-            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
-            outfit: ['"Outfit"', 'sans-serif']
+          {
+            "@type": "Question",
+            "name": "Installment plan (25 / 50 / 25) aur payment methods kaise kaam karte hain?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Hmaray 5-Page (PKR 30,000) aur 7-Page (PKR 42,999) websites par 25 / 50 / 25 Milestone Installments dastiyab hain: 25% project kickoff par, 50% design review & approval par (live launch se pehle), aur baqi 25% aglay 30 dinon ke andar. Payments hum EasyPaisa, JazzCash, Raast, ya Direct Bank Transfer ke zariye receive karte hain."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Kya hum website aur ad accounts ke 100% owner hotay hain?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Bilkul! Aapka domain name, hosting credentials, website code, aur Meta/Google advertising accounts sab aapki direct ownership mein hotay hain. Digital Ustad sirf administrative management access ke sath kaam karta hai taake zero vendor lock-in ho."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Kya advertising budget package fees mein shamil hota hai?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Nahi. Listed amounts hmari management service fees hain. Aapka official ad spend direct Meta ya Google ko aapke business card ke zariye ada hota hai. Is se 100% financial transparency maintain rehti hai aur kisi qisam ka hidden markup nahi hota."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Launch ke baad support aur maintenance kaise milti hai?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Har website package ke sath 14 se 30 days ki comprehensive support warranty shamil hoti hai. Iske baad aap hamari optional Website Care (PKR 3,000 / month) service le saktay hain jisme daily backups, security monitoring, server uptime, aur monthly content edits shamil hotay hain."
+            }
           }
-        }
+        ]
       }
-    }
+    ]
+  }
   </script>
-
-  <!-- Lucide Icons -->
-  <script src="https://unpkg.com/lucide@latest"></script>
-
-  <!-- Custom Styles with Rich Animations & Bento Effects -->
-  <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="bg-[#FAFAFA] text-slate-800 antialiased selection:bg-[#FF6600] selection:text-white relative">
+<body class="bg-[#F8FAFC] text-slate-800 antialiased selection:bg-[#C2410C] selection:text-white relative">
+  <a href="#main-content" class="skip-link">Skip to main content</a>
 
   <!-- ================= TOP READING PROGRESS BAR ================= -->
   <div id="scroll-progress"></div>
 
   <!-- ================= NAVBAR ================= -->
-  <header class="sticky top-0 z-50 bg-[#0B0F19]/90 backdrop-blur-xl border-b border-slate-800/80 transition-all">
+  <header class="sticky top-0 z-50 bg-[#0B1220]/95 backdrop-blur-md border-b border-slate-800/80 transition-all">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-20">
         
-        <!-- Brand Logo -->
+        <!-- Logo -->
         <a href="index.html" class="flex items-center group">
-          <img src="assets/images/logo-dark.png" alt="Digital Ustad" class="h-10 sm:h-11 w-auto object-contain transition-transform duration-300 group-hover:scale-105">
+          <img src="assets/images/logo-dark.png" alt="Digital Ustad" width="160" height="40" class="h-10 sm:h-11 w-auto object-contain transition-transform duration-300 group-hover:scale-105">
         </a>
 
         <!-- Desktop Navigation Links -->
-        <nav class="hidden md:flex items-center gap-7">
-          <a href="index.html" class="text-sm font-semibold text-white hover:text-[#FF6600] transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-[#FF6600]">Home</a>
-          <a href="services.html" class="text-sm font-semibold text-slate-300 hover:text-[#FF6600] transition-colors">Services</a>
-          <a href="pricing.html" class="text-sm font-semibold text-slate-300 hover:text-[#FF6600] transition-colors">Pricing</a>
-          <a href="solutions.html" class="text-sm font-semibold text-slate-300 hover:text-[#FF6600] transition-colors">Solutions</a>
-          <a href="how-it-works.html" class="text-sm font-semibold text-slate-300 hover:text-[#FF6600] transition-colors">How It Works</a>
-          <a href="portfolio.html" class="text-sm font-semibold text-slate-300 hover:text-[#FF6600] transition-colors">Portfolio</a>
-          <a href="about.html" class="text-sm font-semibold text-slate-300 hover:text-[#FF6600] transition-colors">About Us</a>
-          <a href="contact.html" class="text-sm font-semibold text-slate-300 hover:text-[#FF6600] transition-colors">Contact</a>
+        <nav class="hidden md:flex items-center gap-7 lg:gap-8">
+          <a href="index.html" class="text-sm font-semibold text-white hover:text-[#F97316] transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-[#F97316]">Home</a>
+          <a href="services.html" class="text-sm font-semibold text-slate-300 hover:text-[#F97316] transition-colors">Services</a>
+          <a href="solutions.html" class="text-sm font-semibold text-slate-300 hover:text-[#F97316] transition-colors">Solutions</a>
+          <a href="portfolio.html" class="text-sm font-semibold text-slate-300 hover:text-[#F97316] transition-colors">Work &amp; Concepts</a>
+          <a href="pricing.html" class="text-sm font-semibold text-slate-300 hover:text-[#F97316] transition-colors">Pricing</a>
+          <a href="about.html" class="text-sm font-semibold text-slate-300 hover:text-[#F97316] transition-colors">About Us</a>
+          <a href="contact.html" class="text-sm font-semibold text-slate-300 hover:text-[#F97316] transition-colors">Contact</a>
         </nav>
 
-        <!-- CTA Action & Mobile Toggle -->
+        <!-- Navbar Actions -->
         <div class="flex items-center gap-3 sm:gap-4">
-          <!-- Theme Toggle Button -->
-          <button type="button" class="theme-toggle-btn rounded-full text-slate-300 hover:text-white bg-slate-800/80 hover:bg-slate-700 border border-slate-700/70 transition-all flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-[#FF6600]/40 shadow-sm" aria-label="Toggle light/dark theme" title="Switch Theme">
+          <!-- Theme Toggle -->
+          <button type="button" class="theme-toggle-btn rounded-full text-slate-300 hover:text-white bg-slate-800/80 hover:bg-slate-700 border border-slate-700/70 transition-all flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-[#C2410C]/40 shadow-sm w-9 h-9" aria-label="Toggle light/dark theme" title="Switch Theme">
             <i data-lucide="moon" class="w-4 h-4 text-amber-300 theme-icon-moon"></i>
             <i data-lucide="sun" class="w-4 h-4 text-amber-400 theme-icon-sun"></i>
           </button>
 
-          <button class="btn-get-started btn-shine hidden sm:inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-full bg-[#FF6600] hover:bg-[#EA580C] text-white text-sm font-bold shadow-lg orange-glow-sm hover:scale-105 active:scale-95 transition-all">
-            <span>Get Started</span>
+          <!-- Primary Header CTA -->
+          <button type="button" class="btn-get-started btn-primary-accessible hidden sm:inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl font-bold text-xs sm:text-sm shadow-md transition-all">
+            <span>Get a Free Consultation</span>
             <i data-lucide="arrow-right" class="w-4 h-4"></i>
           </button>
 
-          <!-- Hamburger Button -->
-          <button id="mobile-menu-btn" class="md:hidden p-2.5 rounded-xl text-slate-300 hover:text-white hover:bg-slate-800/80 focus:outline-none transition-colors">
+          <!-- Mobile Menu Hamburger -->
+          <button id="mobile-menu-btn" class="md:hidden p-2.5 rounded-xl text-slate-300 hover:text-white hover:bg-slate-800/60 focus:outline-none transition-colors" aria-label="Open navigation menu">
             <i data-lucide="menu" class="w-6 h-6"></i>
           </button>
         </div>
@@ -102,1043 +179,1095 @@
     </div>
   </header>
 
-  <!-- ================= MOBILE DRAWER ================= -->
-  <div id="mobile-drawer" class="fixed inset-0 z-50 bg-[#0B0F19]/95 backdrop-blur-xl transition-all duration-300 hidden opacity-0 pointer-events-none md:hidden">
+  <!-- ================= MOBILE NAVIGATION DRAWER ================= -->
+  <div id="mobile-drawer" class="fixed inset-0 z-50 bg-[#0B1220]/95 backdrop-blur-xl transition-all duration-300 hidden opacity-0 pointer-events-none md:hidden" role="dialog" aria-modal="true" aria-label="Mobile Navigation Menu">
     <div class="flex flex-col h-full p-6">
       <div class="flex items-center justify-between pb-6 border-b border-slate-800">
         <a href="index.html" class="flex items-center">
-          <img src="assets/images/logo-dark.png" alt="Digital Ustad" class="h-9 w-auto object-contain">
+          <img src="assets/images/logo-dark.png" alt="Digital Ustad" width="144" height="36" class="h-9 w-auto object-contain">
         </a>
         <div class="flex items-center gap-2">
-          <button type="button" class="theme-toggle-btn rounded-full text-slate-300 hover:text-white bg-slate-800/80 hover:bg-slate-700 border border-slate-700/70 transition-all flex items-center justify-center focus:outline-none" aria-label="Toggle light/dark theme" title="Switch Theme">
+          <button type="button" class="theme-toggle-btn rounded-full text-slate-300 hover:text-white bg-slate-800/80 hover:bg-slate-700 border border-slate-700/70 transition-all flex items-center justify-center focus:outline-none w-9 h-9" aria-label="Toggle light/dark theme" title="Switch Theme">
             <i data-lucide="moon" class="w-4 h-4 text-amber-300 theme-icon-moon"></i>
             <i data-lucide="sun" class="w-4 h-4 text-amber-400 theme-icon-sun"></i>
           </button>
-          <button id="close-mobile-menu" class="p-2 text-slate-400 hover:text-white">
+          <button id="close-mobile-menu" class="p-2 text-slate-400 hover:text-white focus:outline-none" aria-label="Close navigation menu">
             <i data-lucide="x" class="w-7 h-7"></i>
           </button>
         </div>
       </div>
+      
+      <nav class="flex flex-col gap-4 py-8 flex-1 overflow-y-auto" aria-label="Mobile Navigation">
+        <a href="index.html" class="mobile-nav-link text-base font-semibold text-white">Home</a>
+        <a href="services.html" class="mobile-nav-link text-base font-semibold text-slate-300 hover:text-[#F97316]">Services</a>
+        <a href="solutions.html" class="mobile-nav-link text-base font-semibold text-slate-300 hover:text-[#F97316]">Solutions</a>
+        <a href="portfolio.html" class="mobile-nav-link text-base font-semibold text-slate-300 hover:text-[#F97316]">Work &amp; Concepts</a>
+        <a href="pricing.html" class="mobile-nav-link text-base font-semibold text-slate-300 hover:text-[#F97316]">Pricing</a>
+        <a href="about.html" class="mobile-nav-link text-base font-semibold text-slate-300 hover:text-[#F97316]">About Us</a>
+        <a href="contact.html" class="mobile-nav-link text-base font-semibold text-slate-300 hover:text-[#F97316]">Contact</a>
+      </nav>
 
-      <div class="flex flex-col gap-5 py-8 flex-1">
-        <a href="index.html" class="mobile-nav-link text-lg font-semibold text-white hover:text-[#FF6600]">Home</a>
-        <a href="services.html" class="mobile-nav-link text-lg font-semibold text-slate-300 hover:text-[#FF6600]">Services</a>
-        <a href="pricing.html" class="mobile-nav-link text-lg font-semibold text-slate-300 hover:text-[#FF6600]">Pricing</a>
-        <a href="solutions.html" class="mobile-nav-link text-lg font-semibold text-slate-300 hover:text-[#FF6600]">Solutions</a>
-        <a href="how-it-works.html" class="mobile-nav-link text-lg font-semibold text-slate-300 hover:text-[#FF6600]">How It Works</a>
-        <a href="portfolio.html" class="mobile-nav-link text-lg font-semibold text-slate-300 hover:text-[#FF6600]">Portfolio</a>
-        <a href="about.html" class="mobile-nav-link text-lg font-semibold text-slate-300 hover:text-[#FF6600]">About Us</a>
-        <a href="contact.html" class="mobile-nav-link text-lg font-semibold text-slate-300 hover:text-[#FF6600]">Contact</a>
-      </div>
-
-      <div class="pt-6 border-t border-slate-800 flex flex-col gap-3">
-        <button class="btn-get-started btn-shine w-full py-3 rounded-full bg-[#FF6600] text-white font-bold flex items-center justify-center gap-2">
-          <span>Get Started</span>
+      <div class="pt-6 border-t border-slate-800 space-y-3">
+        <button type="button" class="btn-get-started btn-primary-accessible w-full py-3.5 rounded-xl font-bold text-sm shadow-lg flex items-center justify-center gap-2">
+          <span>Get a Free Consultation</span>
           <i data-lucide="arrow-right" class="w-4 h-4"></i>
         </button>
-        <a href="https://wa.me/923000000000" target="_blank" class="w-full py-3 rounded-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold flex items-center justify-center gap-2">
-          <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12.012 2c-5.506 0-9.989 4.478-9.99 9.984a9.964 9.964 0 0 0 1.333 4.993L2 22l5.233-1.237a9.994 9.994 0 0 0 4.779 1.217h.004c5.505 0 9.988-4.478 9.989-9.984 0-2.669-1.037-5.176-2.925-7.062A9.925 9.925 0 0 0 12.012 2zm5.835 14.198c-.244.688-1.227 1.26-1.786 1.32-.472.052-1.077.08-3.155-.783-2.658-1.102-4.363-3.807-4.496-3.983-.133-.176-1.076-1.433-1.076-2.733 0-1.3.68-1.94.92-2.203.24-.263.523-.328.698-.328.174 0 .349.002.502.01.163.008.382-.062.597.455.22.531.75 1.83.815 1.963.065.133.109.288.022.463-.087.175-.131.284-.262.437-.13.153-.275.342-.393.459-.13.13-.266.27-.115.53.151.26 1.002 1.65 2.148 2.671 1.472 1.312 2.71 1.718 3.097 1.91.387.192.613.16.84-.102.228-.263.974-1.134 1.235-1.523.26-.39.522-.325.872-.196.35.13 2.22 1.047 2.602 1.238.382.19.637.284.73.444.093.16.093.928-.151 1.616z"/></svg>
-          <span>WhatsApp Quick Chat</span>
-        </a>
+        <button type="button" onclick="openDigitalUstadChat({ intent: 'general_consultation', sourcePage: window.location.pathname })" class="w-full py-3 rounded-xl bg-slate-800 text-slate-300 hover:text-white text-xs font-semibold flex items-center justify-center gap-2 border border-slate-700">
+          <i data-lucide="bot" class="w-4 h-4 text-[#F97316]"></i>
+          <span>Ask Digital Ustad Assistant</span>
+        </button>
       </div>
     </div>
   </div>
 
-  <!-- ================= HERO SECTION WITH ATMOSPHERIC AURORA ================= -->
-  <section id="home" class="relative bg-[#0B0F19] text-white pt-10 pb-20 lg:pt-16 lg:pb-32 overflow-hidden">
-    <!-- Floating Ambient Aurora Meshes -->
-    <div class="aurora-orb-1 top-0 right-10"></div>
-    <div class="aurora-orb-2 bottom-0 left-10"></div>
-    <div class="absolute inset-0 hero-grid-pattern opacity-30 pointer-events-none"></div>
+  <main id="main-content">
+    <!-- ================= 1. HERO SECTION ================= -->
+    <section id="home" class="relative bg-[#0B1220] text-white pt-12 pb-20 lg:pt-16 lg:pb-28 overflow-hidden">
+      <div class="absolute inset-0 hero-grid-pattern opacity-20 pointer-events-none"></div>
 
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
-        
-        <!-- Left Hero Content -->
-        <div class="lg:col-span-6 space-y-6 text-center lg:text-left reveal reveal-left active">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           
-          <!-- Eyebrow Badge -->
-          <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-slate-900/80 border border-slate-700/80 backdrop-blur-md shadow-inner">
-            <span class="w-2 h-2 rounded-full bg-[#FF6600] animate-ping"></span>
-            <span class="text-xs font-extrabold uppercase tracking-widest text-[#FF6600]">
-              YOUR DIGITAL TEAM, WITHOUT THE OVERHEAD.
-            </span>
-          </div>
-
-          <!-- Main Headline with Luxury Gradient Fill -->
-          <h1 class="text-4xl sm:text-5xl lg:text-[56px] font-extrabold tracking-tight leading-[1.12] font-outfit">
-            <span class="text-gradient-white">We Handle the Digital.</span><br>
-            <span class="text-gradient-orange relative inline-block">
-              You Handle the Business.
-            </span>
-          </h1>
-
-          <!-- Subtitle -->
-          <p class="text-slate-300 text-base sm:text-lg max-w-xl mx-auto lg:mx-0 leading-relaxed font-normal">
-            Websites, marketing, creative and automation solutions that help local businesses build, grow and operate online.
-          </p>
-
-          <!-- Hero Buttons -->
-          <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-2">
-            <button class="btn-get-started btn-shine inline-flex items-center gap-2.5 px-8 py-4 rounded-full bg-[#FF6600] hover:bg-[#EA580C] text-white font-bold text-sm shadow-xl orange-glow hover:scale-105 active:scale-95 transition-all">
-              <span>Get Started</span>
-              <i data-lucide="arrow-right" class="w-4 h-4"></i>
-            </button>
-
-            <a href="services.html" class="inline-flex items-center gap-2.5 px-7 py-4 rounded-full bg-slate-900/90 hover:bg-slate-800 border border-slate-700 text-white font-bold text-sm hover:scale-105 active:scale-95 transition-all">
-              <span>Our Services</span>
-              <span class="w-5 h-5 rounded-full bg-slate-800 flex items-center justify-center text-xs">
-                <i data-lucide="play" class="w-3 h-3 fill-current text-white"></i>
-              </span>
-            </a>
-          </div>
-
-          <!-- Price Guarantee Pill -->
-          <div class="pt-4 flex items-center justify-center lg:justify-start">
-            <div class="inline-flex items-center gap-2.5 text-xs sm:text-sm font-semibold text-slate-200 bg-slate-900/80 px-4 py-2 rounded-full border border-slate-800 shadow-sm">
-              <span class="w-5 h-5 rounded-full bg-[#FF6600]/20 flex items-center justify-center text-[#FF6600]">
-                <i data-lucide="play" class="w-3 h-3 fill-[#FF6600]"></i>
-              </span>
-              <span>5-Page Business Website from <strong class="text-white font-bold">PKR 30,000</strong></span>
-            </div>
-          </div>
-
-        </div>
-
-        <!-- Right Hero Visual with 3D Tilt & Floating Metric Chips -->
-        <div class="lg:col-span-6 relative flex justify-center items-center reveal reveal-right active">
-          
-          <!-- Animated Stylized Orange Arrow Path -->
-          <svg class="absolute -right-8 -top-14 w-52 sm:w-72 h-80 z-0 pointer-events-none opacity-95 hidden sm:block" viewBox="0 0 200 240" fill="none">
-            <path class="animated-arrow-path" d="M 30 220 C 110 200 160 130 165 40" stroke="#FF6600" stroke-width="18" stroke-linecap="round" />
-            <polygon class="arrow-head" points="165,10 145,50 185,50" fill="#FF6600" />
-          </svg>
-
-          <!-- Floating Agency Highlight Chips -->
-          <div class="status-chip top-2 -left-6 hidden sm:inline-flex">
-            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
-            <span>⚡ 0.8s Ultra-Fast Load</span>
-          </div>
-
-          <div class="status-chip -bottom-4 left-4 hidden sm:inline-flex" style="animation-delay: 1.5s;">
-            <span class="text-emerald-400">📱 100% Mobile Ready</span>
-            <span>(360px+ Optimized)</span>
-          </div>
-
-          <!-- Laptop & Mobile Mockup Container with 3D Tilt Wrapper -->
-          <div class="hero-mockup-wrapper relative w-full max-w-[540px] pt-6 pb-4">
+          <!-- Left Hero Content -->
+          <div class="lg:col-span-7 space-y-6 text-center lg:text-left reveal active">
             
-            <!-- Laptop Mockup -->
-            <div class="laptop-frame bg-slate-900 border border-slate-700 shadow-2xl relative z-10 w-full">
-              <div class="h-6 bg-slate-800/90 px-3 flex items-center justify-between border-b border-slate-700">
-                <div class="flex items-center gap-1.5">
-                  <div class="w-2.5 h-2.5 rounded-full bg-red-500"></div>
-                  <div class="w-2.5 h-2.5 rounded-full bg-amber-500"></div>
-                  <div class="w-2.5 h-2.5 rounded-full bg-emerald-500"></div>
-                </div>
-                <div class="text-[10px] text-slate-400 font-mono tracking-tight bg-slate-900/80 px-3 py-0.5 rounded-full border border-slate-700/50 flex items-center gap-2">
-                  <span>spicebistro.com</span>
-                  <span class="px-1.5 py-0.2 rounded bg-amber-500/20 text-amber-300 text-[8px] font-bold uppercase tracking-wider border border-amber-500/30">Demo Concept</span>
-                </div>
-                <div class="w-6"></div>
-              </div>
-
-              <!-- Laptop Screen Content -->
-              <div class="bg-[#0f1117] p-4 text-white relative min-h-[220px] sm:min-h-[260px] flex flex-col justify-between overflow-hidden">
-                <div class="absolute right-0 top-0 bottom-0 w-1/2 opacity-40 bg-cover bg-center pointer-events-none" style="background-image: url('https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=600&q=80');"></div>
-                
-                <div class="flex items-center justify-between border-b border-slate-800/60 pb-2 relative z-10">
-                  <div class="flex items-center gap-1.5 font-bold text-xs tracking-wider">
-                    <span class="text-[#FF6600]">🌶️ SPICE</span> BISTRO
-                  </div>
-                  <div class="hidden sm:flex items-center gap-3 text-[10px] text-slate-400">
-                    <span class="text-white">Home</span>
-                    <span>Menu</span>
-                    <span>Reservations</span>
-                    <span>Contact</span>
-                  </div>
-                  <span class="text-[9px] px-2 py-0.5 rounded bg-[#FF6600] text-white font-semibold">Book Table</span>
-                </div>
-
-                <div class="my-4 relative z-10 max-w-[240px]">
-                  <span class="text-[9px] uppercase tracking-wider text-[#FF6600] font-bold">Premium Dining Experience</span>
-                  <h4 class="text-lg sm:text-xl font-bold leading-tight mt-1 text-white">
-                    Quality Food.<br>Great Experience.
-                  </h4>
-                  <p class="text-[10px] text-slate-400 mt-1 line-clamp-2">Authentic tastes, farm fresh ingredients, crafted by executive chefs.</p>
-                  <div class="mt-3 flex items-center gap-2">
-                    <span class="text-[9px] px-2.5 py-1 rounded bg-[#FF6600] text-white font-bold shadow-sm">View Menu</span>
-                    <span class="text-[9px] px-2 py-1 rounded border border-slate-600 text-slate-300">Order Online</span>
-                  </div>
-                </div>
-
-                <div class="grid grid-cols-3 gap-2 pt-2 border-t border-slate-800/60 relative z-10">
-                  <div class="bg-slate-800/40 p-1.5 rounded border border-slate-700/40">
-                    <div class="text-[8px] text-slate-400">Chef Specials</div>
-                    <div class="text-[10px] font-bold text-amber-400">25+ Recipes</div>
-                  </div>
-                  <div class="bg-slate-800/40 p-1.5 rounded border border-slate-700/40">
-                    <div class="text-[8px] text-slate-400">Dining Style</div>
-                    <div class="text-[10px] font-bold text-emerald-400">Dine-In & Takeaway</div>
-                  </div>
-                  <div class="bg-slate-800/40 p-1.5 rounded border border-slate-700/40">
-                    <div class="text-[8px] text-slate-400">Delivery</div>
-                    <div class="text-[10px] font-bold text-white">Under 30 Mins</div>
-                  </div>
-                </div>
-
-              </div>
-            </div>
-            
-            <div class="laptop-base relative z-10 w-[104%] -ml-[2%]"></div>
-
-            <!-- Floating Mobile Phone Mockup -->
-            <div class="mobile-frame absolute -right-3 sm:-right-6 bottom-0 w-36 sm:w-44 h-64 sm:h-72 z-20 shadow-2xl animate-float border-2 border-slate-700">
-              <div class="mobile-notch"></div>
-              
-              <div class="w-full h-full bg-[#111622] pt-6 p-2.5 flex flex-col justify-between text-white text-[9px]">
-                <div>
-                  <div class="flex items-center justify-between pb-1 border-b border-slate-800">
-                    <span class="font-bold text-[#FF6600]">SPICE BISTRO</span>
-                    <i data-lucide="shopping-bag" class="w-3 h-3 text-slate-300"></i>
-                  </div>
-                  
-                  <div class="mt-2 text-center">
-                    <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=200&q=80" alt="Dish" class="w-12 h-12 rounded-full mx-auto object-cover border-2 border-[#FF6600] shadow-md">
-                    <div class="font-bold text-[10px] mt-1">Signature Platter</div>
-                    <div class="text-[#FF6600] font-extrabold text-[10px]">PKR 1,850</div>
-                  </div>
-
-                  <div class="grid grid-cols-2 gap-1 mt-2 text-[8px]">
-                    <div class="bg-slate-800/80 p-1 rounded text-center">🔥 Deals</div>
-                    <div class="bg-slate-800/80 p-1 rounded text-center">🥩 Steaks</div>
-                    <div class="bg-slate-800/80 p-1 rounded text-center">🍔 Burgers</div>
-                    <div class="bg-slate-800/80 p-1 rounded text-center">🍹 Drinks</div>
-                  </div>
-                </div>
-
-                <div class="bg-[#FF6600] text-white text-center py-1.5 rounded-lg font-bold shadow-md cursor-pointer hover:bg-orange-600 transition-colors">
-                  Order on WhatsApp
-                </div>
-              </div>
+            <!-- Eyebrow Badge -->
+            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-900/90 border border-slate-700/80 shadow-sm">
+              <span class="w-2 h-2 rounded-full bg-[#F97316]"></span>
+              <span class="text-xs font-extrabold uppercase tracking-widest text-[#F97316]">
+                DIGITAL SOLUTIONS FOR PAKISTANI BUSINESSES
+              </span>
             </div>
 
-          </div>
-
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ================= INFINITE ROLLING TICKER MARQUEE ================= -->
-  <div class="bg-[#0f172a] border-y border-slate-800 py-3.5 overflow-hidden text-xs font-bold text-slate-300 uppercase tracking-widest">
-    <div class="marquee-wrapper">
-      <div class="marquee-content">
-        <span class="flex items-center gap-2"><span class="text-[#FF6600]">✦</span> 10+ LIVE WEBSITES DELIVERED</span>
-        <span class="flex items-center gap-2"><span class="text-[#FF6600]">✦</span> 5+ ACTIVE SEO & RANKING CLIENTS</span>
-        <span class="flex items-center gap-2"><span class="text-[#FF6600]">✦</span> 5-PAGE SITES FROM PKR 30,000</span>
-        <span class="flex items-center gap-2"><span class="text-[#FF6600]">✦</span> 24/7 WHATSAPP AUTOMATION</span>
-        <span class="flex items-center gap-2"><span class="text-[#FF6600]">✦</span> ROI-FOCUSED META & GOOGLE ADS</span>
-        <span class="flex items-center gap-2"><span class="text-[#FF6600]">✦</span> GOOGLE BUSINESS PROFILE & LOCAL SEO</span>
-      </div>
-      <div class="marquee-content" aria-hidden="true">
-        <span class="flex items-center gap-2"><span class="text-[#FF6600]">✦</span> 10+ LIVE WEBSITES DELIVERED</span>
-        <span class="flex items-center gap-2"><span class="text-[#FF6600]">✦</span> 5+ ACTIVE SEO & RANKING CLIENTS</span>
-        <span class="flex items-center gap-2"><span class="text-[#FF6600]">✦</span> 5-PAGE SITES FROM PKR 30,000</span>
-        <span class="flex items-center gap-2"><span class="text-[#FF6600]">✦</span> 24/7 WHATSAPP AUTOMATION</span>
-        <span class="flex items-center gap-2"><span class="text-[#FF6600]">✦</span> ROI-FOCUSED META & GOOGLE ADS</span>
-        <span class="flex items-center gap-2"><span class="text-[#FF6600]">✦</span> GOOGLE BUSINESS PROFILE & LOCAL SEO</span>
-      </div>
-    </div>
-  </div>
-
-  <!-- ================= 6 CORE SERVICES STRIP ================= -->
-  <section id="services" class="relative pt-8 pb-4 z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="bg-white/95 backdrop-blur-xl rounded-3xl shadow-2xl border border-slate-100 p-5 sm:p-7 reveal">
-      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 sm:gap-4">
-        
-        <!-- 1. Web Development -->
-        <a href="service-web-development.html" class="bento-card group flex flex-col items-center text-center p-3.5 sm:p-4 rounded-2xl">
-          <div class="w-12 h-12 rounded-xl bg-orange-100/70 flex items-center justify-center text-[#FF6600] group-hover:bg-[#FF6600] group-hover:text-white group-hover:scale-110 shadow-sm transition-all">
-            <i data-lucide="code-2" class="w-6 h-6"></i>
-          </div>
-          <span class="mt-3 text-xs sm:text-sm font-bold text-slate-800 group-hover:text-[#FF6600] leading-tight">Web Development</span>
-        </a>
-
-        <!-- 2. Social Media Management -->
-        <a href="service-social-media.html" class="bento-card group flex flex-col items-center text-center p-3.5 sm:p-4 rounded-2xl">
-          <div class="w-12 h-12 rounded-xl bg-orange-100/70 flex items-center justify-center text-[#FF6600] group-hover:bg-[#FF6600] group-hover:text-white group-hover:scale-110 shadow-sm transition-all">
-            <i data-lucide="thumbs-up" class="w-6 h-6"></i>
-          </div>
-          <span class="mt-3 text-xs sm:text-sm font-bold text-slate-800 group-hover:text-[#FF6600] leading-tight">Social Media Management</span>
-        </a>
-
-        <!-- 3. Graphic Design -->
-        <a href="service-graphic-design.html" class="bento-card group flex flex-col items-center text-center p-3.5 sm:p-4 rounded-2xl">
-          <div class="w-12 h-12 rounded-xl bg-orange-100/70 flex items-center justify-center text-[#FF6600] group-hover:bg-[#FF6600] group-hover:text-white group-hover:scale-110 shadow-sm transition-all">
-            <i data-lucide="pen-tool" class="w-6 h-6"></i>
-          </div>
-          <span class="mt-3 text-xs sm:text-sm font-bold text-slate-800 group-hover:text-[#FF6600] leading-tight">Graphic Design</span>
-        </a>
-
-        <!-- 4. Meta & Google Ads -->
-        <a href="service-meta-google-ads.html" class="bento-card group flex flex-col items-center text-center p-3.5 sm:p-4 rounded-2xl">
-          <div class="w-12 h-12 rounded-xl bg-orange-100/70 flex items-center justify-center text-[#FF6600] group-hover:bg-[#FF6600] group-hover:text-white group-hover:scale-110 shadow-sm transition-all">
-            <i data-lucide="megaphone" class="w-6 h-6"></i>
-          </div>
-          <span class="mt-3 text-xs sm:text-sm font-bold text-slate-800 group-hover:text-[#FF6600] leading-tight">Meta & Google Ads</span>
-        </a>
-
-        <!-- 5. SEO & Google Business -->
-        <a href="service-seo-google-business.html" class="bento-card group flex flex-col items-center text-center p-3.5 sm:p-4 rounded-2xl">
-          <div class="w-12 h-12 rounded-xl bg-orange-100/70 flex items-center justify-center text-[#FF6600] group-hover:bg-[#FF6600] group-hover:text-white group-hover:scale-110 shadow-sm transition-all">
-            <i data-lucide="search" class="w-6 h-6"></i>
-          </div>
-          <span class="mt-3 text-xs sm:text-sm font-bold text-slate-800 group-hover:text-[#FF6600] leading-tight">SEO & Google Business</span>
-        </a>
-
-        <!-- 6. WhatsApp Automation -->
-        <a href="service-whatsapp-automation.html" class="bento-card group flex flex-col items-center text-center p-3.5 sm:p-4 rounded-2xl">
-          <div class="w-12 h-12 rounded-xl bg-orange-100/70 flex items-center justify-center text-[#FF6600] group-hover:bg-[#FF6600] group-hover:text-white group-hover:scale-110 shadow-sm transition-all">
-            <i data-lucide="message-square" class="w-6 h-6"></i>
-          </div>
-          <span class="mt-3 text-xs sm:text-sm font-bold text-slate-800 group-hover:text-[#FF6600] leading-tight">WhatsApp Automation</span>
-        </a>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ================= STATS COUNTER STRIP ================= -->
-  <section id="stats-section" class="py-14 sm:py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
-      
-      <!-- Stat 1 -->
-      <div class="reveal delay-1 bento-card flex items-center gap-4 p-5 rounded-3xl">
-        <div class="w-14 h-14 rounded-2xl bg-gradient-to-tr from-[#FF6600] to-[#FFA500] flex items-center justify-center text-white shadow-lg flex-shrink-0">
-          <i data-lucide="check-circle-2" class="w-7 h-7"></i>
-        </div>
-        <div>
-          <div class="text-2xl sm:text-3xl font-extrabold text-slate-900 stat-number" data-target="10" data-suffix="+">10+</div>
-          <div class="text-xs sm:text-sm font-semibold text-slate-500">Live Delivered Websites</div>
-        </div>
-      </div>
-
-      <!-- Stat 2 -->
-      <div class="reveal delay-2 bento-card flex items-center gap-4 p-5 rounded-3xl">
-        <div class="w-14 h-14 rounded-2xl bg-gradient-to-tr from-[#FF6600] to-[#FFA500] flex items-center justify-center text-white shadow-lg flex-shrink-0">
-          <i data-lucide="trending-up" class="w-7 h-7"></i>
-        </div>
-        <div>
-          <div class="text-2xl sm:text-3xl font-extrabold text-slate-900 stat-number" data-target="5" data-suffix="+">5+</div>
-          <div class="text-xs sm:text-sm font-semibold text-slate-500">Active SEO & Ads Clients</div>
-        </div>
-      </div>
-
-      <!-- Stat 3 -->
-      <div class="reveal delay-3 bento-card flex items-center gap-4 p-5 rounded-3xl">
-        <div class="w-14 h-14 rounded-2xl bg-gradient-to-tr from-[#FF6600] to-[#FFA500] flex items-center justify-center text-white shadow-lg flex-shrink-0">
-          <i data-lucide="award" class="w-7 h-7"></i>
-        </div>
-        <div>
-          <div class="text-2xl sm:text-3xl font-extrabold text-slate-900 stat-number" data-target="2" data-suffix="+">2+</div>
-          <div class="text-xs sm:text-sm font-semibold text-slate-500">Years Operating (Est. 2023)</div>
-        </div>
-      </div>
-
-      <!-- Stat 4 -->
-      <div class="reveal delay-4 bento-card flex items-center gap-4 p-5 rounded-3xl">
-        <div class="w-14 h-14 rounded-2xl bg-gradient-to-tr from-[#FF6600] to-[#FFA500] flex items-center justify-center text-white shadow-lg flex-shrink-0">
-          <i data-lucide="headset" class="w-7 h-7"></i>
-        </div>
-        <div>
-          <div class="text-2xl sm:text-3xl font-extrabold text-slate-900 stat-number" data-target="24" data-suffix="/7">24/7</div>
-          <div class="text-xs sm:text-sm font-semibold text-slate-500">WhatsApp Client Support</div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ================= INDUSTRY SOLUTIONS SECTION ================= -->
-  <section id="solutions" class="py-16 lg:py-20 bg-white border-y border-slate-100">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      
-      <!-- Section Header -->
-      <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-12 reveal">
-        <div>
-          <span class="text-xs font-extrabold uppercase tracking-widest text-[#FF6600] bg-orange-50 px-3.5 py-1 rounded-full border border-orange-100">
-            SOLUTIONS FOR EVERY BUSINESS
-          </span>
-          <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-3 tracking-tight font-outfit">
-            Digital Solutions for<br class="hidden sm:inline"> Businesses Like Yours
-          </h2>
-        </div>
-        <div class="lg:max-w-md flex flex-col sm:flex-row sm:items-center gap-4 justify-between">
-          <p class="text-slate-600 text-sm leading-relaxed">
-            We understand that every business is different. That's why we provide customized digital solutions that actually make a difference.
-          </p>
-          <a href="solutions.html" class="inline-flex items-center gap-2 text-xs font-bold text-slate-800 hover:text-[#FF6600] px-5 py-3 rounded-full border border-slate-300 hover:border-[#FF6600] transition-colors whitespace-nowrap">
-            <span>View All Solutions</span>
-            <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
-          </a>
-        </div>
-      </div>
-
-      <!-- 4 Core Industry Cards Grid (Restaurants, Salons, Clinics, Real Estate) -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        
-        <!-- Card 1: Restaurants -->
-        <a href="solutions.html" class="reveal delay-1 bento-card group rounded-3xl overflow-hidden flex flex-col">
-          <div class="relative h-48 overflow-hidden bg-slate-100">
-            <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=600&q=80" alt="Restaurants & Cafes" class="w-full h-full object-cover card-image-zoom">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
-            <div class="absolute bottom-3 left-3 w-9 h-9 rounded-full bg-white shadow-md flex items-center justify-center text-[#FF6600]">
-              <i data-lucide="utensils" class="w-4 h-4"></i>
-            </div>
-          </div>
-          <div class="p-5 flex-1 flex flex-col justify-between">
-            <div>
-              <h3 class="font-bold text-slate-900 text-lg group-hover:text-[#FF6600] transition-colors">Restaurants & Cafes</h3>
-              <p class="text-xs text-slate-500 mt-1.5 leading-relaxed">Digital QR menus, online table booking, and 1-click WhatsApp delivery flow.</p>
-            </div>
-            <div class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-[#FF6600]">
-              <span>Explore Solution</span>
-              <i data-lucide="chevron-right" class="w-4 h-4 transform group-hover:translate-x-1 transition-transform"></i>
-            </div>
-          </div>
-        </a>
-
-        <!-- Card 2: Salons -->
-        <a href="solutions.html" class="reveal delay-2 bento-card group rounded-3xl overflow-hidden flex flex-col">
-          <div class="relative h-48 overflow-hidden bg-slate-100">
-            <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=600&q=80" alt="Salons & Beauty" class="w-full h-full object-cover card-image-zoom">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
-            <div class="absolute bottom-3 left-3 w-9 h-9 rounded-full bg-white shadow-md flex items-center justify-center text-[#FF6600]">
-              <i data-lucide="scissors" class="w-4 h-4"></i>
-            </div>
-          </div>
-          <div class="p-5 flex-1 flex flex-col justify-between">
-            <div>
-              <h3 class="font-bold text-slate-900 text-lg group-hover:text-[#FF6600] transition-colors">Salons & Beauty Spas</h3>
-              <p class="text-xs text-slate-500 mt-1.5 leading-relaxed">Bridal tiers, aesthetic portfolios, and automated WhatsApp appointment scheduling.</p>
-            </div>
-            <div class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-[#FF6600]">
-              <span>Explore Solution</span>
-              <i data-lucide="chevron-right" class="w-4 h-4 transform group-hover:translate-x-1 transition-transform"></i>
-            </div>
-          </div>
-        </a>
-
-        <!-- Card 3: Clinics -->
-        <a href="solutions.html" class="reveal delay-3 bento-card group rounded-3xl overflow-hidden flex flex-col">
-          <div class="relative h-48 overflow-hidden bg-slate-100">
-            <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=600&q=80" alt="Clinics & Healthcare" class="w-full h-full object-cover card-image-zoom">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
-            <div class="absolute bottom-3 left-3 w-9 h-9 rounded-full bg-white shadow-md flex items-center justify-center text-[#FF6600]">
-              <i data-lucide="activity" class="w-4 h-4"></i>
-            </div>
-          </div>
-          <div class="p-5 flex-1 flex flex-col justify-between">
-            <div>
-              <h3 class="font-bold text-slate-900 text-lg group-hover:text-[#FF6600] transition-colors">Clinics & Healthcare</h3>
-              <p class="text-xs text-slate-500 mt-1.5 leading-relaxed">Patient trust platforms, doctor OPD schedules, and direct consultation booking.</p>
-            </div>
-            <div class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-[#FF6600]">
-              <span>Explore Solution</span>
-              <i data-lucide="chevron-right" class="w-4 h-4 transform group-hover:translate-x-1 transition-transform"></i>
-            </div>
-          </div>
-        </a>
-
-        <!-- Card 4: Real Estate -->
-        <a href="solutions.html" class="reveal delay-4 bento-card group rounded-3xl overflow-hidden flex flex-col">
-          <div class="relative h-48 overflow-hidden bg-slate-100">
-            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=600&q=80" alt="Real Estate" class="w-full h-full object-cover card-image-zoom">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
-            <div class="absolute bottom-3 left-3 w-9 h-9 rounded-full bg-white shadow-md flex items-center justify-center text-[#FF6600]">
-              <i data-lucide="home" class="w-4 h-4"></i>
-            </div>
-          </div>
-          <div class="p-5 flex-1 flex flex-col justify-between">
-            <div>
-              <h3 class="font-bold text-slate-900 text-lg group-hover:text-[#FF6600] transition-colors">Real Estate & Property</h3>
-              <p class="text-xs text-slate-500 mt-1.5 leading-relaxed">High-converting property catalogs, virtual showcase tours, and WhatsApp lead funnels.</p>
-            </div>
-            <div class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-[#FF6600]">
-              <span>Explore Solution</span>
-              <i data-lucide="chevron-right" class="w-4 h-4 transform group-hover:translate-x-1 transition-transform"></i>
-            </div>
-          </div>
-        </a>
-
-      </div>
-            <div class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-[#FF6600]">
-              <span>Explore</span>
-              <i data-lucide="chevron-right" class="w-4 h-4 transform group-hover:translate-x-1 transition-transform"></i>
-            </div>
-          </div>
-        </a>
-
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ================= OUR PROCESS ================= -->
-  <section id="process" class="py-16 lg:py-24 bg-[#FAFAFA]">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      
-      <div class="text-center max-w-2xl mx-auto mb-16 reveal">
-        <span class="text-xs font-extrabold uppercase tracking-widest text-[#FF6600] bg-orange-50 px-3.5 py-1 rounded-full border border-orange-100">
-          OUR PROCESS
-        </span>
-        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-3 tracking-tight font-outfit">
-          Simple Process. Powerful Results.
-        </h2>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8 lg:gap-4 relative">
-        
-        <div class="process-connector reveal delay-1 bento-card relative flex flex-col items-center lg:items-start text-center lg:text-left p-6 rounded-3xl">
-          <div class="flex items-center gap-3 mb-4">
-            <span class="px-2.5 py-1 rounded-md bg-orange-100 text-[#FF6600] font-extrabold text-xs">01</span>
-            <div class="w-9 h-9 rounded-full bg-white shadow-sm flex items-center justify-center text-[#FF6600] border border-orange-100">
-              <i data-lucide="message-square" class="w-4 h-4"></i>
-            </div>
-          </div>
-          <h3 class="font-bold text-slate-900 text-lg">Talk To Us</h3>
-          <p class="text-xs text-slate-500 mt-2 leading-relaxed">We understand your business, goals and current challenges.</p>
-        </div>
-
-        <div class="process-connector reveal delay-2 bento-card relative flex flex-col items-center lg:items-start text-center lg:text-left p-6 rounded-3xl">
-          <div class="flex items-center gap-3 mb-4">
-            <span class="px-2.5 py-1 rounded-md bg-orange-100 text-[#FF6600] font-extrabold text-xs">02</span>
-            <div class="w-9 h-9 rounded-full bg-white shadow-sm flex items-center justify-center text-[#FF6600] border border-orange-100">
-              <i data-lucide="clipboard-list" class="w-4 h-4"></i>
-            </div>
-          </div>
-          <h3 class="font-bold text-slate-900 text-lg">Plan & Strategy</h3>
-          <p class="text-xs text-slate-500 mt-2 leading-relaxed">We create a smart plan and suggest what you actually need.</p>
-        </div>
-
-        <div class="process-connector reveal delay-3 bento-card relative flex flex-col items-center lg:items-start text-center lg:text-left p-6 rounded-3xl">
-          <div class="flex items-center gap-3 mb-4">
-            <span class="px-2.5 py-1 rounded-md bg-orange-100 text-[#FF6600] font-extrabold text-xs">03</span>
-            <div class="w-9 h-9 rounded-full bg-white shadow-sm flex items-center justify-center text-[#FF6600] border border-orange-100">
-              <i data-lucide="code" class="w-4 h-4"></i>
-            </div>
-          </div>
-          <h3 class="font-bold text-slate-900 text-lg">Build & Implement</h3>
-          <p class="text-xs text-slate-500 mt-2 leading-relaxed">Our team gets to work and brings everything to life.</p>
-        </div>
-
-        <div class="process-connector reveal delay-4 bento-card relative flex flex-col items-center lg:items-start text-center lg:text-left p-6 rounded-3xl">
-          <div class="flex items-center gap-3 mb-4">
-            <span class="px-2.5 py-1 rounded-md bg-orange-100 text-[#FF6600] font-extrabold text-xs">04</span>
-            <div class="w-9 h-9 rounded-full bg-white shadow-sm flex items-center justify-center text-[#FF6600] border border-orange-100">
-              <i data-lucide="rocket" class="w-4 h-4"></i>
-            </div>
-          </div>
-          <h3 class="font-bold text-slate-900 text-lg">Launch & Optimize</h3>
-          <p class="text-xs text-slate-500 mt-2 leading-relaxed">We launch, optimize and make sure everything works perfectly.</p>
-        </div>
-
-        <div class="reveal delay-5 bento-card relative flex flex-col items-center lg:items-start text-center lg:text-left p-6 rounded-3xl">
-          <div class="flex items-center gap-3 mb-4">
-            <span class="px-2.5 py-1 rounded-md bg-orange-100 text-[#FF6600] font-extrabold text-xs">05</span>
-            <div class="w-9 h-9 rounded-full bg-white shadow-sm flex items-center justify-center text-[#FF6600] border border-orange-100">
-              <i data-lucide="trending-up" class="w-4 h-4"></i>
-            </div>
-          </div>
-          <h3 class="font-bold text-slate-900 text-lg">Grow & Scale</h3>
-          <p class="text-xs text-slate-500 mt-2 leading-relaxed">We help you grow continuously and achieve better results.</p>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ================= OUR RECENT WORK (PORTFOLIO) ================= -->
-  <section id="portfolio" class="py-16 lg:py-24 bg-white border-t border-slate-100">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      
-      <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-6 mb-12 reveal">
-        <div>
-          <span class="text-xs font-extrabold uppercase tracking-widest text-[#FF6600] bg-orange-50 px-3.5 py-1 rounded-full border border-orange-100">
-            OUR RECENT WORK
-          </span>
-          <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-3 tracking-tight font-outfit">
-            Work That Speaks For Us
-          </h2>
-        </div>
-        <div>
-          <a href="portfolio.html" class="inline-flex items-center gap-2 text-xs font-bold text-slate-800 hover:text-[#FF6600] px-5 py-2.5 rounded-full border border-slate-300 hover:border-[#FF6600] transition-colors">
-            <span>View All Projects</span>
-            <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
-          </a>
-        </div>
-      </div>
-
-      <!-- 6 Recent Work Cards Grid -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        
-        <!-- Project 1: Spice Bistro -->
-        <div class="project-card reveal delay-1 bento-card cursor-pointer rounded-3xl overflow-hidden flex flex-col" data-project-id="spice-bistro">
-          <div class="relative h-48 overflow-hidden bg-slate-900">
-            <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=600&q=80" alt="Spice Bistro" class="w-full h-full object-cover opacity-90 card-image-zoom">
-            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
-            <div class="absolute top-2.5 right-2.5 px-2.5 py-0.5 rounded bg-black/70 backdrop-blur-md text-[9px] text-amber-300 font-bold border border-amber-400/30 flex items-center gap-1">
-              <span class="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse"></span>
-              <span>Sample Concept</span>
-            </div>
-          </div>
-          <div class="p-4">
-            <h4 class="font-bold text-slate-900 text-base group-hover:text-[#FF6600] transition-colors">Spice Bistro</h4>
-            <p class="text-xs text-slate-500 mt-1">Restaurant & QR Menu Experience</p>
-          </div>
-        </div>
-
-        <!-- Project 2: Glow & Shine Salon -->
-        <div class="project-card reveal delay-2 bento-card cursor-pointer rounded-3xl overflow-hidden flex flex-col" data-project-id="glow-shine">
-          <div class="relative h-48 overflow-hidden bg-slate-100">
-            <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=600&q=80" alt="Glow & Shine Salon" class="w-full h-full object-cover card-image-zoom">
-            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
-            <div class="absolute top-2.5 right-2.5 px-2.5 py-0.5 rounded bg-black/70 backdrop-blur-md text-[9px] text-amber-300 font-bold border border-amber-400/30 flex items-center gap-1">
-              <span class="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse"></span>
-              <span>Sample Concept</span>
-            </div>
-          </div>
-          <div class="p-4">
-            <h4 class="font-bold text-slate-900 text-base group-hover:text-[#FF6600] transition-colors">Glow & Shine Salon</h4>
-            <p class="text-xs text-slate-500 mt-1">Beauty & Spa Booking Portal</p>
-          </div>
-        </div>
-
-        <!-- Project 3: HealthCare Clinic -->
-        <div class="project-card reveal delay-3 bento-card cursor-pointer rounded-3xl overflow-hidden flex flex-col" data-project-id="healthcare-clinic">
-          <div class="relative h-48 overflow-hidden bg-slate-100">
-            <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=600&q=80" alt="HealthCare Clinic" class="w-full h-full object-cover card-image-zoom">
-            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
-            <div class="absolute top-2.5 right-2.5 px-2.5 py-0.5 rounded bg-black/70 backdrop-blur-md text-[9px] text-amber-300 font-bold border border-amber-400/30 flex items-center gap-1">
-              <span class="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse"></span>
-              <span>Sample Concept</span>
-            </div>
-          </div>
-          <div class="p-4">
-            <h4 class="font-bold text-slate-900 text-base group-hover:text-[#FF6600] transition-colors">HealthCare Clinic</h4>
-            <p class="text-xs text-slate-500 mt-1">Medical & OPD Doctor Portal</p>
-          </div>
-        </div>
-
-        <!-- Project 4: Dream Homes -->
-        <div class="project-card reveal delay-4 bento-card cursor-pointer rounded-3xl overflow-hidden flex flex-col" data-project-id="dream-homes">
-          <div class="relative h-48 overflow-hidden bg-slate-100">
-            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=600&q=80" alt="Dream Homes" class="w-full h-full object-cover card-image-zoom">
-            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
-            <div class="absolute top-2.5 right-2.5 px-2.5 py-0.5 rounded bg-black/70 backdrop-blur-md text-[9px] text-amber-300 font-bold border border-amber-400/30 flex items-center gap-1">
-              <span class="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse"></span>
-              <span>Sample Concept</span>
-            </div>
-          </div>
-          <div class="p-4">
-            <h4 class="font-bold text-slate-900 text-base group-hover:text-[#FF6600] transition-colors">Dream Homes</h4>
-            <p class="text-xs text-slate-500 mt-1">Real Estate Property Showcase</p>
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ================= WEBSITE PRICING & FLEX PACKAGES ================= -->
-  <section id="pricing" class="py-16 lg:py-24 bg-slate-50 border-t border-slate-200/80">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      
-      <div class="text-center max-w-2xl mx-auto mb-16 reveal">
-        <span class="text-xs font-extrabold uppercase tracking-widest text-[#FF6600] bg-orange-50 px-3.5 py-1 rounded-full border border-orange-100">
-          TRANSPARENT PACKAGES
-        </span>
-        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-3 font-outfit">
-          Simple, Honest Website Pricing
-        </h2>
-        <p class="text-slate-600 text-sm mt-2">
-          From high-converting entry packages to full-featured digital powerhouses. Zero hidden retainers and flexible payment terms.
-        </p>
-      </div>
-
-      <!-- 3-Column Pricing Grid -->
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch mb-12">
-        
-        <!-- 1. LITE (3 Pages) -->
-        <div class="hover-lift bg-white rounded-3xl p-8 border border-slate-200 shadow-sm flex flex-col justify-between reveal delay-1">
-          <div class="space-y-4">
-            <div class="inline-flex items-center px-3 py-1 rounded-full bg-slate-100 text-slate-700 text-xs font-bold">
-              Entry Package • Micro SMBs
-            </div>
-            <h3 class="text-2xl font-extrabold text-slate-900">LITE — 3 Pages</h3>
-            <p class="text-xs text-slate-500 leading-relaxed">
-              Best for solopreneurs, single-service businesses, and quick online launches.
-            </p>
-            <div class="pt-2">
-              <div class="text-3xl sm:text-4xl font-black text-slate-900 font-outfit">PKR 17,999</div>
-              <div class="text-[11px] text-slate-500 font-semibold mt-1">2 Revision Rounds • 5–7 Days Delivery</div>
-            </div>
-
-            <!-- Payment Policy -->
-            <div class="p-3 rounded-2xl bg-slate-50 border border-slate-200 text-xs text-slate-700">
-              <div class="font-bold text-slate-900 flex items-center gap-1 mb-0.5">
-                <i data-lucide="wallet" class="w-3.5 h-3.5 text-[#FF6600]"></i>
-                <span>Payment Terms:</span>
-                <span class="ml-auto text-[10px] bg-amber-100 text-amber-800 px-2 py-0.5 rounded font-bold">100% Upfront</span>
-              </div>
-              <div class="text-[11px] text-slate-600">Full payment on kickoff • No installments on Lite</div>
-            </div>
-
-            <ul class="space-y-2.5 text-xs text-slate-700 pt-2 border-t border-slate-100">
-              <li class="flex items-start gap-2">
-                <i data-lucide="check" class="w-4 h-4 text-emerald-500 flex-shrink-0 mt-0.5"></i>
-                <span><strong>Up to 3 Pages</strong> (Home, Services, Contact)</span>
-              </li>
-              <li class="flex items-start gap-2">
-                <i data-lucide="check" class="w-4 h-4 text-emerald-500 flex-shrink-0 mt-0.5"></i>
-                <span>Ultra-Fast Mobile Responsive Layout</span>
-              </li>
-              <li class="flex items-start gap-2">
-                <i data-lucide="check" class="w-4 h-4 text-emerald-500 flex-shrink-0 mt-0.5"></i>
-                <span>Direct WhatsApp Chat & Order Button</span>
-              </li>
-              <li class="flex items-start gap-2">
-                <i data-lucide="check" class="w-4 h-4 text-emerald-500 flex-shrink-0 mt-0.5"></i>
-                <span>Google Maps Location & Contact Form</span>
-              </li>
-              <li class="flex items-start gap-2">
-                <i data-lucide="check" class="w-4 h-4 text-emerald-500 flex-shrink-0 mt-0.5"></i>
-                <span>Basic Meta SEO Setup</span>
-              </li>
-            </ul>
-          </div>
-
-          <div class="pt-6 mt-6 border-t border-slate-100">
-            <a href="https://wa.me/923000000000?text=Hello%20Digital%20Ustad,%20I%20want%20the%20LITE%203-Page%20Website%20Package%20(PKR%2017,999)!" target="_blank" class="w-full py-3.5 rounded-full bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs flex items-center justify-center gap-2 transition-all">
-              <span>Select 3-Page Lite</span>
-              <i data-lucide="arrow-right" class="w-4 h-4"></i>
-            </a>
-          </div>
-        </div>
-
-        <!-- 2. STARTER (5 Pages) ⭐ HERO OFFER -->
-        <div class="hover-lift bg-[#0B0F19] text-white rounded-3xl p-8 border-2 border-[#FF6600] shadow-2xl flex flex-col justify-between relative scale-[1.02] z-10 reveal delay-2">
-          <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-[#FF6600] text-white text-[11px] font-black uppercase tracking-wider shadow-lg flex items-center gap-1.5 whitespace-nowrap">
-            <span>⭐ RECOMMENDED • HERO OFFER</span>
-          </div>
-
-          <div class="space-y-4 pt-1">
-            <div class="inline-flex items-center px-3 py-1 rounded-full bg-slate-800 text-[#FF6600] text-xs font-bold">
-              Most Popular Business Setup
-            </div>
-            <h3 class="text-2xl font-extrabold text-white">STARTER — 5 Pages</h3>
-            <p class="text-xs text-slate-300 leading-relaxed">
-              Best for restaurants, salons, clinics, retail shops, and local service brands.
-            </p>
-            <div class="pt-2">
-              <div class="text-4xl sm:text-5xl font-black text-[#FF6600] font-outfit">PKR 30,000</div>
-              <div class="text-[11px] text-slate-400 font-semibold mt-1">3 Revision Rounds • 7–10 Days Delivery</div>
-            </div>
-
-            <!-- Flex Payment Pill (Owner-Specified 25/50/25) -->
-            <div class="p-3 rounded-2xl bg-slate-900/90 border border-[#FF6600]/40 text-xs space-y-1.5">
-              <div class="font-bold text-amber-400 text-[11px] flex items-center justify-between">
-                <span>INSTALLMENT PLAN (25 / 50 / 25)</span>
-                <span class="text-[10px] bg-emerald-500/20 text-emerald-400 px-2 py-0.5 rounded">0% Extra</span>
-              </div>
-              <div class="grid grid-cols-3 gap-1 text-center text-[10px]">
-                <div class="p-1 rounded bg-slate-800"><span class="text-slate-400">25% Kickoff</span><br><strong class="text-white text-xs">PKR 7.5k</strong></div>
-                <div class="p-1 rounded bg-slate-800"><span class="text-slate-400">50% Approval</span><br><strong class="text-white text-xs">PKR 15k</strong></div>
-                <div class="p-1 rounded bg-slate-800"><span class="text-slate-400">25% 30-Day</span><br><strong class="text-white text-xs">PKR 7.5k</strong></div>
-              </div>
-              <div class="text-[10px] text-emerald-400 text-center font-medium pt-0.5">💡 5% Discount for 100% Upfront (PKR 28,500)</div>
-            </div>
-
-            <ul class="space-y-2.5 text-xs text-slate-200 pt-2 border-t border-slate-800">
-              <li class="flex items-start gap-2">
-                <i data-lucide="check" class="w-4 h-4 text-[#FF6600] flex-shrink-0 mt-0.5"></i>
-                <span><strong>Up to 5 Custom Pages</strong> (Home, About, Services, Gallery, Contact)</span>
-              </li>
-              <li class="flex items-start gap-2">
-                <i data-lucide="check" class="w-4 h-4 text-[#FF6600] flex-shrink-0 mt-0.5"></i>
-                <span>Interactive Gallery / Portfolio Showcase</span>
-              </li>
-              <li class="flex items-start gap-2">
-                <i data-lucide="check" class="w-4 h-4 text-[#FF6600] flex-shrink-0 mt-0.5"></i>
-                <span>Menu Integration (Restaurants) or Doctor/Team Section</span>
-              </li>
-              <li class="flex items-start gap-2">
-                <i data-lucide="check" class="w-4 h-4 text-[#FF6600] flex-shrink-0 mt-0.5"></i>
-                <span>Dedicated Services Detail Pages</span>
-              </li>
-              <li class="flex items-start gap-2">
-                <i data-lucide="check" class="w-4 h-4 text-[#FF6600] flex-shrink-0 mt-0.5"></i>
-                <span>WhatsApp Chat Widget with Custom Inquiry Routing</span>
-              </li>
-              <li class="flex items-start gap-2">
-                <i data-lucide="check" class="w-4 h-4 text-[#FF6600] flex-shrink-0 mt-0.5"></i>
-                <span>On-Page SEO & Google Search Console Setup</span>
-              </li>
-              <li class="flex items-start gap-2">
-                <i data-lucide="shield-check" class="w-4 h-4 text-[#FF6600] flex-shrink-0 mt-0.5"></i>
-                <span><strong>14 Days Handover Support & Adjustments</strong></span>
-              </li>
-            </ul>
-          </div>
-
-          <div class="pt-6 mt-6 border-t border-slate-800">
-            <a href="https://wa.me/923000000000?text=Hello%20Digital%20Ustad,%20I%20want%20the%20STARTER%205-Page%20Website%20Package%20(PKR%2030,000)%20with%20Installments!" target="_blank" class="btn-shine w-full py-4 rounded-full bg-[#FF6600] hover:bg-[#EA580C] text-white font-bold text-xs flex items-center justify-center gap-2 shadow-xl orange-glow transition-all">
-              <span>Get 5-Page Starter</span>
-              <i data-lucide="arrow-right" class="w-4 h-4"></i>
-            </a>
-          </div>
-        </div>
-
-        <!-- 3. GROWTH (7 Pages) -->
-        <div class="hover-lift bg-white rounded-3xl p-8 border border-slate-200 shadow-sm flex flex-col justify-between reveal delay-3">
-          <div class="space-y-4">
-            <div class="inline-flex items-center px-3 py-1 rounded-full bg-slate-100 text-slate-700 text-xs font-bold">
-              Multi-Service & Advanced Brands
-            </div>
-            <h3 class="text-2xl font-extrabold text-slate-900">GROWTH — 7 Pages</h3>
-            <p class="text-xs text-slate-500 leading-relaxed">
-              Best for real estate agencies, multi-doctor clinics, and retail firms.
-            </p>
-            <div class="pt-2">
-              <div class="text-3xl sm:text-4xl font-black text-slate-900 font-outfit">PKR 42,999</div>
-              <div class="text-[11px] text-slate-500 font-semibold mt-1">4 Revisions • 1 Month Support Included</div>
-            </div>
-
-            <!-- Flex Payment Pill (Owner-Specified 25/50/25) -->
-            <div class="p-3 rounded-2xl bg-slate-50 border border-slate-200 text-xs space-y-1.5">
-              <div class="font-bold text-slate-800 text-[11px] flex items-center justify-between">
-                <span>INSTALLMENT PLAN (25 / 50 / 25)</span>
-                <span class="text-[10px] bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded font-bold">Milestone Split</span>
-              </div>
-              <div class="grid grid-cols-3 gap-1 text-center text-[10px]">
-                <div class="p-1 rounded bg-white border"><span class="text-slate-400">25% Kickoff</span><br><strong class="text-slate-900 text-xs">PKR 10.7k</strong></div>
-                <div class="p-1 rounded bg-white border"><span class="text-slate-400">50% Approval</span><br><strong class="text-slate-900 text-xs">PKR 21.5k</strong></div>
-                <div class="p-1 rounded bg-white border"><span class="text-slate-400">25% 30-Day</span><br><strong class="text-slate-900 text-xs">PKR 10.7k</strong></div>
-              </div>
-              <div class="text-[10px] text-emerald-700 text-center font-medium pt-0.5">💡 5% Discount for 100% Upfront (PKR 40,850)</div>
-            </div>
-
-            <ul class="space-y-2.5 text-xs text-slate-700 pt-2 border-t border-slate-100">
-              <li class="flex items-start gap-2">
-                <i data-lucide="check" class="w-4 h-4 text-emerald-500 flex-shrink-0 mt-0.5"></i>
-                <span><strong>Up to 7 Custom Pages</strong></span>
-              </li>
-              <li class="flex items-start gap-2">
-                <i data-lucide="check" class="w-4 h-4 text-emerald-500 flex-shrink-0 mt-0.5"></i>
-                <span>Blog & News Section Architecture</span>
-              </li>
-              <li class="flex items-start gap-2">
-                <i data-lucide="check" class="w-4 h-4 text-emerald-500 flex-shrink-0 mt-0.5"></i>
-                <span>Multiple Service/Product Showcase Pages</span>
-              </li>
-              <li class="flex items-start gap-2">
-                <i data-lucide="check" class="w-4 h-4 text-emerald-500 flex-shrink-0 mt-0.5"></i>
-                <span>Interactive Lead Capture & Inquiry Forms</span>
-              </li>
-              <li class="flex items-start gap-2">
-                <i data-lucide="check" class="w-4 h-4 text-emerald-500 flex-shrink-0 mt-0.5"></i>
-                <span>Enhanced SEO & Google Analytics GA4 Setup</span>
-              </li>
-              <li class="flex items-start gap-2">
-                <i data-lucide="shield-check" class="w-4 h-4 text-[#FF6600] flex-shrink-0 mt-0.5"></i>
-                <span><strong>1 Month Free Post-Launch Support</strong></span>
-              </li>
-            </ul>
-          </div>
-
-          <div class="pt-6 mt-6 border-t border-slate-100">
-            <a href="https://wa.me/923000000000?text=Hello%20Digital%20Ustad,%20I%20want%20the%20GROWTH%207-Page%20Website%20Package%20(PKR%2042,999)%20with%20Flex%20Payment!" target="_blank" class="w-full py-3.5 rounded-full bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs flex items-center justify-center gap-2 transition-all">
-              <span>Select 7-Page Growth</span>
-              <i data-lucide="arrow-right" class="w-4 h-4"></i>
-            </a>
-          </div>
-        </div>
-
-      </div>
-
-      <!-- Bottom Banner Linking to Full Pricing Page -->
-      <div class="reveal bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/90 shadow-sm flex flex-col sm:flex-row items-center justify-between gap-6">
-        <div class="space-y-1 text-center sm:text-left">
-          <div class="text-xs font-bold text-[#FF6600] uppercase tracking-wider flex items-center justify-center sm:justify-start gap-1.5">
-            <i data-lucide="sparkles" class="w-4 h-4"></i>
-            <span>COMPLETE AGENCY RATE CARD</span>
-          </div>
-          <h4 class="text-xl font-extrabold text-slate-900">Need Social Media, Meta Ads, SEO, or Automation?</h4>
-          <p class="text-xs text-slate-500">Explore our full pricing matrix with transparent monthly retainers and per-project options.</p>
-        </div>
-        <div class="flex-shrink-0 flex flex-wrap items-center gap-3">
-          <button type="button" data-service="whatsapp-automation" class="btn-whatsapp-bot-quote inline-flex items-center gap-2 px-5 py-3 rounded-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs transition-all shadow-md">
-            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12.012 2c-5.506 0-9.989 4.478-9.99 9.984a9.964 9.964 0 0 0 1.333 4.993L2 22l5.233-1.237a9.994 9.994 0 0 0 4.779 1.217h.004c5.505 0 9.988-4.478 9.989-9.984 0-2.669-1.037-5.176-2.925-7.062A9.925 9.925 0 0 0 12.012 2zm5.835 14.198c-.244.688-1.227 1.26-1.786 1.32-.472.052-1.077.08-3.155-.783-2.658-1.102-4.363-3.807-4.496-3.983-.133-.176-1.076-1.433-1.076-2.733 0-1.3.68-1.94.92-2.203.24-.263.523-.328.698-.328.174 0 .349.002.502.01.163.008.382-.062.597.455.22.531.75 1.83.815 1.963.065.133.109.288.022.463-.087.175-.131.284-.262.437-.13.153-.275.342-.393.459-.13.13-.266.27-.115.53.151.26 1.002 1.65 2.148 2.671 1.472 1.312 2.71 1.718 3.097 1.91.387.192.613.16.84-.102.228-.263.974-1.134 1.235-1.523.26-.39.522-.325.872-.196.35.13 2.22 1.047 2.602 1.238.382.19.637.284.73.444.093.16.093.928-.151 1.616z"/></svg>
-            <span>WhatsApp Bot Quote</span>
-          </button>
-          <a href="pricing.html" class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-slate-900 hover:bg-[#FF6600] text-white font-bold text-xs transition-all shadow-md">
-            <span>View Full Pricing Matrix</span>
-            <i data-lucide="arrow-right" class="w-4 h-4"></i>
-          </a>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ================= CLIENT REVIEWS & VERIFIED PROOF ================= -->
-  <section class="py-16 lg:py-24 bg-[#0B0F19] text-white relative overflow-hidden">
-    <div class="aurora-orb-1 top-0 left-10"></div>
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-      
-      <div class="text-center max-w-2xl mx-auto mb-12 reveal">
-        <span class="text-xs font-extrabold uppercase tracking-widest text-[#FF6600] bg-slate-900 px-3.5 py-1 rounded-full border border-slate-700/80">
-          CLIENT SATISFACTION
-        </span>
-        <h2 class="text-3xl sm:text-4xl font-extrabold mt-3 font-outfit">
-          Client Feedback & Reviews
-        </h2>
-        <p class="text-slate-400 text-sm mt-2">We prioritize genuine partnerships, verified milestones, and transparent delivery.</p>
-      </div>
-
-      <div class="max-w-3xl mx-auto reveal bg-slate-900/80 border border-slate-800 backdrop-blur-xl p-8 sm:p-12 rounded-3xl text-center space-y-4 shadow-xl">
-        <div class="w-12 h-12 rounded-2xl bg-orange-500/10 border border-[#FF6600]/30 flex items-center justify-center text-[#FF6600] mx-auto">
-          <i data-lucide="message-square-heart" class="w-6 h-6"></i>
-        </div>
-        <h3 class="text-xl sm:text-2xl font-bold text-white font-outfit">
-          Real client testimonials coming soon.
-        </h3>
-        <p class="text-slate-400 text-xs sm:text-sm leading-relaxed max-w-lg mx-auto">
-          We are committed to sharing only verified, genuine client reviews and results as our active partner projects and campaign case studies conclude.
-        </p>
-        <div class="pt-2">
-          <a href="portfolio.html" class="inline-flex items-center gap-2 text-xs font-bold text-[#FF6600] hover:text-orange-400 transition-colors">
-            <span>Explore Design Concepts & Architecture</span>
-            <i data-lucide="arrow-right" class="w-4 h-4"></i>
-          </a>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ================= INTERACTIVE FAQS ================= -->
-  <section class="py-16 lg:py-24 bg-white border-b border-slate-100">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      
-      <div class="text-center max-w-xl mx-auto mb-14 reveal">
-        <span class="text-xs font-extrabold uppercase tracking-widest text-[#FF6600] bg-orange-50 px-3.5 py-1 rounded-full border border-orange-100">
-          COMMON QUESTIONS
-        </span>
-        <h2 class="text-3xl font-extrabold text-slate-900 mt-3 font-outfit">Frequently Asked Questions</h2>
-      </div>
-
-      <div class="space-y-4 reveal">
-        
-        <div class="faq-item bento-card p-5 rounded-2xl">
-          <button class="faq-btn w-full flex items-center justify-between text-left font-bold text-slate-900 text-sm">
-            <span>Website kitne din me complete ho jati hai?</span>
-            <i data-lucide="chevron-down" class="faq-icon w-4 h-4 text-slate-400 transition-transform duration-300"></i>
-          </button>
-          <div class="faq-answer hidden mt-3 pt-3 border-t border-slate-100 text-xs text-slate-600 leading-relaxed">
-            Hmari standard 5-Page Business Website aam tor par <strong>7 se 10 working days</strong> me tayar aur live ho jati hai (3-Page Lite package 5 se 7 working days me). Requirements aur content time par milne par timeline bilkul ensure ki jati hai.
-          </div>
-        </div>
-
-        <div class="faq-item bento-card p-5 rounded-2xl">
-          <button class="faq-btn w-full flex items-center justify-between text-left font-bold text-slate-900 text-sm">
-            <span>Installment Plan (25 / 50 / 25) aur payment methods kaise kaam karte hain?</span>
-            <i data-lucide="chevron-down" class="faq-icon w-4 h-4 text-slate-400 transition-transform duration-300"></i>
-          </button>
-          <div class="faq-answer hidden mt-3 pt-3 border-t border-slate-100 text-xs text-slate-600 leading-relaxed">
-            Hmaray 5-Page (PKR 30,000) aur 7-Page (PKR 42,999) websites par <strong>25 / 50 / 25 Milestone Installments</strong> dastiyab hain: 25% project kickoff par, 50% design review & approval par (live launch se pehle), aur baqi 25% aglay 30 dinon ke andar. Agar aap 100% upfront pay karte hain to foran <strong>5% early-payment discount</strong> milta hai. Payments hum <strong>EasyPaisa, JazzCash, ya Direct Bank Transfer</strong> ke zariye receive karte hain.
-          </div>
-        </div>
-
-        <div class="faq-item bento-card p-5 rounded-2xl">
-          <button class="faq-btn w-full flex items-center justify-between text-left font-bold text-slate-900 text-sm">
-            <span>WhatsApp Automation kaise kaam karti hai?</span>
-            <i data-lucide="chevron-down" class="faq-icon w-4 h-4 text-slate-400 transition-transform duration-300"></i>
-          </button>
-          <div class="faq-answer hidden mt-3 pt-3 border-t border-slate-100 text-xs text-slate-600 leading-relaxed">
-            WhatsApp Business API ya automated bot ke zariye jab koi customer aapko message karega, bot foran automated menu, pricing, services, aur booking links share karega — 24 ghante bagair kisi delay ke.
-          </div>
-        </div>
-
-        <div class="faq-item bento-card p-5 rounded-2xl">
-          <button class="faq-btn w-full flex items-center justify-between text-left font-bold text-slate-900 text-sm">
-            <span>Kya project shuru karne ke baad support milti hai?</span>
-            <i data-lucide="chevron-down" class="faq-icon w-4 h-4 text-slate-400 transition-transform duration-300"></i>
-          </button>
-          <div class="faq-answer hidden mt-3 pt-3 border-t border-slate-100 text-xs text-slate-600 leading-relaxed">
-            Bilkul! Har package ke sath post-launch warranty shamil hai: 3-Page Lite par 7 din, 5-Page Starter par 14 din, aur 7-Page Growth par 30 din ki free post-launch technical assistance milti hai. Long-term updates aur regular backup ke liye hamara PKR 3,000/month Website Care retainer moojood hai.
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ================= BOTTOM CTA BANNER ================= -->
-  <section id="contact" class="py-14 sm:py-20 bg-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      
-      <div class="reveal relative bg-[#0B0F19] rounded-3xl p-8 sm:p-12 lg:p-16 overflow-hidden shadow-2xl border border-slate-800">
-        <div class="aurora-orb-1 -right-20 -bottom-20 pointer-events-none"></div>
-        <div class="absolute inset-0 hero-grid-pattern opacity-25 pointer-events-none"></div>
-
-        <div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-          
-          <div class="lg:col-span-8 space-y-4">
-            <span class="text-xs font-extrabold uppercase tracking-widest text-[#FF6600]">
-              READY TO GROW YOUR BUSINESS?
-            </span>
-            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight leading-tight font-outfit">
-              Let's Build Something<br>
-              <span class="text-[#FF6600]">Amazing Together.</span>
-            </h2>
-            <p class="text-slate-300 text-sm sm:text-base max-w-xl leading-relaxed">
-              Whether you need a website, marketing, automation or complete digital support — Digital Ustad is here to help.
+            <!-- Main Headline -->
+            <h1 class="text-3xl sm:text-5xl lg:text-[52px] font-extrabold tracking-tight leading-[1.14] font-outfit text-white">
+              Build a Stronger Digital Presence.<br class="hidden sm:inline">
+              <span class="text-gradient-orange">Generate Better Leads.</span>
+            </h1>
+
+            <!-- Supporting Text -->
+            <p class="text-slate-300 text-base sm:text-lg max-w-2xl mx-auto lg:mx-0 leading-relaxed font-normal">
+              Digital Ustad helps growing businesses across Pakistan with high-performance websites, performance marketing, local SEO, branding and business automation — delivered by one accountable team.
             </p>
 
-            <div class="flex flex-wrap items-center gap-4 pt-4">
-              <button class="btn-get-started btn-shine inline-flex items-center gap-2.5 px-8 py-4 rounded-full bg-[#FF6600] hover:bg-[#EA580C] text-white font-bold text-sm shadow-xl orange-glow hover:scale-105 active:scale-95 transition-all">
-                <span>Get Started</span>
+            <!-- Hero CTAs -->
+            <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-2">
+              <button type="button" class="btn-get-started btn-primary-accessible inline-flex items-center gap-2.5 px-8 py-4 rounded-xl font-bold text-sm shadow-xl transition-all">
+                <span>Get a Free Consultation</span>
                 <i data-lucide="arrow-right" class="w-4 h-4"></i>
               </button>
 
-              <a href="https://wa.me/923000000000?text=Hello%20Digital%20Ustad,%20I%20want%20to%20discuss%20a%20project!" target="_blank" class="inline-flex items-center gap-2.5 px-7 py-4 rounded-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm shadow-lg hover:scale-105 active:scale-95 transition-all">
-                <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12.012 2c-5.506 0-9.989 4.478-9.99 9.984a9.964 9.964 0 0 0 1.333 4.993L2 22l5.233-1.237a9.994 9.994 0 0 0 4.779 1.217h.004c5.505 0 9.988-4.478 9.989-9.984 0-2.669-1.037-5.176-2.925-7.062A9.925 9.925 0 0 0 12.012 2zm5.835 14.198c-.244.688-1.227 1.26-1.786 1.32-.472.052-1.077.08-3.155-.783-2.658-1.102-4.363-3.807-4.496-3.983-.133-.176-1.076-1.433-1.076-2.733 0-1.3.68-1.94.92-2.203.24-.263.523-.328.698-.328.174 0 .349.002.502.01.163.008.382-.062.597.455.22.531.75 1.83.815 1.963.065.133.109.288.022.463-.087.175-.131.284-.262.437-.13.153-.275.342-.393.459-.13.13-.266.27-.115.53.151.26 1.002 1.65 2.148 2.671 1.472 1.312 2.71 1.718 3.097 1.91.387.192.613.16.84-.102.228-.263.974-1.134 1.235-1.523.26-.39.522-.325.872-.196.35.13 2.22 1.047 2.602 1.238.382.19.637.284.73.444.093.16.093.928-.151 1.616z"/></svg>
-                <span>WhatsApp Us</span>
+              <a href="#solutions" class="btn-secondary-accessible inline-flex items-center gap-2 px-7 py-4 rounded-xl font-bold text-sm transition-all">
+                <span>Explore Our Solutions</span>
+                <i data-lucide="arrow-down" class="w-4 h-4 text-slate-400"></i>
               </a>
+            </div>
+
+            <!-- Pricing Anchor Pill -->
+            <div class="pt-2 flex items-center justify-center lg:justify-start">
+              <div class="inline-flex items-center gap-2 text-xs sm:text-sm font-semibold text-slate-300 bg-slate-900/80 px-4 py-2 rounded-xl border border-slate-800">
+                <i data-lucide="shield-check" class="w-4 h-4 text-[#0F766E] flex-shrink-0"></i>
+                <span>Complete Business Websites from <strong class="text-white font-bold">PKR 30,000</strong> (25/50/25 Milestones)</span>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Right Hero Device Presentation (Restrained, Professional) -->
+          <div class="lg:col-span-5 relative flex justify-center items-center reveal active">
+            <div class="w-full max-w-[480px] du-card-dark p-4 shadow-2xl relative">
+              
+              <!-- Clean Browser Header -->
+              <div class="flex items-center justify-between pb-3 mb-3 border-b border-slate-800 text-xs">
+                <div class="flex items-center gap-1.5">
+                  <span class="w-2.5 h-2.5 rounded-full bg-rose-500/80"></span>
+                  <span class="w-2.5 h-2.5 rounded-full bg-amber-500/80"></span>
+                  <span class="w-2.5 h-2.5 rounded-full bg-emerald-500/80"></span>
+                </div>
+                <div class="px-3 py-0.5 rounded-md bg-slate-800/80 text-[10px] text-slate-400 font-mono flex items-center gap-1.5 border border-slate-700/60">
+                  <i data-lucide="lock" class="w-2.5 h-2.5 text-emerald-400"></i>
+                  <span>digitalustad.co/solutions</span>
+                </div>
+                <span class="text-[10px] font-bold text-[#0F766E] bg-teal-950/60 px-2 py-0.5 rounded border border-teal-800/50">Verified Stack</span>
+              </div>
+
+              <!-- Content Showcase -->
+              <div class="space-y-3 p-1">
+                <div class="rounded-xl overflow-hidden relative h-44 bg-slate-800 border border-slate-700/50">
+                  <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=700&q=80" alt="Restaurant digital solution" width="700" height="400" loading="lazy" class="w-full h-full object-cover">
+                  <div class="absolute inset-0 bg-gradient-to-t from-[#0B1220] via-transparent to-transparent"></div>
+                  <div class="absolute bottom-3 left-3 right-3 flex items-center justify-between">
+                    <div>
+                      <div class="text-[11px] font-bold text-[#F97316] uppercase tracking-wider">Hospitality Architecture</div>
+                      <div class="text-sm font-bold text-white">Spice Bistro &bull; QR Menu &amp; Ordering</div>
+                    </div>
+                    <span class="text-[9px] bg-slate-900/90 text-amber-300 font-semibold px-2 py-0.5 rounded border border-amber-500/30">Prototype</span>
+                  </div>
+                </div>
+
+                <!-- Mini Metric Row (Transparent, No fake claims) -->
+                <div class="grid grid-cols-2 gap-2 text-xs">
+                  <div class="p-2.5 rounded-xl bg-slate-900 border border-slate-800">
+                    <div class="text-[10px] text-slate-400 uppercase font-semibold">Lead Routing</div>
+                    <div class="font-bold text-white text-xs mt-0.5 flex items-center gap-1">
+                      <i data-lucide="message-square" class="w-3.5 h-3.5 text-emerald-400"></i>
+                      <span>Direct WhatsApp + Form</span>
+                    </div>
+                  </div>
+                  <div class="p-2.5 rounded-xl bg-slate-900 border border-slate-800">
+                    <div class="text-[10px] text-slate-400 uppercase font-semibold">Search Ready</div>
+                    <div class="font-bold text-white text-xs mt-0.5 flex items-center gap-1">
+                      <i data-lucide="map-pin" class="w-3.5 h-3.5 text-amber-400"></i>
+                      <span>Google Business Setup</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Action Footnote -->
+                <div class="pt-2 border-t border-slate-800/80 flex items-center justify-between text-[11px] text-slate-400">
+                  <span>Built for Pakistani local businesses</span>
+                  <button type="button" onclick="openDigitalUstadChat({ intent: 'package_consultation', service: 'Web Development', packageId: 'starter-5-page', sourcePage: window.location.pathname })" class="text-[#F97316] hover:text-white font-semibold transition-colors flex items-center gap-1">
+                    <span>Discuss Architecture</span>
+                    <i data-lucide="chevron-right" class="w-3 h-3"></i>
+                  </button>
+                </div>
+              </div>
+
             </div>
           </div>
 
-          <div class="lg:col-span-4 flex justify-center lg:justify-end">
-            <div class="relative w-48 h-48 sm:w-56 sm:h-56 flex items-center justify-center bg-slate-900/80 rounded-3xl border border-slate-700/80 shadow-2xl p-6 hover:scale-105 transition-transform duration-500">
-              <img src="assets/images/logo-icon-dark.png" alt="Digital Ustad Mark" class="w-full h-full object-contain filter drop-shadow-2xl">
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 2. LOCAL TRUST STRIP ================= -->
+    <section class="bg-white border-b border-slate-200 py-6">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center mb-4">
+          <p class="text-xs font-bold text-slate-500 uppercase tracking-widest">
+            Lahore-based team &bull; Pakistan-wide delivery &bull; Transparent PKR pricing &bull; Milestone-based execution
+          </p>
+        </div>
+
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 pt-2">
+          
+          <div class="flex items-center gap-3 p-3 rounded-xl bg-slate-50 border border-slate-200/70">
+            <div class="w-9 h-9 rounded-lg bg-emerald-100 text-[#0F766E] flex items-center justify-center flex-shrink-0">
+              <i data-lucide="map-pin" class="w-4 h-4"></i>
+            </div>
+            <div class="text-xs">
+              <div class="font-bold text-slate-900">Lahore HQ &amp; Remote</div>
+              <div class="text-slate-500 text-[11px]">Serving LHE, KHI, ISB &amp; nationwide</div>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-3 p-3 rounded-xl bg-slate-50 border border-slate-200/70">
+            <div class="w-9 h-9 rounded-lg bg-orange-100 text-[#C2410C] flex items-center justify-center flex-shrink-0">
+              <i data-lucide="calculator" class="w-4 h-4"></i>
+            </div>
+            <div class="text-xs">
+              <div class="font-bold text-slate-900">Transparent PKR Pricing</div>
+              <div class="text-slate-500 text-[11px]">Fixed rate scope, zero currency risk</div>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-3 p-3 rounded-xl bg-slate-50 border border-slate-200/70">
+            <div class="w-9 h-9 rounded-lg bg-teal-100 text-[#0F766E] flex items-center justify-center flex-shrink-0">
+              <i data-lucide="wallet" class="w-4 h-4"></i>
+            </div>
+            <div class="text-xs">
+              <div class="font-bold text-slate-900">Milestone-Based Split</div>
+              <div class="text-slate-500 text-[11px]">25% Kickoff &bull; 50% Review &bull; 25% Live</div>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-3 p-3 rounded-xl bg-slate-50 border border-slate-200/70">
+            <div class="w-9 h-9 rounded-lg bg-blue-100 text-blue-700 flex items-center justify-center flex-shrink-0">
+              <i data-lucide="credit-card" class="w-4 h-4"></i>
+            </div>
+            <div class="text-xs">
+              <div class="font-bold text-slate-900">Local Payment Rails</div>
+              <div class="text-slate-500 text-[11px]">Bank Transfer, Raast, JazzCash, EasyPaisa</div>
             </div>
           </div>
 
         </div>
 
       </div>
+    </section>
 
-    </div>
-  </section>
+    <!-- ================= 3. FOUR SOLUTION PILLARS ================= -->
+    <section id="services" class="py-16 lg:py-24 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-14 reveal">
+          <span class="inline-block px-3.5 py-1 rounded-full bg-slate-100 text-slate-700 text-xs font-bold uppercase tracking-wider mb-3">
+            Core Service Capabilities
+          </span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight font-outfit">
+            Four Pillars of Digital Growth
+          </h2>
+          <p class="text-slate-600 text-sm sm:text-base mt-3 leading-relaxed">
+            Everything your business needs to establish authority, generate high-intent customer leads, and operate smoothly — managed under one accountable roof.
+          </p>
+        </div>
 
-  <!-- ================= ABOUT & COMPREHENSIVE FOOTER ================= -->
-  <footer id="about" class="bg-[#0B0F19] text-slate-400 pt-16 pb-12 border-t border-slate-800">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          
+          <!-- Pillar 1: BUILD -->
+          <div class="du-card p-6 flex flex-col justify-between hover:shadow-lg transition-all reveal">
+            <div class="space-y-4">
+              <div class="w-12 h-12 rounded-xl bg-orange-100 text-[#C2410C] flex items-center justify-center">
+                <i data-lucide="code-2" class="w-6 h-6"></i>
+              </div>
+              <div class="inline-block px-2.5 py-0.5 rounded bg-orange-50 text-[#C2410C] text-[10px] font-extrabold uppercase tracking-wider">
+                PILLAR 01
+              </div>
+              <h3 class="text-xl font-extrabold text-slate-900">BUILD</h3>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                Fast, conversion-focused websites and ecommerce experiences built for Pakistani customers.
+              </p>
+              <ul class="space-y-2 text-xs text-slate-700 pt-3 border-t border-slate-100">
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600 flex-shrink-0"></i><span>3 to 7 Page Custom Layouts</span></li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600 flex-shrink-0"></i><span>Mobile-First Speed Optimization</span></li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600 flex-shrink-0"></i><span>Direct WhatsApp Order Button</span></li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600 flex-shrink-0"></i><span>Google Search Console Setup</span></li>
+              </ul>
+            </div>
+            <div class="pt-6 mt-6 border-t border-slate-100 space-y-3">
+              <div class="text-xs font-bold text-slate-900">From PKR 17,999 <span class="text-[10px] font-normal text-slate-500">(Lite)</span></div>
+              <button type="button" onclick="openDigitalUstadChat({ intent: 'package_consultation', service: 'Web Development', packageId: 'web-starter-5-page', sourcePage: window.location.pathname })" class="w-full py-2.5 rounded-xl bg-slate-900 hover:bg-[#C2410C] text-white font-bold text-xs flex items-center justify-center gap-1.5 transition-colors">
+                <span>Discuss Website</span>
+                <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Pillar 2: GROW -->
+          <div class="du-card p-6 flex flex-col justify-between hover:shadow-lg transition-all reveal">
+            <div class="space-y-4">
+              <div class="w-12 h-12 rounded-xl bg-teal-100 text-[#0F766E] flex items-center justify-center">
+                <i data-lucide="trending-up" class="w-6 h-6"></i>
+              </div>
+              <div class="inline-block px-2.5 py-0.5 rounded bg-teal-50 text-[#0F766E] text-[10px] font-extrabold uppercase tracking-wider">
+                PILLAR 02
+              </div>
+              <h3 class="text-xl font-extrabold text-slate-900">GROW</h3>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                Meta Ads, Google Ads, SEO and social media programs tied to clear business goals.
+              </p>
+              <ul class="space-y-2 text-xs text-slate-700 pt-3 border-t border-slate-100">
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600 flex-shrink-0"></i><span>High-Intent Google Search Ads</span></li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600 flex-shrink-0"></i><span>Meta (FB/Insta) Lead Funnels</span></li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600 flex-shrink-0"></i><span>Google Maps Local 3-Pack SEO</span></li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600 flex-shrink-0"></i><span>Weekly Cost-Per-Lead Reports</span></li>
+              </ul>
+            </div>
+            <div class="pt-6 mt-6 border-t border-slate-100 space-y-3">
+              <div class="text-xs font-bold text-slate-900">From PKR 15,000 / mo <span class="text-[10px] font-normal text-slate-500">(Retainer)</span></div>
+              <button type="button" onclick="openDigitalUstadChat({ intent: 'package_consultation', service: 'Meta & Google Ads', packageId: 'ads-starter', sourcePage: window.location.pathname })" class="w-full py-2.5 rounded-xl bg-slate-900 hover:bg-[#C2410C] text-white font-bold text-xs flex items-center justify-center gap-1.5 transition-colors">
+                <span>Discuss Growth</span>
+                <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Pillar 3: BRAND -->
+          <div class="du-card p-6 flex flex-col justify-between hover:shadow-lg transition-all reveal">
+            <div class="space-y-4">
+              <div class="w-12 h-12 rounded-xl bg-purple-100 text-purple-700 flex items-center justify-center">
+                <i data-lucide="pen-tool" class="w-6 h-6"></i>
+              </div>
+              <div class="inline-block px-2.5 py-0.5 rounded bg-purple-50 text-purple-700 text-[10px] font-extrabold uppercase tracking-wider">
+                PILLAR 03
+              </div>
+              <h3 class="text-xl font-extrabold text-slate-900">BRAND</h3>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                Professional identity and creative systems that make your business look established and consistent.
+              </p>
+              <ul class="space-y-2 text-xs text-slate-700 pt-3 border-t border-slate-100">
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600 flex-shrink-0"></i><span>Logo &amp; Brand Guidelines</span></li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600 flex-shrink-0"></i><span>Monthly Social Media Creatives</span></li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600 flex-shrink-0"></i><span>Flyers, Packaging &amp; Web Banners</span></li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600 flex-shrink-0"></i><span>Full Vector Source Files (PSD/AI)</span></li>
+              </ul>
+            </div>
+            <div class="pt-6 mt-6 border-t border-slate-100 space-y-3">
+              <div class="text-xs font-bold text-slate-900">From PKR 10,000 / mo <span class="text-[10px] font-normal text-slate-500">(Starter)</span></div>
+              <button type="button" onclick="openDigitalUstadChat({ intent: 'package_consultation', service: 'Graphic & Brand Identity', packageId: 'graphic-design-starter', sourcePage: window.location.pathname })" class="w-full py-2.5 rounded-xl bg-slate-900 hover:bg-[#C2410C] text-white font-bold text-xs flex items-center justify-center gap-1.5 transition-colors">
+                <span>Discuss Branding</span>
+                <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Pillar 4: AUTOMATE -->
+          <div class="du-card p-6 flex flex-col justify-between hover:shadow-lg transition-all reveal">
+            <div class="space-y-4">
+              <div class="w-12 h-12 rounded-xl bg-blue-100 text-blue-700 flex items-center justify-center">
+                <i data-lucide="bot" class="w-6 h-6"></i>
+              </div>
+              <div class="inline-block px-2.5 py-0.5 rounded bg-blue-50 text-blue-700 text-[10px] font-extrabold uppercase tracking-wider">
+                PILLAR 04
+              </div>
+              <h3 class="text-xl font-extrabold text-slate-900">AUTOMATE</h3>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                AI chat, customer workflows and integrations that reduce repetitive work and improve response time.
+              </p>
+              <ul class="space-y-2 text-xs text-slate-700 pt-3 border-t border-slate-100">
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600 flex-shrink-0"></i><span>24/7 Clonvo AI Website Assistant</span></li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600 flex-shrink-0"></i><span>WhatsApp Interactive Menu Bots</span></li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600 flex-shrink-0"></i><span>Lead Qualification &rarr; Google Sheet</span></li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600 flex-shrink-0"></i><span>Appointment Booking Sync</span></li>
+              </ul>
+            </div>
+            <div class="pt-6 mt-6 border-t border-slate-100 space-y-3">
+              <div class="text-xs font-bold text-slate-900">From PKR 25,000 <span class="text-[10px] font-normal text-slate-500">(Basic Bot)</span></div>
+              <button type="button" onclick="openDigitalUstadChat({ intent: 'package_consultation', service: 'WhatsApp Automation', packageId: 'whatsapp-basic', sourcePage: window.location.pathname })" class="w-full py-2.5 rounded-xl bg-slate-900 hover:bg-[#C2410C] text-white font-bold text-xs flex items-center justify-center gap-1.5 transition-colors">
+                <span>Discuss Automation</span>
+                <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+              </button>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= 4. INDUSTRIES SERVED ================= -->
+    <section id="solutions" class="py-16 lg:py-24 bg-slate-50 border-y border-slate-200">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-14 reveal">
+          <span class="inline-block px-3.5 py-1 rounded-full bg-orange-100 text-[#C2410C] text-xs font-bold uppercase tracking-wider mb-3">
+            Tailored Industry Frameworks
+          </span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight font-outfit">
+            Engineered for Your Business Sector
+          </h2>
+          <p class="text-slate-600 text-sm sm:text-base mt-3 leading-relaxed">
+            Every business vertical has specific customer behaviors and bottlenecks. We implement solutions designed to overcome them directly.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          
+          <!-- Sector 1: Clinics & Healthcare -->
+          <div class="du-card p-6 hover:shadow-md transition-all space-y-3 reveal">
+            <div class="w-10 h-10 rounded-lg bg-teal-100 text-[#0F766E] flex items-center justify-center">
+              <i data-lucide="stethoscope" class="w-5 h-5"></i>
+            </div>
+            <h3 class="text-lg font-bold text-slate-900">Clinics &amp; Healthcare</h3>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              Doctor profiles, OPD schedule display, and structured WhatsApp appointment requests that reduce receptionist overhead.
+            </p>
+            <div class="pt-2 text-[11px] font-semibold text-[#0F766E] flex items-center gap-1">
+              <i data-lucide="check" class="w-3.5 h-3.5"></i>
+              <span>Patient Trust &bull; OPD Schedules &bull; Booking</span>
+            </div>
+          </div>
+
+          <!-- Sector 2: Restaurants & Cafes -->
+          <div class="du-card p-6 hover:shadow-md transition-all space-y-3 reveal">
+            <div class="w-10 h-10 rounded-lg bg-orange-100 text-[#C2410C] flex items-center justify-center">
+              <i data-lucide="utensils" class="w-5 h-5"></i>
+            </div>
+            <h3 class="text-lg font-bold text-slate-900">Restaurants &amp; Cafes</h3>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              Mobile-responsive QR photo menus, table reservation engines, and 1-click WhatsApp delivery order routing for local diners.
+            </p>
+            <div class="pt-2 text-[11px] font-semibold text-[#C2410C] flex items-center gap-1">
+              <i data-lucide="check" class="w-3.5 h-3.5"></i>
+              <span>QR Menus &bull; Table Booking &bull; Delivery Orders</span>
+            </div>
+          </div>
+
+          <!-- Sector 3: Salons & Beauty -->
+          <div class="du-card p-6 hover:shadow-md transition-all space-y-3 reveal">
+            <div class="w-10 h-10 rounded-lg bg-rose-100 text-rose-700 flex items-center justify-center">
+              <i data-lucide="scissors" class="w-5 h-5"></i>
+            </div>
+            <h3 class="text-lg font-bold text-slate-900">Salons &amp; Beauty</h3>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              High-aesthetic portfolios displaying bridal transformations, service rate cards, and stylist calendar reservation slots.
+            </p>
+            <div class="pt-2 text-[11px] font-semibold text-rose-700 flex items-center gap-1">
+              <i data-lucide="check" class="w-3.5 h-3.5"></i>
+              <span>Bridal Packages &bull; Rate Cards &bull; Slot Booking</span>
+            </div>
+          </div>
+
+          <!-- Sector 4: Real Estate -->
+          <div class="du-card p-6 hover:shadow-md transition-all space-y-3 reveal">
+            <div class="w-10 h-10 rounded-lg bg-blue-100 text-blue-700 flex items-center justify-center">
+              <i data-lucide="building" class="w-5 h-5"></i>
+            </div>
+            <h3 class="text-lg font-bold text-slate-900">Real Estate &amp; Builders</h3>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              Property listings, project brochures, interactive map location highlights, and investor lead qualification capture forms.
+            </p>
+            <div class="pt-2 text-[11px] font-semibold text-blue-700 flex items-center gap-1">
+              <i data-lucide="check" class="w-3.5 h-3.5"></i>
+              <span>Property Portfolios &bull; Investor Leads &bull; Floor Plans</span>
+            </div>
+          </div>
+
+          <!-- Sector 5: Retail & Ecommerce -->
+          <div class="du-card p-6 hover:shadow-md transition-all space-y-3 reveal">
+            <div class="w-10 h-10 rounded-lg bg-emerald-100 text-emerald-700 flex items-center justify-center">
+              <i data-lucide="shopping-bag" class="w-5 h-5"></i>
+            </div>
+            <h3 class="text-lg font-bold text-slate-900">Retail &amp; Ecommerce</h3>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              Fast, catalog-driven storefronts with Pakistan courier integration, Cash-on-Delivery (COD) checkout, and order status bots.
+            </p>
+            <div class="pt-2 text-[11px] font-semibold text-emerald-700 flex items-center gap-1">
+              <i data-lucide="check" class="w-3.5 h-3.5"></i>
+              <span>Fast Product Catalogs &bull; COD Checkout &bull; Tracking</span>
+            </div>
+          </div>
+
+          <!-- Sector 6: Academies & Professional Services -->
+          <div class="du-card p-6 hover:shadow-md transition-all space-y-3 reveal">
+            <div class="w-10 h-10 rounded-lg bg-indigo-100 text-indigo-700 flex items-center justify-center">
+              <i data-lucide="graduation-cap" class="w-5 h-5"></i>
+            </div>
+            <h3 class="text-lg font-bold text-slate-900">Academies &amp; Services</h3>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              Course catalogs, fee outlines, corporate credibility profiles, and automated inquiry capture to streamline student enrollment.
+            </p>
+            <div class="pt-2 text-[11px] font-semibold text-indigo-700 flex items-center gap-1">
+              <i data-lucide="check" class="w-3.5 h-3.5"></i>
+              <span>Course Catalogs &bull; Admission Leads &bull; Credibility</span>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="mt-10 text-center">
+          <a href="solutions.html" class="inline-flex items-center gap-2 text-xs font-bold text-slate-800 hover:text-[#C2410C] px-6 py-3 rounded-xl border border-slate-300 hover:border-[#C2410C] transition-all bg-white">
+            <span>Explore All Industry Solutions</span>
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= 5. WORK & CONCEPTS (VERIFIED PROOF & ARCHITECTURE) ================= -->
+    <section id="portfolio" class="py-16 lg:py-24 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-6 mb-12 reveal">
+          <div>
+            <span class="inline-block px-3.5 py-1 rounded-full bg-slate-100 text-slate-700 text-xs font-bold uppercase tracking-wider mb-2">
+              Work &amp; Concepts
+            </span>
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight font-outfit">
+              Production Architecture &amp; Prototypes
+            </h2>
+            <p class="text-slate-600 text-xs sm:text-sm mt-2 max-w-xl">
+              Inspect our production-grade UI systems, booking flows, and conversion architectures built for Pakistani local businesses.
+            </p>
+          </div>
+          <div>
+            <a href="portfolio.html" class="inline-flex items-center gap-2 text-xs font-bold text-slate-800 hover:text-[#C2410C] px-5 py-2.5 rounded-xl border border-slate-300 hover:border-[#C2410C] transition-all">
+              <span>View All Concepts &amp; Architecture</span>
+              <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- 4 Visually Labeled Concept Cards Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          
+          <!-- Concept 1: Spice Bistro -->
+          <div class="project-card du-card overflow-hidden flex flex-col cursor-pointer group hover:shadow-lg transition-all reveal" data-project-id="spice-bistro">
+            <div class="relative h-48 overflow-hidden bg-slate-900">
+              <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=600&q=80" alt="Spice Bistro concept" width="600" height="400" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+              <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
+              <div class="absolute top-3 right-3 px-2 py-0.5 rounded bg-black/80 backdrop-blur-md text-[9px] text-amber-300 font-bold border border-amber-400/40">
+                Sample Concept
+              </div>
+            </div>
+            <div class="p-4 flex-1 flex flex-col justify-between">
+              <div>
+                <span class="text-[10px] font-bold text-[#C2410C] uppercase tracking-wider">Restaurant Architecture</span>
+                <h3 class="font-bold text-slate-900 text-base group-hover:text-[#C2410C] transition-colors mt-0.5">Spice Bistro</h3>
+                <p class="text-xs text-slate-500 mt-1">QR menu ordering, table reservations, and 1-click delivery routing.</p>
+              </div>
+              <div class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-slate-700 group-hover:text-[#C2410C]">
+                <span>Inspect Architecture</span>
+                <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+              </div>
+            </div>
+          </div>
+
+          <!-- Concept 2: Glow & Shine Salon -->
+          <div class="project-card du-card overflow-hidden flex flex-col cursor-pointer group hover:shadow-lg transition-all reveal" data-project-id="glow-shine">
+            <div class="relative h-48 overflow-hidden bg-slate-900">
+              <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=600&q=80" alt="Glow and Shine Salon concept" width="600" height="400" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+              <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
+              <div class="absolute top-3 right-3 px-2 py-0.5 rounded bg-black/80 backdrop-blur-md text-[9px] text-amber-300 font-bold border border-amber-400/40">
+                Sample Concept
+              </div>
+            </div>
+            <div class="p-4 flex-1 flex flex-col justify-between">
+              <div>
+                <span class="text-[10px] font-bold text-rose-700 uppercase tracking-wider">Salon &amp; Spa Portal</span>
+                <h3 class="font-bold text-slate-900 text-base group-hover:text-[#C2410C] transition-colors mt-0.5">Glow &amp; Shine Salon</h3>
+                <p class="text-xs text-slate-500 mt-1">Bridal package showcases, service menus, and calendar appointment bookings.</p>
+              </div>
+              <div class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-slate-700 group-hover:text-[#C2410C]">
+                <span>Inspect Architecture</span>
+                <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+              </div>
+            </div>
+          </div>
+
+          <!-- Concept 3: HealthCare Clinic -->
+          <div class="project-card du-card overflow-hidden flex flex-col cursor-pointer group hover:shadow-lg transition-all reveal" data-project-id="healthcare-clinic">
+            <div class="relative h-48 overflow-hidden bg-slate-900">
+              <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=600&q=80" alt="HealthCare Clinic concept" width="600" height="400" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+              <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
+              <div class="absolute top-3 right-3 px-2 py-0.5 rounded bg-black/80 backdrop-blur-md text-[9px] text-amber-300 font-bold border border-amber-400/40">
+                Sample Concept
+              </div>
+            </div>
+            <div class="p-4 flex-1 flex flex-col justify-between">
+              <div>
+                <span class="text-[10px] font-bold text-[#0F766E] uppercase tracking-wider">Medical Portal</span>
+                <h3 class="font-bold text-slate-900 text-base group-hover:text-[#C2410C] transition-colors mt-0.5">HealthCare Clinic</h3>
+                <p class="text-xs text-slate-500 mt-1">Doctor credentials, specialty schedules, and patient OPD appointment intake.</p>
+              </div>
+              <div class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-slate-700 group-hover:text-[#C2410C]">
+                <span>Inspect Architecture</span>
+                <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+              </div>
+            </div>
+          </div>
+
+          <!-- Concept 4: Dream Homes -->
+          <div class="project-card du-card overflow-hidden flex flex-col cursor-pointer group hover:shadow-lg transition-all reveal" data-project-id="dream-homes">
+            <div class="relative h-48 overflow-hidden bg-slate-900">
+              <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=600&q=80" alt="Dream Homes concept" width="600" height="400" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+              <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
+              <div class="absolute top-3 right-3 px-2 py-0.5 rounded bg-black/80 backdrop-blur-md text-[9px] text-amber-300 font-bold border border-amber-400/40">
+                Sample Concept
+              </div>
+            </div>
+            <div class="p-4 flex-1 flex flex-col justify-between">
+              <div>
+                <span class="text-[10px] font-bold text-blue-700 uppercase tracking-wider">Real Estate Showcase</span>
+                <h3 class="font-bold text-slate-900 text-base group-hover:text-[#C2410C] transition-colors mt-0.5">Dream Homes</h3>
+                <p class="text-xs text-slate-500 mt-1">High-end residential listings, interactive property galleries, and lead capture.</p>
+              </div>
+              <div class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-slate-700 group-hover:text-[#C2410C]">
+                <span>Inspect Architecture</span>
+                <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Transparent Client Case Studies Note -->
+        <div class="mt-10 p-5 rounded-2xl bg-slate-50 border border-slate-200 text-xs text-slate-600 flex items-start gap-3 reveal">
+          <i data-lucide="info" class="w-5 h-5 text-[#0F766E] flex-shrink-0 mt-0.5"></i>
+          <div>
+            <strong class="text-slate-900">Verification &amp; Confidentiality Transparency:</strong> The items shown above represent production-grade UI concepts developed to demonstrate our responsive engineering, conversion layouts, and booking integrations. Confidential client campaigns, live ranking data, and ad spend analytics are reviewed during private discovery consultations under client NDA authorization.
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= 6. HOW ENGAGEMENT WORKS ================= -->
+    <section id="process" class="py-16 lg:py-24 bg-slate-50 border-t border-slate-200">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-14 reveal">
+          <span class="inline-block px-3.5 py-1 rounded-full bg-slate-200 text-slate-800 text-xs font-bold uppercase tracking-wider mb-3">
+            Accountable 4-Step Delivery
+          </span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight font-outfit">
+            How Our Partnership Works
+          </h2>
+          <p class="text-slate-600 text-sm sm:text-base mt-3 leading-relaxed">
+            No ambiguous promises or disappearing acts. Every project follows a clear milestone roadmap with written deliverables and transparent PKR payment gates.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          
+          <!-- Step 1 -->
+          <div class="du-card p-6 space-y-3 reveal">
+            <div class="w-10 h-10 rounded-xl bg-slate-900 text-white flex items-center justify-center font-extrabold text-sm">
+              01
+            </div>
+            <div class="text-[11px] font-bold text-[#C2410C] uppercase tracking-wider">Discovery &amp; Scoping</div>
+            <h3 class="text-base font-bold text-slate-900">Talk To Us</h3>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              We evaluate your business model, target Pakistani audience, competitors, and goals to specify an exact project scope and fixed PKR quote.
+            </p>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="du-card p-6 space-y-3 reveal">
+            <div class="w-10 h-10 rounded-xl bg-[#C2410C] text-white flex items-center justify-center font-extrabold text-sm">
+              02
+            </div>
+            <div class="text-[11px] font-bold text-[#C2410C] uppercase tracking-wider">Milestone Kickoff (25%)</div>
+            <h3 class="text-base font-bold text-slate-900">Strategy &amp; Wireframes</h3>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              We deliver written scope agreements, wireframes, and design directions. You approve the blueprint with your 25% kickoff milestone.
+            </p>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="du-card p-6 space-y-3 reveal">
+            <div class="w-10 h-10 rounded-xl bg-slate-900 text-white flex items-center justify-center font-extrabold text-sm">
+              03
+            </div>
+            <div class="text-[11px] font-bold text-[#C2410C] uppercase tracking-wider">Build &amp; Staging (50%)</div>
+            <h3 class="text-base font-bold text-slate-900">Private Review Signoff</h3>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              We build your website or setup your ad campaign on private staging. You test on mobile and desktop and sign off on revisions (50% on approval).
+            </p>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="du-card p-6 space-y-3 reveal">
+            <div class="w-10 h-10 rounded-xl bg-[#0F766E] text-white flex items-center justify-center font-extrabold text-sm">
+              04
+            </div>
+            <div class="text-[11px] font-bold text-[#0F766E] uppercase tracking-wider">Live &amp; Support (25%)</div>
+            <h3 class="text-base font-bold text-slate-900">Launch &amp; Warranty</h3>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              Live deployment to your domain, complete account handover, walkthrough training, and 14–30 days support warranty (final 25% balance after 30 days).
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= 7. SELECTED PACKAGES & STARTING PRICES ================= -->
+    <section id="pricing" class="py-16 lg:py-24 bg-white border-t border-slate-200">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-14 reveal">
+          <span class="inline-block px-3.5 py-1 rounded-full bg-orange-100 text-[#C2410C] text-xs font-bold uppercase tracking-wider mb-3">
+            Fixed PKR Investments
+          </span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight font-outfit">
+            Transparent Website Packages
+          </h2>
+          <p class="text-slate-600 text-sm sm:text-base mt-3 leading-relaxed">
+            All prices are net in Pakistani Rupees with zero hidden setup fees. Sourced directly from our canonical commercial policies.
+          </p>
+        </div>
+
+        <!-- 3-Column Pricing Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch mb-12">
+          
+          <!-- 1. LITE (3 Pages) -->
+          <div class="du-card p-7 flex flex-col justify-between hover:shadow-lg transition-all reveal">
+            <div class="space-y-4">
+              <div class="inline-block px-3 py-1 rounded-full bg-slate-100 text-slate-700 text-xs font-bold">
+                Entry Package &bull; Micro SMBs
+              </div>
+              <h3 class="text-2xl font-extrabold text-slate-900">LITE — 3 Pages</h3>
+              <p class="text-xs text-slate-500 leading-relaxed">
+                For solopreneurs, single-service professionals, and fast online launches.
+              </p>
+              
+              <div class="pt-2">
+                <div class="text-3xl sm:text-4xl font-black text-slate-900 font-outfit">PKR 17,999</div>
+                <div class="text-[11px] text-slate-500 font-semibold mt-1">2 Revision Rounds &bull; 5–7 Working Days Delivery</div>
+              </div>
+
+              <!-- Payment Policy Box -->
+              <div class="p-3 rounded-xl bg-slate-50 border border-slate-200 text-xs text-slate-700 space-y-1">
+                <div class="font-bold text-slate-900 flex items-center justify-between">
+                  <span>Payment Terms:</span>
+                  <span class="text-[10px] bg-amber-100 text-amber-800 px-2 py-0.5 rounded font-bold">100% Upfront</span>
+                </div>
+                <div class="text-[11px] text-slate-600">Full payment on kickoff &bull; 7 Days Handover Support</div>
+              </div>
+
+              <ul class="space-y-2.5 text-xs text-slate-700 pt-3 border-t border-slate-100">
+                <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-600 flex-shrink-0 mt-0.5"></i><span><strong>Up to 3 Pages</strong> (Home, Services, Contact)</span></li>
+                <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-600 flex-shrink-0 mt-0.5"></i><span>Mobile-Responsive Layout (360px+)</span></li>
+                <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-600 flex-shrink-0 mt-0.5"></i><span>Direct WhatsApp Chat &amp; Order Button</span></li>
+                <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-600 flex-shrink-0 mt-0.5"></i><span>Google Maps Location &amp; Contact Form</span></li>
+                <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-600 flex-shrink-0 mt-0.5"></i><span>Basic On-Page SEO Meta Setup</span></li>
+              </ul>
+            </div>
+
+            <div class="pt-6 mt-6 border-t border-slate-100">
+              <button type="button" onclick="openDigitalUstadChat({ intent: 'package_consultation', service: 'Web Development', packageId: 'lite-3-page', sourcePage: window.location.pathname })" class="w-full py-3.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs flex items-center justify-center gap-2 transition-all">
+                <span>Discuss This Plan</span>
+                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- 2. STARTER (5 Pages) ⭐ HERO OFFER -->
+          <div class="du-card-dark text-white p-7 border-2 border-[#C2410C] shadow-2xl flex flex-col justify-between relative scale-[1.02] z-10 reveal">
+            <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-[#C2410C] text-white text-[11px] font-black uppercase tracking-wider shadow-md whitespace-nowrap">
+              RECOMMENDED OFFER
+            </div>
+
+            <div class="space-y-4 pt-1">
+              <div class="inline-block px-3 py-1 rounded-full bg-slate-800 text-[#F97316] text-xs font-bold">
+                Most Popular Business Setup
+              </div>
+              <h3 class="text-2xl font-extrabold text-white">STARTER — 5 Pages</h3>
+              <p class="text-xs text-slate-300 leading-relaxed">
+                For clinics, restaurants, salons, retail stores, and service companies.
+              </p>
+
+              <div class="pt-2">
+                <div class="text-3xl sm:text-4xl font-black text-[#F97316] font-outfit">PKR 30,000</div>
+                <div class="text-[11px] text-slate-400 font-semibold mt-1">3 Revision Rounds &bull; 7–10 Working Days Delivery</div>
+              </div>
+
+              <!-- Flex Installment Breakdown Box -->
+              <div class="p-3 rounded-xl bg-slate-900 border border-slate-700 text-xs space-y-1.5">
+                <div class="font-bold text-amber-400 text-[11px] flex items-center justify-between">
+                  <span>INSTALLMENT PLAN (25 / 50 / 25)</span>
+                  <span class="text-[10px] bg-emerald-500/20 text-emerald-400 px-2 py-0.5 rounded font-bold">Milestone Split</span>
+                </div>
+                <div class="grid grid-cols-3 gap-1 text-center text-[10px]">
+                  <div class="p-1 rounded bg-slate-800"><span class="text-slate-400">Kickoff (25%)</span><br><strong class="text-white text-xs">PKR 7.5k</strong></div>
+                  <div class="p-1 rounded bg-slate-800"><span class="text-slate-400">Approval (50%)</span><br><strong class="text-white text-xs">PKR 15k</strong></div>
+                  <div class="p-1 rounded bg-slate-800"><span class="text-slate-400">30-Day (25%)</span><br><strong class="text-white text-xs">PKR 7.5k</strong></div>
+                </div>
+                <div class="text-[9px] text-slate-400 text-center pt-0.5 border-t border-slate-800">Requires Website Care (PKR 3,000/mo) during 30-day balance window</div>
+              </div>
+
+              <ul class="space-y-2.5 text-xs text-slate-200 pt-3 border-t border-slate-800">
+                <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-[#F97316] flex-shrink-0 mt-0.5"></i><span><strong>Up to 5 Custom Pages</strong> (Home, About, Services, Gallery, Contact)</span></li>
+                <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-[#F97316] flex-shrink-0 mt-0.5"></i><span>Interactive Portfolio / Service Showcase</span></li>
+                <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-[#F97316] flex-shrink-0 mt-0.5"></i><span>Doctor / Team / Menu Integration</span></li>
+                <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-[#F97316] flex-shrink-0 mt-0.5"></i><span>WhatsApp Inquiry Routing Button</span></li>
+                <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-[#F97316] flex-shrink-0 mt-0.5"></i><span>On-Page SEO &amp; Search Console Setup</span></li>
+                <li class="flex items-start gap-2"><i data-lucide="shield-check" class="w-4 h-4 text-[#0F766E] flex-shrink-0 mt-0.5"></i><span><strong>14 Days Handover Support &amp; Adjustments</strong></span></li>
+              </ul>
+            </div>
+
+            <div class="pt-6 mt-6 border-t border-slate-800">
+              <button type="button" onclick="openDigitalUstadChat({ intent: 'package_consultation', service: 'Web Development', packageId: 'starter-5-page', sourcePage: window.location.pathname })" class="btn-primary-accessible w-full py-3.5 rounded-xl font-bold text-xs flex items-center justify-center gap-2 shadow-xl transition-all">
+                <span>Discuss This Plan</span>
+                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- 3. GROWTH (7 Pages) -->
+          <div class="du-card p-7 flex flex-col justify-between hover:shadow-lg transition-all reveal">
+            <div class="space-y-4">
+              <div class="inline-block px-3 py-1 rounded-full bg-slate-100 text-slate-700 text-xs font-bold">
+                Advanced Brands &bull; Multi-Service
+              </div>
+              <h3 class="text-2xl font-extrabold text-slate-900">GROWTH — 7 Pages</h3>
+              <p class="text-xs text-slate-500 leading-relaxed">
+                For real estate agencies, multi-doctor clinics, and established retailers.
+              </p>
+
+              <div class="pt-2">
+                <div class="text-3xl sm:text-4xl font-black text-slate-900 font-outfit">PKR 42,999</div>
+                <div class="text-[11px] text-slate-500 font-semibold mt-1">4 Revisions &bull; 10–14 Working Days Delivery</div>
+              </div>
+
+              <!-- Flex Installment Breakdown Box -->
+              <div class="p-3 rounded-xl bg-slate-50 border border-slate-200 text-xs space-y-1.5">
+                <div class="font-bold text-slate-800 text-[11px] flex items-center justify-between">
+                  <span>INSTALLMENT PLAN (25 / 50 / 25)</span>
+                  <span class="text-[10px] bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded font-bold">Milestone Split</span>
+                </div>
+                <div class="grid grid-cols-3 gap-1 text-center text-[10px]">
+                  <div class="p-1 rounded bg-white border"><span class="text-slate-400">Kickoff (25%)</span><br><strong class="text-slate-900 text-xs">PKR 10.7k</strong></div>
+                  <div class="p-1 rounded bg-white border"><span class="text-slate-400">Approval (50%)</span><br><strong class="text-slate-900 text-xs">PKR 21.5k</strong></div>
+                  <div class="p-1 rounded bg-white border"><span class="text-slate-400">30-Day (25%)</span><br><strong class="text-slate-900 text-xs">PKR 10.7k</strong></div>
+                </div>
+                <div class="text-[9px] text-slate-500 text-center pt-0.5 border-t border-slate-200">Requires Website Care (PKR 3,000/mo) during 30-day balance window</div>
+              </div>
+
+              <ul class="space-y-2.5 text-xs text-slate-700 pt-3 border-t border-slate-100">
+                <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-600 flex-shrink-0 mt-0.5"></i><span><strong>Up to 7 Custom Pages</strong> with CMS Architecture</span></li>
+                <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-600 flex-shrink-0 mt-0.5"></i><span>Blog / Articles Section Architecture</span></li>
+                <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-600 flex-shrink-0 mt-0.5"></i><span>Multiple Service / Product Detail Pages</span></li>
+                <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-600 flex-shrink-0 mt-0.5"></i><span>Enhanced SEO &amp; Google Analytics GA4 Setup</span></li>
+                <li class="flex items-start gap-2"><i data-lucide="shield-check" class="w-4 h-4 text-[#0F766E] flex-shrink-0 mt-0.5"></i><span><strong>30 Days Post-Launch Support Warranty</strong></span></li>
+              </ul>
+            </div>
+
+            <div class="pt-6 mt-6 border-t border-slate-100">
+              <button type="button" onclick="openDigitalUstadChat({ intent: 'package_consultation', service: 'Web Development', packageId: 'web-growth-7-page', sourcePage: window.location.pathname })" class="w-full py-3.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs flex items-center justify-center gap-2 transition-all">
+                <span>Discuss This Plan</span>
+                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+              </button>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="text-center">
+          <a href="pricing.html" class="inline-flex items-center gap-2 text-xs font-bold text-slate-800 hover:text-[#C2410C] px-6 py-3 rounded-xl border border-slate-300 hover:border-[#C2410C] transition-all bg-white">
+            <span>View Complete Pricing Catalog &amp; Policies</span>
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= 8. CLIENT ASSURANCES ================= -->
+    <section id="assurances" class="py-16 lg:py-24 bg-[#0B1220] text-white relative overflow-hidden">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        
+        <div class="text-center max-w-2xl mx-auto mb-14 reveal">
+          <span class="inline-block px-3.5 py-1 rounded-full bg-slate-900 text-[#0F766E] text-xs font-bold uppercase tracking-wider border border-slate-800 mb-3">
+            Accountability &bull; Transparency &bull; Control
+          </span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight font-outfit">
+            The Digital Ustad Assurance Standard
+          </h2>
+          <p class="text-slate-400 text-sm mt-3 leading-relaxed">
+            We operate as an accountable digital partner. Your business retains 100% control, full transparency, and zero locked-in traps.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          
+          <!-- Assurance 1 -->
+          <div class="du-card-dark p-6 space-y-3 reveal">
+            <div class="w-10 h-10 rounded-xl bg-teal-900/50 text-[#0F766E] flex items-center justify-center border border-teal-800/40">
+              <i data-lucide="key-round" class="w-5 h-5"></i>
+            </div>
+            <h3 class="text-base font-bold text-white">100% Asset Ownership</h3>
+            <p class="text-xs text-slate-400 leading-relaxed">
+              You own your domain, code, hosting, and Meta/Google ad accounts. Digital Ustad never holds client assets hostage.
+            </p>
+          </div>
+
+          <!-- Assurance 2 -->
+          <div class="du-card-dark p-6 space-y-3 reveal">
+            <div class="w-10 h-10 rounded-xl bg-orange-900/50 text-[#F97316] flex items-center justify-center border border-orange-800/40">
+              <i data-lucide="receipt" class="w-5 h-5"></i>
+            </div>
+            <h3 class="text-base font-bold text-white">Fixed PKR Milestones</h3>
+            <p class="text-xs text-slate-400 leading-relaxed">
+              Every deliverable is backed by a written PKR milestone agreement. No sudden currency exchange rate fluctuations.
+            </p>
+          </div>
+
+          <!-- Assurance 3 -->
+          <div class="du-card-dark p-6 space-y-3 reveal">
+            <div class="w-10 h-10 rounded-xl bg-blue-900/50 text-blue-400 flex items-center justify-center border border-blue-800/40">
+              <i data-lucide="clipboard-check" class="w-5 h-5"></i>
+            </div>
+            <h3 class="text-base font-bold text-white">Weekly Account Reporting</h3>
+            <p class="text-xs text-slate-400 leading-relaxed">
+              Dedicated communication channel, clear milestone progress updates, and transparent ad analytics dashboards.
+            </p>
+          </div>
+
+          <!-- Assurance 4 -->
+          <div class="du-card-dark p-6 space-y-3 reveal">
+            <div class="w-10 h-10 rounded-xl bg-emerald-900/50 text-emerald-400 flex items-center justify-center border border-emerald-800/40">
+              <i data-lucide="shield-check" class="w-5 h-5"></i>
+            </div>
+            <h3 class="text-base font-bold text-white">Post-Launch Warranty</h3>
+            <p class="text-xs text-slate-400 leading-relaxed">
+              14 to 30 days of included post-launch support and bug fixes to ensure complete peace of mind after going live.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= 9. FREQUENTLY ASKED QUESTIONS ================= -->
+    <section id="faq" class="py-16 lg:py-24 bg-white border-b border-slate-200">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-xl mx-auto mb-14 reveal">
+          <span class="inline-block px-3.5 py-1 rounded-full bg-slate-100 text-slate-700 text-xs font-bold uppercase tracking-wider mb-2">
+            Clear Answers
+          </span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight font-outfit">
+            Frequently Asked Questions
+          </h2>
+          <p class="text-slate-500 text-xs sm:text-sm mt-2">
+            Practical details regarding our delivery, payment models, and accountability.
+          </p>
+        </div>
+
+        <div class="space-y-4 reveal">
+          
+          <div class="faq-item du-card p-5">
+            <button class="faq-btn w-full flex items-center justify-between text-left font-bold text-slate-900 text-sm">
+              <span>Website kitne din mein tayar aur live ho jati hai?</span>
+              <i data-lucide="chevron-down" class="faq-icon w-4 h-4 text-slate-400 transition-transform duration-300"></i>
+            </button>
+            <div class="faq-answer hidden mt-3 pt-3 border-t border-slate-100 text-xs text-slate-600 leading-relaxed">
+              Hmari standard 5-Page Business Website aam tor par <strong>7 se 10 working days</strong> mein tayar aur live ho jati hai (3-Page Lite package 5 se 7 working days mein, aur 7-Page Growth package 10 se 14 working days mein). Requirements aur content time par milne par timeline bilkul ensure ki jati hai.
+            </div>
+          </div>
+
+          <div class="faq-item du-card p-5">
+            <button class="faq-btn w-full flex items-center justify-between text-left font-bold text-slate-900 text-sm">
+              <span>Installment plan (25 / 50 / 25) aur payment methods kaise kaam karte hain?</span>
+              <i data-lucide="chevron-down" class="faq-icon w-4 h-4 text-slate-400 transition-transform duration-300"></i>
+            </button>
+            <div class="faq-answer hidden mt-3 pt-3 border-t border-slate-100 text-xs text-slate-600 leading-relaxed">
+              Hmaray 5-Page (PKR 30,000) aur 7-Page (PKR 42,999) websites par <strong>25 / 50 / 25 Milestone Installments</strong> dastiyab hain: 25% project kickoff par, 50% design review &amp; approval par (live launch se pehle), aur baqi 25% aglay 30 dinon ke andar (Flex plan ke doraan PKR 3,000/mo Website Care active rehta hai). Payments hum <strong>EasyPaisa, JazzCash, Raast, ya Direct Bank Transfer</strong> ke zariye receive karte hain.
+            </div>
+          </div>
+
+          <div class="faq-item du-card p-5">
+            <button class="faq-btn w-full flex items-center justify-between text-left font-bold text-slate-900 text-sm">
+              <span>Kya hum website aur ad accounts ke 100% owner hotay hain?</span>
+              <i data-lucide="chevron-down" class="faq-icon w-4 h-4 text-slate-400 transition-transform duration-300"></i>
+            </button>
+            <div class="faq-answer hidden mt-3 pt-3 border-t border-slate-100 text-xs text-slate-600 leading-relaxed">
+              Bilkul! Aapka domain name, hosting credentials, website code, aur Meta/Google advertising accounts sab aapki direct ownership mein hotay hain. Digital Ustad sirf administrative management access ke sath kaam karta hai taake zero vendor lock-in ho.
+            </div>
+          </div>
+
+          <div class="faq-item du-card p-5">
+            <button class="faq-btn w-full flex items-center justify-between text-left font-bold text-slate-900 text-sm">
+              <span>Kya advertising budget package fees mein shamil hota hai?</span>
+              <i data-lucide="chevron-down" class="faq-icon w-4 h-4 text-slate-400 transition-transform duration-300"></i>
+            </button>
+            <div class="faq-answer hidden mt-3 pt-3 border-t border-slate-100 text-xs text-slate-600 leading-relaxed">
+              Nahi. Listed amounts hmari management service fees hain. Aapka official ad spend direct Meta ya Google ko aapke business card ke zariye ada hota hai. Is se 100% financial transparency maintain rehti hai aur kisi qisam ka hidden markup nahi hota.
+            </div>
+          </div>
+
+          <div class="faq-item du-card p-5">
+            <button class="faq-btn w-full flex items-center justify-between text-left font-bold text-slate-900 text-sm">
+              <span>Launch ke baad support aur maintenance kaise milti hai?</span>
+              <i data-lucide="chevron-down" class="faq-icon w-4 h-4 text-slate-400 transition-transform duration-300"></i>
+            </button>
+            <div class="faq-answer hidden mt-3 pt-3 border-t border-slate-100 text-xs text-slate-600 leading-relaxed">
+              Har website package ke sath 14 se 30 days ki comprehensive support warranty shamil hoti hai. Iske baad aap hamari optional <strong>Website Care (PKR 3,000 / month)</strong> service le saktay hain jisme daily backups, security monitoring, server uptime, aur monthly content edits shamil hotay hain.
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= 10. FINAL CONTACT CTA & PROJECT BRIEF ================= -->
+    <section id="contact" class="py-16 lg:py-24 bg-slate-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+          
+          <!-- Left Brief Description -->
+          <div class="lg:col-span-5 space-y-5 reveal">
+            <span class="inline-block px-3.5 py-1 rounded-full bg-orange-100 text-[#C2410C] text-xs font-bold uppercase tracking-wider">
+              Start Your Project Brief
+            </span>
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight font-outfit">
+              Ready to improve how your business shows up and sells online?
+            </h2>
+            <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+              Tell us what you are trying to achieve. We will recommend the right starting point, scope and investment range.
+            </p>
+
+            <div class="p-5 rounded-2xl bg-white border border-slate-200 space-y-3">
+              <div class="text-xs font-bold text-slate-900 uppercase tracking-wider">What happens after you submit:</div>
+              <ul class="space-y-2 text-xs text-slate-600">
+                <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-[#0F766E] flex-shrink-0"></i><span>Prompt review by our Lahore strategy team</span></li>
+                <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-[#0F766E] flex-shrink-0"></i><span>Transparent fixed PKR proposal &amp; timeline</span></li>
+                <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-[#0F766E] flex-shrink-0"></i><span>Zero obligation discovery conversation</span></li>
+              </ul>
+            </div>
+
+            <div class="pt-2 text-xs text-slate-500">
+              Prefer direct chat? <button type="button" onclick="openDigitalUstadChat({ intent: 'general_consultation', sourcePage: window.location.pathname })" class="text-[#C2410C] hover:underline font-semibold">Open Digital Ustad Assistant</button>
+            </div>
+          </div>
+
+          <!-- Right Brief Form -->
+          <div class="lg:col-span-7 reveal">
+            <div class="du-card p-6 sm:p-8 shadow-md">
+              <form id="quote-form" class="space-y-4">
+                
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div>
+                    <label for="client-name" class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">Your Name *</label>
+                    <input type="text" id="client-name" required placeholder="e.g. Tariq Mehmood" class="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:border-[#C2410C] focus:ring-2 focus:ring-[#C2410C]/20 transition-all">
+                  </div>
+                  <div>
+                    <label for="client-phone" class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">Phone / WhatsApp *</label>
+                    <input type="tel" id="client-phone" required placeholder="0300 1234567" class="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:border-[#C2410C] focus:ring-2 focus:ring-[#C2410C]/20 transition-all">
+                  </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div>
+                    <label for="client-service" class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">Service Interest</label>
+                    <select id="client-service" class="w-full px-3 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:border-[#C2410C] bg-white">
+                      <option value="5-Page Website Starter (PKR 30,000)">5-Page Website Starter (PKR 30k)</option>
+                      <option value="3-Page Website Lite (PKR 17,999)">3-Page Website Lite (PKR 17,999)</option>
+                      <option value="7-Page Website Growth (PKR 42,999)">7-Page Website Growth (PKR 42,999)</option>
+                      <option value="Custom Web / E-Commerce">Custom Web / E-Commerce</option>
+                      <option value="Meta & Google Ads Management">Meta &amp; Google Ads Management</option>
+                      <option value="SEO & Google Business Profile">SEO &amp; Google Business Profile</option>
+                      <option value="WhatsApp Automation Bot">WhatsApp Automation Bot</option>
+                      <option value="Graphic & Brand Identity">Graphic &amp; Brand Identity</option>
+                    </select>
+                  </div>
+
+                  <div>
+                    <label for="client-budget" class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">Estimated Budget Band</label>
+                    <select id="client-budget" class="w-full px-3 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:border-[#C2410C] bg-white">
+                      <option value="PKR 25,000 - 35,000">PKR 25,000 - 35,000</option>
+                      <option value="Under PKR 25,000">Under PKR 25,000</option>
+                      <option value="PKR 35,000 - 60,000">PKR 35,000 - 60,000</option>
+                      <option value="PKR 60,000 - 100,000">PKR 60,000 - 100,000</option>
+                      <option value="PKR 100,000+">PKR 100,000+</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div>
+                  <label for="client-message" class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">Brief Project Details</label>
+                  <textarea id="client-message" rows="3" placeholder="Tell us about your brand, current challenges, or goals..." class="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:border-[#C2410C] focus:ring-2 focus:ring-[#C2410C]/20 transition-all"></textarea>
+                </div>
+
+                <button type="submit" class="btn-primary-accessible w-full py-3.5 rounded-xl font-bold text-sm shadow-md flex items-center justify-center gap-2 transition-all">
+                  <i data-lucide="send" class="w-4 h-4"></i>
+                  <span>Start Your Project Brief</span>
+                </button>
+
+                <div id="payment-milestone-text" class="text-[11px] text-slate-500 text-center pt-1 leading-relaxed">
+                  🔒 Confidentiality guaranteed. <strong>Milestone Payments: 25% kickoff, 50% approval on staging, 25% within 30 days of launch.</strong>
+                </div>
+
+              </form>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= COMPREHENSIVE FOOTER ================= -->
+  <footer class="bg-[#0B1220] text-slate-400 pt-16 pb-12 border-t border-slate-800">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-slate-800">
@@ -1146,16 +1275,13 @@
         <!-- Col 1: Brand & About (Spans 2 cols on desktop) -->
         <div class="lg:col-span-2 space-y-4">
           <a href="index.html" class="inline-block group">
-            <img src="assets/images/logo-dark.png" alt="Digital Ustad" class="h-10 sm:h-11 w-auto object-contain transition-transform duration-300 group-hover:scale-105">
+            <img src="assets/images/logo-dark.png" alt="Digital Ustad" width="160" height="40" class="h-10 sm:h-11 w-auto object-contain transition-transform duration-300 group-hover:scale-105">
           </a>
           <p class="text-xs sm:text-sm text-slate-400 leading-relaxed max-w-sm">
-            A digital partner for small & medium businesses across Pakistan. We build fast, beautiful websites, run ROI-driven marketing, and automate operations.
+            An accountable digital growth partner for growing businesses across Pakistan. We build high-performance websites, run ROI-driven advertising, and automate operations.
           </p>
           <div class="flex items-center gap-3 text-slate-400 pt-2">
-            <a href="https://wa.me/923000000000" target="_blank" class="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center hover:bg-[#FF6600] hover:text-white transition-colors" title="WhatsApp">
-              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12.012 2c-5.506 0-9.989 4.478-9.99 9.984a9.964 9.964 0 0 0 1.333 4.993L2 22l5.233-1.237a9.994 9.994 0 0 0 4.779 1.217h.004c5.505 0 9.988-4.478 9.989-9.984 0-2.669-1.037-5.176-2.925-7.062A9.925 9.925 0 0 0 12.012 2zm5.835 14.198c-.244.688-1.227 1.26-1.786 1.32-.472.052-1.077.08-3.155-.783-2.658-1.102-4.363-3.807-4.496-3.983-.133-.176-1.076-1.433-1.076-2.733 0-1.3.68-1.94.92-2.203.24-.263.523-.328.698-.328.174 0 .349.002.502.01.163.008.382-.062.597.455.22.531.75 1.83.815 1.963.065.133.109.288.022.463-.087.175-.131.284-.262.437-.13.153-.275.342-.393.459-.13.13-.266.27-.115.53.151.26 1.002 1.65 2.148 2.671 1.472 1.312 2.71 1.718 3.097 1.91.387.192.613.16.84-.102.228-.263.974-1.134 1.235-1.523.26-.39.522-.325.872-.196.35.13 2.22 1.047 2.602 1.238.382.19.637.284.73.444.093.16.093.928-.151 1.616z"/></svg>
-            </a>
-            <a href="mailto:contact@digitalustad.co" class="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center hover:bg-[#FF6600] hover:text-white transition-colors" title="Email">
+            <a href="mailto:contact@digitalustad.co" class="w-8 h-8 rounded-lg bg-slate-800 flex items-center justify-center hover:bg-[#C2410C] hover:text-white transition-colors" aria-label="Email Us" title="Email Us">
               <i data-lucide="mail" class="w-4 h-4"></i>
             </a>
           </div>
@@ -1163,52 +1289,51 @@
 
         <!-- Col 2: Services -->
         <div class="space-y-3">
-          <h4 class="text-sm font-bold text-white uppercase tracking-wider">Services</h4>
+          <h2 class="text-sm font-bold text-white uppercase tracking-wider">Services</h2>
           <ul class="space-y-2 text-xs">
-            <li><a href="service-web-development.html" class="hover:text-[#FF6600] transition-colors">Web Development</a></li>
-            <li><a href="service-social-media.html" class="hover:text-[#FF6600] transition-colors">Social Media Marketing</a></li>
-            <li><a href="service-graphic-design.html" class="hover:text-[#FF6600] transition-colors">Graphic & Brand Identity</a></li>
-            <li><a href="service-meta-google-ads.html" class="hover:text-[#FF6600] transition-colors">Meta & Google Ads</a></li>
-            <li><a href="service-seo-google-business.html" class="hover:text-[#FF6600] transition-colors">SEO & Google Maps</a></li>
-            <li><a href="service-whatsapp-automation.html" class="hover:text-[#FF6600] transition-colors">WhatsApp Automation</a></li>
-            <li><a href="pricing.html" class="text-[#FF6600] font-semibold hover:underline">Pricing & Packages</a></li>
+            <li><a href="service-web-development.html" class="hover:text-[#F97316] transition-colors">Web Development</a></li>
+            <li><a href="service-social-media.html" class="hover:text-[#F97316] transition-colors">Social Media Marketing</a></li>
+            <li><a href="service-graphic-design.html" class="hover:text-[#F97316] transition-colors">Graphic &amp; Brand Identity</a></li>
+            <li><a href="service-meta-google-ads.html" class="hover:text-[#F97316] transition-colors">Meta &amp; Google Ads</a></li>
+            <li><a href="service-seo-google-business.html" class="hover:text-[#F97316] transition-colors">SEO &amp; Google Maps</a></li>
+            <li><a href="service-whatsapp-automation.html" class="hover:text-[#F97316] transition-colors">WhatsApp Automation</a></li>
+            <li><a href="pricing.html" class="text-[#F97316] font-semibold hover:underline">Pricing &amp; Packages</a></li>
           </ul>
         </div>
 
         <!-- Col 3: Quick Links -->
         <div class="space-y-3">
-          <h4 class="text-sm font-bold text-white uppercase tracking-wider">Quick Links</h4>
+          <h2 class="text-sm font-bold text-white uppercase tracking-wider">Quick Links</h2>
           <ul class="space-y-2 text-xs">
-            <li><a href="index.html" class="hover:text-[#FF6600] transition-colors">Home</a></li>
-            <li><a href="about.html" class="hover:text-[#FF6600] transition-colors">About Us</a></li>
-            <li><a href="services.html" class="hover:text-[#FF6600] transition-colors">All Services</a></li>
-            <li><a href="pricing.html" class="hover:text-[#FF6600] transition-colors">Pricing & Plans</a></li>
-            <li><a href="solutions.html" class="hover:text-[#FF6600] transition-colors">Industries & Solutions</a></li>
-            <li><a href="how-it-works.html" class="hover:text-[#FF6600] transition-colors">How It Works</a></li>
-            <li><a href="portfolio.html" class="hover:text-[#FF6600] transition-colors">Our Portfolio</a></li>
-            <li><a href="contact.html" class="hover:text-[#FF6600] transition-colors">Contact Us</a></li>
+            <li><a href="index.html" class="hover:text-[#F97316] transition-colors">Home</a></li>
+            <li><a href="about.html" class="hover:text-[#F97316] transition-colors">About Us</a></li>
+            <li><a href="services.html" class="hover:text-[#F97316] transition-colors">All Services</a></li>
+            <li><a href="solutions.html" class="hover:text-[#F97316] transition-colors">Industries &amp; Solutions</a></li>
+            <li><a href="portfolio.html" class="hover:text-[#F97316] transition-colors">Work &amp; Concepts</a></li>
+            <li><a href="pricing.html" class="hover:text-[#F97316] transition-colors">Pricing &amp; Plans</a></li>
+            <li><a href="contact.html" class="hover:text-[#F97316] transition-colors">Contact Us</a></li>
           </ul>
         </div>
 
         <!-- Col 4: Get In Touch -->
         <div class="space-y-3">
-          <h4 class="text-sm font-bold text-white uppercase tracking-wider">Get In Touch</h4>
+          <h2 class="text-sm font-bold text-white uppercase tracking-wider">Get In Touch</h2>
           <ul class="space-y-2.5 text-xs text-slate-300">
             <li class="flex items-start gap-2">
-              <i data-lucide="map-pin" class="w-4 h-4 text-[#FF6600] flex-shrink-0 mt-0.5"></i>
-              <span>Lahore, Pakistan & Worldwide Remote</span>
+              <i data-lucide="map-pin" class="w-4 h-4 text-[#F97316] flex-shrink-0 mt-0.5"></i>
+              <span>Lahore, Pakistan &bull; Nationwide Delivery</span>
             </li>
             <li class="flex items-center gap-2">
-              <i data-lucide="message-square" class="w-4 h-4 text-[#FF6600] flex-shrink-0"></i>
-              <span>Direct WhatsApp Support</span>
-            </li>
-            <li class="flex items-center gap-2">
-              <i data-lucide="mail" class="w-4 h-4 text-[#FF6600] flex-shrink-0"></i>
+              <i data-lucide="mail" class="w-4 h-4 text-[#F97316] flex-shrink-0"></i>
               <span>contact@digitalustad.co</span>
             </li>
-            <li class="flex items-center gap-2 text-emerald-400 font-semibold">
-              <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-              <span>Fast Response Guaranteed</span>
+            <li class="flex items-center gap-2">
+              <i data-lucide="message-square" class="w-4 h-4 text-[#F97316] flex-shrink-0"></i>
+              <a href="contact.html" class="hover:text-[#F97316] transition-colors">Contact Form &amp; Hours</a>
+            </li>
+            <li class="flex items-center gap-2 text-emerald-400 font-semibold pt-1">
+              <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+              <span>Accountable Turnaround</span>
             </li>
           </ul>
         </div>
@@ -1217,7 +1342,7 @@
 
       <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
         <div>
-          © 2026 Digital Ustad. All Rights Reserved. Based in Lahore, Pakistan.
+          &copy; 2026 Digital Ustad. All Rights Reserved. Based in Lahore, Pakistan.
         </div>
         <div class="flex items-center gap-6">
           <a href="privacy.html" class="hover:text-slate-300 transition-colors">Privacy Policy</a>
@@ -1229,71 +1354,61 @@
     </div>
   </footer>
 
-  <!-- ================= FLOATING WHATSAPP BUTTON WITH RADAR PULSE ================= -->
-  <a href="https://wa.me/923000000000?text=Hello%20Digital%20Ustad,%20I%20need%20a%20website%20quotation!" target="_blank" class="fixed bottom-6 right-6 z-40 w-14 h-14 rounded-full bg-emerald-500 hover:bg-emerald-600 text-white flex items-center justify-center shadow-2xl hover:scale-110 active:scale-95 transition-all group" title="Chat on WhatsApp">
-    <div class="radar-ring"></div>
-    <span class="absolute -top-9 right-0 bg-slate-900 text-white text-[11px] font-semibold px-2.5 py-1 rounded-md shadow-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">Message Karen — Fast Reply</span>
-    <svg class="w-7 h-7 fill-current" viewBox="0 0 24 24"><path d="M12.012 2c-5.506 0-9.989 4.478-9.99 9.984a9.964 9.964 0 0 0 1.333 4.993L2 22l5.233-1.237a9.994 9.994 0 0 0 4.779 1.217h.004c5.505 0 9.988-4.478 9.989-9.984 0-2.669-1.037-5.176-2.925-7.062A9.925 9.925 0 0 0 12.012 2zm5.835 14.198c-.244.688-1.227 1.26-1.786 1.32-.472.052-1.077.08-3.155-.783-2.658-1.102-4.363-3.807-4.496-3.983-.133-.176-1.076-1.433-1.076-2.733 0-1.3.68-1.94.92-2.203.24-.263.523-.328.698-.328.174 0 .349.002.502.01.163.008.382-.062.597.455.22.531.75 1.83.815 1.963.065.133.109.288.022.463-.087.175-.131.284-.262.437-.13.153-.275.342-.393.459-.13.13-.266.27-.115.53.151.26 1.002 1.65 2.148 2.671 1.472 1.312 2.71 1.718 3.097 1.91.387.192.613.16.84-.102.228-.263.974-1.134 1.235-1.523.26-.39.522-.325.872-.196.35.13 2.22 1.047 2.602 1.238.382.19.637.284.73.444.093.16.093.928-.151 1.616z"/></svg>
-  </a>
-
   <!-- ================= BACK TO TOP BUTTON ================= -->
-  <button id="back-to-top" class="fixed bottom-6 left-6 z-40 w-11 h-11 rounded-full bg-slate-900/80 hover:bg-[#FF6600] text-white flex items-center justify-center shadow-lg border border-slate-700 hover:border-[#FF6600] transition-all hover:scale-110 opacity-0 invisible translate-y-4" title="Back to top">
-    <i data-lucide="arrow-up" class="w-5 h-5"></i>
+  <button id="back-to-top" class="fixed bottom-6 left-6 z-40 w-10 h-10 rounded-xl bg-slate-900/90 hover:bg-[#C2410C] text-white flex items-center justify-center shadow-lg border border-slate-700 hover:border-[#C2410C] transition-all opacity-0 invisible translate-y-4" title="Back to top" aria-label="Back to top">
+    <i data-lucide="arrow-up" class="w-4 h-4"></i>
   </button>
 
   <!-- ================= QUOTATION / GET STARTED MODAL ================= -->
-  <div id="quote-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/80 modal-backdrop hidden p-4">
-    <div class="modal-box bg-white rounded-3xl max-w-lg w-full p-6 sm:p-8 shadow-2xl relative scale-95 opacity-0 transition-all duration-200">
+  <div id="quote-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/80 modal-backdrop hidden p-4" role="dialog" aria-modal="true" aria-labelledby="quote-modal-title">
+    <div class="modal-box du-card max-w-lg w-full p-6 sm:p-8 shadow-2xl relative scale-95 opacity-0 transition-all duration-200">
       
-      <button id="close-quote-modal" class="absolute top-5 right-5 w-8 h-8 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-500 flex items-center justify-center transition-colors">
+      <button id="close-quote-modal" class="absolute top-5 right-5 w-8 h-8 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-500 flex items-center justify-center transition-colors" aria-label="Close quote modal">
         <i data-lucide="x" class="w-5 h-5"></i>
       </button>
 
       <div class="mb-6">
         <div class="flex items-center justify-between mb-2">
-          <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-orange-100 text-[#FF6600] text-xs font-bold">
-            <span>Get Free Proposal</span>
+          <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-orange-100 text-[#C2410C] text-xs font-bold">
+            <span>Free Consultation</span>
           </div>
-          <span id="payment-milestone-badge" class="text-[11px] font-bold text-orange-800 bg-orange-100 px-3 py-1 rounded-full transition-colors">25/50/25 Installments</span>
+          <span id="payment-milestone-badge" class="text-[11px] font-bold text-orange-900 bg-orange-100 px-3 py-1 rounded-full">25/50/25 Milestones</span>
         </div>
-        <h3 class="text-2xl font-extrabold text-slate-900">Start Your Project With Us</h3>
-        <p class="text-xs sm:text-sm text-slate-500 mt-1">Fill this quick form to receive an instant proposal & WhatsApp quote.</p>
+        <h2 id="quote-modal-title" class="text-2xl font-extrabold text-slate-900">Start Your Project Brief</h2>
+        <p class="text-xs sm:text-sm text-slate-500 mt-1">Submit your project details to receive a clear proposal &amp; timeline.</p>
       </div>
 
-      <form id="quote-form" class="space-y-4">
+      <form id="quote-modal-form" class="space-y-4">
         <div>
-          <label for="client-name" class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">Your Name *</label>
-          <input type="text" id="client-name" required placeholder="e.g. Ali Khan" class="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:border-[#FF6600] focus:ring-2 focus:ring-[#FF6600]/20 transition-all">
+          <label for="modal-client-name" class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">Your Name *</label>
+          <input type="text" id="modal-client-name" required placeholder="e.g. Tariq Mehmood" class="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:border-[#C2410C] focus:ring-2 focus:ring-[#C2410C]/20 transition-all">
         </div>
 
         <div>
-          <label for="client-phone" class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">WhatsApp Number *</label>
-          <input type="tel" id="client-phone" required placeholder="0300 1122334" class="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:border-[#FF6600] focus:ring-2 focus:ring-[#FF6600]/20 transition-all">
+          <label for="modal-client-phone" class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">Phone / WhatsApp *</label>
+          <input type="tel" id="modal-client-phone" required placeholder="0300 1234567" class="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:border-[#C2410C] focus:ring-2 focus:ring-[#C2410C]/20 transition-all">
         </div>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div>
-            <label for="client-service" class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">Service Package</label>
-            <select id="client-service" class="w-full px-3 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:border-[#FF6600] bg-white">
-              <option value="5-Page Website Starter (PKR 30,000)">5-Page Website Starter (PKR 30k) ⭐</option>
+            <label for="modal-client-service" class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">Service Interest</label>
+            <select id="modal-client-service" class="w-full px-3 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:border-[#C2410C] bg-white">
+              <option value="5-Page Website Starter (PKR 30,000)">5-Page Website Starter (PKR 30k)</option>
               <option value="3-Page Website Lite (PKR 17,999)">3-Page Website Lite (PKR 17,999)</option>
               <option value="7-Page Website Growth (PKR 42,999)">7-Page Website Growth (PKR 42,999)</option>
               <option value="Custom Web / E-Commerce">Custom Web / E-Commerce</option>
-              <option value="Growth WhatsApp Workflow (PKR 45K-65K)">Growth WhatsApp Workflow (PKR 45k-65k) 🤖</option>
-              <option value="Basic WhatsApp Bot (PKR 25K-35K)">Basic WhatsApp Bot (PKR 25k-35k)</option>
-              <option value="Advanced AI & Custom API Bot (PKR 75K+)">Advanced AI & Custom API Bot (PKR 75k+)</option>
-              <option value="Social Media Management (from PKR 18k/mo)">Social Media Management</option>
-              <option value="Meta & Google Ads Management (from PKR 15k/mo)">Meta & Google Ads</option>
-              <option value="SEO & Google Business (from PKR 15k/mo)">SEO & Google Business</option>
-              <option value="Monthly All-in-One Retainer (from PKR 45k/mo)">Monthly Digital Retainer</option>
+              <option value="Meta & Google Ads Management">Meta &amp; Google Ads</option>
+              <option value="SEO & Google Business">SEO &amp; Google Business</option>
+              <option value="WhatsApp Automation">WhatsApp Automation</option>
+              <option value="Graphic Design">Graphic Design</option>
             </select>
           </div>
 
           <div>
-            <label for="client-budget" class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">Estimated Budget</label>
-            <select id="client-budget" class="w-full px-3 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:border-[#FF6600] bg-white">
-              <option value="PKR 20,000 - 35,000">PKR 20,000 - 35,000</option>
-              <option value="Under PKR 20,000">Under PKR 20,000</option>
+            <label for="modal-client-budget" class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">Estimated Budget</label>
+            <select id="modal-client-budget" class="w-full px-3 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:border-[#C2410C] bg-white">
+              <option value="PKR 25,000 - 35,000">PKR 25,000 - 35,000</option>
+              <option value="Under PKR 25,000">Under PKR 25,000</option>
               <option value="PKR 35,000 - 60,000">PKR 35,000 - 60,000</option>
               <option value="PKR 60,000 - 100,000">PKR 60,000 - 100,000</option>
               <option value="PKR 100,000+">PKR 100,000+</option>
@@ -1302,17 +1417,17 @@
         </div>
 
         <div>
-          <label for="client-message" class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">Brief Details About Your Business</label>
-          <textarea id="client-message" rows="3" placeholder="Tell us about your brand or any reference website..." class="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:border-[#FF6600] focus:ring-2 focus:ring-[#FF6600]/20 transition-all"></textarea>
+          <label for="modal-client-message" class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">Brief Details About Your Business</label>
+          <textarea id="modal-client-message" rows="3" placeholder="Tell us about your brand or what you are trying to achieve..." class="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:border-[#C2410C] focus:ring-2 focus:ring-[#C2410C]/20 transition-all"></textarea>
         </div>
 
-        <button type="submit" class="btn-shine w-full py-3.5 rounded-xl bg-[#FF6600] hover:bg-[#EA580C] text-white font-bold text-sm shadow-xl orange-glow-sm flex items-center justify-center gap-2 hover:scale-[1.01] active:scale-[0.99] transition-all">
+        <button type="submit" class="btn-primary-accessible w-full py-3.5 rounded-xl font-bold text-sm shadow-md flex items-center justify-center gap-2 transition-all">
           <i data-lucide="send" class="w-4 h-4"></i>
-          <span>Send Proposal Request (Direct WhatsApp)</span>
+          <span>Submit Project Brief</span>
         </button>
 
-        <div id="payment-milestone-text" class="text-[11px] text-slate-500 text-center pt-1 leading-relaxed">
-          🔒 Privacy guaranteed. Zero spam. <strong>Payment Milestones: 25% kickoff, 50% approval on staging, 25% within 30 days of launch.</strong>
+        <div class="text-[11px] text-slate-500 text-center pt-1 leading-relaxed">
+          🔒 Confidentiality guaranteed. Zero spam. <strong>Milestones: 25% kickoff, 50% approval, 25% 30-day balance.</strong>
         </div>
       </form>
 
@@ -1320,46 +1435,46 @@
   </div>
 
   <!-- ================= PORTFOLIO DETAILS MODAL ================= -->
-  <div id="project-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/80 modal-backdrop hidden p-4">
-    <div class="modal-box bg-white rounded-3xl max-w-2xl w-full p-6 sm:p-8 shadow-2xl relative scale-95 opacity-0 transition-all duration-200 max-h-[90vh] overflow-y-auto">
+  <div id="project-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/80 modal-backdrop hidden p-4" role="dialog" aria-modal="true" aria-labelledby="project-modal-title">
+    <div class="modal-box du-card max-w-2xl w-full p-6 sm:p-8 shadow-2xl relative scale-95 opacity-0 transition-all duration-200 max-h-[90vh] overflow-y-auto">
       
-      <button id="close-project-modal" class="absolute top-5 right-5 w-8 h-8 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-500 flex items-center justify-center transition-colors">
+      <button id="close-project-modal" class="absolute top-5 right-5 w-8 h-8 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-500 flex items-center justify-center transition-colors" aria-label="Close project modal">
         <i data-lucide="x" class="w-5 h-5"></i>
       </button>
 
       <div class="space-y-4">
-        <div class="relative rounded-2xl overflow-hidden h-60 bg-slate-900 border border-slate-200">
-          <img id="project-modal-img" src="" alt="Project Preview" class="w-full h-full object-cover">
+        <div class="relative rounded-xl overflow-hidden h-60 bg-slate-900 border border-slate-200">
+          <img id="project-modal-img" src="" alt="Project Preview" width="800" height="450" class="w-full h-full object-cover">
           <div class="absolute top-3 right-3 px-3 py-1 rounded-full bg-amber-500 text-slate-950 text-xs font-black uppercase tracking-wider shadow-md">
             <span id="project-modal-badge">Sample Website Concept</span>
           </div>
         </div>
 
         <div>
-          <span id="project-modal-category" class="text-xs font-bold uppercase tracking-wider text-[#FF6600]"></span>
-          <h3 id="project-modal-title" class="text-2xl font-extrabold text-slate-900 mt-1"></h3>
+          <span id="project-modal-category" class="text-xs font-bold uppercase tracking-wider text-[#C2410C]"></span>
+          <h2 id="project-modal-title" class="text-2xl font-extrabold text-slate-900 mt-1"></h2>
           <p id="project-modal-desc" class="text-xs sm:text-sm text-slate-600 mt-2 leading-relaxed"></p>
         </div>
 
         <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200 text-xs">
-          <div class="font-bold text-slate-800 uppercase tracking-wider text-[10px] mb-1">Delivered Solution:</div>
+          <div class="font-bold text-slate-800 uppercase tracking-wider text-[10px] mb-1">Architecture Delivered:</div>
           <div id="project-modal-deliverables" class="text-slate-700 font-medium"></div>
         </div>
 
-        <div class="p-4 rounded-xl bg-orange-50/60 border border-orange-100">
-          <div class="text-xs font-bold uppercase tracking-wider text-[#FF6600] mb-1">Key Impact & Verified Baseline</div>
+        <div class="p-4 rounded-xl bg-orange-50/80 border border-orange-100">
+          <div class="text-xs font-bold uppercase tracking-wider text-[#C2410C] mb-1">Architecture &amp; Features</div>
           <div id="project-modal-stats" class="text-sm font-extrabold text-slate-900"></div>
         </div>
 
         <div>
           <div class="text-xs font-bold uppercase tracking-wider text-slate-800 mb-2">Core Features Included:</div>
-          <ul id="project-modal-features" class="grid grid-cols-1 sm:grid-cols-2 gap-2"></ul>
+          <ul id="project-modal-features" class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs"></ul>
         </div>
 
         <div class="pt-4 flex items-center justify-between border-t border-slate-100">
-          <span class="text-[11px] text-slate-400">💡 Custom built for Pakistani vertical markets</span>
-          <button class="btn-get-started px-6 py-2.5 rounded-full bg-[#FF6600] text-white text-xs font-bold shadow-md hover:bg-orange-600 transition-colors">
-            Build Similar Project
+          <span class="text-[11px] text-slate-400">Custom engineered for Pakistani verticals</span>
+          <button type="button" class="btn-get-started btn-primary-accessible px-5 py-2 rounded-xl text-xs font-bold shadow-sm transition-colors">
+            Build Similar Architecture
           </button>
         </div>
       </div>
@@ -1370,8 +1485,36 @@
   <!-- Scripts -->
   <script src="js/config.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/clonvo-chat.js" defer></script>
   <script>
+    // Initialize Lucide Icons
     lucide.createIcons();
+
+    // Wire up modal quote form to open quote modal or submit
+    const modalForm = document.getElementById('quote-modal-form');
+    if (modalForm) {
+      modalForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const submitBtn = modalForm.querySelector('button[type="submit"]');
+        const originalContent = submitBtn.innerHTML;
+        submitBtn.innerHTML = '<i data-lucide="check" class="w-4 h-4"></i><span>Brief Received!</span>';
+        submitBtn.classList.remove('btn-primary-accessible');
+        submitBtn.classList.add('bg-emerald-600', 'text-white');
+        lucide.createIcons();
+
+        setTimeout(() => {
+          modalForm.reset();
+          submitBtn.innerHTML = originalContent;
+          submitBtn.classList.remove('bg-emerald-600', 'text-white');
+          submitBtn.classList.add('btn-primary-accessible');
+          lucide.createIcons();
+          const quoteModal = document.getElementById('quote-modal');
+          if (quoteModal) {
+            quoteModal.classList.add('hidden');
+          }
+        }, 2200);
+      });
+    }
   </script>
 </body>
 </html>

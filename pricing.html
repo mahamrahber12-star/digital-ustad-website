@@ -5,8 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pricing & Packages | Digital Ustad</title>
   <meta name="description" content="Transparent pricing for Digital Ustad services. 3-Page Website from PKR 17,999, 5-Page Website from PKR 30,000 with 25/50/25 Milestone Installments, Social Media, Ads, and SEO.">
+  <link rel="canonical" href="https://digitalustad.co/pricing">
   <link rel="icon" type="image/png" href="assets/images/favicon.png">
-  
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://digitalustad.co/pricing">
+  <meta property="og:title" content="Pricing & Packages | Digital Ustad">
+  <meta property="og:description" content="Transparent pricing for Digital Ustad services. 3-Page Website from PKR 17,999, 5-Page Website from PKR 30,000 with 25/50/25 Milestone Installments, Social Media, Ads, and SEO.">
+  <meta property="og:image" content="https://digitalustad.co/assets/images/logo-dark.png">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://digitalustad.co/pricing">
+  <meta name="twitter:title" content="Pricing & Packages | Digital Ustad">
+  <meta name="twitter:description" content="Transparent pricing for Digital Ustad services. 3-Page Website from PKR 17,999, 5-Page Website from PKR 30,000 with 25/50/25 Milestone Installments, Social Media, Ads, and SEO.">
+  <meta name="twitter:image" content="https://digitalustad.co/assets/images/logo-dark.png">
+
   <!-- Theme Init (Prevents FOUC) -->
   <script>
     (function() {
@@ -20,34 +35,53 @@
     })();
   </script>
 
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      darkMode: 'class',
-      theme: {
-        extend: {
-          colors: {
-            brand: {
-              orange: '#FF6600',
-              orangeHover: '#EA580C',
-              orangeLight: '#FFF7ED',
-              dark: '#0B0F19',
-              darkCard: '#111827',
-              slateText: '#94A3B8'
-            }
-          },
-          fontFamily: {
-            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
-            inter: ['"Inter"', 'sans-serif']
-          }
-        }
-      }
-    }
-  </script>
+  <link rel="stylesheet" href="css/tailwind.min.css">
   <script src="https://unpkg.com/lucide@latest"></script>
   <link rel="stylesheet" href="css/style.css">
+
+  <!-- Structured Data: WebPage & BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://digitalustad.co/pricing#webpage",
+        "url": "https://digitalustad.co/pricing",
+        "name": "Pricing & Packages | Digital Ustad",
+        "description": "Transparent pricing for Digital Ustad services. 3-Page Website from PKR 17,999, 5-Page Website from PKR 30,000 with 25/50/25 Milestone Installments, Social Media, Ads, and SEO.",
+        "isPartOf": {
+          "@type": "WebSite",
+          "@id": "https://digitalustad.co/#website",
+          "url": "https://digitalustad.co/",
+          "name": "Digital Ustad"
+        },
+        "inLanguage": "en"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://digitalustad.co/pricing#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://digitalustad.co/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Pricing & Packages",
+            "item": "https://digitalustad.co/pricing"
+          }
+        ]
+      }
+    ]
+  }
+  </script>
 </head>
 <body class="bg-white text-slate-800 antialiased selection:bg-[#FF6600] selection:text-white relative">
+  <a href="#main-content" class="skip-link">Skip to main content</a>
 
   <div id="scroll-progress"></div>
 
@@ -56,7 +90,7 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-20">
         <a href="index.html" class="flex items-center group">
-          <img src="assets/images/logo-dark.png" alt="Digital Ustad" class="h-10 sm:h-11 w-auto object-contain transition-transform duration-300 group-hover:scale-105">
+          <img src="assets/images/logo-dark.png" alt="Digital Ustad" width="160" height="44" class="h-10 sm:h-11 w-auto object-contain transition-transform duration-300 group-hover:scale-105">
         </a>
 
         <nav class="hidden md:flex items-center gap-7">
@@ -77,11 +111,11 @@
             <i data-lucide="sun" class="w-4 h-4 text-amber-400 theme-icon-sun"></i>
           </button>
 
-          <button class="btn-get-started btn-shine hidden sm:inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-full bg-[#FF6600] hover:bg-[#EA580C] text-white text-sm font-bold shadow-lg orange-glow-sm hover:scale-105 transition-all">
-            <span>Get Started</span>
+          <a href="contact.html" class="btn-shine hidden sm:inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-full bg-[#FF6600] hover:bg-[#EA580C] text-white text-sm font-bold shadow-lg orange-glow-sm hover:scale-105 transition-all">
+            <span>Get a Free Consultation</span>
             <i data-lucide="arrow-right" class="w-4 h-4"></i>
-          </button>
-          <button id="mobile-menu-btn" class="md:hidden p-2.5 rounded-xl text-slate-300 hover:text-white">
+          </a>
+          <button id="mobile-menu-btn" class="md:hidden p-2.5 rounded-xl text-slate-300 hover:text-white" aria-label="Open navigation menu">
             <i data-lucide="menu" class="w-6 h-6"></i>
           </button>
         </div>
@@ -90,16 +124,16 @@
   </header>
 
   <!-- MOBILE NAVIGATION DRAWER -->
-  <div id="mobile-drawer" class="fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-sm hidden flex-col justify-end transition-all">
+  <div id="mobile-drawer" class="fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-sm hidden flex-col justify-end transition-all" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
     <div class="bg-[#0B0F19] border-t border-slate-800 rounded-t-3xl p-6 space-y-6 max-h-[85vh] overflow-y-auto">
       <div class="flex items-center justify-between border-b border-slate-800 pb-4">
-        <img src="assets/images/logo-dark.png" alt="Digital Ustad" class="h-8 w-auto">
+        <img src="assets/images/logo-dark.png" alt="Digital Ustad" width="128" height="32" class="h-8 w-auto">
         <div class="flex items-center gap-3">
           <button type="button" class="theme-toggle-btn rounded-full text-slate-300 hover:text-white bg-slate-800/80 p-2 border border-slate-700/70" aria-label="Toggle theme">
             <i data-lucide="moon" class="w-4 h-4 text-amber-300 theme-icon-moon"></i>
             <i data-lucide="sun" class="w-4 h-4 text-amber-400 theme-icon-sun"></i>
           </button>
-          <button id="close-mobile-menu" class="text-slate-400 hover:text-white p-2">
+          <button id="close-mobile-menu" class="text-slate-400 hover:text-white p-2" aria-label="Close navigation menu">
             <i data-lucide="x" class="w-6 h-6"></i>
           </button>
         </div>
@@ -115,13 +149,16 @@
         <a href="contact.html" class="mobile-nav-link text-lg font-semibold text-slate-300 hover:text-[#FF6600]">Contact</a>
       </div>
       <div class="pt-4 border-t border-slate-800 space-y-3">
-        <button class="btn-get-started w-full py-3.5 rounded-full bg-[#FF6600] text-white font-bold flex items-center justify-center gap-2 shadow-lg">
-          <span>Get Started Now</span>
+        <a href="contact.html" class="btn-shine w-full py-3.5 rounded-full bg-[#FF6600] text-white font-bold flex items-center justify-center gap-2 shadow-lg">
+          <span>Get a Free Consultation</span>
           <i data-lucide="arrow-right" class="w-4 h-4"></i>
-        </button>
+        </a>
       </div>
     </div>
   </div>
+
+  <!-- MAIN CONTENT AREA -->
+  <main id="main-content">
 
   <!-- HERO SECTION -->
   <section class="bg-[#0B0F19] text-white py-16 lg:py-24 relative overflow-hidden">
@@ -252,7 +289,7 @@
   </section>
 
   <!-- TAB CONTENTS CONTAINER -->
-  <main class="py-14 sm:py-20 bg-white">
+  <div class="py-14 sm:py-20 bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
       <!-- ================= 01. WEBSITES TAB ================= -->
@@ -285,15 +322,16 @@
                 <div class="text-[11px] text-slate-500 font-semibold mt-1">One-time investment • 2 Revisions</div>
               </div>
 
-              <!-- Payment terms -->
-              <div class="p-3.5 rounded-2xl bg-slate-50 border border-slate-200/80 text-xs space-y-1">
+              <!-- Payment terms (QA-COMMERCIAL-04) -->
+              <div class="p-3.5 rounded-2xl bg-slate-50 border border-slate-200/80 text-xs space-y-1.5" data-commercial-package="web-lite">
                 <div class="font-bold text-slate-800 flex items-center justify-between">
                   <span class="flex items-center gap-1.5"><i data-lucide="wallet" class="w-3.5 h-3.5 text-[#FF6600]"></i>Payment Terms:</span>
                   <span class="text-[10px] bg-amber-100 text-amber-800 px-2 py-0.5 rounded font-bold">100% Upfront</span>
                 </div>
-                <div class="text-slate-600 text-[11px]">
-                  • Full payment on kickoff: <strong>PKR 17,999</strong><br>
-                  • No installments or Flex plans on Lite tiers
+                <div class="text-slate-600 text-[11px] space-y-0.5">
+                  <div>• Standard kickoff investment: <strong>PKR 17,999</strong></div>
+                  <div class="text-[10px] text-emerald-700 font-medium">💡 5% Early-Payment Discount: <strong>PKR 17,099</strong> payable <span class="text-[9px] text-slate-500 font-normal">(Subject to owner confirmation on net vs gross base)</span></div>
+                  <div class="text-[10px] text-slate-500">• Single-batch 5–7 day delivery. Installments not available on Lite tier.</div>
                 </div>
               </div>
 
@@ -330,10 +368,9 @@
             </div>
 
             <div class="pt-6 mt-6 border-t border-slate-100">
-              <a href="https://wa.me/923000000000?text=Hello%20Digital%20Ustad,%20I%20want%20the%20LITE%203-Page%20Website%20Package%20(PKR%2017,999)!" target="_blank" class="w-full py-3.5 rounded-full bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs flex items-center justify-center gap-2 transition-all">
-                <span>Select 3-Page Lite</span>
-                <i data-lucide="arrow-right" class="w-4 h-4"></i>
-              </a>
+              <button type="button" onclick="openDigitalUstadChat({ intent: 'package_consultation', service: 'web-development', packageId: 'lite-3-page', sourcePage: window.location.pathname })" class="w-full py-3.5 rounded-full bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs flex items-center justify-center gap-2 transition-all">
+                <span>Discuss This Plan</span>
+              </button>
             </div>
           </div>
 
@@ -357,8 +394,8 @@
                 <div class="text-[11px] text-slate-400 font-semibold mt-1">Complete setup • 3 Revisions</div>
               </div>
 
-              <!-- Flex Payment Breakdown Box (Owner-Specified 25/50/25) -->
-              <div class="p-3.5 rounded-2xl bg-slate-900/90 border border-[#FF6600]/40 text-xs space-y-2">
+              <!-- Flex Payment Breakdown Box (Owner-Specified 25/50/25) (QA-COMMERCIAL-05) -->
+              <div class="p-3.5 rounded-2xl bg-slate-900/90 border border-[#FF6600]/40 text-xs space-y-2" data-commercial-package="web-starter">
                 <div class="font-bold text-amber-400 flex items-center justify-between text-[11px]">
                   <span>INSTALLMENT PLAN (25 / 50 / 25)</span>
                   <span class="px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-400 text-[10px]">Zero Extra</span>
@@ -378,6 +415,10 @@
                   </div>
                 </div>
                 <div class="text-[10px] text-emerald-400 text-center font-medium pt-0.5">💡 5% Discount for 100% Upfront (PKR 28,500)</div>
+                <!-- Mandatory Care disclosure before plan selection -->
+                <div class="p-2 rounded-lg bg-slate-800/90 border border-slate-700 text-[10px] text-slate-300 leading-tight">
+                  🔒 <strong>Hosting & Care Requirement:</strong> Website Care (PKR 3,000/mo) is mandatory during the active 30-day balance window. Optional thereafter.
+                </div>
               </div>
 
               <ul class="space-y-2.5 text-xs text-slate-200 pt-2 border-t border-slate-800">
@@ -413,10 +454,9 @@
             </div>
 
             <div class="pt-6 mt-6 border-t border-slate-800">
-              <a href="https://wa.me/923000000000?text=Hello%20Digital%20Ustad,%20I%20want%20the%20STARTER%205-Page%20Website%20Package%20(PKR%2030,000)%20with%20Flex%20Payment!" target="_blank" class="btn-shine w-full py-4 rounded-full bg-[#FF6600] hover:bg-[#EA580C] text-white font-bold text-xs flex items-center justify-center gap-2 shadow-xl orange-glow transition-all">
-                <span>Choose 5-Page Starter</span>
-                <i data-lucide="arrow-right" class="w-4 h-4"></i>
-              </a>
+              <button type="button" onclick="openDigitalUstadChat({ intent: 'package_consultation', service: 'web-development', packageId: 'starter-5-page', sourcePage: window.location.pathname })" class="btn-shine w-full py-4 rounded-full bg-[#FF6600] hover:bg-[#EA580C] text-white font-bold text-xs flex items-center justify-center gap-2 shadow-xl orange-glow transition-all">
+                <span>Discuss This Plan</span>
+              </button>
             </div>
           </div>
 
@@ -436,8 +476,8 @@
                 <div class="text-[11px] text-slate-500 font-semibold mt-1">4 Revisions • 1 Month Support Included</div>
               </div>
 
-              <!-- Flex Payment Breakdown Box (Owner-Specified 25/50/25) -->
-              <div class="p-3.5 rounded-2xl bg-slate-50 border border-slate-200/80 text-xs space-y-2">
+              <!-- Flex Payment Breakdown Box (Owner-Specified 25/50/25) (QA-COMMERCIAL-01 & 05) -->
+              <div class="p-3.5 rounded-2xl bg-slate-50 border border-slate-200/80 text-xs space-y-2" data-commercial-package="web-growth">
                 <div class="font-bold text-slate-800 flex items-center justify-between text-[11px]">
                   <span>INSTALLMENT PLAN (25 / 50 / 25)</span>
                   <span class="px-2 py-0.5 rounded bg-emerald-100 text-emerald-700 text-[10px] font-bold">Milestone Split</span>
@@ -456,7 +496,14 @@
                     <div class="font-bold text-slate-900 text-xs mt-0.5">PKR 10,750</div>
                   </div>
                 </div>
-                <div class="text-[10px] text-emerald-700 text-center font-medium pt-0.5">💡 5% Discount for 100% Upfront (PKR 40,850)</div>
+                <div class="text-[10px] text-emerald-700 text-center font-medium pt-0.5">
+                  💡 5% Discount for 100% Upfront (PKR 40,850)
+                  <span class="block text-[9px] text-slate-500 font-normal mt-0.5">*Installments sum to PKR 43,000 (1 PKR difference from PKR 42,999; centralized in DU_CONFIG.commercial pending owner decision)</span>
+                </div>
+                <!-- Mandatory Care disclosure before plan selection -->
+                <div class="p-2 rounded-lg bg-amber-50 border border-amber-200/80 text-[10px] text-amber-900 leading-tight">
+                  🔒 <strong>Hosting & Care Requirement:</strong> Website Care (PKR 3,000/mo) is mandatory during the active 30-day balance window. Optional thereafter.
+                </div>
               </div>
 
               <ul class="space-y-2.5 text-xs text-slate-700 pt-2 border-t border-slate-100">
@@ -490,16 +537,15 @@
                 </li>
                 <li class="flex items-start gap-2">
                   <i data-lucide="clock" class="w-4 h-4 text-slate-400 flex-shrink-0 mt-0.5"></i>
-                  <span>Delivery in <strong>12–15 working days</strong></span>
+                  <span>Delivery in <strong>10–14 working days</strong> <span class="text-[10px] text-slate-500 font-normal">(12–15 days on legacy card; pending owner confirmation)</span></span>
                 </li>
               </ul>
             </div>
 
             <div class="pt-6 mt-6 border-t border-slate-100">
-              <a href="https://wa.me/923000000000?text=Hello%20Digital%20Ustad,%20I%20want%20the%20GROWTH%207-Page%20Website%20Package%20(PKR%2042,999)%20with%20Flex%20Payment!" target="_blank" class="w-full py-3.5 rounded-full bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs flex items-center justify-center gap-2 transition-all">
-                <span>Select 7-Page Growth</span>
-                <i data-lucide="arrow-right" class="w-4 h-4"></i>
-              </a>
+              <button type="button" onclick="openDigitalUstadChat({ intent: 'package_consultation', service: 'web-development', packageId: 'growth-7-page', sourcePage: window.location.pathname })" class="w-full py-3.5 rounded-full bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs flex items-center justify-center gap-2 transition-all">
+                <span>Discuss This Plan</span>
+              </button>
             </div>
           </div>
 
@@ -562,10 +608,9 @@
               </p>
             </div>
             <div class="pt-6 mt-4">
-              <a href="https://wa.me/923000000000?text=Hello%20Digital%20Ustad,%20I%20want%20to%20inquire%20about%20Website%20Care%20(PKR%203,000/mo)!" target="_blank" class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold transition-all">
-                <span>Inquire About Website Care</span>
-                <i data-lucide="arrow-right" class="w-4 h-4"></i>
-              </a>
+              <button type="button" onclick="openDigitalUstadChat({ intent: 'package_consultation', service: 'website-care', packageId: 'website-care', sourcePage: window.location.pathname })" class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold transition-all">
+                <span>Discuss This Plan</span>
+              </button>
             </div>
           </div>
 
@@ -611,10 +656,9 @@
             </div>
 
             <div class="pt-6 mt-6 border-t border-slate-100">
-              <a href="https://wa.me/923000000000?text=Hello%20Digital%20Ustad,%20I%20want%20the%20BASIC%20Social%20Media%20Package%20(PKR%2018,000/mo)!" target="_blank" class="w-full py-3.5 rounded-full bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs flex items-center justify-center gap-2 transition-all">
-                <span>Start Basic Social</span>
-                <i data-lucide="arrow-right" class="w-4 h-4"></i>
-              </a>
+              <button type="button" onclick="openDigitalUstadChat({ intent: 'package_consultation', service: 'social-media', packageId: 'basic-social', sourcePage: window.location.pathname })" class="w-full py-3.5 rounded-full bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs flex items-center justify-center gap-2 transition-all">
+                <span>Discuss This Plan</span>
+              </button>
             </div>
           </div>
 
@@ -647,10 +691,9 @@
             </div>
 
             <div class="pt-6 mt-6 border-t border-slate-800">
-              <a href="https://wa.me/923000000000?text=Hello%20Digital%20Ustad,%20I%20want%20the%20GROWTH%20Social%20Media%20Package%20(PKR%2028,000/mo)!" target="_blank" class="btn-shine w-full py-4 rounded-full bg-[#FF6600] hover:bg-[#EA580C] text-white font-bold text-xs flex items-center justify-center gap-2 shadow-xl orange-glow transition-all">
-                <span>Start Growth Social</span>
-                <i data-lucide="arrow-right" class="w-4 h-4"></i>
-              </a>
+              <button type="button" onclick="openDigitalUstadChat({ intent: 'package_consultation', service: 'social-media', packageId: 'growth-social', sourcePage: window.location.pathname })" class="btn-shine w-full py-4 rounded-full bg-[#FF6600] hover:bg-[#EA580C] text-white font-bold text-xs flex items-center justify-center gap-2 shadow-xl orange-glow transition-all">
+                <span>Discuss This Plan</span>
+              </button>
             </div>
           </div>
 
@@ -680,10 +723,9 @@
             </div>
 
             <div class="pt-6 mt-6 border-t border-slate-100">
-              <a href="https://wa.me/923000000000?text=Hello%20Digital%20Ustad,%20I%20want%20the%20PRO%20Social%20Media%20Package%20(PKR%2045,000/mo)!" target="_blank" class="w-full py-3.5 rounded-full bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs flex items-center justify-center gap-2 transition-all">
-                <span>Start Pro Social</span>
-                <i data-lucide="arrow-right" class="w-4 h-4"></i>
-              </a>
+              <button type="button" onclick="openDigitalUstadChat({ intent: 'package_consultation', service: 'social-media', packageId: 'pro-social', sourcePage: window.location.pathname })" class="w-full py-3.5 rounded-full bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs flex items-center justify-center gap-2 transition-all">
+                <span>Discuss This Plan</span>
+              </button>
             </div>
           </div>
 
@@ -720,9 +762,9 @@
               </ul>
             </div>
             <div class="pt-6 mt-6 border-t border-slate-100">
-              <a href="https://wa.me/923000000000?text=Hello%20Digital%20Ustad,%20I%20want%20the%20Starter%20Design%20Retainer%20(PKR%2010,000/mo)!" target="_blank" class="w-full py-3.5 rounded-full bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs flex items-center justify-center gap-2 transition-all">
-                <span>Select Starter</span>
-              </a>
+              <button type="button" onclick="openDigitalUstadChat({ intent: 'package_consultation', service: 'graphic-design', packageId: 'starter-design', sourcePage: window.location.pathname })" class="w-full py-3.5 rounded-full bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs flex items-center justify-center gap-2 transition-all">
+                <span>Discuss This Plan</span>
+              </button>
             </div>
           </div>
 
@@ -745,9 +787,9 @@
               </ul>
             </div>
             <div class="pt-6 mt-6 border-t border-slate-800">
-              <a href="https://wa.me/923000000000?text=Hello%20Digital%20Ustad,%20I%20want%20the%20Standard%20Design%20Retainer%20(PKR%2018,000/mo)!" target="_blank" class="btn-shine w-full py-4 rounded-full bg-[#FF6600] hover:bg-[#EA580C] text-white font-bold text-xs flex items-center justify-center gap-2 transition-all">
-                <span>Select Standard</span>
-              </a>
+              <button type="button" onclick="openDigitalUstadChat({ intent: 'package_consultation', service: 'graphic-design', packageId: 'standard-design', sourcePage: window.location.pathname })" class="btn-shine w-full py-4 rounded-full bg-[#FF6600] hover:bg-[#EA580C] text-white font-bold text-xs flex items-center justify-center gap-2 transition-all">
+                <span>Discuss This Plan</span>
+              </button>
             </div>
           </div>
 
@@ -767,9 +809,9 @@
               </ul>
             </div>
             <div class="pt-6 mt-6 border-t border-slate-100">
-              <a href="https://wa.me/923000000000?text=Hello%20Digital%20Ustad,%20I%20want%20the%20Full%20Design%20Suite%20(PKR%2028,000/mo)!" target="_blank" class="w-full py-3.5 rounded-full bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs flex items-center justify-center gap-2 transition-all">
-                <span>Select Full Suite</span>
-              </a>
+              <button type="button" onclick="openDigitalUstadChat({ intent: 'package_consultation', service: 'graphic-design', packageId: 'full-design', sourcePage: window.location.pathname })" class="w-full py-3.5 rounded-full bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs flex items-center justify-center gap-2 transition-all">
+                <span>Discuss This Plan</span>
+              </button>
             </div>
           </div>
 
@@ -872,9 +914,9 @@
                 </ul>
               </div>
               <div class="pt-6 mt-6 border-t border-slate-100">
-                <a href="https://wa.me/923000000000?text=Hello%20Digital%20Ustad,%20I%20want%20Meta%20Ads%20Starter%20(PKR%2015,000/mo)!" target="_blank" class="w-full py-3.5 rounded-full bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs flex items-center justify-center gap-2">
-                  <span>Start Meta Starter</span>
-                </a>
+                <button type="button" onclick="openDigitalUstadChat({ intent: 'package_consultation', service: 'meta-ads', packageId: 'meta-starter', sourcePage: window.location.pathname })" class="w-full py-3.5 rounded-full bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs flex items-center justify-center gap-2">
+                <span>Discuss This Plan</span>
+              </button>
               </div>
             </div>
 
@@ -896,9 +938,9 @@
                 </ul>
               </div>
               <div class="pt-6 mt-6 border-t border-slate-800">
-                <a href="https://wa.me/923000000000?text=Hello%20Digital%20Ustad,%20I%20want%20Meta%20Ads%20Growth%20(PKR%2025,000/mo)!" target="_blank" class="btn-shine w-full py-4 rounded-full bg-[#FF6600] text-white font-bold text-xs flex items-center justify-center gap-2">
-                  <span>Start Meta Growth</span>
-                </a>
+                <button type="button" onclick="openDigitalUstadChat({ intent: 'package_consultation', service: 'meta-ads', packageId: 'meta-growth', sourcePage: window.location.pathname })" class="btn-shine w-full py-4 rounded-full bg-[#FF6600] text-white font-bold text-xs flex items-center justify-center gap-2">
+                <span>Discuss This Plan</span>
+              </button>
               </div>
             </div>
 
@@ -917,9 +959,9 @@
                 </ul>
               </div>
               <div class="pt-6 mt-6 border-t border-slate-100">
-                <a href="https://wa.me/923000000000?text=Hello%20Digital%20Ustad,%20I%20want%20Meta%20Ads%20Scale%20(PKR%2040,000/mo)!" target="_blank" class="w-full py-3.5 rounded-full bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs flex items-center justify-center gap-2">
-                  <span>Start Meta Scale</span>
-                </a>
+                <button type="button" onclick="openDigitalUstadChat({ intent: 'package_consultation', service: 'meta-ads', packageId: 'meta-scale', sourcePage: window.location.pathname })" class="w-full py-3.5 rounded-full bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs flex items-center justify-center gap-2">
+                <span>Discuss This Plan</span>
+              </button>
               </div>
             </div>
 
@@ -952,9 +994,9 @@
                 </ul>
               </div>
               <div class="pt-6 mt-6 border-t border-slate-100">
-                <a href="https://wa.me/923000000000?text=Hello%20Digital%20Ustad,%20I%20want%20Google%20Ads%20Starter%20(PKR%2015,000/mo)!" target="_blank" class="w-full py-3.5 rounded-full bg-slate-900 text-white font-bold text-xs flex items-center justify-center gap-2">
-                  <span>Select Google Starter</span>
-                </a>
+                <button type="button" onclick="openDigitalUstadChat({ intent: 'package_consultation', service: 'google-ads', packageId: 'google-starter', sourcePage: window.location.pathname })" class="w-full py-3.5 rounded-full bg-slate-900 text-white font-bold text-xs flex items-center justify-center gap-2">
+                <span>Discuss This Plan</span>
+              </button>
               </div>
             </div>
 
@@ -972,9 +1014,9 @@
                 </ul>
               </div>
               <div class="pt-6 mt-6 border-t border-slate-100">
-                <a href="https://wa.me/923000000000?text=Hello%20Digital%20Ustad,%20I%20want%20Google%20Ads%20Growth%20(PKR%2025,000/mo)!" target="_blank" class="w-full py-3.5 rounded-full bg-slate-900 text-white font-bold text-xs flex items-center justify-center gap-2">
-                  <span>Select Google Growth</span>
-                </a>
+                <button type="button" onclick="openDigitalUstadChat({ intent: 'package_consultation', service: 'google-ads', packageId: 'google-growth', sourcePage: window.location.pathname })" class="w-full py-3.5 rounded-full bg-slate-900 text-white font-bold text-xs flex items-center justify-center gap-2">
+                <span>Discuss This Plan</span>
+              </button>
               </div>
             </div>
 
@@ -992,9 +1034,9 @@
                 </ul>
               </div>
               <div class="pt-6 mt-6 border-t border-slate-100">
-                <a href="https://wa.me/923000000000?text=Hello%20Digital%20Ustad,%20I%20want%20Google%20Ads%20Scale%20(PKR%2040,000/mo)!" target="_blank" class="w-full py-3.5 rounded-full bg-slate-900 text-white font-bold text-xs flex items-center justify-center gap-2">
-                  <span>Select Google Scale</span>
-                </a>
+                <button type="button" onclick="openDigitalUstadChat({ intent: 'package_consultation', service: 'google-ads', packageId: 'google-scale', sourcePage: window.location.pathname })" class="w-full py-3.5 rounded-full bg-slate-900 text-white font-bold text-xs flex items-center justify-center gap-2">
+                <span>Discuss This Plan</span>
+              </button>
               </div>
             </div>
 
@@ -1023,10 +1065,9 @@
               <div class="text-xs text-slate-400 font-semibold uppercase">Management Fee</div>
               <div class="text-3xl sm:text-4xl font-black text-[#FF6600] font-outfit">PKR 35,000<span class="text-xs font-normal text-slate-300">/mo</span></div>
               <div class="text-[11px] text-emerald-400 font-semibold">Save PKR 8,000/mo vs separate retainers</div>
-              <a href="https://wa.me/923000000000?text=Hello%20Digital%20Ustad,%20I%20want%20the%20Meta%20+%20Google%20Ads%20Dual%20Engine%20Combo%20(PKR%2035,000/mo)!" target="_blank" class="btn-shine w-full py-3.5 rounded-full bg-[#FF6600] hover:bg-[#EA580C] text-white font-bold text-xs flex items-center justify-center gap-2 shadow-lg transition-all">
-                <span>Choose Dual Engine Combo</span>
-                <i data-lucide="arrow-right" class="w-4 h-4"></i>
-              </a>
+              <button type="button" onclick="openDigitalUstadChat({ intent: 'package_consultation', service: 'ads-combo', packageId: 'ads-dual-engine', sourcePage: window.location.pathname })" class="btn-shine w-full py-3.5 rounded-full bg-[#FF6600] hover:bg-[#EA580C] text-white font-bold text-xs flex items-center justify-center gap-2 shadow-lg transition-all">
+                <span>Discuss This Plan</span>
+              </button>
               <div class="text-[10px] text-slate-400">*Setup fees: Meta PKR 5,000 + Google PKR 6,000 (Waived with 3-month upfront commitment)</div>
             </div>
           </div>
@@ -1039,7 +1080,7 @@
         
         <div class="text-center max-w-3xl mx-auto space-y-3">
           <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-50 text-[#FF6600] text-xs font-bold uppercase tracking-wider">
-            Minimum 3-Month Commitment
+            Monthly Retainer • 3-Month Recommended Campaign (No Lock-in • 7-Day Notice)
           </div>
           <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900">SEO & Google Maps Ranking</h2>
           <p class="text-slate-600 text-sm">Improve local visibility on Google Maps and Google Search when nearby customers search for your products and services.</p>
@@ -1062,9 +1103,9 @@
               </ul>
             </div>
             <div class="pt-6 mt-6 border-t border-slate-100">
-              <a href="https://wa.me/923000000000?text=Hello%20Digital%20Ustad,%20I%20want%20Local%20SEO%20(PKR%2015,000/mo)!" target="_blank" class="w-full py-3.5 rounded-full bg-slate-900 text-white font-bold text-xs flex items-center justify-center gap-2">
-                <span>Start Local SEO</span>
-              </a>
+              <button type="button" onclick="openDigitalUstadChat({ intent: 'package_consultation', service: 'seo', packageId: 'local-seo', sourcePage: window.location.pathname })" class="w-full py-3.5 rounded-full bg-slate-900 text-white font-bold text-xs flex items-center justify-center gap-2">
+                <span>Discuss This Plan</span>
+              </button>
             </div>
           </div>
 
@@ -1087,9 +1128,9 @@
               </ul>
             </div>
             <div class="pt-6 mt-6 border-t border-slate-800">
-              <a href="https://wa.me/923000000000?text=Hello%20Digital%20Ustad,%20I%20want%20Growth%20SEO%20(PKR%2025,000/mo)!" target="_blank" class="btn-shine w-full py-4 rounded-full bg-[#FF6600] text-white font-bold text-xs flex items-center justify-center gap-2">
-                <span>Start Growth SEO</span>
-              </a>
+              <button type="button" onclick="openDigitalUstadChat({ intent: 'package_consultation', service: 'seo', packageId: 'growth-seo', sourcePage: window.location.pathname })" class="btn-shine w-full py-4 rounded-full bg-[#FF6600] text-white font-bold text-xs flex items-center justify-center gap-2">
+                <span>Discuss This Plan</span>
+              </button>
             </div>
           </div>
 
@@ -1108,9 +1149,9 @@
               </ul>
             </div>
             <div class="pt-6 mt-6 border-t border-slate-100">
-              <a href="https://wa.me/923000000000?text=Hello%20Digital%20Ustad,%20I%20want%20Authority%20SEO%20(PKR%2040,000/mo)!" target="_blank" class="w-full py-3.5 rounded-full bg-slate-900 text-white font-bold text-xs flex items-center justify-center gap-2">
-                <span>Start Authority SEO</span>
-              </a>
+              <button type="button" onclick="openDigitalUstadChat({ intent: 'package_consultation', service: 'seo', packageId: 'authority-seo', sourcePage: window.location.pathname })" class="w-full py-3.5 rounded-full bg-slate-900 text-white font-bold text-xs flex items-center justify-center gap-2">
+                <span>Discuss This Plan</span>
+              </button>
             </div>
           </div>
 
@@ -1121,7 +1162,7 @@
           <div class="p-8 rounded-3xl bg-slate-50 border border-slate-200 space-y-4">
             <span class="text-xs font-bold text-[#FF6600] uppercase tracking-wider">ONE-TIME SERVICE</span>
             <div class="flex items-baseline justify-between">
-              <h4 class="text-xl font-extrabold text-slate-900">Google Business Setup & Audit</h4>
+              <h3 class="text-xl font-extrabold text-slate-900">Google Business Setup & Audit</h3>
               <div class="text-2xl font-black text-slate-900">PKR 8,000</div>
             </div>
             <p class="text-xs text-slate-600 leading-relaxed">
@@ -1132,7 +1173,7 @@
           <div class="p-8 rounded-3xl bg-slate-50 border border-slate-200 space-y-4">
             <span class="text-xs font-bold text-emerald-600 uppercase tracking-wider">MONTHLY ADD-ON</span>
             <div class="flex items-baseline justify-between">
-              <h4 class="text-xl font-extrabold text-slate-900">GBP Monthly Management</h4>
+              <h3 class="text-xl font-extrabold text-slate-900">GBP Monthly Management</h3>
               <div class="text-2xl font-black text-slate-900">PKR 4,000<span class="text-xs text-slate-400 font-normal">/mo</span></div>
             </div>
             <p class="text-xs text-slate-600 leading-relaxed">
@@ -1172,9 +1213,9 @@
               </ul>
             </div>
             <div class="pt-6 mt-6 border-t border-slate-100">
-              <a href="https://wa.me/923000000000?text=Hello%20Digital%20Ustad,%20I%20want%20Basic%20WhatsApp%20Automation!" target="_blank" class="w-full py-3.5 rounded-full bg-slate-900 text-white font-bold text-xs flex items-center justify-center gap-2">
-                <span>Inquire Basic</span>
-              </a>
+              <button type="button" onclick="openDigitalUstadChat({ intent: 'package_consultation', service: 'whatsapp-automation', packageId: 'basic-bot', sourcePage: window.location.pathname })" class="w-full py-3.5 rounded-full bg-slate-900 text-white font-bold text-xs flex items-center justify-center gap-2">
+                <span>Discuss This Plan</span>
+              </button>
             </div>
           </div>
 
@@ -1198,9 +1239,9 @@
               </ul>
             </div>
             <div class="pt-6 mt-6 border-t border-slate-800">
-              <a href="https://wa.me/923000000000?text=Hello%20Digital%20Ustad,%20I%20want%20Growth%20WhatsApp%20Automation!" target="_blank" class="btn-shine w-full py-4 rounded-full bg-[#FF6600] text-white font-bold text-xs flex items-center justify-center gap-2">
-                <span>Inquire Growth</span>
-              </a>
+              <button type="button" onclick="openDigitalUstadChat({ intent: 'package_consultation', service: 'whatsapp-automation', packageId: 'growth-bot', sourcePage: window.location.pathname })" class="btn-shine w-full py-4 rounded-full bg-[#FF6600] text-white font-bold text-xs flex items-center justify-center gap-2">
+                <span>Discuss This Plan</span>
+              </button>
             </div>
           </div>
 
@@ -1220,9 +1261,9 @@
               </ul>
             </div>
             <div class="pt-6 mt-6 border-t border-slate-100">
-              <a href="https://wa.me/923000000000?text=Hello%20Digital%20Ustad,%20I%20want%20Advanced%20WhatsApp%20Automation!" target="_blank" class="w-full py-3.5 rounded-full bg-slate-900 text-white font-bold text-xs flex items-center justify-center gap-2">
-                <span>Inquire Advanced</span>
-              </a>
+              <button type="button" onclick="openDigitalUstadChat({ intent: 'package_consultation', service: 'whatsapp-automation', packageId: 'advanced-bot', sourcePage: window.location.pathname })" class="w-full py-3.5 rounded-full bg-slate-900 text-white font-bold text-xs flex items-center justify-center gap-2">
+                <span>Discuss This Plan</span>
+              </button>
             </div>
           </div>
 
@@ -1262,9 +1303,9 @@
               </ul>
             </div>
             <div class="pt-6 mt-6 border-t border-slate-100">
-              <a href="https://wa.me/923000000000?text=Hello%20Digital%20Ustad,%20I%20want%20the%20ESSENTIAL%20Monthly%20Retainer%20(PKR%2032,000/mo)!" target="_blank" class="w-full py-3.5 rounded-full bg-slate-900 text-white font-bold text-xs flex items-center justify-center gap-2">
-                <span>Select Essential</span>
-              </a>
+              <button type="button" onclick="openDigitalUstadChat({ intent: 'package_consultation', service: 'monthly-retainer', packageId: 'essential-retainer', sourcePage: window.location.pathname })" class="w-full py-3.5 rounded-full bg-slate-900 text-white font-bold text-xs flex items-center justify-center gap-2">
+                <span>Discuss This Plan</span>
+              </button>
             </div>
           </div>
 
@@ -1287,9 +1328,9 @@
               </ul>
             </div>
             <div class="pt-6 mt-6 border-t border-slate-800">
-              <a href="https://wa.me/923000000000?text=Hello%20Digital%20Ustad,%20I%20want%20the%20GROWTH%20Monthly%20Retainer%20(PKR%2075,000/mo)!" target="_blank" class="btn-shine w-full py-4 rounded-full bg-[#FF6600] text-white font-bold text-xs flex items-center justify-center gap-2">
-                <span>Select Growth Retainer</span>
-              </a>
+              <button type="button" onclick="openDigitalUstadChat({ intent: 'package_consultation', service: 'monthly-retainer', packageId: 'growth-retainer', sourcePage: window.location.pathname })" class="btn-shine w-full py-4 rounded-full bg-[#FF6600] text-white font-bold text-xs flex items-center justify-center gap-2">
+                <span>Discuss This Plan</span>
+              </button>
             </div>
           </div>
 
@@ -1309,9 +1350,9 @@
               </ul>
             </div>
             <div class="pt-6 mt-6 border-t border-slate-100">
-              <a href="https://wa.me/923000000000?text=Hello%20Digital%20Ustad,%20I%20want%20to%20discuss%20the%20COMPLETE%20Monthly%20Retainer%20(PKR%20120k+)!" target="_blank" class="w-full py-3.5 rounded-full bg-slate-900 text-white font-bold text-xs flex items-center justify-center gap-2">
-                <span>Contact For Scope</span>
-              </a>
+              <button type="button" onclick="openDigitalUstadChat({ intent: 'package_consultation', service: 'monthly-retainer', packageId: 'complete-retainer', sourcePage: window.location.pathname })" class="w-full py-3.5 rounded-full bg-slate-900 text-white font-bold text-xs flex items-center justify-center gap-2">
+                <span>Discuss This Plan</span>
+              </button>
             </div>
           </div>
 
@@ -1320,13 +1361,13 @@
       </div>
 
     </div>
-  </main>
+  </div>
 
   <!-- PAYMENT & HOSTING POLICIES ACCORDION -->
   <section class="py-16 bg-slate-50 border-t border-slate-200/80">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
       <div class="text-center space-y-2">
-        <h3 class="text-2xl sm:text-3xl font-extrabold text-slate-900">Payment & Hosting Transparency Policy</h3>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900">Payment & Hosting Transparency Policy</h2>
         <p class="text-xs sm:text-sm text-slate-500">Clear guidelines so expectations are crystal clear before kickoff.</p>
       </div>
 
@@ -1356,6 +1397,40 @@
             Our pricing quotes are <strong>management fees only</strong>. Actual ad spend is paid directly by you to Meta (Facebook/Instagram) or Google via your own debit/credit card. We never run ads from our card, ensuring 100% financial transparency and direct access to your analytics.
           </p>
         </div>
+
+        <!-- 4. Domain Ownership & WhatsApp Meta API Fees -->
+        <div class="bg-white p-6 rounded-3xl border border-slate-200 space-y-2 shadow-sm">
+          <div class="font-extrabold text-slate-900 text-base flex items-center gap-2">
+            <i data-lucide="globe" class="w-5 h-5 text-[#FF6600]"></i>
+            <span>Domain Names & WhatsApp Meta Platform Fees</span>
+          </div>
+          <p class="text-slate-600 text-xs leading-relaxed">
+            <strong>Domain Registration:</strong> Domain names (.com, .pk, etc.) are 100% owned by the client and purchased separately at direct registrar cost unless explicitly included in a custom proposal.<br>
+            <strong>WhatsApp Cloud API Fees:</strong> Official Meta per-conversation message charges are billed directly by Meta to the credit card linked in your Meta Business Manager. Digital Ustad charges only for bot architecture and optional cloud webhook maintenance (PKR 3,000–5,000/mo).
+          </p>
+        </div>
+
+        <!-- 5. Retainer Cancellation Policy -->
+        <div class="bg-white p-6 rounded-3xl border border-slate-200 space-y-2 shadow-sm">
+          <div class="font-extrabold text-slate-900 text-base flex items-center gap-2">
+            <i data-lucide="refresh-cw" class="w-5 h-5 text-[#FF6600]"></i>
+            <span>Retainer Cancellation & No Lock-In Policy</span>
+          </div>
+          <p class="text-slate-600 text-xs leading-relaxed">
+            Ongoing monthly retainers (Social Media, SEO, Paid Ads) operate on an advance monthly billing cycle with <strong>zero lock-in contracts</strong>. You may cancel or pause your retainer at any time by giving written notice at least <strong>7 days prior</strong> to your next billing cycle. (For SEO campaigns, a 3-month compounding timeframe is recommended for organic indexing results).
+          </p>
+        </div>
+
+        <!-- 6. Tax Treatment Notice -->
+        <div class="bg-slate-100/70 p-5 rounded-3xl border border-slate-200 text-slate-600 text-xs space-y-1">
+          <div class="font-bold text-slate-800 flex items-center gap-1.5">
+            <i data-lucide="info" class="w-4 h-4 text-[#FF6600]"></i>
+            <span>Tax Policy Disclosure</span>
+          </div>
+          <p class="text-[11px] text-slate-500 leading-relaxed">
+            All prices displayed across the website represent net professional agency fees in PKR. Provincial Sales Tax on Services (PRA / SRB / WHT) applicability is governed by official tax registration status and formal invoice issuance (Pending final business owner tax classification confirmation).
+          </p>
+        </div>
       </div>
     </div>
   </section>
@@ -1371,18 +1446,19 @@
             <p class="text-slate-300 text-sm max-w-xl">Tell us your goals, and we'll craft the right bundle with clear milestones and immediate kickoff.</p>
           </div>
           <div class="flex flex-wrap gap-4">
-            <button class="btn-get-started btn-shine px-8 py-3.5 rounded-full bg-[#FF6600] hover:bg-[#EA580C] text-white font-bold text-sm shadow-xl orange-glow transition-all">
-              <span>Get Free Proposal</span>
-            </button>
-            <a href="https://wa.me/923000000000?text=Hello%20Digital%20Ustad,%20I%20have%20questions%20about%20your%20pricing%20packages!" target="_blank" class="px-7 py-3.5 rounded-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm shadow-lg flex items-center gap-2 transition-all">
-              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12.012 2c-5.506 0-9.989 4.478-9.99 9.984a9.964 9.964 0 0 0 1.333 4.993L2 22l5.233-1.237a9.994 9.994 0 0 0 4.779 1.217h.004c5.505 0 9.988-4.478 9.989-9.984 0-2.669-1.037-5.176-2.925-7.062A9.925 9.925 0 0 0 12.012 2zm5.835 14.198c-.244.688-1.227 1.26-1.786 1.32-.472.052-1.077.08-3.155-.783-2.658-1.102-4.363-3.807-4.496-3.983-.133-.176-1.076-1.433-1.076-2.733 0-1.3.68-1.94.92-2.203.24-.263.523-.328.698-.328.174 0 .349.002.502.01.163.008.382-.062.597.455.22.531.75 1.83.815 1.963.065.133.109.288.022.463-.087.175-.131.284-.262.437-.13.153-.275.342-.393.459-.13.13-.266.27-.115.53.151.26 1.002 1.65 2.148 2.671 1.472 1.312 2.71 1.718 3.097 1.91.387.192.613.16.84-.102.228-.263.974-1.134 1.235-1.523.26-.39.522-.325.872-.196.35.13 2.22 1.047 2.602 1.238.382.19.637.284.73.444.093.16.093.928-.151 1.616z"/></svg>
-              <span>WhatsApp Us</span>
+            <a href="contact.html" class="btn-shine px-8 py-3.5 rounded-full bg-[#FF6600] hover:bg-[#EA580C] text-white font-bold text-sm shadow-xl orange-glow transition-all flex items-center justify-center">
+              <span>Get a Free Consultation</span>
             </a>
+            <button type="button" onclick="openDigitalUstadChat({ intent: 'pricing_consultation', service: 'custom-package', sourcePage: window.location.pathname })" class="px-7 py-3.5 rounded-full bg-slate-900 hover:bg-slate-800 text-white font-bold text-sm shadow-lg flex items-center gap-2 transition-all">
+              <i data-lucide="bot" class="w-4 h-4 text-[#FF6600]"></i>
+              <span>Discuss This Plan</span>
+            </button>
           </div>
         </div>
       </div>
     </div>
   </section>
+  </main>
 
   <!-- ================= COMPREHENSIVE FOOTER ================= -->
   <footer class="bg-[#0B0F19] text-slate-400 pt-16 pb-12 border-t border-slate-800">
@@ -1393,15 +1469,13 @@
         <!-- Col 1: Brand & About (Spans 2 cols on desktop) -->
         <div class="lg:col-span-2 space-y-4">
           <a href="index.html" class="inline-block group">
-            <img src="assets/images/logo-dark.png" alt="Digital Ustad" class="h-10 sm:h-11 w-auto object-contain transition-transform duration-300 group-hover:scale-105">
+            <img src="assets/images/logo-dark.png" alt="Digital Ustad" width="160" height="44" class="h-10 sm:h-11 w-auto object-contain transition-transform duration-300 group-hover:scale-105">
           </a>
           <p class="text-xs sm:text-sm text-slate-400 leading-relaxed max-w-sm">
             A digital partner for small & medium businesses across Pakistan. We build fast, beautiful websites, run ROI-driven marketing, and automate operations.
           </p>
           <div class="flex items-center gap-3 text-slate-400 pt-2">
-            <a href="https://wa.me/923000000000" target="_blank" class="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center hover:bg-[#FF6600] hover:text-white transition-colors" title="WhatsApp">
-              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12.012 2c-5.506 0-9.989 4.478-9.99 9.984a9.964 9.964 0 0 0 1.333 4.993L2 22l5.233-1.237a9.994 9.994 0 0 0 4.779 1.217h.004c5.505 0 9.988-4.478 9.989-9.984 0-2.669-1.037-5.176-2.925-7.062A9.925 9.925 0 0 0 12.012 2zm5.835 14.198c-.244.688-1.227 1.26-1.786 1.32-.472.052-1.077.08-3.155-.783-2.658-1.102-4.363-3.807-4.496-3.983-.133-.176-1.076-1.433-1.076-2.733 0-1.3.68-1.94.92-2.203.24-.263.523-.328.698-.328.174 0 .349.002.502.01.163.008.382-.062.597.455.22.531.75 1.83.815 1.963.065.133.109.288.022.463-.087.175-.131.284-.262.437-.13.153-.275.342-.393.459-.13.13-.266.27-.115.53.151.26 1.002 1.65 2.148 2.671 1.472 1.312 2.71 1.718 3.097 1.91.387.192.613.16.84-.102.228-.263.974-1.134 1.235-1.523.26-.39.522-.325.872-.196.35.13 2.22 1.047 2.602 1.238.382.19.637.284.73.444.093.16.093.928-.151 1.616z"/></svg>
-            </a>
+            
             <a href="mailto:contact@digitalustad.co" class="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center hover:bg-[#FF6600] hover:text-white transition-colors" title="Email">
               <i data-lucide="mail" class="w-4 h-4"></i>
             </a>
@@ -1413,7 +1487,7 @@
 
         <!-- Col 2: Services -->
         <div class="space-y-3">
-          <h4 class="text-sm font-bold text-white uppercase tracking-wider">Services</h4>
+          <h2 class="text-sm font-bold text-white uppercase tracking-wider">Services</h2>
           <ul class="space-y-2 text-xs">
             <li><a href="service-web-development.html" class="hover:text-[#FF6600] transition-colors">Web Development</a></li>
             <li><a href="service-social-media.html" class="hover:text-[#FF6600] transition-colors">Social Media Marketing</a></li>
@@ -1427,7 +1501,7 @@
 
         <!-- Col 3: Quick Links -->
         <div class="space-y-3">
-          <h4 class="text-sm font-bold text-white uppercase tracking-wider">Quick Links</h4>
+          <h2 class="text-sm font-bold text-white uppercase tracking-wider">Quick Links</h2>
           <ul class="space-y-2 text-xs">
             <li><a href="index.html" class="hover:text-[#FF6600] transition-colors">Home</a></li>
             <li><a href="about.html" class="hover:text-[#FF6600] transition-colors">About Us</a></li>
@@ -1442,7 +1516,7 @@
 
         <!-- Col 4: Get In Touch -->
         <div class="space-y-3">
-          <h4 class="text-sm font-bold text-white uppercase tracking-wider">Get In Touch</h4>
+          <h2 class="text-sm font-bold text-white uppercase tracking-wider">Get In Touch</h2>
           <ul class="space-y-2.5 text-xs text-slate-300">
             <li class="flex items-start gap-2">
               <i data-lucide="map-pin" class="w-4 h-4 text-[#FF6600] flex-shrink-0 mt-0.5"></i>
@@ -1458,7 +1532,7 @@
             </li>
             <li class="flex items-center gap-2 text-emerald-400 font-semibold">
               <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-              <span>24/7 WhatsApp Assistance</span>
+              <a href="contact.html" class="hover:text-[#FF6600] transition-colors">Contact Our Team</a>
             </li>
           </ul>
         </div>
@@ -1480,18 +1554,18 @@
     </div>
   </footer>
 
-  <!-- ================= FLOATING WHATSAPP BUTTON WITH RADAR PULSE ================= -->
-  <a href="https://wa.me/923000000000?text=Hello%20Digital%20Ustad,%20I%20have%20questions%20about%20your%20pricing%20packages!" target="_blank" class="fixed bottom-6 right-6 z-40 w-14 h-14 rounded-full bg-emerald-500 hover:bg-emerald-600 text-white flex items-center justify-center shadow-2xl hover:scale-110 active:scale-95 transition-all group" title="Chat on WhatsApp">
-    <div class="radar-ring"></div>
-    <span class="absolute -top-9 right-0 bg-slate-900 text-white text-[11px] font-semibold px-2.5 py-1 rounded-md shadow-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">Message Karen — Fast Reply</span>
-    <svg class="w-7 h-7 fill-current" viewBox="0 0 24 24"><path d="M12.012 2c-5.506 0-9.989 4.478-9.99 9.984a9.964 9.964 0 0 0 1.333 4.993L2 22l5.233-1.237a9.994 9.994 0 0 0 4.779 1.217h.004c5.505 0 9.988-4.478 9.989-9.984 0-2.669-1.037-5.176-2.925-7.062A9.925 9.925 0 0 0 12.012 2zm5.835 14.198c-.244.688-1.227 1.26-1.786 1.32-.472.052-1.077.08-3.155-.783-2.658-1.102-4.363-3.807-4.496-3.983-.133-.176-1.076-1.433-1.076-2.733 0-1.3.68-1.94.92-2.203.24-.263.523-.328.698-.328.174 0 .349.002.502.01.163.008.382-.062.597.455.22.531.75 1.83.815 1.963.065.133.109.288.022.463-.087.175-.131.284-.262.437-.13.153-.275.342-.393.459-.13.13-.266.27-.115.53.151.26 1.002 1.65 2.148 2.671 1.472 1.312 2.71 1.718 3.097 1.91.387.192.613.16.84-.102.228-.263.974-1.134 1.235-1.523.26-.39.522-.325.872-.196.35.13 2.22 1.047 2.602 1.238.382.19.637.284.73.444.093.16.093.928-.151 1.616z"/></svg>
-  </a>
+  <!-- ================= DIGITAL USTAD WEBCHAT LAUNCHER ================= -->
+  <button type="button" onclick="openDigitalUstadChat({ intent: 'general_consultation', sourcePage: window.location.pathname })" class="fixed bottom-6 right-6 z-40 px-4 py-3 sm:px-5 sm:py-3.5 rounded-full bg-[#0B0F19] hover:bg-slate-900 text-white flex items-center justify-center gap-2.5 shadow-2xl border border-slate-700/80 hover:border-[#FF6600] hover:scale-105 active:scale-95 transition-all group" aria-label="Open Digital Ustad assistant" title="Ask Digital Ustad">
+    <span class="w-2 h-2 rounded-full bg-[#FF6600] animate-pulse"></span>
+    <i data-lucide="bot" class="w-5 h-5 text-[#FF6600]"></i>
+    <span class="text-xs font-bold tracking-wide hidden sm:inline">Ask Digital Ustad</span>
+  </button>
 
   <!-- ================= QUOTATION / GET STARTED MODAL ================= -->
-  <div id="quote-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/80 modal-backdrop hidden p-4">
+  <div id="quote-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/80 modal-backdrop hidden p-4" role="dialog" aria-modal="true" aria-labelledby="quote-modal-title">
     <div class="modal-box bg-white rounded-3xl max-w-lg w-full p-6 sm:p-8 shadow-2xl relative scale-95 opacity-0 transition-all duration-200">
       
-      <button id="close-quote-modal" class="absolute top-5 right-5 w-8 h-8 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-500 flex items-center justify-center transition-colors">
+      <button id="close-quote-modal" class="absolute top-5 right-5 w-8 h-8 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-500 flex items-center justify-center transition-colors" aria-label="Close quote dialog">
         <i data-lucide="x" class="w-5 h-5"></i>
       </button>
 
@@ -1502,7 +1576,7 @@
           </div>
           <span id="payment-milestone-badge" class="text-[11px] font-bold text-orange-800 bg-orange-100 px-3 py-1 rounded-full transition-colors">25/50/25 Installments</span>
         </div>
-        <h3 class="text-2xl font-extrabold text-slate-900">Start Your Project With Us</h3>
+        <h2 id="quote-modal-title" class="text-2xl font-extrabold text-slate-900">Start Your Project With Us</h2>
         <p class="text-xs sm:text-sm text-slate-500 mt-1">Select your desired service package to receive an instant proposal.</p>
       </div>
 
@@ -1554,7 +1628,7 @@
 
         <button type="submit" class="btn-shine w-full py-3.5 rounded-xl bg-[#FF6600] hover:bg-[#EA580C] text-white font-bold text-sm shadow-xl orange-glow-sm flex items-center justify-center gap-2 hover:scale-[1.01] active:scale-[0.99] transition-all">
           <i data-lucide="send" class="w-4 h-4"></i>
-          <span>Send Proposal Request (Direct WhatsApp)</span>
+          <span>Submit Project Brief</span>
         </button>
 
         <div id="payment-milestone-text" class="text-[11px] text-slate-500 text-center pt-1 leading-relaxed">
@@ -1567,6 +1641,7 @@
 
   <script src="js/config.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/clonvo-chat.js" defer></script>
   <script>
     lucide.createIcons();
   </script>
