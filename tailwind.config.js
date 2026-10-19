@@ -22,6 +22,10 @@ module.exports = {
           slateText: '#94A3B8'
         }
       },
+      maxWidth: {
+        '7xl': '90rem',
+        '8xl': '96rem'
+      },
       fontFamily: {
         sans: ['"Plus Jakarta Sans"', 'sans-serif'],
         outfit: ['"Outfit"', 'sans-serif'],

@@ -13,13 +13,16 @@
   <meta property="og:title" content="About Us - Lahore-Based Digital Team | Digital Ustad">
   <meta property="og:description" content="Meet Digital Ustad: an accountable digital growth partner based in Lahore, delivering web, marketing, and automation across Pakistan.">
   <meta property="og:url" content="https://digitalustad.co/about">
-  <meta property="og:image" content="https://digitalustad.co/assets/images/logo-original.png">
+  <meta property="og:image" content="https://digitalustad.co/assets/images/og-social-card.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Digital Ustad - Build Grow Automate | Digital Solutions &amp; Business Automation">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="About Us - Lahore-Based Digital Team | Digital Ustad">
   <meta name="twitter:description" content="Meet Digital Ustad: an accountable digital growth partner based in Lahore, delivering web, marketing, and automation across Pakistan.">
-  <meta name="twitter:image" content="https://digitalustad.co/assets/images/logo-original.png">
+  <meta name="twitter:image" content="https://digitalustad.co/assets/images/og-social-card.png">
 
   <!-- Structured Data: AboutPage & Breadcrumbs -->
   <script type="application/ld+json">
@@ -82,7 +85,7 @@
 
   <!-- Production Compiled Tailwind CSS -->
   <link rel="stylesheet" href="css/tailwind.min.css">
-  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="js/lucide.min.js"></script>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="bg-white text-slate-800 antialiased selection:bg-[#FF6600] selection:text-white relative">
@@ -99,14 +102,13 @@
           <img src="assets/images/logo-dark.png" alt="Digital Ustad" width="168" height="44" class="h-10 sm:h-11 w-auto object-contain transition-transform duration-300 group-hover:scale-105">
         </a>
 
-        <nav class="hidden md:flex items-center gap-8" aria-label="Main Navigation">
+        <nav class="hidden md:flex items-center gap-6 lg:gap-8" aria-label="Main Navigation">
           <a href="index.html" class="text-sm font-semibold text-slate-300 hover:text-[#FF6600] transition-colors">Home</a>
           <a href="services.html" class="text-sm font-semibold text-slate-300 hover:text-[#FF6600] transition-colors">Services</a>
-          <a href="pricing.html" class="text-sm font-semibold text-slate-300 hover:text-[#FF6600] transition-colors">Pricing</a>
           <a href="solutions.html" class="text-sm font-semibold text-slate-300 hover:text-[#FF6600] transition-colors">Solutions</a>
-          <a href="how-it-works.html" class="text-sm font-semibold text-slate-300 hover:text-[#FF6600] transition-colors">How It Works</a>
-          <a href="portfolio.html" class="text-sm font-semibold text-slate-300 hover:text-[#FF6600] transition-colors">Portfolio</a>
-          <a href="about.html" class="text-sm font-semibold text-white hover:text-[#FF6600] transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-[#FF6600]">About Us</a>
+          <a href="portfolio.html" class="text-sm font-semibold text-slate-300 hover:text-[#FF6600] transition-colors">Work and Concepts</a>
+          <a href="pricing.html" class="text-sm font-semibold text-slate-300 hover:text-[#FF6600] transition-colors">Pricing</a>
+          <a href="about.html" class="text-sm font-semibold text-white hover:text-[#FF6600] transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-[#FF6600]" aria-current="page">About Us</a>
           <a href="contact.html" class="text-sm font-semibold text-slate-300 hover:text-[#FF6600] transition-colors">Contact</a>
         </nav>
 
@@ -117,8 +119,8 @@
             <i data-lucide="sun" class="w-4 h-4 text-amber-400 theme-icon-sun"></i>
           </button>
 
-          <a href="contact.html" class="btn-get-started btn-shine hidden sm:inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-full bg-[#FF6600] hover:bg-[#EA580C] text-white text-sm font-bold shadow-lg orange-glow-sm hover:scale-105 transition-all">
-            <span>Get a Free Consultation</span>
+          <a href="contact.html" class="btn-get-started btn-shine hidden sm:inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-full bg-[#FF6600] hover:bg-[#EA580C] text-white text-sm font-bold shadow-lg orange-glow-sm hover:scale-105 transition-all" data-track="proposal-cta">
+            <span>Get Free Proposal</span>
             <i data-lucide="arrow-right" class="w-4 h-4"></i>
           </a>
           <button id="mobile-menu-btn" class="md:hidden p-2.5 rounded-xl text-slate-300 hover:text-white" aria-label="Open navigation menu" aria-controls="mobile-drawer" aria-expanded="false">
@@ -142,15 +144,14 @@
           <button id="close-mobile-menu" class="p-2 text-slate-400 hover:text-white" aria-label="Close navigation menu"><i data-lucide="x" class="w-7 h-7"></i></button>
         </div>
       </div>
-      <nav class="flex flex-col gap-5 py-8 flex-1" aria-label="Mobile Navigation Links">
-        <a href="index.html" class="mobile-nav-link text-lg font-semibold text-slate-300 hover:text-[#FF6600]">Home</a>
-        <a href="services.html" class="mobile-nav-link text-lg font-semibold text-slate-300 hover:text-[#FF6600]">Services</a>
-        <a href="pricing.html" class="mobile-nav-link text-lg font-semibold text-slate-300 hover:text-[#FF6600]">Pricing</a>
-        <a href="solutions.html" class="mobile-nav-link text-lg font-semibold text-slate-300 hover:text-[#FF6600]">Solutions</a>
-        <a href="how-it-works.html" class="mobile-nav-link text-lg font-semibold text-slate-300 hover:text-[#FF6600]">How It Works</a>
-        <a href="portfolio.html" class="mobile-nav-link text-lg font-semibold text-slate-300 hover:text-[#FF6600]">Portfolio</a>
-        <a href="about.html" class="mobile-nav-link text-lg font-semibold text-white hover:text-[#FF6600]">About Us</a>
-        <a href="contact.html" class="mobile-nav-link text-lg font-semibold text-slate-300 hover:text-[#FF6600]">Contact</a>
+      <nav class="flex flex-col gap-4 py-8 flex-1 overflow-y-auto" aria-label="Mobile Navigation">
+        <a href="index.html" class="mobile-nav-link text-base font-semibold text-slate-300 hover:text-[#FF6600]">Home</a>
+        <a href="services.html" class="mobile-nav-link text-base font-semibold text-slate-300 hover:text-[#FF6600]">Services</a>
+        <a href="solutions.html" class="mobile-nav-link text-base font-semibold text-slate-300 hover:text-[#FF6600]">Solutions</a>
+        <a href="portfolio.html" class="mobile-nav-link text-base font-semibold text-slate-300 hover:text-[#FF6600]">Work and Concepts</a>
+        <a href="pricing.html" class="mobile-nav-link text-base font-semibold text-slate-300 hover:text-[#FF6600]">Pricing</a>
+        <a href="about.html" class="mobile-nav-link text-base font-semibold text-white hover:text-[#FF6600]" aria-current="page">About Us</a>
+        <a href="contact.html" class="mobile-nav-link text-base font-semibold text-slate-300 hover:text-[#FF6600]">Contact</a>
       </nav>
     </div>
   </div>
@@ -190,19 +191,19 @@
           <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-4">
             <div class="p-4 rounded-2xl bg-orange-50/70 border border-orange-100 text-center">
               <div class="text-2xl sm:text-3xl font-extrabold text-[#FF6600]">10+</div>
-              <div class="text-[11px] font-semibold text-slate-700 mt-1">Live Delivered Websites</div>
+              <div class="text-[11px] font-semibold text-slate-700 mt-1">Websites Delivered</div>
             </div>
             <div class="p-4 rounded-2xl bg-orange-50/70 border border-orange-100 text-center">
               <div class="text-2xl sm:text-3xl font-extrabold text-[#FF6600]">5+</div>
-              <div class="text-[11px] font-semibold text-slate-700 mt-1">Active SEO & Ads Clients</div>
+              <div class="text-[11px] font-semibold text-slate-700 mt-1">Active Growth Partnerships</div>
             </div>
             <div class="p-4 rounded-2xl bg-orange-50/70 border border-orange-100 text-center">
               <div class="text-2xl sm:text-3xl font-extrabold text-[#FF6600]">2+</div>
-              <div class="text-[11px] font-semibold text-slate-700 mt-1">Years Operating (2023)</div>
+              <div class="text-[11px] font-semibold text-slate-700 mt-1">Years Experience</div>
             </div>
             <div class="p-4 rounded-2xl bg-orange-50/70 border border-orange-100 text-center">
-              <div class="text-2xl sm:text-3xl font-extrabold text-[#FF6600]">24/7</div>
-              <div class="text-[11px] font-semibold text-slate-700 mt-1">Direct WhatsApp Support</div>
+              <div class="text-2xl sm:text-3xl font-extrabold text-[#FF6600]">PK</div>
+              <div class="text-[11px] font-semibold text-slate-700 mt-1">Pakistan-Based Support</div>
             </div>
           </div>
         </div>
@@ -262,7 +263,7 @@
               In Pakistan, over 80% of small business owners rely entirely on Facebook and Instagram pages to make sales. But when ad accounts get suspended or algorithm reach collapses, business grinds to a halt. Meanwhile, hiring a traditional agency often results in endless delays, five-figure upfront bills, and confusing technical jargon.
             </p>
             <p>
-              <strong>Digital Ustad was founded in 2023</strong> in Lahore to solve exactly that. We created a practical, transparent model tailored for Pakistani realities: fast 7–10 day delivery, mobile-first design for 360px smartphones, seamless WhatsApp lead generation, and milestone-backed 25/50/25 installment plans.
+              <strong>Digital Ustad was founded in 2023</strong> in Lahore to solve exactly that. We created a practical, transparent model tailored for Pakistani realities: fast 7–10 day delivery, mobile-first design for 360px smartphones, seamless WhatsApp lead generation, and milestone-backed 40/30/30 installment plans.
             </p>
             <p>
               Today, with over 10 live delivered websites and 5 ongoing retainer partnerships across retail, dining, healthcare, and services, we continue to help Pakistani entrepreneurs own their digital future with confidence.
@@ -302,7 +303,7 @@
               </li>
               <li class="flex items-start gap-2.5">
                 <span class="w-2 h-2 rounded-full bg-[#FF6600] mt-1.5 flex-shrink-0"></span>
-                <span><strong>Accountability & Risk Relief:</strong> 25% kickoff, 50% only when you approve the staging preview, 25% after 30 days of live operation.</span>
+                <span><strong>Accountability & Risk Relief:</strong> 40% project kickoff, 30% after design/development approval milestone, 30% before final handover / deployment completion.</span>
               </li>
             </ul>
           </div>
@@ -312,7 +313,7 @@
             <div class="text-sm font-bold text-white mt-0.5">Operating from Lahore (remote-first), Pakistan</div>
             <div class="text-xs text-emerald-400 mt-1 font-semibold flex items-center gap-1.5">
               <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-              WhatsApp Consultation Active: <span data-du-phone>+92 300 0000000</span>
+              Consultation Active via Contact Brief
             </div>
           </div>
         </div>
@@ -341,16 +342,16 @@
           <div class="w-12 h-12 rounded-xl bg-orange-100 flex items-center justify-center text-[#FF6600]">
             <i data-lucide="award" class="w-6 h-6"></i>
           </div>
-          <h3 class="font-extrabold text-slate-900 text-lg">Transparent 25/50/25 Milestones</h3>
-          <p class="text-xs text-slate-600 leading-relaxed">No surprise charges. Web development packages start at PKR 17,999 (100% upfront), with flexible 25/50/25 milestone plans available on Starter &amp; Growth.</p>
+          <h3 class="font-extrabold text-slate-900 text-lg">Transparent 40/30/30 Milestones</h3>
+          <p class="text-xs text-slate-600 leading-relaxed">No surprise charges. Web development packages start at PKR 17,999 (100% upfront), with clear 40/30/30 milestone plans available on Starter &amp; Growth.</p>
         </div>
 
         <div class="reveal delay-3 hover-lift bg-slate-50 p-8 rounded-3xl border border-slate-200/80 shadow-sm space-y-3">
           <div class="w-12 h-12 rounded-xl bg-orange-100 flex items-center justify-center text-[#FF6600]">
             <i data-lucide="headphones" class="w-6 h-6"></i>
           </div>
-          <h3 class="font-extrabold text-slate-900 text-lg">24/7 WhatsApp Support</h3>
-          <p class="text-xs text-slate-600 leading-relaxed">Direct WhatsApp assistance anytime you need updates, emergency fixes, or strategic growth advice.</p>
+          <h3 class="font-extrabold text-slate-900 text-lg">Dedicated Project Communication</h3>
+          <p class="text-xs text-slate-600 leading-relaxed">Direct communication and milestone updates during active project delivery and retainer service windows.</p>
         </div>
       </div>
     </div>
@@ -375,7 +376,7 @@
             <a href="mailto:contact@digitalustad.co" class="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center hover:bg-[#FF6600] hover:text-white transition-colors" title="Email" aria-label="Email Digital Ustad">
               <i data-lucide="mail" class="w-4 h-4"></i>
             </a>
-            <a href="tel:+923000000000" class="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center hover:bg-[#FF6600] hover:text-white transition-colors" title="Phone" aria-label="Call Digital Ustad">
+            <a href="#" data-du-tel class="hidden w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center hover:bg-[#FF6600] hover:text-white transition-colors" title="Phone" aria-label="Call Digital Ustad">
               <i data-lucide="phone" class="w-4 h-4"></i>
             </a>
           </div>
@@ -418,9 +419,9 @@
               <i data-lucide="map-pin" class="w-4 h-4 text-[#FF6600] flex-shrink-0 mt-0.5"></i>
               <span>Lahore, Pakistan & Worldwide Remote</span>
             </li>
-            <li class="flex items-center gap-2">
+            <li class="flex items-center gap-2 hidden" data-du-phone-container>
               <i data-lucide="phone" class="w-4 h-4 text-[#FF6600] flex-shrink-0"></i>
-              <span data-du-phone>+92 300 0000000</span>
+              <span data-du-phone></span>
             </li>
             <li class="flex items-center gap-2">
               <i data-lucide="mail" class="w-4 h-4 text-[#FF6600] flex-shrink-0"></i>
@@ -450,13 +451,6 @@
     </div>
   </footer>
 
-  <!-- ================= DIGITAL USTAD WEBCHAT LAUNCHER ================= -->
-  <button type="button" onclick="openDigitalUstadChat({ intent: 'general_consultation', sourcePage: window.location.pathname })" class="fixed bottom-6 right-6 z-40 px-4 py-3 sm:px-5 sm:py-3.5 rounded-full bg-[#0B0F19] hover:bg-slate-900 text-white flex items-center justify-center gap-2.5 shadow-2xl border border-slate-700/80 hover:border-[#FF6600] hover:scale-105 active:scale-95 transition-all group" aria-label="Open Digital Ustad assistant" title="Ask Digital Ustad">
-    <span class="w-2 h-2 rounded-full bg-[#FF6600] animate-pulse"></span>
-    <i data-lucide="bot" class="w-5 h-5 text-[#FF6600]"></i>
-    <span class="text-xs font-bold tracking-wide hidden sm:inline">Ask Digital Ustad</span>
-  </button>
-
   <!-- QUOTATION MODAL -->
   <div id="quote-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/80 modal-backdrop hidden p-4" role="dialog" aria-modal="true" aria-label="Request a Free Proposal">
     <div class="modal-box bg-white rounded-3xl max-w-lg w-full p-6 sm:p-8 shadow-2xl relative scale-95 opacity-0 transition-all duration-200">
@@ -465,18 +459,21 @@
         <h3 class="text-2xl font-extrabold text-slate-900">Request a Free Proposal</h3>
         <p class="text-xs text-slate-500 mt-1">Select a service package and submit your requirements to our team.</p>
       </div>
-      <form id="quote-form" class="space-y-4">
+      <form id="quote-form" method="POST" action="/api/leads" class="space-y-4">
+        <!-- Anti-spam Honeypot -->
+        <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" class="hidden" aria-hidden="true" style="display:none !important">
+
         <div>
           <label for="client-name" class="block text-xs font-bold text-slate-700 uppercase mb-1">Your Name *</label>
-          <input type="text" id="client-name" required placeholder="Ali Khan" class="w-full px-4 py-2.5 rounded-xl border text-sm">
+          <input type="text" id="client-name" name="name" required placeholder="Ali Khan" class="w-full px-4 py-2.5 rounded-xl border text-sm">
         </div>
         <div>
           <label for="client-phone" class="block text-xs font-bold text-slate-700 uppercase mb-1">WhatsApp Number *</label>
-          <input type="tel" id="client-phone" required placeholder="0300 1122334" class="w-full px-4 py-2.5 rounded-xl border text-sm">
+          <input type="tel" id="client-phone" name="phone" required placeholder="e.g. 03XX XXXXXXX" class="w-full px-4 py-2.5 rounded-xl border text-sm">
         </div>
         <div>
           <label for="client-service" class="block text-xs font-bold text-slate-700 uppercase mb-1">Primary Service Interested In</label>
-          <select id="client-service" class="w-full px-3 py-2.5 rounded-xl border text-sm bg-white">
+          <select id="client-service" name="service" class="w-full px-3 py-2.5 rounded-xl border text-sm bg-white">
             <option value="5-Page Website Starter (PKR 30,000)">5-Page Website Starter (PKR 30,000) ⭐</option>
             <option value="3-Page Website Lite (PKR 17,999)">3-Page Website Lite (PKR 17,999)</option>
             <option value="Growth Social Media Retainer (PKR 28,000/mo)">Growth Social Media (PKR 28,000/mo)</option>
@@ -485,10 +482,14 @@
             <option value="Growth WhatsApp Workflow (PKR 45K-65K)">WhatsApp Automation Workflow</option>
           </select>
         </div>
-        <button type="submit" class="btn-shine w-full py-3.5 rounded-xl bg-[#FF6600] text-white font-bold text-sm shadow-xl flex items-center justify-center gap-2">
+        <button type="submit" class="btn-shine w-full py-3.5 rounded-xl bg-[#FF6600] text-white font-bold text-sm shadow-xl flex items-center justify-center gap-2" data-track="contact-form-submit">
           <span>Submit Project Brief</span>
           <i data-lucide="send" class="w-4 h-4"></i>
         </button>
+
+        <div id="payment-milestone-text" class="text-[11px] text-slate-500 text-center pt-1 leading-relaxed">
+          🔒 Privacy guaranteed. Zero spam. By submitting, you agree to our <a href="privacy.html" class="underline hover:text-[#FF6600]">Privacy Policy</a>. <strong>Payment Milestones: 40% project kickoff, 30% after design/development approval milestone, 30% before final handover / deployment completion.</strong>
+        </div>
       </form>
     </div>
   </div>

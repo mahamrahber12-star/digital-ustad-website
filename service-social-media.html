@@ -13,14 +13,17 @@
   <meta property="og:url" content="https://digitalustad.co/service-social-media">
   <meta property="og:title" content="Social Media Management | Digital Ustad">
   <meta property="og:description" content="We manage your social media presence, create engaging content and help you build a community that converts.">
-  <meta property="og:image" content="https://digitalustad.co/assets/images/logo-dark.png">
+  <meta property="og:image" content="https://digitalustad.co/assets/images/og-social-card.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Digital Ustad - Build Grow Automate | Digital Solutions &amp; Business Automation">
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:url" content="https://digitalustad.co/service-social-media">
   <meta name="twitter:title" content="Social Media Management | Digital Ustad">
   <meta name="twitter:description" content="We manage your social media presence, create engaging content and help you build a community that converts.">
-  <meta name="twitter:image" content="https://digitalustad.co/assets/images/logo-dark.png">
+  <meta name="twitter:image" content="https://digitalustad.co/assets/images/og-social-card.png">
 
   <!-- Theme Init (Prevents FOUC) -->
   <script>
@@ -36,7 +39,7 @@
   </script>
 
   <link rel="stylesheet" href="css/tailwind.min.css">
-  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="js/lucide.min.js"></script>
   <link rel="stylesheet" href="css/style.css">
 
   <!-- Structured Data: Service, WebPage, and BreadcrumbList -->
@@ -117,12 +120,12 @@
           <img src="assets/images/logo-dark.png" alt="Digital Ustad" width="160" height="44" class="h-10 sm:h-11 w-auto object-contain transition-transform duration-300 group-hover:scale-105">
         </a>
 
-        <nav class="hidden md:flex items-center gap-8">
+        <nav class="hidden md:flex items-center gap-6 lg:gap-8" aria-label="Main Navigation">
           <a href="index.html" class="text-sm font-semibold text-slate-300 hover:text-[#FF6600] transition-colors">Home</a>
-          <a href="services.html" class="text-sm font-semibold text-white hover:text-[#FF6600] transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-[#FF6600]">Services</a>
-          <a href="pricing.html" class="text-sm font-semibold text-slate-300 hover:text-[#FF6600] transition-colors">Pricing</a>
+          <a href="services.html" class="text-sm font-semibold text-slate-300 hover:text-[#FF6600] transition-colors">Services</a>
           <a href="solutions.html" class="text-sm font-semibold text-slate-300 hover:text-[#FF6600] transition-colors">Solutions</a>
-          <a href="how-it-works.html" class="text-sm font-semibold text-slate-300 hover:text-[#FF6600] transition-colors">How It Works</a>
+          <a href="portfolio.html" class="text-sm font-semibold text-slate-300 hover:text-[#FF6600] transition-colors">Work and Concepts</a>
+          <a href="pricing.html" class="text-sm font-semibold text-slate-300 hover:text-[#FF6600] transition-colors">Pricing</a>
           <a href="about.html" class="text-sm font-semibold text-slate-300 hover:text-[#FF6600] transition-colors">About Us</a>
           <a href="contact.html" class="text-sm font-semibold text-slate-300 hover:text-[#FF6600] transition-colors">Contact</a>
         </nav>
@@ -134,8 +137,8 @@
             <i data-lucide="sun" class="w-4 h-4 text-amber-400 theme-icon-sun"></i>
           </button>
 
-          <a href="contact.html" class="btn-get-started btn-shine hidden sm:inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-full bg-[#FF6600] hover:bg-[#EA580C] text-white text-sm font-bold shadow-lg orange-glow-sm hover:scale-105 transition-all">
-            <span>Get a Free Consultation</span>
+          <a href="contact.html" class="btn-get-started btn-shine hidden sm:inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-full bg-[#FF6600] hover:bg-[#EA580C] text-white text-sm font-bold shadow-lg orange-glow-sm hover:scale-105 transition-all" data-track="proposal-cta">
+            <span>Get Free Proposal</span>
             <i data-lucide="arrow-right" class="w-4 h-4"></i>
           </a>
           <button id="mobile-menu-btn" class="md:hidden p-2.5 rounded-xl text-slate-300 hover:text-white" aria-label="Open navigation menu">
@@ -159,15 +162,15 @@
           <button id="close-mobile-menu" class="p-2 text-slate-400 hover:text-white" aria-label="Close navigation menu"><i data-lucide="x" class="w-7 h-7"></i></button>
         </div>
       </div>
-      <div class="flex flex-col gap-5 py-8 flex-1">
-        <a href="index.html" class="mobile-nav-link text-lg font-semibold text-slate-300 hover:text-[#FF6600]">Home</a>
-        <a href="services.html" class="mobile-nav-link text-lg font-semibold text-white hover:text-[#FF6600]">Services</a>
-        <a href="pricing.html" class="mobile-nav-link text-lg font-semibold text-slate-300 hover:text-[#FF6600]">Pricing</a>
-        <a href="solutions.html" class="mobile-nav-link text-lg font-semibold text-slate-300 hover:text-[#FF6600]">Solutions</a>
-        <a href="how-it-works.html" class="mobile-nav-link text-lg font-semibold text-slate-300 hover:text-[#FF6600]">How It Works</a>
-        <a href="about.html" class="mobile-nav-link text-lg font-semibold text-slate-300 hover:text-[#FF6600]">About Us</a>
-        <a href="contact.html" class="mobile-nav-link text-lg font-semibold text-slate-300 hover:text-[#FF6600]">Contact</a>
-      </div>
+      <nav class="flex flex-col gap-4 py-8 flex-1 overflow-y-auto" aria-label="Mobile Navigation">
+        <a href="index.html" class="mobile-nav-link text-base font-semibold text-slate-300 hover:text-[#FF6600]">Home</a>
+        <a href="services.html" class="mobile-nav-link text-base font-semibold text-slate-300 hover:text-[#FF6600]">Services</a>
+        <a href="solutions.html" class="mobile-nav-link text-base font-semibold text-slate-300 hover:text-[#FF6600]">Solutions</a>
+        <a href="portfolio.html" class="mobile-nav-link text-base font-semibold text-slate-300 hover:text-[#FF6600]">Work and Concepts</a>
+        <a href="pricing.html" class="mobile-nav-link text-base font-semibold text-slate-300 hover:text-[#FF6600]">Pricing</a>
+        <a href="about.html" class="mobile-nav-link text-base font-semibold text-slate-300 hover:text-[#FF6600]">About Us</a>
+        <a href="contact.html" class="mobile-nav-link text-base font-semibold text-slate-300 hover:text-[#FF6600]">Contact</a>
+      </nav>
     </div>
   </div>
 
@@ -234,14 +237,14 @@
 
           <!-- Action Buttons -->
           <div class="flex flex-wrap items-center gap-4 pt-4">
-            <button class="btn-get-started btn-shine inline-flex items-center gap-2.5 px-7 py-3.5 rounded-full bg-[#FF6600] hover:bg-[#EA580C] text-white font-bold text-sm shadow-xl orange-glow hover:scale-105 active:scale-95 transition-all">
-              <span>Get Started</span>
+            <button class="btn-get-started btn-shine inline-flex items-center gap-2.5 px-7 py-3.5 rounded-full bg-[#FF6600] hover:bg-[#EA580C] text-white font-bold text-sm shadow-xl orange-glow hover:scale-105 active:scale-95 transition-all" data-track="proposal-cta">
+              <span>Get Free Proposal</span>
               <i data-lucide="arrow-right" class="w-4 h-4"></i>
             </button>
 
-            <button type="button" onclick="openDigitalUstadChat({ intent: 'service_inquiry', service: 'Social Media Marketing', sourcePage: window.location.pathname })" class="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-full bg-slate-900 hover:bg-slate-800 text-white font-bold text-sm shadow-md hover:scale-105 active:scale-95 transition-all">
+            <button type="button" data-track="chatbot-open" onclick="openDigitalUstadChat({ intent: 'service_inquiry', service: 'Social Media Marketing', sourcePage: window.location.pathname })" class="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-full bg-slate-900 hover:bg-slate-800 text-white font-bold text-sm shadow-md hover:scale-105 active:scale-95 transition-all">
               <i data-lucide="message-square" class="w-4 h-4 text-[#FF6600]"></i>
-              <span>Discuss This Service</span>
+              <span>Chat With Us</span>
             </button>
           </div>
         </div>
@@ -250,18 +253,18 @@
         <div class="lg:col-span-6 relative flex justify-center items-center reveal reveal-right active">
           <div class="hero-mockup-wrapper relative w-full max-w-[340px] flex flex-col items-center">
             <div class="mb-2">
-              <span class="px-2.5 py-0.5 rounded-full bg-slate-900/90 border border-amber-500/40 text-amber-300 text-[10px] font-extrabold uppercase tracking-wide">Sample Concept — Demo Data</span>
+              <span class="px-2.5 py-0.5 rounded-full bg-slate-900/90 border border-amber-500/40 text-amber-300 text-[10px] font-extrabold uppercase tracking-wide">Industry Demo Concept</span>
             </div>
             <div class="relative flex justify-center w-full">
               <!-- Floating Social Icons -->
               <div class="absolute -left-6 top-8 w-11 h-11 rounded-2xl bg-gradient-to-tr from-pink-500 via-red-500 to-yellow-400 text-white flex items-center justify-center shadow-lg animate-float z-30">
-                <i data-lucide="instagram" class="w-6 h-6"></i>
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
               </div>
               <div class="absolute -right-6 top-20 w-11 h-11 rounded-2xl bg-blue-600 text-white flex items-center justify-center shadow-lg animate-float z-30" style="animation-delay: 1s;">
-                <i data-lucide="facebook" class="w-6 h-6"></i>
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
               </div>
               <div class="absolute -right-4 bottom-16 w-11 h-11 rounded-2xl bg-sky-700 text-white flex items-center justify-center shadow-lg animate-float z-30" style="animation-delay: 2s;">
-                <i data-lucide="linkedin" class="w-6 h-6"></i>
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
               </div>
 
               <!-- Phone Frame -->
@@ -399,7 +402,7 @@
           Social Media Management Packages
         </h2>
         <p class="text-slate-600 text-sm sm:text-base mt-3">
-          Consistent, high-converting social media presence managed entirely for you. Billed monthly in advance with zero locked contracts (7–15 days notice flexibility).
+          Consistent, high-converting social media presence managed entirely for you. Billed monthly in advance with zero locked contracts (at least 7 days before the next billing date).
         </p>
       </div>
 
@@ -446,10 +449,7 @@
           </div>
 
           <div class="pt-6 mt-6 border-t border-slate-100">
-            <button type="button" onclick="openDigitalUstadChat({ intent: 'package_consultation', service: 'Social Media Marketing', packageId: 'social-media-basic', sourcePage: window.location.pathname })" class="w-full py-3.5 rounded-full bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs flex items-center justify-center gap-2 transition-all">
-              <span>Discuss This Plan</span>
-              <i data-lucide="arrow-right" class="w-4 h-4"></i>
-            </button>
+            <button type="button" data-service="Social Media Marketing" data-package="social-media-basic" onclick="openProposalModal({ service: 'Social Media Marketing', package: 'social-media-basic' })" data-track="pricing-cta" class="w-full py-3.5 rounded-full bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs flex items-center justify-center gap-2 transition-all"><span>Get Free Proposal</span> <i data-lucide="arrow-right" class="w-4 h-4"></i></button>
           </div>
         </div>
 
@@ -501,10 +501,7 @@
           </div>
 
           <div class="pt-6 mt-6 border-t border-slate-800">
-            <button type="button" onclick="openDigitalUstadChat({ intent: 'package_consultation', service: 'Social Media Marketing', packageId: 'social-media-growth', sourcePage: window.location.pathname })" class="w-full py-3.5 rounded-full bg-[#FF6600] hover:bg-[#EA580C] text-white font-bold text-xs flex items-center justify-center gap-2 shadow-lg orange-glow transition-all">
-              <span>Discuss This Plan</span>
-              <i data-lucide="arrow-right" class="w-4 h-4"></i>
-            </button>
+            <button type="button" data-service="Social Media Marketing" data-package="social-media-growth" onclick="openProposalModal({ service: 'Social Media Marketing', package: 'social-media-growth' })" data-track="pricing-cta" class="w-full py-3.5 rounded-full bg-[#FF6600] hover:bg-[#EA580C] text-white font-bold text-xs flex items-center justify-center gap-2 shadow-lg orange-glow transition-all"><span>Get Free Proposal</span> <i data-lucide="arrow-right" class="w-4 h-4"></i></button>
           </div>
         </div>
 
@@ -552,10 +549,7 @@
           </div>
 
           <div class="pt-6 mt-6 border-t border-slate-100">
-            <button type="button" onclick="openDigitalUstadChat({ intent: 'package_consultation', service: 'Social Media Marketing', packageId: 'social-media-pro', sourcePage: window.location.pathname })" class="w-full py-3.5 rounded-full bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs flex items-center justify-center gap-2 transition-all">
-              <span>Discuss This Plan</span>
-              <i data-lucide="arrow-right" class="w-4 h-4"></i>
-            </button>
+            <button type="button" data-service="Social Media Marketing" data-package="social-media-pro" onclick="openProposalModal({ service: 'Social Media Marketing', package: 'social-media-pro' })" data-track="pricing-cta" class="w-full py-3.5 rounded-full bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs flex items-center justify-center gap-2 transition-all"><span>Get Free Proposal</span> <i data-lucide="arrow-right" class="w-4 h-4"></i></button>
           </div>
         </div>
 
@@ -600,8 +594,8 @@
               Let us handle your social media while you focus on running your business.
             </h2>
             <div class="pt-4">
-              <button class="btn-get-started btn-shine inline-flex items-center gap-2 px-7 py-3 rounded-full bg-[#FF6600] hover:bg-[#EA580C] text-white font-bold text-sm shadow-xl orange-glow transition-all">
-                <span>Get Started Today</span>
+              <button class="btn-get-started btn-shine inline-flex items-center gap-2 px-7 py-3 rounded-full bg-[#FF6600] hover:bg-[#EA580C] text-white font-bold text-sm shadow-xl orange-glow transition-all" data-track="proposal-cta">
+                <span>Get Free Proposal</span>
                 <i data-lucide="arrow-right" class="w-4 h-4"></i>
               </button>
             </div>
@@ -649,7 +643,7 @@
             <a href="mailto:contact@digitalustad.co" class="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center hover:bg-[#FF6600] hover:text-white transition-colors" title="Email">
               <i data-lucide="mail" class="w-4 h-4"></i>
             </a>
-            <a href="tel:+923000000000" class="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center hover:bg-[#FF6600] hover:text-white transition-colors" title="Phone">
+            <a href="#" data-du-tel class="hidden w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center hover:bg-[#FF6600] hover:text-white transition-colors" title="Phone">
               <i data-lucide="phone" class="w-4 h-4"></i>
             </a>
           </div>
@@ -692,9 +686,9 @@
               <i data-lucide="map-pin" class="w-4 h-4 text-[#FF6600] flex-shrink-0 mt-0.5"></i>
               <span>Lahore, Pakistan & Worldwide Remote</span>
             </li>
-            <li class="flex items-center gap-2">
+            <li class="flex items-center gap-2 hidden" data-du-phone-container>
               <i data-lucide="phone" class="w-4 h-4 text-[#FF6600] flex-shrink-0"></i>
-              <span data-du-phone>+92 300 0000000</span>
+              <span data-du-phone></span>
             </li>
             <li class="flex items-center gap-2">
               <i data-lucide="mail" class="w-4 h-4 text-[#FF6600] flex-shrink-0"></i>
@@ -723,13 +717,6 @@
 
     </div>
   </footer>
-
-  <!-- ================= DIGITAL USTAD WEBCHAT LAUNCHER ================= -->
-  <button type="button" onclick="openDigitalUstadChat({ intent: 'general_consultation', sourcePage: window.location.pathname })" class="fixed bottom-6 right-6 z-40 px-4 py-3 sm:px-5 sm:py-3.5 rounded-full bg-[#0B0F19] hover:bg-slate-900 text-white flex items-center justify-center gap-2.5 shadow-2xl border border-slate-700/80 hover:border-[#FF6600] hover:scale-105 active:scale-95 transition-all group" aria-label="Open Digital Ustad assistant" title="Ask Digital Ustad">
-    <span class="w-2 h-2 rounded-full bg-[#FF6600] animate-pulse"></span>
-    <i data-lucide="bot" class="w-5 h-5 text-[#FF6600]"></i>
-    <span class="text-xs font-bold tracking-wide hidden sm:inline">Ask Digital Ustad</span>
-  </button>
 
   <script src="js/config.js"></script>
   <script src="js/main.js"></script>

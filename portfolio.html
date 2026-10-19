@@ -13,14 +13,17 @@
   <meta property="og:url" content="https://digitalustad.co/portfolio">
   <meta property="og:title" content="Our Portfolio & Work | Digital Ustad">
   <meta property="og:description" content="Explore our web design portfolio — sample concepts and live delivered websites for Pakistan SMBs.">
-  <meta property="og:image" content="https://digitalustad.co/assets/images/logo-dark.png">
+  <meta property="og:image" content="https://digitalustad.co/assets/images/og-social-card.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Digital Ustad - Build Grow Automate | Digital Solutions &amp; Business Automation">
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:url" content="https://digitalustad.co/portfolio">
   <meta name="twitter:title" content="Our Portfolio & Work | Digital Ustad">
   <meta name="twitter:description" content="Explore our web design portfolio — sample concepts and live delivered websites for Pakistan SMBs.">
-  <meta name="twitter:image" content="https://digitalustad.co/assets/images/logo-dark.png">
+  <meta name="twitter:image" content="https://digitalustad.co/assets/images/og-social-card.png">
   
   <!-- Theme Init (Prevents FOUC) -->
   <script>
@@ -36,7 +39,7 @@
   </script>
 
   <link rel="stylesheet" href="css/tailwind.min.css">
-  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="js/lucide.min.js"></script>
   <link rel="stylesheet" href="css/style.css">
 
   <!-- Structured Data: CollectionPage & Breadcrumbs -->
@@ -95,13 +98,12 @@
           <img src="assets/images/logo-dark.png" alt="Digital Ustad" width="160" height="40" class="h-10 sm:h-11 w-auto object-contain transition-transform duration-300 group-hover:scale-105">
         </a>
 
-        <nav class="hidden md:flex items-center gap-8" aria-label="Main Navigation">
+        <nav class="hidden md:flex items-center gap-6 lg:gap-8" aria-label="Main Navigation">
           <a href="index.html" class="text-sm font-semibold text-slate-300 hover:text-[#FF6600] transition-colors">Home</a>
           <a href="services.html" class="text-sm font-semibold text-slate-300 hover:text-[#FF6600] transition-colors">Services</a>
-          <a href="pricing.html" class="text-sm font-semibold text-slate-300 hover:text-[#FF6600] transition-colors">Pricing</a>
           <a href="solutions.html" class="text-sm font-semibold text-slate-300 hover:text-[#FF6600] transition-colors">Solutions</a>
-          <a href="how-it-works.html" class="text-sm font-semibold text-slate-300 hover:text-[#FF6600] transition-colors">How It Works</a>
-          <a href="portfolio.html" class="text-sm font-semibold text-white hover:text-[#FF6600] transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-[#FF6600]">Portfolio</a>
+          <a href="portfolio.html" class="text-sm font-semibold text-white hover:text-[#FF6600] transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-[#FF6600]" aria-current="page">Work and Concepts</a>
+          <a href="pricing.html" class="text-sm font-semibold text-slate-300 hover:text-[#FF6600] transition-colors">Pricing</a>
           <a href="about.html" class="text-sm font-semibold text-slate-300 hover:text-[#FF6600] transition-colors">About Us</a>
           <a href="contact.html" class="text-sm font-semibold text-slate-300 hover:text-[#FF6600] transition-colors">Contact</a>
         </nav>
@@ -113,8 +115,8 @@
             <i data-lucide="sun" class="w-4 h-4 text-amber-400 theme-icon-sun"></i>
           </button>
 
-          <a href="contact.html" class="btn-shine hidden sm:inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-full bg-[#FF6600] hover:bg-[#EA580C] text-white text-sm font-bold shadow-lg orange-glow-sm hover:scale-105 transition-all">
-            <span>Get a Free Consultation</span>
+          <a href="contact.html" class="btn-shine hidden sm:inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-full bg-[#FF6600] hover:bg-[#EA580C] text-white text-sm font-bold shadow-lg orange-glow-sm hover:scale-105 transition-all" data-track="proposal-cta">
+            <span>Get Free Proposal</span>
             <i data-lucide="arrow-right" class="w-4 h-4"></i>
           </a>
           <button id="mobile-menu-btn" aria-label="Open mobile menu" class="md:hidden p-2.5 rounded-xl text-slate-300 hover:text-white">
@@ -138,15 +140,14 @@
           <button id="close-mobile-menu" aria-label="Close mobile menu" class="p-2 text-slate-400 hover:text-white"><i data-lucide="x" class="w-7 h-7"></i></button>
         </div>
       </div>
-      <nav class="flex flex-col gap-5 py-8 flex-1" aria-label="Mobile Navigation">
-        <a href="index.html" class="mobile-nav-link text-lg font-semibold text-slate-300 hover:text-[#FF6600]">Home</a>
-        <a href="services.html" class="mobile-nav-link text-lg font-semibold text-slate-300 hover:text-[#FF6600]">Services</a>
-        <a href="pricing.html" class="mobile-nav-link text-lg font-semibold text-slate-300 hover:text-[#FF6600]">Pricing</a>
-        <a href="solutions.html" class="mobile-nav-link text-lg font-semibold text-slate-300 hover:text-[#FF6600]">Solutions</a>
-        <a href="how-it-works.html" class="mobile-nav-link text-lg font-semibold text-slate-300 hover:text-[#FF6600]">How It Works</a>
-        <a href="portfolio.html" class="mobile-nav-link text-lg font-semibold text-white hover:text-[#FF6600]">Portfolio</a>
-        <a href="about.html" class="mobile-nav-link text-lg font-semibold text-slate-300 hover:text-[#FF6600]">About Us</a>
-        <a href="contact.html" class="mobile-nav-link text-lg font-semibold text-slate-300 hover:text-[#FF6600]">Contact</a>
+      <nav class="flex flex-col gap-4 py-8 flex-1 overflow-y-auto" aria-label="Mobile Navigation">
+        <a href="index.html" class="mobile-nav-link text-base font-semibold text-slate-300 hover:text-[#FF6600]">Home</a>
+        <a href="services.html" class="mobile-nav-link text-base font-semibold text-slate-300 hover:text-[#FF6600]">Services</a>
+        <a href="solutions.html" class="mobile-nav-link text-base font-semibold text-slate-300 hover:text-[#FF6600]">Solutions</a>
+        <a href="portfolio.html" class="mobile-nav-link text-base font-semibold text-white hover:text-[#FF6600]" aria-current="page">Work and Concepts</a>
+        <a href="pricing.html" class="mobile-nav-link text-base font-semibold text-slate-300 hover:text-[#FF6600]">Pricing</a>
+        <a href="about.html" class="mobile-nav-link text-base font-semibold text-slate-300 hover:text-[#FF6600]">About Us</a>
+        <a href="contact.html" class="mobile-nav-link text-base font-semibold text-slate-300 hover:text-[#FF6600]">Contact</a>
       </nav>
     </div>
   </div>
@@ -157,32 +158,64 @@
       <div class="absolute inset-0 bg-hero-glow pointer-events-none"></div>
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
         <span class="text-xs font-extrabold uppercase tracking-widest text-[#FF6600] bg-slate-900 border border-slate-700/80 px-4 py-1.5 rounded-full inline-block mb-4">
-          OUR RECENT WORK
+          PORTFOLIO &amp; SHOWCASE
         </span>
         <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight">
-          Work That <span class="text-[#FF6600]">Speaks For Us</span>
+          Client Work &amp; <span class="text-[#FF6600]">Industry Concepts</span>
         </h1>
         <p class="text-slate-300 text-base sm:text-lg max-w-2xl mx-auto mt-4 leading-relaxed">
-          Browse our design concepts and live delivered websites.
+          Explore our client work commitments and interactive industry demo concepts.
         </p>
       </div>
     </section>
 
-    <!-- PORTFOLIO GRID (6 DETAILED CASE STUDIES WITH MODAL TRIGGERS) -->
+    <!-- 1. CLIENT WORK SECTION -->
+    <section class="py-12 bg-slate-50 border-b border-slate-200" aria-labelledby="client-work-heading">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl">
+          <span class="text-xs font-extrabold uppercase tracking-widest text-[#0F766E] bg-teal-100 px-3.5 py-1 rounded-full inline-block mb-3">
+            CLIENT WORK
+          </span>
+          <h2 id="client-work-heading" class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight font-outfit">
+            Client Projects &amp; Commercial Partnerships
+          </h2>
+          <p class="text-slate-600 text-sm mt-3 leading-relaxed">
+            Digital Ustad actively designs and deploys custom websites, e-commerce stores, and business automation workflows for growing companies across Pakistan. Out of respect for our clients' competitive privacy and Non-Disclosure Agreements (NDAs), live client production links, private metrics, and administrative dashboards are shared selectively during direct project discovery consultations.
+          </p>
+          <div class="mt-5 flex flex-wrap gap-4 text-xs font-semibold text-slate-700">
+            <span class="inline-flex items-center gap-1.5"><i data-lucide="shield-check" class="w-4 h-4 text-emerald-600"></i> Strict NDA &amp; Data Protection</span>
+            <span class="inline-flex items-center gap-1.5"><i data-lucide="lock" class="w-4 h-4 text-emerald-600"></i> Private Consultation Walkthroughs</span>
+            <span class="inline-flex items-center gap-1.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600"></i> 10+ Delivered Deployments</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. DEMO / INDUSTRY CONCEPTS SECTION -->
     <section class="py-16 lg:py-24 bg-white" aria-labelledby="portfolio-section-title">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 id="portfolio-section-title" class="sr-only">Featured Digital Projects & Sample Concepts</h2>
+        <div class="max-w-3xl mb-12">
+          <span class="text-xs font-extrabold uppercase tracking-widest text-[#FF6600] bg-orange-100 px-3.5 py-1 rounded-full inline-block mb-3">
+            DEMO / INDUSTRY CONCEPTS
+          </span>
+          <h2 id="portfolio-section-title" class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight font-outfit">
+            Industry Demo Concepts
+          </h2>
+          <p class="text-slate-600 text-sm mt-3 leading-relaxed">
+            These concepts demonstrate how Digital Ustad can build a modern digital presence for businesses in each industry. Click any concept to inspect its architecture, deliverables, and responsive conversion features.
+          </p>
+        </div>
         
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           
           <!-- 1. Spice Bistro -->
-          <div class="project-card reveal delay-1 hover-lift cursor-pointer bg-white rounded-3xl overflow-hidden border border-slate-200/80 shadow-md group flex flex-col" data-project-id="spice-bistro" role="button" tabindex="0" aria-haspopup="dialog" aria-label="View Spice Bistro project details">
-            <div class="relative h-60 bg-slate-900 overflow-hidden">
-              <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80" alt="Spice Bistro Restaurant Website Showcase" width="800" height="450" loading="lazy" class="w-full h-full object-cover card-image-zoom">
+          <div class="project-card reveal delay-1 hover-lift cursor-pointer bg-white rounded-3xl overflow-hidden border border-slate-200/80 shadow-md group flex flex-col" data-track="portfolio-click" data-project-id="spice-bistro" role="button" tabindex="0" aria-haspopup="dialog" aria-label="View Spice Bistro demo concept details">
+            <div class="relative h-56 bg-slate-900 overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80" alt="Spice Bistro Restaurant Concept" width="800" height="450" loading="lazy" class="w-full h-full object-cover card-image-zoom">
               <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
               <div class="absolute top-4 left-4 px-2.5 py-1 rounded-full bg-slate-900/90 backdrop-blur-sm border border-amber-500/40 text-amber-300 text-[10px] font-extrabold uppercase tracking-wide flex items-center gap-1 shadow-md">
                 <span class="w-1.5 h-1.5 rounded-full bg-amber-400"></span>
-                Sample Concept
+                Industry Demo Concept
               </div>
               <div class="absolute top-4 right-4 px-3 py-1 rounded-full bg-[#FF6600] text-white text-xs font-bold shadow-md">
                 Restaurant
@@ -192,7 +225,7 @@
               <div>
                 <h3 class="text-xl font-extrabold text-slate-900 group-hover:text-[#FF6600] transition-colors">Spice Bistro</h3>
                 <p class="text-slate-600 text-xs mt-2 leading-relaxed">
-                  Full-featured online dining experience with QR menu, table reservation engine, and 1-click WhatsApp delivery order flow.
+                  This concept demonstrates how Digital Ustad can build a modern digital presence for businesses in this industry.
                 </p>
               </div>
               <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-[#FF6600]">
@@ -203,23 +236,23 @@
           </div>
 
           <!-- 2. Glow & Shine Salon -->
-          <div class="project-card reveal delay-2 hover-lift cursor-pointer bg-white rounded-3xl overflow-hidden border border-slate-200/80 shadow-md group flex flex-col" data-project-id="glow-shine" role="button" tabindex="0" aria-haspopup="dialog" aria-label="View Glow & Shine Salon project details">
-            <div class="relative h-60 bg-slate-900 overflow-hidden">
-              <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=800&q=80" alt="Glow and Shine Salon Booking Portal Showcase" width="800" height="450" loading="lazy" class="w-full h-full object-cover card-image-zoom">
+          <div class="project-card reveal delay-2 hover-lift cursor-pointer bg-white rounded-3xl overflow-hidden border border-slate-200/80 shadow-md group flex flex-col" data-track="portfolio-click" data-project-id="glow-shine" role="button" tabindex="0" aria-haspopup="dialog" aria-label="View Glow & Shine Salon demo concept details">
+            <div class="relative h-56 bg-slate-900 overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=800&q=80" alt="Glow and Shine Salon Booking Portal Concept" width="800" height="450" loading="lazy" class="w-full h-full object-cover card-image-zoom">
               <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
               <div class="absolute top-4 left-4 px-2.5 py-1 rounded-full bg-slate-900/90 backdrop-blur-sm border border-amber-500/40 text-amber-300 text-[10px] font-extrabold uppercase tracking-wide flex items-center gap-1 shadow-md">
                 <span class="w-1.5 h-1.5 rounded-full bg-amber-400"></span>
-                Sample Concept
+                Industry Demo Concept
               </div>
               <div class="absolute top-4 right-4 px-3 py-1 rounded-full bg-[#FF6600] text-white text-xs font-bold shadow-md">
-                Salon & Beauty
+                Salon &amp; Beauty
               </div>
             </div>
             <div class="p-6 flex-1 flex flex-col justify-between">
               <div>
-                <h3 class="text-xl font-extrabold text-slate-900 group-hover:text-[#FF6600] transition-colors">Glow & Shine Salon</h3>
+                <h3 class="text-xl font-extrabold text-slate-900 group-hover:text-[#FF6600] transition-colors">Glow &amp; Shine Salon</h3>
                 <p class="text-slate-600 text-xs mt-2 leading-relaxed">
-                  Aesthetic booking portal featuring bridal service packages, stylist availability calendars, and automated appointment reminders.
+                  This concept demonstrates how Digital Ustad can build a modern digital presence for businesses in this industry.
                 </p>
               </div>
               <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-[#FF6600]">
@@ -230,23 +263,23 @@
           </div>
 
           <!-- 3. HealthCare Clinic -->
-          <div class="project-card reveal delay-3 hover-lift cursor-pointer bg-white rounded-3xl overflow-hidden border border-slate-200/80 shadow-md group flex flex-col" data-project-id="healthcare-clinic" role="button" tabindex="0" aria-haspopup="dialog" aria-label="View HealthCare Clinic project details">
-            <div class="relative h-60 bg-slate-900 overflow-hidden">
-              <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=800&q=80" alt="HealthCare Clinic Doctor Appointment Platform Showcase" width="800" height="450" loading="lazy" class="w-full h-full object-cover card-image-zoom">
+          <div class="project-card reveal delay-3 hover-lift cursor-pointer bg-white rounded-3xl overflow-hidden border border-slate-200/80 shadow-md group flex flex-col" data-track="portfolio-click" data-project-id="healthcare-clinic" role="button" tabindex="0" aria-haspopup="dialog" aria-label="View HealthCare Clinic demo concept details">
+            <div class="relative h-56 bg-slate-900 overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=800&q=80" alt="HealthCare Clinic Platform Concept" width="800" height="450" loading="lazy" class="w-full h-full object-cover card-image-zoom">
               <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
               <div class="absolute top-4 left-4 px-2.5 py-1 rounded-full bg-slate-900/90 backdrop-blur-sm border border-amber-500/40 text-amber-300 text-[10px] font-extrabold uppercase tracking-wide flex items-center gap-1 shadow-md">
                 <span class="w-1.5 h-1.5 rounded-full bg-amber-400"></span>
-                Sample Concept
+                Industry Demo Concept
               </div>
               <div class="absolute top-4 right-4 px-3 py-1 rounded-full bg-[#FF6600] text-white text-xs font-bold shadow-md">
-                Medical & Clinic
+                Medical &amp; Clinic
               </div>
             </div>
             <div class="p-6 flex-1 flex flex-col justify-between">
               <div>
                 <h3 class="text-xl font-extrabold text-slate-900 group-hover:text-[#FF6600] transition-colors">HealthCare Clinic</h3>
                 <p class="text-slate-600 text-xs mt-2 leading-relaxed">
-                  Patient-centric medical platform designed for trust, highlighting specialist profiles, OPD timings, and online consultations.
+                  This concept demonstrates how Digital Ustad can build a modern digital presence for businesses in this industry.
                 </p>
               </div>
               <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-[#FF6600]">
@@ -257,13 +290,13 @@
           </div>
 
           <!-- 4. Dream Homes -->
-          <div class="project-card reveal delay-4 hover-lift cursor-pointer bg-white rounded-3xl overflow-hidden border border-slate-200/80 shadow-md group flex flex-col" data-project-id="dream-homes" role="button" tabindex="0" aria-haspopup="dialog" aria-label="View Dream Homes Real Estate project details">
-            <div class="relative h-60 bg-slate-900 overflow-hidden">
-              <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" alt="Dream Homes Real Estate Showcase" width="800" height="450" loading="lazy" class="w-full h-full object-cover card-image-zoom">
+          <div class="project-card reveal delay-4 hover-lift cursor-pointer bg-white rounded-3xl overflow-hidden border border-slate-200/80 shadow-md group flex flex-col" data-track="portfolio-click" data-project-id="dream-homes" role="button" tabindex="0" aria-haspopup="dialog" aria-label="View Dream Homes demo concept details">
+            <div class="relative h-56 bg-slate-900 overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" alt="Dream Homes Real Estate Concept" width="800" height="450" loading="lazy" class="w-full h-full object-cover card-image-zoom">
               <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
               <div class="absolute top-4 left-4 px-2.5 py-1 rounded-full bg-slate-900/90 backdrop-blur-sm border border-amber-500/40 text-amber-300 text-[10px] font-extrabold uppercase tracking-wide flex items-center gap-1 shadow-md">
                 <span class="w-1.5 h-1.5 rounded-full bg-amber-400"></span>
-                Sample Concept
+                Industry Demo Concept
               </div>
               <div class="absolute top-4 right-4 px-3 py-1 rounded-full bg-[#FF6600] text-white text-xs font-bold shadow-md">
                 Real Estate
@@ -273,7 +306,61 @@
               <div>
                 <h3 class="text-xl font-extrabold text-slate-900 group-hover:text-[#FF6600] transition-colors">Dream Homes</h3>
                 <p class="text-slate-600 text-xs mt-2 leading-relaxed">
-                  Luxury property showcase featuring interactive property listings, virtual tours, and automated investor lead capture.
+                  This concept demonstrates how Digital Ustad can build a modern digital presence for businesses in this industry.
+                </p>
+              </div>
+              <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-[#FF6600]">
+                <span>View Concept</span>
+                <i data-lucide="arrow-right" class="w-4 h-4 transform group-hover:translate-x-1 transition-transform"></i>
+              </div>
+            </div>
+          </div>
+
+          <!-- 5. FitZone -->
+          <div class="project-card reveal delay-5 hover-lift cursor-pointer bg-white rounded-3xl overflow-hidden border border-slate-200/80 shadow-md group flex flex-col" data-track="portfolio-click" data-project-id="fitzone-gym" role="button" tabindex="0" aria-haspopup="dialog" aria-label="View FitZone Fitness Club demo concept details">
+            <div class="relative h-56 bg-slate-900 overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=800&q=80" alt="FitZone Fitness Club Concept" width="800" height="450" loading="lazy" class="w-full h-full object-cover card-image-zoom">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+              <div class="absolute top-4 left-4 px-2.5 py-1 rounded-full bg-slate-900/90 backdrop-blur-sm border border-amber-500/40 text-amber-300 text-[10px] font-extrabold uppercase tracking-wide flex items-center gap-1 shadow-md">
+                <span class="w-1.5 h-1.5 rounded-full bg-amber-400"></span>
+                Industry Demo Concept
+              </div>
+              <div class="absolute top-4 right-4 px-3 py-1 rounded-full bg-[#FF6600] text-white text-xs font-bold shadow-md">
+                Gym &amp; Fitness
+              </div>
+            </div>
+            <div class="p-6 flex-1 flex flex-col justify-between">
+              <div>
+                <h3 class="text-xl font-extrabold text-slate-900 group-hover:text-[#FF6600] transition-colors">FitZone</h3>
+                <p class="text-slate-600 text-xs mt-2 leading-relaxed">
+                  This concept demonstrates how Digital Ustad can build a modern digital presence for businesses in this industry.
+                </p>
+              </div>
+              <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-[#FF6600]">
+                <span>View Concept</span>
+                <i data-lucide="arrow-right" class="w-4 h-4 transform group-hover:translate-x-1 transition-transform"></i>
+              </div>
+            </div>
+          </div>
+
+          <!-- 6. Bright Future Academy -->
+          <div class="project-card reveal delay-6 hover-lift cursor-pointer bg-white rounded-3xl overflow-hidden border border-slate-200/80 shadow-md group flex flex-col" data-track="portfolio-click" data-project-id="bright-future" role="button" tabindex="0" aria-haspopup="dialog" aria-label="View Bright Future Academy demo concept details">
+            <div class="relative h-56 bg-slate-900 overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=800&q=80" alt="Bright Future Academy Concept" width="800" height="450" loading="lazy" class="w-full h-full object-cover card-image-zoom">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+              <div class="absolute top-4 left-4 px-2.5 py-1 rounded-full bg-slate-900/90 backdrop-blur-sm border border-amber-500/40 text-amber-300 text-[10px] font-extrabold uppercase tracking-wide flex items-center gap-1 shadow-md">
+                <span class="w-1.5 h-1.5 rounded-full bg-amber-400"></span>
+                Industry Demo Concept
+              </div>
+              <div class="absolute top-4 right-4 px-3 py-1 rounded-full bg-[#FF6600] text-white text-xs font-bold shadow-md">
+                Education
+              </div>
+            </div>
+            <div class="p-6 flex-1 flex flex-col justify-between">
+              <div>
+                <h3 class="text-xl font-extrabold text-slate-900 group-hover:text-[#FF6600] transition-colors">Bright Future Academy</h3>
+                <p class="text-slate-600 text-xs mt-2 leading-relaxed">
+                  This concept demonstrates how Digital Ustad can build a modern digital presence for businesses in this industry.
                 </p>
               </div>
               <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-[#FF6600]">
@@ -295,7 +382,7 @@
       <button id="close-project-modal" class="absolute top-5 right-5 w-8 h-8 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-500 flex items-center justify-center" aria-label="Close project details modal"><i data-lucide="x" class="w-5 h-5"></i></button>
       <div class="space-y-4">
         <div class="rounded-2xl overflow-hidden h-60 bg-slate-900 border border-slate-200">
-          <img id="project-modal-img" src="" alt="Project Preview" width="800" height="450" class="w-full h-full object-cover">
+          <img id="project-modal-img" src="assets/images/logo-dark.png" alt="Project Preview" width="800" height="450" class="w-full h-full object-cover">
         </div>
         <div>
           <div class="flex items-center gap-2 mb-1.5 flex-wrap">
@@ -338,7 +425,7 @@
             <a href="mailto:contact@digitalustad.co" class="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center hover:bg-[#FF6600] hover:text-white transition-colors" aria-label="Email" title="Email">
               <i data-lucide="mail" class="w-4 h-4"></i>
             </a>
-            <a href="tel:+923000000000" class="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center hover:bg-[#FF6600] hover:text-white transition-colors" aria-label="Phone" title="Phone">
+            <a href="#" data-du-tel class="hidden w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center hover:bg-[#FF6600] hover:text-white transition-colors" aria-label="Phone" title="Phone">
               <i data-lucide="phone" class="w-4 h-4"></i>
             </a>
           </div>
@@ -381,9 +468,9 @@
               <i data-lucide="map-pin" class="w-4 h-4 text-[#FF6600] flex-shrink-0 mt-0.5"></i>
               <span>Lahore, Pakistan & Worldwide Remote</span>
             </li>
-            <li class="flex items-center gap-2">
+            <li class="flex items-center gap-2 hidden" data-du-phone-container>
               <i data-lucide="phone" class="w-4 h-4 text-[#FF6600] flex-shrink-0"></i>
-              <span data-du-phone>+92 300 0000000</span>
+              <span data-du-phone></span>
             </li>
             <li class="flex items-center gap-2">
               <i data-lucide="mail" class="w-4 h-4 text-[#FF6600] flex-shrink-0"></i>
@@ -413,13 +500,6 @@
     </div>
   </footer>
 
-  <!-- ================= DIGITAL USTAD WEBCHAT LAUNCHER ================= -->
-  <button type="button" onclick="openDigitalUstadChat({ intent: 'general_consultation', sourcePage: window.location.pathname })" class="fixed bottom-6 right-6 z-40 px-4 py-3 sm:px-5 sm:py-3.5 rounded-full bg-[#0B0F19] hover:bg-slate-900 text-white flex items-center justify-center gap-2.5 shadow-2xl border border-slate-700/80 hover:border-[#FF6600] hover:scale-105 active:scale-95 transition-all group" aria-label="Open Digital Ustad assistant" title="Ask Digital Ustad">
-    <span class="w-2 h-2 rounded-full bg-[#FF6600] animate-pulse"></span>
-    <i data-lucide="bot" class="w-5 h-5 text-[#FF6600]"></i>
-    <span class="text-xs font-bold tracking-wide hidden sm:inline">Ask Digital Ustad</span>
-  </button>
-
   <!-- QUOTATION MODAL -->
   <div id="quote-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/80 modal-backdrop hidden p-4" role="dialog" aria-modal="true" aria-labelledby="quote-modal-title">
     <div class="modal-box bg-white rounded-3xl max-w-lg w-full p-6 sm:p-8 shadow-2xl relative scale-95 opacity-0 transition-all duration-200">
@@ -427,22 +507,25 @@
       <div class="mb-6">
         <div class="flex items-center justify-between mb-2">
           <h2 id="quote-modal-title" class="text-2xl font-extrabold text-slate-900">Build a Similar Project</h2>
-          <span id="payment-milestone-badge" class="text-[11px] font-bold text-orange-800 bg-orange-100 px-3 py-1 rounded-full transition-colors">25/50/25 Installments</span>
+          <span id="payment-milestone-badge" class="text-[11px] font-bold text-orange-800 bg-orange-100 px-3 py-1 rounded-full transition-colors">40/30/30 Milestones</span>
         </div>
         <p class="text-xs text-slate-500 mt-1">Select your service package to begin a project like the ones in our portfolio.</p>
       </div>
-      <form id="quote-form" class="space-y-4">
+      <form id="quote-form" method="POST" action="/api/leads" class="space-y-4">
+        <!-- Anti-spam Honeypot -->
+        <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" class="hidden" aria-hidden="true" style="display:none !important">
+
         <div>
           <label for="portfolio-client-name" class="block text-xs font-bold text-slate-700 uppercase mb-1">Your Name *</label>
-          <input type="text" id="portfolio-client-name" required placeholder="Ali Khan" class="w-full px-4 py-2.5 rounded-xl border text-sm focus:outline-none focus:border-[#FF6600]">
+          <input type="text" id="portfolio-client-name" name="name" required placeholder="Ali Khan" class="w-full px-4 py-2.5 rounded-xl border text-sm focus:outline-none focus:border-[#FF6600]">
         </div>
         <div>
           <label for="portfolio-client-phone" class="block text-xs font-bold text-slate-700 uppercase mb-1">WhatsApp Number *</label>
-          <input type="tel" id="portfolio-client-phone" required placeholder="0300 1122334" class="w-full px-4 py-2.5 rounded-xl border text-sm focus:outline-none focus:border-[#FF6600]">
+          <input type="tel" id="portfolio-client-phone" name="phone" required placeholder="e.g. 03XX XXXXXXX" class="w-full px-4 py-2.5 rounded-xl border text-sm focus:outline-none focus:border-[#FF6600]">
         </div>
         <div>
           <label for="portfolio-client-service" class="block text-xs font-bold text-slate-700 uppercase mb-1">Package of Interest</label>
-          <select id="portfolio-client-service" class="w-full px-3 py-2.5 rounded-xl border text-sm bg-white focus:outline-none focus:border-[#FF6600]">
+          <select id="portfolio-client-service" name="service" class="w-full px-3 py-2.5 rounded-xl border text-sm bg-white focus:outline-none focus:border-[#FF6600]">
             <option value="5-Page Website Starter (PKR 30,000)">5-Page Website Starter (PKR 30,000) ⭐</option>
             <option value="3-Page Website Lite (PKR 17,999)">3-Page Website Lite (PKR 17,999)</option>
             <option value="7-Page Website Growth (PKR 42,999)">7-Page Website Growth (PKR 42,999)</option>
@@ -455,13 +538,13 @@
             <option value="Growth SEO Retainer (PKR 25,000/mo)">SEO & Google Maps (PKR 25,000/mo)</option>
           </select>
         </div>
-        <button type="submit" class="btn-shine w-full py-3.5 rounded-xl bg-[#FF6600] text-white font-bold text-sm shadow-xl flex items-center justify-center gap-2">
+        <button type="submit" class="btn-shine w-full py-3.5 rounded-xl bg-[#FF6600] text-white font-bold text-sm shadow-xl flex items-center justify-center gap-2" data-track="contact-form-submit">
           <span>Submit Project Brief</span>
           <i data-lucide="send" class="w-4 h-4"></i>
         </button>
 
         <div id="payment-milestone-text" class="text-[11px] text-slate-500 text-center pt-1 leading-relaxed">
-          🔒 Privacy guaranteed. Zero spam. <strong>Payment Milestones: 25% kickoff, 50% approval on staging, 25% within 30 days of launch.</strong>
+          🔒 Privacy guaranteed. Zero spam. By submitting, you agree to our <a href="privacy.html" class="underline hover:text-[#FF6600]">Privacy Policy</a>. <strong>Payment Milestones: 40% project kickoff, 30% after design/development approval milestone, 30% before final handover / deployment completion.</strong>
         </div>
       </form>
     </div>

@@ -5,14 +5,21 @@
 
 // Central Brand Configuration - Reads from js/config.js (Single Source of Truth)
 const DU_ACTIVE_CONFIG = (typeof window !== 'undefined' && window.DU_CONFIG) ? window.DU_CONFIG : {
-  whatsappNumber: '923000000000', 
-  telPhone: '+923000000000',
-  displayPhone: '+92 300 0000000',
+  businessName: 'Digital Ustad',
+  websiteURL: 'https://digitalustad.co/',
+  businessLocation: 'Lahore, Punjab, Pakistan',
+  workingHours: 'Monday – Saturday: 10:00 AM – 7:00 PM PKT',
+  businessEmail: 'contact@digitalustad.co',
+  businessPhone: '',
+  whatsappNumber: '', 
+  telPhone: '',
+  displayPhone: '',
   officialEmail: 'contact@digitalustad.co',
-  officeLocation: 'Lahore, Pakistan',
+  officeLocation: 'Lahore, Punjab, Pakistan',
   verifiedWebsites: '10+',
-  verifiedClients: '5+',
-  yearsActive: '2+'
+  activePartnerships: '5+',
+  yearsActive: '2+',
+  supportLocation: 'Pakistan-Based Support'
 };
 if (typeof window !== 'undefined' && !window.DU_CONFIG) {
   window.DU_CONFIG = DU_ACTIVE_CONFIG;
@@ -315,23 +322,23 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     if (text.includes('starter') || text.includes('5-page')) {
       return termsMap.starter || {
-        badge: '25/50/25 Flex Installments',
-        note: 'Payment Milestones: 25% kickoff, 50% approval on staging, 25% within 30 days of launch.',
-        draftTerms: '25/50/25 Flex Installments (25% kickoff, 50% staging approval, 25% in 30 days)'
+        badge: '40/30/30 Milestones',
+        note: 'Payment Milestones: 40% project kickoff, 30% after design/development approval milestone, 30% before final handover / deployment completion.',
+        draftTerms: '40/30/30 Milestones (40% kickoff, 30% approval, 30% final handover)'
       };
     }
     if (text.includes('7-page') || text.includes('growth web') || text.includes('website growth')) {
       return termsMap.growthWeb || {
-        badge: '25/50/25 Flex Installments',
-        note: 'Payment Milestones: 25% kickoff, 50% approval on staging, 25% within 30 days of launch.',
-        draftTerms: '25/50/25 Flex Installments (25% kickoff, 50% staging approval, 25% in 30 days)'
+        badge: '40/30/30 Milestones',
+        note: 'Payment Milestones: 40% project kickoff, 30% after design/development approval milestone, 30% before final handover / deployment completion.',
+        draftTerms: '40/30/30 Milestones (40% kickoff, 30% approval, 30% final handover)'
       };
     }
     if (text.includes('custom web') || text.includes('e-commerce') || text.includes('custom e-commerce') || text.includes('web app') || text.includes('portal')) {
       return termsMap.customWeb || {
-        badge: '25/50/25 Milestones (Deployment Final)',
-        note: 'Payment Milestones: 25% kickoff, 50% staging demo approval, 25% at final launch & deployment.',
-        draftTerms: '25/50/25 Milestone Plan (25% kickoff, 50% staging demo, 25% at final launch/deployment)'
+        badge: '40/30/30 Milestones',
+        note: 'Payment Milestones: 40% project kickoff, 30% after design/development approval milestone, 30% before final handover / deployment completion.',
+        draftTerms: '40/30/30 Milestones (40% kickoff, 30% staging demo, 30% at final deployment)'
       };
     }
     if (text.includes('basic') && (text.includes('bot') || text.includes('whatsapp') || text.includes('automation'))) {
@@ -343,24 +350,24 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     if (text.includes('advanced') && (text.includes('bot') || text.includes('ai') || text.includes('api'))) {
       return termsMap.advancedBot || {
-        badge: '25/50/25 Milestones (Live Final)',
-        note: 'Payment Milestones: 25% kickoff, 50% staging demo, 25% upon final live deployment.',
-        draftTerms: '25/50/25 Milestone Plan (25% kickoff, 50% staging demo, 25% upon live deployment)'
+        badge: '40/30/30 Milestones',
+        note: 'Payment Milestones: 40% project kickoff, 30% after design/development approval milestone, 30% before final handover / deployment completion.',
+        draftTerms: '40/30/30 Milestones (40% kickoff, 30% staging demo, 30% upon live deployment)'
       };
     }
     if (text.includes('growth') && (text.includes('bot') || text.includes('workflow') || text.includes('whatsapp'))) {
       return termsMap.growthBot || {
-        badge: '25/50/25 Milestones (Live Final)',
-        note: 'Payment Milestones: 25% kickoff, 50% staging demo, 25% at final live launch.',
-        draftTerms: '25/50/25 Milestone Plan (25% kickoff, 50% staging demo, 25% at live launch)'
+        badge: '40/30/30 Milestones',
+        note: 'Payment Milestones: 40% project kickoff, 30% after design/development approval milestone, 30% before final handover / deployment completion.',
+        draftTerms: '40/30/30 Milestones (40% kickoff, 30% staging demo, 30% at live launch)'
       };
     }
     if (text.includes('whatsapp') || text.includes('automation')) {
       // General bot inquiry default
       return termsMap.growthBot || {
-        badge: '25/50/25 Milestones (Live Final)',
-        note: 'Payment Milestones: 25% kickoff, 50% staging demo, 25% at final live launch (Basic bot: 50/50).',
-        draftTerms: 'Service-Specific Milestone Plan (25/50/25 or 50/50)'
+        badge: '40/30/30 Milestones',
+        note: 'Payment Milestones: 40% project kickoff, 30% after design/development approval milestone, 30% before final handover / deployment completion (Basic bot: 50/50).',
+        draftTerms: 'Service-Specific Milestone Plan (40/30/30 or 50/50)'
       };
     }
     if (text.includes('seo') || text.includes('google maps') || text.includes('google business')) {
@@ -408,9 +415,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Default fallback
     return termsMap.starter || {
-      badge: '25/50/25 Flex Installments',
-      note: 'Payment Milestones: 25% kickoff, 50% approval on staging, 25% within 30 days.',
-      draftTerms: '25/50/25 Flex Installments'
+      badge: '40/30/30 Milestones',
+      note: 'Payment Milestones: 40% project kickoff, 30% after design/development approval milestone, 30% before final handover / deployment completion.',
+      draftTerms: '40/30/30 Milestones'
     };
   };
 
@@ -444,18 +451,28 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   };
 
-  // Helper: Open Digital Ustad contextual chat (prepared for Clonvo.chat integration)
+  // Helper: Open Digital Ustad contextual chat (Thin adapter for future official Clonvo integration)
   const openDigitalUstadChat = (context) => {
     context = context || {};
+    const pathname = (typeof window !== 'undefined' && window.location && window.location.pathname) 
+      ? window.location.pathname 
+      : '';
+
     const chatContext = {
-      intent: context.intent || 'general_consultation',
-      service: context.service || null,
-      packageId: context.packageId || null,
-      sourcePage: context.sourcePage || (typeof window !== 'undefined' ? window.location.pathname : '')
+      intent: (typeof context.intent === 'string' && context.intent.trim() !== '') ? context.intent : 'general_consultation',
+      service: (typeof context.service === 'string' && context.service.trim() !== '') ? context.service : null,
+      packageId: (typeof context.packageId === 'string' && context.packageId.trim() !== '') ? context.packageId : null,
+      sourcePage: (typeof context.sourcePage === 'string' && context.sourcePage.trim() !== '') ? context.sourcePage : pathname,
+      campaign: (typeof context.campaign === 'string' && context.campaign.trim() !== '') ? context.campaign : null,
+      industry: (typeof context.industry === 'string' && context.industry.trim() !== '') ? context.industry : null,
+      language: (typeof context.language === 'string' && context.language.trim() !== '') ? context.language : 'en'
     };
 
     if (typeof window !== 'undefined') {
-      window.dispatchEvent(new CustomEvent('digitalustad:chat:open', { detail: chatContext }));
+      window.__DU_CHAT_CONTEXT__ = chatContext;
+      try {
+        window.dispatchEvent(new CustomEvent('digitalustad:chat:open', { detail: chatContext }));
+      } catch (e) {}
     }
 
     if (typeof window !== 'undefined' && window.Clonvo && typeof window.Clonvo.open === 'function') {
@@ -468,11 +485,14 @@ document.addEventListener('DOMContentLoaded', () => {
     if (chatContext.service) params.set('service', chatContext.service);
     if (chatContext.packageId) params.set('package', chatContext.packageId);
     if (chatContext.intent) params.set('intent', chatContext.intent);
+    if (chatContext.campaign) params.set('campaign', chatContext.campaign);
+    if (chatContext.industry) params.set('industry', chatContext.industry);
+    if (chatContext.language && chatContext.language !== 'en') params.set('lang', chatContext.language);
 
     const queryStr = params.toString() ? '?' + params.toString() : '';
 
     if (typeof window !== 'undefined') {
-      const isContactPage = window.location.pathname.endsWith('contact.html') || window.location.pathname.endsWith('/contact');
+      const isContactPage = pathname.endsWith('contact.html') || pathname.endsWith('/contact') || pathname.endsWith('/contact/');
       if (isContactPage) {
         const serviceSelect = document.getElementById('client-service');
         if (serviceSelect && chatContext.service) {
@@ -519,144 +539,308 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  const handleProposalSubmission = (form) => {
-    const nameInput = form.querySelector('[id*="name"]') || form.querySelector('input[name="name"]');
-    const phoneInput = form.querySelector('[id*="phone"]') || form.querySelector('input[name="phone"]');
-    const serviceSelect = form.querySelector('[id*="service"]') || form.querySelector('select[name="service"]');
-    const budgetSelect = form.querySelector('[id*="budget"]') || form.querySelector('select[name="budget"]');
-    const messageInput = form.querySelector('[id*="message"]') || form.querySelector('textarea');
+  // Helper: Sanitize text for HTML rendering
+  const escapeHTML = (str) => {
+    return String(str || '').replace(/[&<>"']/g, m => ({
+      '&': '&amp;',
+      '<': '&lt;',
+      '>': '&gt;',
+      '"': '&quot;',
+      "'": '&#39;'
+    }[m]));
+  };
+
+  // 8A. Form Success State Renderer (Task 6: Multi-Step Roadmap & Action CTAs)
+  const renderFormSuccessScreen = (form, info) => {
+    const config = getActiveConfig();
+    const cleanWa = (config.whatsappNumber || '').replace(/[^0-9]/g, '');
+    const waLink = cleanWa ? `https://wa.me/${cleanWa}?text=${encodeURIComponent('Hi Digital Ustad, I just submitted a project brief on your website.')}` : 'contact.html';
+
+    const successCard = document.createElement('div');
+    successCard.className = 'du-form-success-screen p-6 sm:p-8 rounded-3xl bg-slate-900 border border-slate-800 text-white space-y-6 text-center animate-fade-in shadow-2xl';
+    successCard.innerHTML = `
+      <div class="w-16 h-16 mx-auto rounded-3xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 shadow-inner">
+        <i data-lucide="check-circle-2" class="w-8 h-8"></i>
+      </div>
+      
+      <div class="space-y-2">
+        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-950/80 border border-emerald-800/80 text-emerald-400 text-xs font-bold font-mono">
+          Ref #${escapeHTML(info.confirmationId || ('DU-' + Date.now().toString().slice(-6)))}
+        </span>
+        <h3 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
+          Thank You — We've Received Your Project Brief.
+        </h3>
+        <p class="text-xs sm:text-sm text-slate-300 max-w-md mx-auto leading-relaxed">
+          Your requirements have been securely delivered to our project management desk in Lahore.
+        </p>
+      </div>
+
+      <!-- 4-Step Process Roadmap -->
+      <div class="bg-slate-950/80 p-5 rounded-2xl border border-slate-800 text-left space-y-3.5">
+        <div class="text-[11px] font-bold text-slate-400 uppercase tracking-wider">What Happens Next:</div>
+        
+        <div class="flex items-start gap-3 text-xs text-slate-300">
+          <span class="w-5 h-5 rounded-full bg-[#FF6600]/20 border border-[#FF6600]/40 text-[#FF6600] font-extrabold text-[10px] flex items-center justify-center flex-shrink-0 mt-0.5">1</span>
+          <span><strong>Requirement Review:</strong> Our senior team reviews your business goals, target audience, and scope.</span>
+        </div>
+
+        <div class="flex items-start gap-3 text-xs text-slate-300">
+          <span class="w-5 h-5 rounded-full bg-[#FF6600]/20 border border-[#FF6600]/40 text-[#FF6600] font-extrabold text-[10px] flex items-center justify-center flex-shrink-0 mt-0.5">2</span>
+          <span><strong>Package & Scope Mapping:</strong> We identify the suitable service tier or tailor a milestone package.</span>
+        </div>
+
+        <div class="flex items-start gap-3 text-xs text-slate-300">
+          <span class="w-5 h-5 rounded-full bg-[#FF6600]/20 border border-[#FF6600]/40 text-[#FF6600] font-extrabold text-[10px] flex items-center justify-center flex-shrink-0 mt-0.5">3</span>
+          <span><strong>Direct Contact:</strong> We contact you directly on your provided phone / WhatsApp to discuss details.</span>
+        </div>
+
+        <div class="flex items-start gap-3 text-xs text-slate-300">
+          <span class="w-5 h-5 rounded-full bg-[#FF6600]/20 border border-[#FF6600]/40 text-[#FF6600] font-extrabold text-[10px] flex items-center justify-center flex-shrink-0 mt-0.5">4</span>
+          <span><strong>Proposal Shared:</strong> A formal, milestone-backed proposal (40/30/30) is shared where required.</span>
+        </div>
+      </div>
+
+      <!-- Action Buttons (Task 6: Return Home, Start Web Chat, Optional WhatsApp) -->
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-3 pt-2">
+        <a href="index.html" class="w-full sm:w-auto px-5 py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-white font-bold text-xs transition-all flex items-center justify-center gap-2">
+          <i data-lucide="home" class="w-4 h-4 text-slate-400"></i>
+          <span>Return Home</span>
+        </a>
+        <button type="button" id="du-success-chat-btn" class="w-full sm:w-auto px-5 py-3 rounded-xl bg-[#FF6600] hover:bg-[#EA580C] text-white font-bold text-xs transition-all shadow-lg flex items-center justify-center gap-2" data-track="chatbot-open">
+          <i data-lucide="message-square" class="w-4 h-4"></i>
+          <span>Start Web Chat</span>
+        </button>
+        <a href="${waLink}" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto px-5 py-3 rounded-xl bg-slate-800/80 hover:bg-emerald-700 text-slate-300 hover:text-white font-bold text-xs transition-all border border-slate-700 hover:border-emerald-600 flex items-center justify-center gap-2" data-track="whatsapp-click">
+          <img src="assets/images/whatsapp-icon.png" alt="" width="16" height="16" class="w-4 h-4 object-contain">
+          <span>Contact on WhatsApp</span>
+        </a>
+      </div>
+    `;
+
+    const modalBox = form.closest('.modal-box');
+    if (modalBox) {
+      const closeBtn = modalBox.querySelector('#close-quote-modal');
+      modalBox.innerHTML = '';
+      if (closeBtn) modalBox.appendChild(closeBtn);
+      modalBox.appendChild(successCard);
+    } else {
+      form.parentNode.replaceChild(successCard, form);
+    }
+
+    if (window.lucide && typeof window.lucide.createIcons === 'function') {
+      window.lucide.createIcons();
+    }
+
+    const chatBtn = successCard.querySelector('#du-success-chat-btn');
+    if (chatBtn) {
+      chatBtn.addEventListener('click', () => {
+        if (typeof window.openDigitalUstadChat === 'function') {
+          window.openDigitalUstadChat({ intent: 'submitted_brief', service: info.service });
+        }
+      });
+    }
+  };
+
+  // 8. Lead Form Secure POST Delivery Engine & Delivery State Management
+  const handleProposalSubmission = async (form) => {
+    const nameInput = form.querySelector('[name="name"], [id*="name"]');
+    const bizInput = form.querySelector('[name="business"], [name="businessName"], [id*="business"]');
+    const phoneInput = form.querySelector('[name="phone"], [id*="phone"]');
+    const emailInput = form.querySelector('[name="email"], [id*="email"]');
+    const websiteInput = form.querySelector('[name="website"], [id*="website"]');
+    const serviceSelect = form.querySelector('[name="service"], [id*="service"]');
+    const budgetSelect = form.querySelector('[name="budget"], [id*="budget"]');
+    const messageInput = form.querySelector('[name="message"], [id*="message"], textarea');
+    const gotchaInput = form.querySelector('[name="_gotcha"]');
     const submitBtn = form.querySelector('button[type="submit"]');
 
     const name = nameInput?.value.trim() || '';
+    const businessName = bizInput?.value.trim() || '';
     const phone = phoneInput?.value.trim() || '';
+    const email = emailInput?.value.trim() || '';
+    const website = websiteInput?.value.trim() || '';
     const service = serviceSelect?.value || 'Website Development';
     const budget = budgetSelect?.value || 'Standard Business Budget';
-    let message = messageInput?.value.trim() || '';
+    const message = messageInput?.value.trim() || '';
 
-    // Clear previous inline errors
-    form.querySelectorAll('.du-form-error').forEach(el => el.remove());
-    [nameInput, phoneInput].forEach(inp => inp?.classList.remove('border-red-500', 'ring-2', 'ring-red-400'));
+    // Clear previous inline messages
+    form.querySelectorAll('.du-form-error, .du-form-success, .du-form-failure').forEach(el => el.remove());
+    [nameInput, bizInput, phoneInput, emailInput].forEach(inp => inp?.classList.remove('border-red-500', 'ring-2', 'ring-red-400'));
+
+    // Spam honeypot detection
+    if (gotchaInput && gotchaInput.value.trim() !== '') {
+      return false;
+    }
 
     let hasError = false;
 
-    // FORM-01: Name validation
+    // Name validation
     if (!name || name.length < 2) {
       hasError = true;
       if (nameInput) {
         nameInput.classList.add('border-red-500', 'ring-2', 'ring-red-400');
         const err = document.createElement('p');
         err.className = 'du-form-error text-[11px] text-red-500 font-semibold mt-1';
-        err.textContent = 'Please provide your full name.';
+        err.textContent = 'Please provide your full name (minimum 2 characters).';
         nameInput.parentNode.appendChild(err);
       }
     }
 
-    // FORM-02 & FORM-10: Phone validation (Accepts JazzCash, EasyPaisa, 03xx, +92)
+    // Business Name validation (if required or provided)
+    if (bizInput && bizInput.hasAttribute('required') && (!businessName || businessName.length < 2)) {
+      hasError = true;
+      bizInput.classList.add('border-red-500', 'ring-2', 'ring-red-400');
+      const err = document.createElement('p');
+      err.className = 'du-form-error text-[11px] text-red-500 font-semibold mt-1';
+      err.textContent = 'Please provide your business or brand name.';
+      bizInput.parentNode.appendChild(err);
+    }
+
+    // Pakistan WhatsApp/Phone validation
     if (!phone || !isValidPakistanPhone(phone)) {
       hasError = true;
       if (phoneInput) {
         phoneInput.classList.add('border-red-500', 'ring-2', 'ring-red-400');
         const err = document.createElement('p');
         err.className = 'du-form-error text-[11px] text-red-500 font-semibold mt-1';
-        err.textContent = 'Please enter a valid Pakistan WhatsApp number (e.g. 0300 1122334).';
+        err.textContent = 'Please enter a valid Pakistan WhatsApp number (e.g. 03XX XXXXXXX).';
         phoneInput.parentNode.appendChild(err);
+      }
+    }
+
+    // Email validation (optional but validated if provided)
+    if (email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      hasError = true;
+      if (emailInput) {
+        emailInput.classList.add('border-red-500', 'ring-2', 'ring-red-400');
+        const err = document.createElement('p');
+        err.className = 'du-form-error text-[11px] text-red-500 font-semibold mt-1';
+        err.textContent = 'Please enter a valid email address.';
+        emailInput.parentNode.appendChild(err);
       }
     }
 
     if (hasError) return false;
 
-    // FORM-06: Long description safeguard
-    if (message.length > 500) {
-      message = message.substring(0, 500) + '...';
+    // Prevent duplicate submissions using unique idempotency key & loading state
+    let idempotencyKey = form.getAttribute('data-idempotency-key');
+    if (!idempotencyKey) {
+      idempotencyKey = 'lead_' + Date.now() + '_' + Math.random().toString(36).substring(2, 9);
+      form.setAttribute('data-idempotency-key', idempotencyKey);
     }
 
-    // FORM-09: Double submit prevention & loading state
     if (submitBtn) {
       submitBtn.disabled = true;
-      submitBtn.setAttribute('data-original-text', submitBtn.innerHTML);
+      if (!submitBtn.getAttribute('data-original-text')) {
+        submitBtn.setAttribute('data-original-text', submitBtn.innerHTML);
+      }
       submitBtn.innerHTML = `
         <svg class="animate-spin -ml-1 mr-2 h-4 w-4 text-white inline" fill="none" viewBox="0 0 24 24">
           <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
           <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
         </svg>
-        <span>Submitting Project Brief...</span>
+        <span>Transmitting Project Brief...</span>
       `;
     }
 
-    // Standard website form lead handling (zero WhatsApp draft, on-page confirmation)
     const leadPayload = {
       name,
+      businessName,
       phone,
+      email,
+      website,
       service,
       budget,
-      message,
-      submittedAt: new Date().toISOString(),
-      sourcePage: window.location.pathname
+      message: message.length > 500 ? (message.substring(0, 500) + '...') : message,
+      sourcePage: window.location.pathname,
+      leadSource: form.id === 'quote-modal-form' ? 'modal_proposal' : 'page_form',
+      idempotencyKey,
+      _gotcha: gotchaInput?.value || ''
     };
 
+    const endpoint = form.getAttribute('action') || (window.DU_CONFIG && window.DU_CONFIG.leadEndpoint) || '/api/leads';
+
     try {
-      const existingLeads = JSON.parse(localStorage.getItem('du_project_briefs') || '[]');
-      existingLeads.push(leadPayload);
-      localStorage.setItem('du_project_briefs', JSON.stringify(existingLeads));
-    } catch (e) {}
+      const response = await fetch(endpoint, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Idempotency-Key': idempotencyKey,
+          'X-Requested-With': 'XMLHttpRequest'
+        },
+        body: JSON.stringify(leadPayload)
+      });
 
-    window.dispatchEvent(new CustomEvent('digitalustad:lead:submitted', { detail: leadPayload }));
+      const data = await response.json().catch(() => null);
 
-    setTimeout(() => {
-      // Clear previous success alert if any
-      form.querySelectorAll('.du-form-success').forEach(el => el.remove());
+      if (response.ok && data && data.success) {
+        // Track successful submission
+        window.dispatchEvent(new CustomEvent('du:track', {
+          detail: { event: 'contact-form-submit', service, budget, timestamp: Date.now() }
+        }));
 
-      const successAlert = document.createElement('div');
-      successAlert.className = 'du-form-success p-4 mt-3 rounded-2xl bg-emerald-50 border border-emerald-200 text-emerald-900 text-xs leading-relaxed space-y-1';
-      successAlert.innerHTML = `
-        <div class="flex items-center gap-2 font-bold text-emerald-800 text-sm">
-          <svg class="w-5 h-5 text-emerald-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-          <span>Project Brief Submitted Successfully!</span>
+        // Render Professional Success Screen (Task 6)
+        renderFormSuccessScreen(form, {
+          confirmationId: data.confirmationId || idempotencyKey,
+          service,
+          name
+        });
+
+        return true;
+      } else {
+        throw new Error(data?.message || 'Server indicated unsuccessful submission.');
+      }
+    } catch (err) {
+      // FAILURE STATE: Preserve user draft! Do not clear inputs.
+      const failureAlert = document.createElement('div');
+      failureAlert.className = 'du-form-failure p-4 mt-3 rounded-2xl bg-red-50 border border-red-200 text-red-900 text-xs leading-relaxed space-y-2';
+      failureAlert.innerHTML = `
+        <div class="flex items-center gap-2 font-bold text-red-800 text-sm">
+          <svg class="w-5 h-5 text-red-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+          <span>Delivery Not Confirmed — Draft Preserved</span>
         </div>
-        <p class="text-slate-600">Thank you, <strong>${name}</strong>. Our team has received your brief for <strong>${service}</strong> and will contact you directly at <strong>${phone}</strong> within 24 hours.</p>
+        <p class="text-slate-600">Your brief could not be delivered to our backend at this moment. Your entered details have been preserved above so you do not have to retype them.</p>
+        <div class="flex items-center gap-3 pt-1">
+          <button type="button" class="du-retry-btn px-4 py-1.5 rounded-lg bg-red-600 hover:bg-red-700 text-white font-bold text-xs transition-colors">
+            Retry Submission
+          </button>
+          <a href="contact.html" class="text-xs font-semibold text-slate-700 hover:text-[#C2410C] underline">
+            Or Contact us directly via email &rarr;
+          </a>
+        </div>
       `;
+      form.appendChild(failureAlert);
 
-      form.appendChild(successAlert);
-
-      // Clear input fields
-      if (nameInput) nameInput.value = '';
-      if (phoneInput) phoneInput.value = '';
-      if (messageInput) messageInput.value = '';
+      const retryBtn = failureAlert.querySelector('.du-retry-btn');
+      if (retryBtn) {
+        retryBtn.addEventListener('click', () => {
+          failureAlert.remove();
+          handleProposalSubmission(form);
+        });
+      }
 
       if (submitBtn) {
         submitBtn.disabled = false;
-        const originalText = submitBtn.getAttribute('data-original-text');
-        if (originalText) submitBtn.innerHTML = originalText;
+        submitBtn.innerHTML = submitBtn.getAttribute('data-original-text') || 'Submit Project Brief';
       }
-    }, 700);
 
-    return true;
+      return false;
+    }
   };
 
   // Attach submission handler & dynamic change listener to ALL proposal forms (modal and page-level)
-  const allProposalForms = document.querySelectorAll('#quote-form, form.proposal-form');
+  const allProposalForms = document.querySelectorAll('#quote-form, #quote-modal-form, form.proposal-form');
   allProposalForms.forEach(form => {
     // Dynamic payment milestone binding (QA-08)
     const serviceSelect = form.querySelector('[id*="service"]') || form.querySelector('select[name="service"]');
     if (serviceSelect) {
       serviceSelect.addEventListener('change', () => updateFormMilestoneDisplay(form));
-      // Initialize milestone display on page load
       updateFormMilestoneDisplay(form);
     }
 
     form.addEventListener('submit', (e) => {
       e.preventDefault();
-      const success = handleProposalSubmission(form);
-      if (success) {
-        // If inside modal, close it cleanly after user sees confirmation
-        const modal = form.closest('#quote-modal');
-        if (modal) {
-          setTimeout(() => {
-            const closeBtn = document.getElementById('close-quote-modal');
-            if (closeBtn) closeBtn.click();
-          }, 2400);
-        }
-      }
+      handleProposalSubmission(form);
     });
   });
 
@@ -700,6 +884,9 @@ document.addEventListener('DOMContentLoaded', () => {
     quoteModal.setAttribute('role', 'dialog');
     quoteModal.setAttribute('aria-modal', 'true');
     quoteModal.setAttribute('aria-label', 'Project Consultation & Proposal Request');
+    quoteModal.setAttribute('aria-hidden', 'true');
+    quoteModal.setAttribute('inert', '');
+    quoteModal.hidden = true;
 
     const handleQuoteModalKeyDown = (e) => {
       if (quoteModal.classList.contains('hidden')) return;
@@ -732,11 +919,91 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     };
 
-    const openModal = (serviceType = null, triggerEl = null) => {
+    const prefillFormFields = (form, options = {}) => {
+      if (!form) return;
+      const { service, package: pkgName, budget, notes } = options;
+
+      // 1. Service & Package matching
+      const serviceSelect = form.querySelector('[id*="service"]') || form.querySelector('select[name="service"]');
+      if (serviceSelect && (service || pkgName)) {
+        const queryTerms = [pkgName, service].filter(Boolean).map(t => String(t).toLowerCase());
+        const optionsList = Array.from(serviceSelect.options);
+        
+        let bestMatch = null;
+        for (const term of queryTerms) {
+          const found = optionsList.find(opt => {
+            const val = opt.value.toLowerCase();
+            const txt = opt.textContent.toLowerCase();
+            return val.includes(term) || txt.includes(term);
+          });
+          if (found) {
+            bestMatch = found;
+            break;
+          }
+        }
+
+        if (bestMatch) {
+          serviceSelect.value = bestMatch.value;
+          serviceSelect.dispatchEvent(new Event('change'));
+        }
+      }
+
+      // 2. Budget matching
+      const budgetSelect = form.querySelector('[id*="budget"]') || form.querySelector('select[name="budget"]');
+      if (budgetSelect && budget) {
+        const cleanBudget = String(budget).replace(/[^0-9]/g, '');
+        const optionsList = Array.from(budgetSelect.options);
+        
+        let budgetMatch = optionsList.find(opt => {
+          const optText = opt.textContent || opt.value;
+          if (cleanBudget && optText.replace(/[^0-9]/g, '').includes(cleanBudget)) return true;
+          return optText.toLowerCase().includes(String(budget).toLowerCase());
+        });
+
+        if (budgetMatch) {
+          budgetSelect.value = budgetMatch.value;
+          budgetSelect.dispatchEvent(new Event('change'));
+        }
+      }
+
+      // 3. Message / Notes pre-filling
+      const messageTextarea = form.querySelector('textarea');
+      if (messageTextarea && (notes || pkgName)) {
+        const prefillNote = notes || (pkgName ? `Selected Package: ${pkgName}` : '');
+        if (prefillNote && (!messageTextarea.value.trim() || messageTextarea.value.startsWith('Selected Package:'))) {
+          messageTextarea.value = prefillNote;
+        }
+      }
+
+      updateFormMilestoneDisplay(form);
+    };
+
+    const openModal = (options = null, triggerEl = null) => {
       lastFocusedQuoteTrigger = triggerEl || document.activeElement;
+      
+      const modalForm = quoteModal.querySelector('form');
+      let serviceType = null;
+      let opts = {};
+
+      if (typeof options === 'string') {
+        serviceType = options;
+        opts = { service: options };
+      } else if (options && typeof options === 'object') {
+        serviceType = options.service || null;
+        opts = options;
+      }
+
       if (serviceType) {
         configureModalForService(serviceType);
       }
+
+      if (modalForm && Object.keys(opts).length > 0) {
+        prefillFormFields(modalForm, opts);
+      }
+
+      quoteModal.removeAttribute('aria-hidden');
+      quoteModal.removeAttribute('inert');
+      quoteModal.hidden = false;
       quoteModal.classList.remove('hidden');
       document.body.style.overflow = 'hidden';
       window.addEventListener('keydown', handleQuoteModalKeyDown);
@@ -751,6 +1018,10 @@ document.addEventListener('DOMContentLoaded', () => {
         const firstInput = quoteModal.querySelector('input:not([disabled]), select:not([disabled]), button');
         if (firstInput) firstInput.focus();
       }, 50);
+
+      window.dispatchEvent(new CustomEvent('du:track', {
+        detail: { event: 'proposal-cta', ...opts, timestamp: Date.now() }
+      }));
     };
 
     const closeModal = () => {
@@ -761,6 +1032,9 @@ document.addEventListener('DOMContentLoaded', () => {
         modalContent.classList.add('scale-95', 'opacity-0');
       }
       setTimeout(() => {
+        quoteModal.setAttribute('aria-hidden', 'true');
+        quoteModal.setAttribute('inert', '');
+        quoteModal.hidden = true;
         quoteModal.classList.add('hidden');
         document.body.style.overflow = '';
         if (lastFocusedQuoteTrigger && typeof lastFocusedQuoteTrigger.focus === 'function') {
@@ -769,19 +1043,27 @@ document.addEventListener('DOMContentLoaded', () => {
       }, 200);
     };
 
+    window.openProposalModal = (options = {}) => {
+      openModal(options);
+    };
+    window.closeProposalModal = closeModal;
+
     getStartedBtns.forEach(btn => {
       btn.addEventListener('click', (e) => {
-        const serviceType = btn.getAttribute('data-service') || null;
-        openModal(serviceType, btn);
+        e.preventDefault();
+        const service = btn.getAttribute('data-service') || null;
+        const pkg = btn.getAttribute('data-package') || null;
+        const budget = btn.getAttribute('data-budget') || null;
+        openModal({ service, package: pkg, budget }, btn);
       });
     });
 
     // Special WhatsApp Automation Bot Quote Triggers across pages
-    const botQuoteBtns = document.querySelectorAll('.btn-whatsapp-bot-quote, [data-service="whatsapp-automation"]');
+    const botQuoteBtns = document.querySelectorAll('.btn-whatsapp-bot-quote:not(.btn-get-started), [data-service="whatsapp-automation"]:not(.btn-get-started)');
     botQuoteBtns.forEach(btn => {
       btn.addEventListener('click', (e) => {
         e.preventDefault();
-        openModal('whatsapp-automation', btn);
+        openModal({ service: 'whatsapp-automation', package: 'Growth WhatsApp Workflow' }, btn);
       });
     });
 
@@ -795,61 +1077,176 @@ document.addEventListener('DOMContentLoaded', () => {
     quoteModal.addEventListener('click', (e) => {
       if (e.target === quoteModal) closeModal();
     });
+  } else {
+    // If quoteModal is NOT present on this page (e.g. /contact), scroll to page form
+    window.openProposalModal = (options = {}) => {
+      const pageForm = document.getElementById('quote-form') || document.querySelector('form.proposal-form');
+      if (pageForm) {
+        const { service, package: pkgName, budget, notes } = options;
+        const serviceSelect = pageForm.querySelector('[id*="service"]') || pageForm.querySelector('select[name="service"]');
+        if (serviceSelect && (service || pkgName)) {
+          const matchTerm = (pkgName || service).toLowerCase();
+          const matchOpt = Array.from(serviceSelect.options).find(o => o.value.toLowerCase().includes(matchTerm) || o.textContent.toLowerCase().includes(matchTerm));
+          if (matchOpt) {
+            serviceSelect.value = matchOpt.value;
+            serviceSelect.dispatchEvent(new Event('change'));
+          }
+        }
+        if (budget) {
+          const budgetSelect = pageForm.querySelector('[id*="budget"]') || pageForm.querySelector('select[name="budget"]');
+          if (budgetSelect) {
+            const cleanBudget = String(budget).replace(/[^0-9]/g, '');
+            const matchB = Array.from(budgetSelect.options).find(o => cleanBudget && o.textContent.replace(/[^0-9]/g, '').includes(cleanBudget));
+            if (matchB) {
+              budgetSelect.value = matchB.value;
+              budgetSelect.dispatchEvent(new Event('change'));
+            }
+          }
+        }
+        pageForm.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        const firstField = pageForm.querySelector('input:not([type="hidden"]), select');
+        if (firstField) setTimeout(() => firstField.focus(), 400);
+      }
+      window.dispatchEvent(new CustomEvent('du:track', {
+        detail: { event: 'proposal-cta', ...options, timestamp: Date.now() }
+      }));
+    };
   }
 
-  // 8B. Centralized Contact Links & Display Synchronizer (QA-01)
+  // 8C. Global Trackable Event Delegation (Task 10)
+  document.addEventListener('click', (e) => {
+    const trackTarget = e.target.closest('[data-track]');
+    if (!trackTarget) return;
+
+    const trackType = trackTarget.getAttribute('data-track');
+    const service = trackTarget.getAttribute('data-service') || null;
+    const pkg = trackTarget.getAttribute('data-package') || null;
+    const budget = trackTarget.getAttribute('data-budget') || null;
+
+    // Track custom analytics event
+    window.dispatchEvent(new CustomEvent('du:track', {
+      detail: {
+        event: trackType,
+        service,
+        package: pkg,
+        budget,
+        id: trackTarget.id || null,
+        text: trackTarget.textContent.trim().slice(0, 60),
+        href: trackTarget.getAttribute('href') || null,
+        timestamp: Date.now()
+      }
+    }));
+
+    if (trackType === 'chatbot-open') {
+      if (typeof window.openDigitalUstadChat === 'function') {
+        e.preventDefault();
+        window.openDigitalUstadChat({ intent: 'direct_open', service, packageId: pkg });
+      }
+    } else if (trackType === 'pricing-cta') {
+      // Pricing cards open proposal modal with pre-filled details (Task 8)
+      if (typeof window.openProposalModal === 'function') {
+        e.preventDefault();
+        window.openProposalModal({ service, package: pkg, budget });
+      }
+    }
+  });
+
+  // 8B. Centralized Contact Links & Display Synchronizer (QA-01, QA-02)
   const syncContactLinks = () => {
     const config = getActiveConfig();
-    if (!config || !config.whatsappNumber) return;
+    const hasVerifiedPhone = Boolean(config && config.whatsappNumber && config.whatsappNumber.trim() !== '');
+    const hasVerifiedTel = Boolean(config && ((config.telPhone && config.telPhone.trim() !== '') || (config.whatsappNumber && config.whatsappNumber.trim() !== '')));
 
     // 1. Synchronize wa.me links ONLY on the contact page
-    const isContactPage = typeof window !== 'undefined' && (
-      window.location.pathname.endsWith('contact.html') || 
-      window.location.pathname.endsWith('/contact')
-    );
+    const pathname = (typeof window !== 'undefined' && window.location.pathname) ? window.location.pathname.toLowerCase() : '';
+    const isContactPage = pathname.endsWith('contact.html') || pathname.endsWith('/contact') || pathname.endsWith('/contact/');
 
-    if (isContactPage) {
-      document.querySelectorAll('a[href*="wa.me"]').forEach(link => {
-        const rawHref = link.getAttribute('href') || '';
-        try {
-          const queryIndex = rawHref.indexOf('?');
-          const queryPart = queryIndex !== -1 ? rawHref.substring(queryIndex) : '';
-          link.href = `https://wa.me/${config.whatsappNumber}${queryPart}`;
-        } catch (err) {
-          link.href = rawHref.replace(/wa\.me\/[0-9]+/, `wa.me/${config.whatsappNumber}`);
-        }
+    const waLinks = document.querySelectorAll('a[href*="wa.me"], a[href*="api.whatsapp.com"], [data-du-contact="whatsapp"], [data-du-contact="whatsapp-btn"]');
+    waLinks.forEach(link => {
+      if (!isContactPage || !hasVerifiedPhone) {
+        link.classList.add('hidden');
+        link.removeAttribute('href');
+        const container = link.closest('[data-du-whatsapp-wrapper]');
+        if (container) container.classList.add('hidden');
+      } else {
+        link.classList.remove('hidden');
+        const container = link.closest('[data-du-whatsapp-wrapper]');
+        if (container) container.classList.remove('hidden');
+        const cleanNumber = config.whatsappNumber.trim().replace(/[^0-9]/g, '');
+        link.href = `https://wa.me/${cleanNumber}`;
+        link.setAttribute('target', '_blank');
+        link.setAttribute('rel', 'noopener noreferrer');
 
-        const textTrim = link.textContent.trim();
-        if (textTrim.startsWith('+92') || textTrim.startsWith('0300')) {
-          link.textContent = config.displayPhone;
+        if (config.displayPhone) {
+          const phoneEl = link.querySelector('[data-du-phone]');
+          if (phoneEl) phoneEl.textContent = config.displayPhone;
         }
-      });
-    }
+      }
+    });
 
     // 2. Synchronize all tel: links
-    document.querySelectorAll('a[href^="tel:"]').forEach(link => {
-      link.href = `tel:${config.telPhone || ('+' + config.whatsappNumber)}`;
+    document.querySelectorAll('a[href^="tel:"], [data-du-tel]').forEach(link => {
+      if (!hasVerifiedTel) {
+        link.classList.add('hidden');
+        link.removeAttribute('href');
+        const container = link.closest('[data-du-phone-container]');
+        if (container) container.classList.add('hidden');
+      } else {
+        link.classList.remove('hidden');
+        const telValue = config.telPhone || ('+' + config.whatsappNumber.trim().replace(/[^0-9]/g, ''));
+        link.href = `tel:${telValue}`;
+        const container = link.closest('[data-du-phone-container]');
+        if (container) container.classList.remove('hidden');
+      }
     });
 
     // 3. Synchronize all display phone elements
     document.querySelectorAll('[data-du-phone], .du-phone-display').forEach(el => {
-      el.textContent = config.displayPhone;
+      const container = el.closest('[data-du-phone-container]');
+      if (!hasVerifiedPhone && (!config || !config.displayPhone)) {
+        el.classList.add('hidden');
+        el.textContent = '';
+        if (container) container.classList.add('hidden');
+      } else {
+        el.classList.remove('hidden');
+        el.textContent = config.displayPhone;
+        if (container) container.classList.remove('hidden');
+      }
     });
   };
 
   // Run contact synchronization on load
   syncContactLinks();
 
-  // 9. Portfolio Detailed Case Study Modal (DU-PORT-001 & DU-PORT-002 Fix)
-  // Kept strictly to 4 relevant sample concept industries (Restaurants, Salons, Clinics, Real Estate)
+  // 8C. Central Commercial Source Synchronization
+  const syncCommercialData = () => {
+    const config = getActiveConfig();
+    const commercial = config?.commercial;
+    if (!commercial || !commercial.packages) return;
+
+    document.querySelectorAll('[data-commercial-package]').forEach(el => {
+      const pkgKey = el.getAttribute('data-commercial-package');
+      const pkg = commercial.packages[pkgKey];
+      if (!pkg) return;
+
+      const upfrontEl = el.querySelector('[data-commercial-upfront]');
+      if (upfrontEl && pkg.upfrontDiscountText) {
+        upfrontEl.textContent = pkg.upfrontDiscountText;
+      }
+    });
+  };
+
+  syncCommercialData();
+
+  // 9. Portfolio Detailed Case Study Modal - Industry Demo Concepts
   const portfolioData = {
     'spice-bistro': {
       title: 'Spice Bistro — Lahore',
       category: 'Restaurant & Hospitality Website',
-      typeBadge: 'Sample Website Concept',
+      typeBadge: 'Industry Demo Concept',
       industry: 'Food & Dining — Lahore, Pakistan',
       deliverables: '5-Page Custom Web Experience + Digital QR Menu + 1-Click WhatsApp Ordering Flow',
-      description: 'A complete digital presence engineered for high-end dining. Designed to eliminate expensive third-party delivery commission fees by routing customer reservations and takeout orders directly into WhatsApp.',
+      description: 'This concept demonstrates how Digital Ustad can build a modern digital presence for businesses in this industry. Designed to eliminate third-party commission fees by routing customer reservations and takeout orders directly into WhatsApp.',
       features: [
         'Live Digital QR & Visual Food Menu',
         'Direct 1-Click WhatsApp Delivery & Takeout Flow',
@@ -857,35 +1254,35 @@ document.addEventListener('DOMContentLoaded', () => {
         'Local SEO & Google Maps Sync Architecture',
         '100% Mobile Optimized for 360px+ Smartphones'
       ],
-      stats: 'Designed in 8 Working Days • Fast WhatsApp Ordering Architecture',
-      status: 'Sample Concept Showcase',
+      stats: 'Typical Delivery: 7–10 Working Days • Fast WhatsApp Ordering Architecture',
+      status: 'Industry Demo Concept',
       image: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=80'
     },
     'glow-shine': {
       title: 'Glow & Shine Salon — Lahore',
       category: 'Beauty, Salon & Spa Booking Portal',
-      typeBadge: 'Sample Website Concept',
+      typeBadge: 'Industry Demo Concept',
       industry: 'Aesthetics & Wellness — Lahore, Pakistan',
-      deliverables: 'Custom Booking Portal + Service Menu + Stylist Portfolio Gallery + WhatsApp Bot',
-      description: 'An elegant pastel-toned showcase designed to convert casual Instagram visitors into confirmed appointments. Enables clients to browse bridal tiers, facial treatments, and select stylist availability.',
+      deliverables: 'Custom Booking Portal + Service Menu + Stylist Portfolio Gallery + WhatsApp Flow',
+      description: 'This concept demonstrates how Digital Ustad can build a modern digital presence for businesses in this industry. An elegant showcase designed to convert visitors into confirmed appointments, allowing clients to browse services and book directly.',
       features: [
         'Interactive Bridal & Party Service Catalog',
         'Direct WhatsApp Slot Booking System',
-        'Stylist Work Gallery with Before/After Showcase',
+        'Stylist Work Gallery Showcase',
         'Google Business Profile Integration',
-        'Fast 0.9s Load Speed on Mobile Connections'
+        'Fast Load Speed on Mobile Connections'
       ],
-      stats: 'Designed in 7 Working Days • 360px Responsive Layout',
-      status: 'Sample Concept Showcase',
+      stats: 'Typical Delivery: 7–10 Working Days • 360px Responsive Layout',
+      status: 'Industry Demo Concept',
       image: 'https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1200&q=80'
     },
     'healthcare-clinic': {
       title: 'HealthCare Clinic — Lahore',
       category: 'Medical & Diagnostic Healthcare Portal',
-      typeBadge: 'Sample Website Concept',
+      typeBadge: 'Industry Demo Concept',
       industry: 'Healthcare & Diagnostics — Lahore, Pakistan',
       deliverables: 'Patient Information Portal + Doctor OPD Timings + Online Appointment Inquiry',
-      description: 'A clean, patient-centric medical website engineered to establish patient trust. Features clear doctor specializations, clinic timings, branch locations, and instant appointment booking.',
+      description: 'This concept demonstrates how Digital Ustad can build a modern digital presence for businesses in this industry. A clean, patient-centric layout featuring clear doctor specializations, clinic timings, and direct WhatsApp appointment inquiry.',
       features: [
         'Physician Profiles & Specialty Directory',
         'Interactive OPD Schedule & Timings Table',
@@ -893,17 +1290,17 @@ document.addEventListener('DOMContentLoaded', () => {
         'Google Maps Direction & Contact Locator',
         'Emergency Helpline Quick-Tap Integration'
       ],
-      stats: 'Designed in 9 Working Days • Clean Accessibility & Trust Architecture',
-      status: 'Sample Concept Showcase',
+      stats: 'Typical Delivery: 7–10 Working Days • Clean Accessibility & Trust Architecture',
+      status: 'Industry Demo Concept',
       image: 'https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1200&q=80'
     },
     'dream-homes': {
       title: 'Dream Homes Real Estate — Lahore',
       category: 'Real Estate & Property Consultancy',
-      typeBadge: 'Sample Website Concept',
+      typeBadge: 'Industry Demo Concept',
       industry: 'Property & Investments — Lahore, Pakistan',
       deliverables: 'High-Converting Property Catalog + Virtual Video Showcase + WhatsApp Lead Funnel',
-      description: 'A high-converting real estate showcase designed for local and overseas Pakistani property investors. Integrates high-res image galleries, location filter tags, and direct lead routing to sales agents.',
+      description: 'This concept demonstrates how Digital Ustad can build a modern digital presence for businesses in this industry. Integrates image galleries, property filter tags, and direct lead routing to sales agents via WhatsApp.',
       features: [
         'Featured Residential & Commercial Listings',
         'Filter by Category, Price & Area',
@@ -911,9 +1308,45 @@ document.addEventListener('DOMContentLoaded', () => {
         'Meta Ads Lead Funnel Integration',
         'Overseas Investor Direct Inquiry Form'
       ],
-      stats: 'Designed in 10 Working Days • Fast Lead Capture Architecture',
-      status: 'Sample Concept Showcase',
+      stats: 'Typical Delivery: 7–10 Working Days • Fast Lead Capture Architecture',
+      status: 'Industry Demo Concept',
       image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80'
+    },
+    'fitzone-gym': {
+      title: 'FitZone Fitness Club — Lahore',
+      category: 'Gym, Fitness & Membership Portal',
+      typeBadge: 'Industry Demo Concept',
+      industry: 'Health & Fitness — Lahore, Pakistan',
+      deliverables: 'Modern Fitness Experience + Trainer Schedules + WhatsApp Membership Funnel',
+      description: 'This concept demonstrates how Digital Ustad can build a modern digital presence for businesses in this industry. Engineered to showcase class timetables, membership pricing, and direct WhatsApp signups.',
+      features: [
+        'Weekly Class Timetable & Trainer Showcase',
+        'Membership Tier Comparison Table',
+        '1-Click WhatsApp Trial Class Booking',
+        'Google Business Profile & Location Map Sync',
+        'Mobile-Optimized Fast Architecture'
+      ],
+      stats: 'Typical Delivery: 7–10 Working Days • Membership Lead Funnel',
+      status: 'Industry Demo Concept',
+      image: 'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1200&q=80'
+    },
+    'bright-future': {
+      title: 'Bright Future Academy — Lahore',
+      category: 'Education, School & Academy Portal',
+      typeBadge: 'Industry Demo Concept',
+      industry: 'Education & Academics — Lahore, Pakistan',
+      deliverables: 'Academic Information Portal + Admission Inquiries + Fee Structure Guide',
+      description: 'This concept demonstrates how Digital Ustad can build a modern digital presence for businesses in this industry. Built to streamline student admissions and provide transparent curriculum and fee details.',
+      features: [
+        'Curriculum Overview & Faculty Profiles',
+        'Online Admission Inquiry Form',
+        'Fee Structure & Academic Calendar',
+        'Direct WhatsApp Guidance Line',
+        'Fast Accessible Layout on Mobile'
+      ],
+      stats: 'Typical Delivery: 7–10 Working Days • Admissions Funnel',
+      status: 'Industry Demo Concept',
+      image: 'https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=1200&q=80'
     }
   };
 

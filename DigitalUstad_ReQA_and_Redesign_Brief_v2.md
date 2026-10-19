@@ -33,7 +33,7 @@ The following was directly observed across 17 public routes.
 
 ### High-priority issues still present
 
-1. **The public WhatsApp number is still `+92 300 0000000`.** The business owner must verify the actual controlled number before any WhatsApp link is published.
+1. **The public WhatsApp number previously had a placeholder (`[PLACEHOLDER_REMOVED]`).** The business owner must verify the actual controlled number before any WhatsApp link is published.
 2. **Growth package arithmetic is inconsistent.** The advertised price is PKR 42,999, while the visible installments are PKR 10,750 + 21,500 + 10,750 = PKR 43,000.
 3. **Growth delivery timing conflicts.** Pricing says 12-15 working days; Terms says 10-14 working days.
 4. **Retainer cancellation conflicts.** Social Media says 15-day exit flexibility; Refund Policy says seven days and calls retainers no-lock-in. SEO simultaneously states a three-month commitment.

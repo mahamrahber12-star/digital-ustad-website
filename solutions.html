@@ -13,14 +13,17 @@
   <meta property="og:url" content="https://digitalustad.co/solutions">
   <meta property="og:title" content="Industry Solutions | Digital Ustad">
   <meta property="og:description" content="Customized digital solutions tailored for Restaurants, Salons & Spas, Healthcare Clinics, and Real Estate Agencies across Pakistan.">
-  <meta property="og:image" content="https://digitalustad.co/assets/images/logo-dark.png">
+  <meta property="og:image" content="https://digitalustad.co/assets/images/og-social-card.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Digital Ustad - Build Grow Automate | Digital Solutions &amp; Business Automation">
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:url" content="https://digitalustad.co/solutions">
   <meta name="twitter:title" content="Industry Solutions | Digital Ustad">
   <meta name="twitter:description" content="Customized digital solutions tailored for Restaurants, Salons & Spas, Healthcare Clinics, and Real Estate Agencies across Pakistan.">
-  <meta name="twitter:image" content="https://digitalustad.co/assets/images/logo-dark.png">
+  <meta name="twitter:image" content="https://digitalustad.co/assets/images/og-social-card.png">
 
   <!-- Theme Init (Prevents FOUC) -->
   <script>
@@ -36,7 +39,7 @@
   </script>
 
   <link rel="stylesheet" href="css/tailwind.min.css">
-  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="js/lucide.min.js"></script>
   <link rel="stylesheet" href="css/style.css">
 
   <!-- Structured Data: CollectionPage & BreadcrumbList -->
@@ -93,13 +96,12 @@
           <img src="assets/images/logo-dark.png" alt="Digital Ustad" width="160" height="44" class="h-10 sm:h-11 w-auto object-contain transition-transform duration-300 group-hover:scale-105">
         </a>
 
-        <nav class="hidden md:flex items-center gap-8">
+        <nav class="hidden md:flex items-center gap-6 lg:gap-8" aria-label="Main Navigation">
           <a href="index.html" class="text-sm font-semibold text-slate-300 hover:text-[#FF6600] transition-colors">Home</a>
           <a href="services.html" class="text-sm font-semibold text-slate-300 hover:text-[#FF6600] transition-colors">Services</a>
+          <a href="solutions.html" class="text-sm font-semibold text-white hover:text-[#FF6600] transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-[#FF6600]" aria-current="page">Solutions</a>
+          <a href="portfolio.html" class="text-sm font-semibold text-slate-300 hover:text-[#FF6600] transition-colors">Work and Concepts</a>
           <a href="pricing.html" class="text-sm font-semibold text-slate-300 hover:text-[#FF6600] transition-colors">Pricing</a>
-          <a href="solutions.html" class="text-sm font-semibold text-white hover:text-[#FF6600] transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-[#FF6600]">Solutions</a>
-          <a href="how-it-works.html" class="text-sm font-semibold text-slate-300 hover:text-[#FF6600] transition-colors">How It Works</a>
-          <a href="portfolio.html" class="text-sm font-semibold text-slate-300 hover:text-[#FF6600] transition-colors">Portfolio</a>
           <a href="about.html" class="text-sm font-semibold text-slate-300 hover:text-[#FF6600] transition-colors">About Us</a>
           <a href="contact.html" class="text-sm font-semibold text-slate-300 hover:text-[#FF6600] transition-colors">Contact</a>
         </nav>
@@ -111,8 +113,8 @@
             <i data-lucide="sun" class="w-4 h-4 text-amber-400 theme-icon-sun"></i>
           </button>
 
-          <a href="contact.html" class="btn-shine hidden sm:inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-full bg-[#FF6600] hover:bg-[#EA580C] text-white text-sm font-bold shadow-lg orange-glow-sm hover:scale-105 transition-all">
-            <span>Get a Free Consultation</span>
+          <a href="contact.html" class="btn-shine hidden sm:inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-full bg-[#FF6600] hover:bg-[#EA580C] text-white text-sm font-bold shadow-lg orange-glow-sm hover:scale-105 transition-all" data-track="proposal-cta">
+            <span>Get Free Proposal</span>
             <i data-lucide="arrow-right" class="w-4 h-4"></i>
           </a>
           <button id="mobile-menu-btn" class="md:hidden p-2.5 rounded-xl text-slate-300 hover:text-white" aria-label="Open navigation menu">
@@ -136,16 +138,15 @@
           <button id="close-mobile-menu" class="p-2 text-slate-400 hover:text-white" aria-label="Close navigation menu"><i data-lucide="x" class="w-7 h-7"></i></button>
         </div>
       </div>
-      <div class="flex flex-col gap-5 py-8 flex-1">
-        <a href="index.html" class="mobile-nav-link text-lg font-semibold text-slate-300 hover:text-[#FF6600]">Home</a>
-        <a href="services.html" class="mobile-nav-link text-lg font-semibold text-slate-300 hover:text-[#FF6600]">Services</a>
-        <a href="pricing.html" class="mobile-nav-link text-lg font-semibold text-slate-300 hover:text-[#FF6600]">Pricing</a>
-        <a href="solutions.html" class="mobile-nav-link text-lg font-semibold text-white hover:text-[#FF6600]">Solutions</a>
-        <a href="how-it-works.html" class="mobile-nav-link text-lg font-semibold text-slate-300 hover:text-[#FF6600]">How It Works</a>
-        <a href="portfolio.html" class="mobile-nav-link text-lg font-semibold text-slate-300 hover:text-[#FF6600]">Portfolio</a>
-        <a href="about.html" class="mobile-nav-link text-lg font-semibold text-slate-300 hover:text-[#FF6600]">About Us</a>
-        <a href="contact.html" class="mobile-nav-link text-lg font-semibold text-slate-300 hover:text-[#FF6600]">Contact</a>
-      </div>
+      <nav class="flex flex-col gap-4 py-8 flex-1 overflow-y-auto" aria-label="Mobile Navigation">
+        <a href="index.html" class="mobile-nav-link text-base font-semibold text-slate-300 hover:text-[#FF6600]">Home</a>
+        <a href="services.html" class="mobile-nav-link text-base font-semibold text-slate-300 hover:text-[#FF6600]">Services</a>
+        <a href="solutions.html" class="mobile-nav-link text-base font-semibold text-white hover:text-[#FF6600]" aria-current="page">Solutions</a>
+        <a href="portfolio.html" class="mobile-nav-link text-base font-semibold text-slate-300 hover:text-[#FF6600]">Work and Concepts</a>
+        <a href="pricing.html" class="mobile-nav-link text-base font-semibold text-slate-300 hover:text-[#FF6600]">Pricing</a>
+        <a href="about.html" class="mobile-nav-link text-base font-semibold text-slate-300 hover:text-[#FF6600]">About Us</a>
+        <a href="contact.html" class="mobile-nav-link text-base font-semibold text-slate-300 hover:text-[#FF6600]">Contact</a>
+      </nav>
     </div>
   </div>
 
@@ -306,7 +307,7 @@
             <a href="mailto:contact@digitalustad.co" class="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center hover:bg-[#FF6600] hover:text-white transition-colors" title="Email">
               <i data-lucide="mail" class="w-4 h-4"></i>
             </a>
-            <a href="tel:+923000000000" class="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center hover:bg-[#FF6600] hover:text-white transition-colors" title="Phone">
+            <a href="#" data-du-tel class="hidden w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center hover:bg-[#FF6600] hover:text-white transition-colors" title="Phone">
               <i data-lucide="phone" class="w-4 h-4"></i>
             </a>
           </div>
@@ -349,9 +350,9 @@
               <i data-lucide="map-pin" class="w-4 h-4 text-[#FF6600] flex-shrink-0 mt-0.5"></i>
               <span>Lahore, Pakistan & Worldwide Remote</span>
             </li>
-            <li class="flex items-center gap-2">
+            <li class="flex items-center gap-2 hidden" data-du-phone-container>
               <i data-lucide="phone" class="w-4 h-4 text-[#FF6600] flex-shrink-0"></i>
-              <span data-du-phone>+92 300 0000000</span>
+              <span data-du-phone></span>
             </li>
             <li class="flex items-center gap-2">
               <i data-lucide="mail" class="w-4 h-4 text-[#FF6600] flex-shrink-0"></i>
@@ -381,13 +382,6 @@
     </div>
   </footer>
 
-  <!-- ================= DIGITAL USTAD WEBCHAT LAUNCHER ================= -->
-  <button type="button" onclick="openDigitalUstadChat({ intent: 'general_consultation', sourcePage: window.location.pathname })" class="fixed bottom-6 right-6 z-40 px-4 py-3 sm:px-5 sm:py-3.5 rounded-full bg-[#0B0F19] hover:bg-slate-900 text-white flex items-center justify-center gap-2.5 shadow-2xl border border-slate-700/80 hover:border-[#FF6600] hover:scale-105 active:scale-95 transition-all group" aria-label="Open Digital Ustad assistant" title="Ask Digital Ustad">
-    <span class="w-2 h-2 rounded-full bg-[#FF6600] animate-pulse"></span>
-    <i data-lucide="bot" class="w-5 h-5 text-[#FF6600]"></i>
-    <span class="text-xs font-bold tracking-wide hidden sm:inline">Ask Digital Ustad</span>
-  </button>
-
   <!-- QUOTATION MODAL -->
   <div id="quote-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/80 modal-backdrop hidden p-4" role="dialog" aria-modal="true" aria-labelledby="quote-modal-title">
     <div class="modal-box bg-white rounded-3xl max-w-lg w-full p-6 sm:p-8 shadow-2xl relative scale-95 opacity-0 transition-all duration-200">
@@ -395,22 +389,25 @@
       <div class="mb-6">
         <div class="flex items-center justify-between mb-2">
           <h2 id="quote-modal-title" class="text-2xl font-extrabold text-slate-900">Request an Industry Solution</h2>
-          <span id="payment-milestone-badge" class="text-[11px] font-bold text-orange-800 bg-orange-100 px-3 py-1 rounded-full transition-colors">25/50/25 Installments</span>
+          <span id="payment-milestone-badge" class="text-[11px] font-bold text-orange-800 bg-orange-100 px-3 py-1 rounded-full transition-colors">40/30/30 Milestones</span>
         </div>
         <p class="text-xs text-slate-500 mt-1">Select your preferred package and receive a customized plan from our team.</p>
       </div>
-      <form id="quote-form" class="space-y-4">
+      <form id="quote-form" method="POST" action="/api/leads" class="space-y-4">
+        <!-- Anti-spam Honeypot -->
+        <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" class="hidden" aria-hidden="true" style="display:none !important">
+
         <div>
           <label for="solutions-client-name" class="block text-xs font-bold text-slate-700 uppercase mb-1">Your Name *</label>
-          <input type="text" id="solutions-client-name" required placeholder="Ali Khan" class="w-full px-4 py-2.5 rounded-xl border text-sm">
+          <input type="text" id="solutions-client-name" name="name" required placeholder="Ali Khan" class="w-full px-4 py-2.5 rounded-xl border text-sm">
         </div>
         <div>
           <label for="solutions-client-phone" class="block text-xs font-bold text-slate-700 uppercase mb-1">WhatsApp Number *</label>
-          <input type="tel" id="solutions-client-phone" required placeholder="0300 1122334" class="w-full px-4 py-2.5 rounded-xl border text-sm">
+          <input type="tel" id="solutions-client-phone" name="phone" required placeholder="e.g. 03XX XXXXXXX" class="w-full px-4 py-2.5 rounded-xl border text-sm">
         </div>
         <div>
           <label for="solutions-client-service" class="block text-xs font-bold text-slate-700 uppercase mb-1">Target Service</label>
-          <select id="solutions-client-service" class="w-full px-3 py-2.5 rounded-xl border text-sm bg-white">
+          <select id="solutions-client-service" name="service" class="w-full px-3 py-2.5 rounded-xl border text-sm bg-white">
             <option value="5-Page Website Starter (PKR 30,000)">5-Page Website Starter (PKR 30,000) ⭐</option>
             <option value="3-Page Website Lite (PKR 17,999)">3-Page Website Lite (PKR 17,999)</option>
             <option value="Growth WhatsApp Workflow (PKR 45K-65K)">Growth WhatsApp Workflow (PKR 45k-65k) 🤖</option>
@@ -422,13 +419,13 @@
             <option value="All-in-One Growth Bundle (PKR 75,000/mo)">All-in-One Growth Suite (PKR 75,000/mo)</option>
           </select>
         </div>
-        <button type="submit" class="btn-shine w-full py-3.5 rounded-xl bg-[#FF6600] text-white font-bold text-sm shadow-xl flex items-center justify-center gap-2">
+        <button type="submit" class="btn-shine w-full py-3.5 rounded-xl bg-[#FF6600] text-white font-bold text-sm shadow-xl flex items-center justify-center gap-2" data-track="contact-form-submit">
           <span>Submit Project Brief</span>
           <i data-lucide="send" class="w-4 h-4"></i>
         </button>
 
         <div id="payment-milestone-text" class="text-[11px] text-slate-500 text-center pt-1 leading-relaxed">
-          🔒 Privacy guaranteed. Zero spam. <strong>Payment Milestones: 25% kickoff, 50% approval on staging, 25% within 30 days of launch.</strong>
+          🔒 Privacy guaranteed. Zero spam. By submitting, you agree to our <a href="privacy.html" class="underline hover:text-[#FF6600]">Privacy Policy</a>. <strong>Payment Milestones: 40% project kickoff, 30% after design/development approval milestone, 30% before final handover / deployment completion.</strong>
         </div>
       </form>
     </div>

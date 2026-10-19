@@ -13,14 +13,17 @@
   <meta property="og:url" content="https://digitalustad.co/service-seo-google-business">
   <meta property="og:title" content="SEO & Google Business Profile | Digital Ustad">
   <meta property="og:description" content="Improve your visibility on Google, get more traffic and attract local customers to your business.">
-  <meta property="og:image" content="https://digitalustad.co/assets/images/logo-dark.png">
+  <meta property="og:image" content="https://digitalustad.co/assets/images/og-social-card.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Digital Ustad - Build Grow Automate | Digital Solutions &amp; Business Automation">
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:url" content="https://digitalustad.co/service-seo-google-business">
   <meta name="twitter:title" content="SEO & Google Business Profile | Digital Ustad">
   <meta name="twitter:description" content="Improve your visibility on Google, get more traffic and attract local customers to your business.">
-  <meta name="twitter:image" content="https://digitalustad.co/assets/images/logo-dark.png">
+  <meta name="twitter:image" content="https://digitalustad.co/assets/images/og-social-card.png">
 
   <!-- Theme Init (Prevents FOUC) -->
   <script>
@@ -36,7 +39,7 @@
   </script>
 
   <link rel="stylesheet" href="css/tailwind.min.css">
-  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="js/lucide.min.js"></script>
   <link rel="stylesheet" href="css/style.css">
 
   <!-- Structured Data: Service, WebPage, and BreadcrumbList -->
@@ -117,12 +120,12 @@
           <img src="assets/images/logo-dark.png" alt="Digital Ustad" width="160" height="44" class="h-10 sm:h-11 w-auto object-contain transition-transform duration-300 group-hover:scale-105">
         </a>
 
-        <nav class="hidden md:flex items-center gap-8">
+        <nav class="hidden md:flex items-center gap-6 lg:gap-8" aria-label="Main Navigation">
           <a href="index.html" class="text-sm font-semibold text-slate-300 hover:text-[#FF6600] transition-colors">Home</a>
-          <a href="services.html" class="text-sm font-semibold text-white hover:text-[#FF6600] transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-[#FF6600]">Services</a>
-          <a href="pricing.html" class="text-sm font-semibold text-slate-300 hover:text-[#FF6600] transition-colors">Pricing</a>
+          <a href="services.html" class="text-sm font-semibold text-slate-300 hover:text-[#FF6600] transition-colors">Services</a>
           <a href="solutions.html" class="text-sm font-semibold text-slate-300 hover:text-[#FF6600] transition-colors">Solutions</a>
-          <a href="how-it-works.html" class="text-sm font-semibold text-slate-300 hover:text-[#FF6600] transition-colors">How It Works</a>
+          <a href="portfolio.html" class="text-sm font-semibold text-slate-300 hover:text-[#FF6600] transition-colors">Work and Concepts</a>
+          <a href="pricing.html" class="text-sm font-semibold text-slate-300 hover:text-[#FF6600] transition-colors">Pricing</a>
           <a href="about.html" class="text-sm font-semibold text-slate-300 hover:text-[#FF6600] transition-colors">About Us</a>
           <a href="contact.html" class="text-sm font-semibold text-slate-300 hover:text-[#FF6600] transition-colors">Contact</a>
         </nav>
@@ -134,8 +137,8 @@
             <i data-lucide="sun" class="w-4 h-4 text-amber-400 theme-icon-sun"></i>
           </button>
 
-          <a href="contact.html" class="btn-get-started btn-shine hidden sm:inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-full bg-[#FF6600] hover:bg-[#EA580C] text-white text-sm font-bold shadow-lg orange-glow-sm hover:scale-105 transition-all">
-            <span>Get a Free Consultation</span>
+          <a href="contact.html" class="btn-get-started btn-shine hidden sm:inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-full bg-[#FF6600] hover:bg-[#EA580C] text-white text-sm font-bold shadow-lg orange-glow-sm hover:scale-105 transition-all" data-track="proposal-cta">
+            <span>Get Free Proposal</span>
             <i data-lucide="arrow-right" class="w-4 h-4"></i>
           </a>
           <button id="mobile-menu-btn" class="md:hidden p-2.5 rounded-xl text-slate-300 hover:text-white" aria-label="Open navigation menu">
@@ -159,15 +162,15 @@
           <button id="close-mobile-menu" class="p-2 text-slate-400 hover:text-white" aria-label="Close navigation menu"><i data-lucide="x" class="w-7 h-7"></i></button>
         </div>
       </div>
-      <div class="flex flex-col gap-5 py-8 flex-1">
-        <a href="index.html" class="mobile-nav-link text-lg font-semibold text-slate-300 hover:text-[#FF6600]">Home</a>
-        <a href="services.html" class="mobile-nav-link text-lg font-semibold text-white hover:text-[#FF6600]">Services</a>
-        <a href="pricing.html" class="mobile-nav-link text-lg font-semibold text-slate-300 hover:text-[#FF6600]">Pricing</a>
-        <a href="solutions.html" class="mobile-nav-link text-lg font-semibold text-slate-300 hover:text-[#FF6600]">Solutions</a>
-        <a href="how-it-works.html" class="mobile-nav-link text-lg font-semibold text-slate-300 hover:text-[#FF6600]">How It Works</a>
-        <a href="about.html" class="mobile-nav-link text-lg font-semibold text-slate-300 hover:text-[#FF6600]">About Us</a>
-        <a href="contact.html" class="mobile-nav-link text-lg font-semibold text-slate-300 hover:text-[#FF6600]">Contact</a>
-      </div>
+      <nav class="flex flex-col gap-4 py-8 flex-1 overflow-y-auto" aria-label="Mobile Navigation">
+        <a href="index.html" class="mobile-nav-link text-base font-semibold text-slate-300 hover:text-[#FF6600]">Home</a>
+        <a href="services.html" class="mobile-nav-link text-base font-semibold text-slate-300 hover:text-[#FF6600]">Services</a>
+        <a href="solutions.html" class="mobile-nav-link text-base font-semibold text-slate-300 hover:text-[#FF6600]">Solutions</a>
+        <a href="portfolio.html" class="mobile-nav-link text-base font-semibold text-slate-300 hover:text-[#FF6600]">Work and Concepts</a>
+        <a href="pricing.html" class="mobile-nav-link text-base font-semibold text-slate-300 hover:text-[#FF6600]">Pricing</a>
+        <a href="about.html" class="mobile-nav-link text-base font-semibold text-slate-300 hover:text-[#FF6600]">About Us</a>
+        <a href="contact.html" class="mobile-nav-link text-base font-semibold text-slate-300 hover:text-[#FF6600]">Contact</a>
+      </nav>
     </div>
   </div>
 
@@ -233,14 +236,14 @@
 
           <!-- Action Buttons -->
           <div class="flex flex-wrap items-center gap-4 pt-4">
-            <button class="btn-get-started btn-shine inline-flex items-center gap-2.5 px-7 py-3.5 rounded-full bg-[#FF6600] hover:bg-[#EA580C] text-white font-bold text-sm shadow-xl orange-glow hover:scale-105 active:scale-95 transition-all">
+            <button class="btn-get-started btn-shine inline-flex items-center gap-2.5 px-7 py-3.5 rounded-full bg-[#FF6600] hover:bg-[#EA580C] text-white font-bold text-sm shadow-xl orange-glow hover:scale-105 active:scale-95 transition-all" data-track="proposal-cta">
               <span>Improve Your Visibility</span>
               <i data-lucide="arrow-right" class="w-4 h-4"></i>
             </button>
 
-            <button type="button" onclick="openDigitalUstadChat({ intent: 'service_inquiry', service: 'SEO & Google Maps', sourcePage: window.location.pathname })" class="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-full bg-slate-900 hover:bg-slate-800 text-white font-bold text-sm shadow-md hover:scale-105 active:scale-95 transition-all">
+            <button type="button" data-track="chatbot-open" onclick="openDigitalUstadChat({ intent: 'service_inquiry', service: 'SEO & Google Maps', sourcePage: window.location.pathname })" class="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-full bg-slate-900 hover:bg-slate-800 text-white font-bold text-sm shadow-md hover:scale-105 active:scale-95 transition-all">
               <i data-lucide="message-square" class="w-4 h-4 text-[#FF6600]"></i>
-              <span>Discuss This Service</span>
+              <span>Chat With Us</span>
             </button>
           </div>
         </div>
@@ -249,7 +252,7 @@
         <div class="lg:col-span-6 relative flex justify-center items-center reveal reveal-right active">
           <div class="hero-mockup-wrapper relative w-full max-w-[420px]">
             <div class="mb-3 flex items-center justify-between">
-              <span class="px-2.5 py-0.5 rounded-full bg-slate-900/90 border border-amber-500/40 text-amber-300 text-[10px] font-extrabold uppercase tracking-wide">Sample Concept — Demo Data</span>
+              <span class="px-2.5 py-0.5 rounded-full bg-slate-900/90 border border-amber-500/40 text-amber-300 text-[10px] font-extrabold uppercase tracking-wide">Industry Demo Concept</span>
             </div>
             
             <!-- Google Profile Mockup Card -->
@@ -387,7 +390,7 @@
           SEO & Google Business Packages
         </h2>
         <p class="text-slate-600 text-sm sm:text-base mt-3">
-          Improve local visibility on Google Maps and Google Search. Trusted partner for 5+ active ranking clients across Pakistan. All packages structured for compounding organic visibility with a 3-month recommended horizon (advance monthly billing, no locked-in contracts with 7-day notice).
+          Improve local visibility on Google Maps and Google Search. Structured for growing businesses and local service providers across Pakistan seeking sustainable organic rankings. All packages structured for compounding organic visibility with a 3-month recommended horizon (advance monthly billing, no locked-in contracts with 7-day notice).
         </p>
       </div>
 
@@ -434,10 +437,7 @@
           </div>
 
           <div class="pt-6 mt-6 border-t border-slate-100">
-            <button type="button" onclick="openDigitalUstadChat({ intent: 'package_consultation', service: 'SEO & Google Maps', packageId: 'local-seo', sourcePage: window.location.pathname })" class="w-full py-3.5 rounded-full bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs flex items-center justify-center gap-2 transition-all">
-              <span>Discuss This Plan</span>
-              <i data-lucide="arrow-right" class="w-4 h-4"></i>
-            </button>
+            <button type="button" data-service="SEO & Google Maps" data-package="local-seo" onclick="openProposalModal({ service: 'SEO & Google Maps', package: 'local-seo' })" data-track="pricing-cta" class="w-full py-3.5 rounded-full bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs flex items-center justify-center gap-2 transition-all"><span>Get Free Proposal</span> <i data-lucide="arrow-right" class="w-4 h-4"></i></button>
           </div>
         </div>
 
@@ -489,10 +489,7 @@
           </div>
 
           <div class="pt-6 mt-6 border-t border-slate-800">
-            <button type="button" onclick="openDigitalUstadChat({ intent: 'package_consultation', service: 'SEO & Google Maps', packageId: 'growth-seo', sourcePage: window.location.pathname })" class="w-full py-3.5 rounded-full bg-[#FF6600] hover:bg-[#EA580C] text-white font-bold text-xs flex items-center justify-center gap-2 shadow-lg orange-glow transition-all">
-              <span>Discuss This Plan</span>
-              <i data-lucide="arrow-right" class="w-4 h-4"></i>
-            </button>
+            <button type="button" data-service="SEO & Google Maps" data-package="growth-seo" onclick="openProposalModal({ service: 'SEO & Google Maps', package: 'growth-seo' })" data-track="pricing-cta" class="w-full py-3.5 rounded-full bg-[#FF6600] hover:bg-[#EA580C] text-white font-bold text-xs flex items-center justify-center gap-2 shadow-lg orange-glow transition-all"><span>Get Free Proposal</span> <i data-lucide="arrow-right" class="w-4 h-4"></i></button>
           </div>
         </div>
 
@@ -536,10 +533,7 @@
           </div>
 
           <div class="pt-6 mt-6 border-t border-slate-100">
-            <button type="button" onclick="openDigitalUstadChat({ intent: 'package_consultation', service: 'SEO & Google Maps', packageId: 'authority-seo', sourcePage: window.location.pathname })" class="w-full py-3.5 rounded-full bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs flex items-center justify-center gap-2 transition-all">
-              <span>Discuss This Plan</span>
-              <i data-lucide="arrow-right" class="w-4 h-4"></i>
-            </button>
+            <button type="button" data-service="SEO & Google Maps" data-package="authority-seo" onclick="openProposalModal({ service: 'SEO & Google Maps', package: 'authority-seo' })" data-track="pricing-cta" class="w-full py-3.5 rounded-full bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs flex items-center justify-center gap-2 transition-all"><span>Get Free Proposal</span> <i data-lucide="arrow-right" class="w-4 h-4"></i></button>
           </div>
         </div>
 
@@ -560,7 +554,7 @@
               <p class="text-xs text-slate-500 pt-1">Pin placement, category optimization, business hours, services menu, geotagged photos upload, and verification guidance.</p>
             </div>
             <div class="pt-4">
-              <button type="button" onclick="openDigitalUstadChat({ intent: 'package_consultation', service: 'SEO & Google Maps', packageId: 'gbp-setup', sourcePage: window.location.pathname })" class="text-xs font-bold text-slate-900 hover:text-[#FF6600] flex items-center gap-1">Discuss This Plan &rarr;</button>
+              <button type="button" data-service="SEO & Google Maps" data-package="gbp-setup" onclick="openProposalModal({ service: 'SEO & Google Maps', package: 'gbp-setup' })" data-track="pricing-cta" class="text-xs font-bold text-slate-900 hover:text-[#FF6600] flex items-center gap-1"><span>Get Free Proposal</span> <i data-lucide="arrow-right" class="w-4 h-4"></i></button>
             </div>
           </div>
 
@@ -572,7 +566,7 @@
               <p class="text-xs text-slate-500 pt-1">2 Updates/week, offer posts, photo uploads, customer review response templates, and local keyword ranking tracking.</p>
             </div>
             <div class="pt-4">
-              <button type="button" onclick="openDigitalUstadChat({ intent: 'package_consultation', service: 'SEO & Google Maps', packageId: 'gbp-management', sourcePage: window.location.pathname })" class="text-xs font-bold text-slate-900 hover:text-[#FF6600] flex items-center gap-1">Discuss This Plan &rarr;</button>
+              <button type="button" data-service="SEO & Google Maps" data-package="gbp-management" onclick="openProposalModal({ service: 'SEO & Google Maps', package: 'gbp-management' })" data-track="pricing-cta" class="text-xs font-bold text-slate-900 hover:text-[#FF6600] flex items-center gap-1"><span>Get Free Proposal</span> <i data-lucide="arrow-right" class="w-4 h-4"></i></button>
             </div>
           </div>
         </div>
@@ -582,7 +576,7 @@
       <div class="reveal p-5 rounded-2xl bg-blue-500/10 border border-blue-500/30 text-xs text-slate-700 flex items-start gap-3">
         <i data-lucide="calendar" class="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5"></i>
         <div class="space-y-1">
-          <div class="font-bold text-slate-900">Why a 3-Month Minimum Commitment?</div>
+          <div class="font-bold text-slate-900">Why a 3-Month Recommended Horizon (No Lock-In)?</div>
           <p class="text-slate-600 leading-relaxed">
             Google's indexing and authority algorithms require genuine build-up: <strong>Month 1</strong> is dedicated to code auditing, schema implementation & keyword architecture. <strong>Month 2</strong> builds indexing velocity and content authority. <strong>Month 3</strong> focuses on measuring ranking progress, building organic visibility, and generating initial inbound inquiry momentum.
           </p>
@@ -602,8 +596,8 @@
             <p class="text-slate-400 text-sm">More visibility. More customers. More growth.</p>
           </div>
           <div class="flex items-center gap-4">
-            <a href="contact.html" class="btn-get-started btn-shine px-7 py-3.5 rounded-full bg-[#FF6600] hover:bg-[#EA580C] text-white font-bold text-sm shadow-xl orange-glow transition-all">
-              <span>Get a Free Consultation</span>
+            <a href="contact.html" class="btn-get-started btn-shine px-7 py-3.5 rounded-full bg-[#FF6600] hover:bg-[#EA580C] text-white font-bold text-sm shadow-xl orange-glow transition-all" data-track="proposal-cta">
+              <span>Get Free Proposal</span>
             </a>
           </div>
         </div>
@@ -630,7 +624,7 @@
             <a href="mailto:contact@digitalustad.co" class="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center hover:bg-[#FF6600] hover:text-white transition-colors" title="Email">
               <i data-lucide="mail" class="w-4 h-4"></i>
             </a>
-            <a href="tel:+923000000000" class="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center hover:bg-[#FF6600] hover:text-white transition-colors" title="Phone">
+            <a href="#" data-du-tel class="hidden w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center hover:bg-[#FF6600] hover:text-white transition-colors" title="Phone">
               <i data-lucide="phone" class="w-4 h-4"></i>
             </a>
           </div>
@@ -673,9 +667,9 @@
               <i data-lucide="map-pin" class="w-4 h-4 text-[#FF6600] flex-shrink-0 mt-0.5"></i>
               <span>Lahore, Pakistan & Worldwide Remote</span>
             </li>
-            <li class="flex items-center gap-2">
+            <li class="flex items-center gap-2 hidden" data-du-phone-container>
               <i data-lucide="phone" class="w-4 h-4 text-[#FF6600] flex-shrink-0"></i>
-              <span data-du-phone>+92 300 0000000</span>
+              <span data-du-phone></span>
             </li>
             <li class="flex items-center gap-2">
               <i data-lucide="mail" class="w-4 h-4 text-[#FF6600] flex-shrink-0"></i>
@@ -705,13 +699,6 @@
     </div>
   </footer>
 
-  <!-- ================= DIGITAL USTAD WEBCHAT LAUNCHER ================= -->
-  <button type="button" onclick="openDigitalUstadChat({ intent: 'general_consultation', sourcePage: window.location.pathname })" class="fixed bottom-6 right-6 z-40 px-4 py-3 sm:px-5 sm:py-3.5 rounded-full bg-[#0B0F19] hover:bg-slate-900 text-white flex items-center justify-center gap-2.5 shadow-2xl border border-slate-700/80 hover:border-[#FF6600] hover:scale-105 active:scale-95 transition-all group" aria-label="Open Digital Ustad assistant" title="Ask Digital Ustad">
-    <span class="w-2 h-2 rounded-full bg-[#FF6600] animate-pulse"></span>
-    <i data-lucide="bot" class="w-5 h-5 text-[#FF6600]"></i>
-    <span class="text-xs font-bold tracking-wide hidden sm:inline">Ask Digital Ustad</span>
-  </button>
-
   <!-- QUOTATION MODAL -->
   <div id="quote-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/80 modal-backdrop hidden p-4" role="dialog" aria-modal="true" aria-labelledby="quote-modal-title">
     <div class="modal-box bg-white rounded-3xl max-w-lg w-full p-6 sm:p-8 shadow-2xl relative scale-95 opacity-0 transition-all duration-200">
@@ -723,18 +710,21 @@
         </div>
         <p class="text-xs text-slate-500 mt-1">Get verified on Google Maps and improve organic visibility in your city.</p>
       </div>
-      <form id="quote-form" class="space-y-4">
+      <form id="quote-form" method="POST" action="/api/leads" class="space-y-4">
+        <!-- Anti-spam Honeypot -->
+        <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" class="hidden" aria-hidden="true" style="display:none !important">
+
         <div>
           <label for="seo-client-name" class="block text-xs font-bold text-slate-700 uppercase mb-1">Your Name *</label>
-          <input type="text" id="seo-client-name" required placeholder="Ali Khan" class="w-full px-4 py-2.5 rounded-xl border text-sm">
+          <input type="text" id="seo-client-name" name="name" required placeholder="Ali Khan" class="w-full px-4 py-2.5 rounded-xl border text-sm">
         </div>
         <div>
           <label for="seo-client-phone" class="block text-xs font-bold text-slate-700 uppercase mb-1">WhatsApp Number *</label>
-          <input type="tel" id="seo-client-phone" required placeholder="0300 1122334" class="w-full px-4 py-2.5 rounded-xl border text-sm">
+          <input type="tel" id="seo-client-phone" name="phone" required placeholder="e.g. 03XX XXXXXXX" class="w-full px-4 py-2.5 rounded-xl border text-sm">
         </div>
         <div>
           <label for="seo-client-service" class="block text-xs font-bold text-slate-700 uppercase mb-1">SEO Package</label>
-          <select id="seo-client-service" class="w-full px-3 py-2.5 rounded-xl border text-sm bg-white">
+          <select id="seo-client-service" name="service" class="w-full px-3 py-2.5 rounded-xl border text-sm bg-white">
             <option value="Growth SEO Retainer (PKR 25,000/mo)">Growth SEO Retainer (PKR 25,000/mo) ⭐</option>
             <option value="Local SEO Retainer (PKR 15,000/mo)">Local SEO Retainer (PKR 15,000/mo)</option>
             <option value="Authority SEO Retainer (PKR 40,000/mo)">Authority SEO Retainer (PKR 40,000/mo)</option>
@@ -742,13 +732,13 @@
             <option value="GBP Active Management (PKR 4,000/mo)">GBP Active Management (PKR 4,000/mo)</option>
           </select>
         </div>
-        <button type="submit" class="btn-shine w-full py-3.5 rounded-xl bg-[#FF6600] text-white font-bold text-sm shadow-xl flex items-center justify-center gap-2">
+        <button type="submit" class="btn-shine w-full py-3.5 rounded-xl bg-[#FF6600] text-white font-bold text-sm shadow-xl flex items-center justify-center gap-2" data-track="contact-form-submit">
           <span>Submit Project Brief</span>
           <i data-lucide="send" class="w-4 h-4"></i>
         </button>
 
         <div id="payment-milestone-text" class="text-[11px] text-slate-500 text-center pt-1 leading-relaxed">
-          🔒 Privacy guaranteed. Zero spam. <strong>Payment Milestones: Advance monthly retainer (100% at start of each monthly cycle).</strong>
+          🔒 Privacy guaranteed. Zero spam. By submitting, you agree to our <a href="privacy.html" class="underline hover:text-[#FF6600]">Privacy Policy</a>. <strong>Payment Milestones: Advance monthly retainer (100% at start of each monthly cycle).</strong>
         </div>
       </form>
     </div>

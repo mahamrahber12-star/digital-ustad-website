@@ -14,4 +14,5 @@
 /privacy                  /privacy.html                  200
 /terms                    /terms.html                    200
 /refund                   /refund.html                   200
+/api/leads                 /.netlify/functions/leads      200
 /*                        /404.html                      404

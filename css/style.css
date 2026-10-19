@@ -703,157 +703,6 @@ html.dark .pricing-tab-btn:not(.active):hover {
   display: block;
 }
 
-/* ==========================================================================
-   CLONVO.CHAT - DIGITAL USTAD ASSISTANT STYLING (QA-05)
-   ========================================================================== */
-#du-chat-dialog {
-  position: fixed;
-  bottom: calc(1.5rem + env(safe-area-inset-bottom, 0px));
-  right: 1.5rem;
-  width: 390px;
-  max-width: calc(100vw - 2rem);
-  height: 620px;
-  max-height: calc(100vh - 5rem);
-  background: #0B0F19;
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: 1.25rem;
-  box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.7), 0 0 35px rgba(255, 102, 0, 0.12);
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-  z-index: 1000;
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(20px) scale(0.96);
-  transition: opacity 0.25s cubic-bezier(0.16, 1, 0.3, 1), 
-              transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), 
-              visibility 0.25s;
-}
-
-#du-chat-dialog.du-chat-open {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0) scale(1);
-}
-
-@media (max-width: 640px) {
-  #du-chat-dialog {
-    bottom: calc(0.5rem + env(safe-area-inset-bottom, 0px));
-    right: 0.5rem;
-    left: 0.5rem;
-    width: auto;
-    max-width: none;
-    height: 85vh;
-    max-height: 85vh;
-    border-radius: 1.25rem 1.25rem 0.75rem 0.75rem;
-  }
-}
-
-/* Chat Messages Scroll Container */
-.du-chat-messages {
-  flex: 1 1 auto;
-  overflow-y: auto;
-  padding: 1rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-  scroll-behavior: smooth;
-  overscroll-behavior: contain;
-}
-
-.du-chat-messages::-webkit-scrollbar {
-  width: 6px;
-}
-.du-chat-messages::-webkit-scrollbar-track {
-  background: rgba(11, 15, 25, 0.6);
-}
-.du-chat-messages::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.15);
-  border-radius: 3px;
-}
-.du-chat-messages::-webkit-scrollbar-thumb:hover {
-  background: #FF6600;
-}
-
-/* Bubble Styling */
-.du-bubble-bot {
-  align-self: flex-start;
-  max-width: 86%;
-  background: #151D2F;
-  color: #E2E8F0;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 1rem 1rem 1rem 0.25rem;
-  padding: 0.75rem 0.9rem;
-  font-size: 0.8125rem;
-  line-height: 1.45;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-}
-
-.du-bubble-user {
-  align-self: flex-end;
-  max-width: 86%;
-  background: linear-gradient(135deg, #FF6600 0%, #EA580C 100%);
-  color: #FFFFFF;
-  border-radius: 1rem 1rem 0.25rem 1rem;
-  padding: 0.75rem 0.9rem;
-  font-size: 0.8125rem;
-  line-height: 1.45;
-  font-weight: 500;
-  box-shadow: 0 4px 14px rgba(255, 102, 0, 0.3);
-}
-
-/* Quick Action Chips */
-.du-chip-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.35rem;
-  padding: 0.4rem 0.75rem;
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: 9999px;
-  color: #F1F5F9;
-  font-size: 0.75rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.15s ease-in-out;
-  text-align: left;
-}
-
-.du-chip-btn:hover {
-  background: rgba(255, 102, 0, 0.15);
-  border-color: #FF6600;
-  color: #FFFFFF;
-  transform: translateY(-1px);
-}
-
-.du-chip-btn:focus-visible {
-  outline: 2px solid #FF6600;
-  outline-offset: 2px;
-}
-
-/* Typing Indicator Animation */
-.du-typing-dot {
-  width: 6px;
-  height: 6px;
-  background: #94A3B8;
-  border-radius: 50%;
-  display: inline-block;
-  animation: duTypingBounce 1.4s infinite ease-in-out both;
-}
-.du-typing-dot:nth-child(1) { animation-delay: -0.32s; }
-.du-typing-dot:nth-child(2) { animation-delay: -0.16s; }
-.du-typing-dot:nth-child(3) { animation-delay: 0s; }
-
-@keyframes duTypingBounce {
-  0%, 80%, 100% { transform: scale(0); opacity: 0.3; }
-  40% { transform: scale(1); opacity: 1; background: #FF6600; }
-}
-
-/* Floating Launcher Safe Area */
-#du-chat-launcher {
-  bottom: calc(1.5rem + env(safe-area-inset-bottom, 0px)) !important;
-}
-
 /* ================= REDESIGN DESIGN TOKENS & ACCESSIBILITY ================= */
 
 /* Accessible Dark Orange Button (WCAG AA compliant with white text) */
@@ -955,5 +804,235 @@ html.dark :focus-visible {
     transform: none !important;
   }
 }
+
+/* Mobile Conversion UX & Modal Viewport Fit (Task 9) */
+.modal-box {
+  max-height: 90vh;
+  max-height: 90dvh;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
+}
+
+@media (max-width: 640px) {
+  .modal-box {
+    width: 95% !important;
+    max-width: 95% !important;
+    padding: 1.25rem !important;
+    margin: auto;
+  }
+  
+  input, select, textarea, button, a.btn-shine, a.btn-primary-accessible {
+    min-height: 44px;
+  }
+}
+
+/* Web Chatbot Launcher & Widget Styling (Tasks 3, 4, 9) */
+#du-chat-launcher {
+  position: fixed !important;
+  bottom: 1.25rem !important;
+  right: 1.25rem !important;
+  width: 52px !important;
+  height: 52px !important;
+  border-radius: 9999px !important;
+  background-color: #0B0F19 !important;
+  color: #FFFFFF !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border: 2px solid rgba(51, 65, 85, 0.8) !important;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 8px 10px -6px rgba(0, 0, 0, 0.5) !important;
+  z-index: 9999 !important;
+  cursor: pointer !important;
+  transition: all 0.3s ease !important;
+}
+
+#du-chat-launcher:hover {
+  border-color: #FF6600 !important;
+  transform: scale(1.05);
+}
+
+@media (min-width: 640px) {
+  #du-chat-launcher {
+    bottom: 1.5rem !important;
+    right: 1.5rem !important;
+    width: 60px !important;
+    height: 60px !important;
+  }
+}
+
+#du-chat-widget {
+  z-index: 10000 !important;
+}
+
+#du-chat-widget.hidden {
+  display: none !important;
+}
+
+#du-chat-widget:not(.hidden) {
+  display: flex !important;
+}
+
+/* ==========================================================================
+   DESKTOP VISUAL SCALING & READABILITY ENGINE
+   Restores a natural, professional full-width desktop layout with a centered
+   content container of appropriate maximum width (1440px / 90rem) and
+   comfortably readable typography, headers, buttons, cards and spacing at 100% zoom.
+   ========================================================================== */
+
+/* Tablet Navigation Fit (768px - 1023px):
+   Ensure horizontal text links do not collide with logo on tablet screens;
+   use hamburger navigation drawer below 1024px for a clean, spacious header */
+@media (min-width: 768px) and (max-width: 1023px) {
+  header nav {
+    display: none !important;
+  }
+  header #mobile-menu-btn {
+    display: inline-flex !important;
+  }
+}
+
+/* Header Desktop Layout: natural wide span without cramped centering */
+@media (min-width: 1024px) {
+  header .max-w-7xl {
+    max-width: 1536px !important;
+    padding-left: 2rem !important;
+    padding-right: 2rem !important;
+  }
+
+  header nav {
+    gap: 1.75rem !important;
+  }
+
+  header nav a {
+    font-size: 0.9375rem !important; /* 15px */
+    letter-spacing: -0.01em;
+  }
+
+  header .btn-get-started,
+  header .btn-primary-accessible {
+    font-size: 0.875rem !important; /* 14px */
+    padding: 0.65rem 1.35rem !important;
+  }
+}
+
+@media (min-width: 1280px) {
+  header .max-w-7xl {
+    padding-left: 3rem !important;
+    padding-right: 3rem !important;
+  }
+
+  header nav {
+    gap: 2.25rem !important;
+  }
+
+  header nav a {
+    font-size: 0.96875rem !important; /* 15.5px */
+  }
+}
+
+@media (min-width: 1536px) {
+  header .max-w-7xl {
+    padding-left: 3.5rem !important;
+    padding-right: 3.5rem !important;
+  }
+}
+
+/* Hero Section Proportions & Balance on Desktop */
+@media (min-width: 1024px) {
+  /* Allow hero right mockup to scale with the column instead of being artificially capped at 480px */
+  .lg\:col-span-5 > div.max-w-\[480px\] {
+    max-width: 560px !important;
+    width: 100% !important;
+  }
+
+  /* Hero headline presence on large screens */
+  #home h1 {
+    font-size: clamp(3rem, 3.75vw, 3.875rem) !important; /* 48px - 62px */
+    line-height: 1.12 !important;
+  }
+
+  #home p.max-w-2xl {
+    max-width: 44rem !important; /* 704px */
+    font-size: 1.125rem !important; /* 18px */
+    line-height: 1.65 !important;
+  }
+
+  #home .btn-get-started,
+  #home .btn-secondary-accessible {
+    font-size: 0.9375rem !important; /* 15px */
+    padding: 0.95rem 2rem !important;
+  }
+}
+
+/* Card & Section Content Typography Scale (Desktop Readability) */
+@media (min-width: 1024px) {
+  /* Elevate cramped 12px (text-xs) descriptions in cards to 14px */
+  .du-card p.text-xs,
+  .du-card-dark p.text-xs,
+  .bento-card p.text-xs,
+  .project-card p.text-xs {
+    font-size: 0.875rem !important; /* 14px */
+    line-height: 1.6 !important;
+  }
+
+  /* Elevate checklist items in cards */
+  .du-card ul.text-xs,
+  .du-card-dark ul.text-xs {
+    font-size: 0.84375rem !important; /* 13.5px */
+    line-height: 1.55 !important;
+  }
+
+  /* Elevate buttons in cards from 12px to 14px */
+  .du-card button.text-xs,
+  .du-card-dark button.text-xs,
+  .du-card a.text-xs,
+  .du-card-dark a.text-xs {
+    font-size: 0.875rem !important; /* 14px */
+  }
+
+  /* Ensure card headings have comfortable authority */
+  .du-card h3.text-lg,
+  .du-card-dark h3.text-lg {
+    font-size: 1.25rem !important; /* 20px */
+    line-height: 1.35 !important;
+  }
+
+  .du-card h3.text-xl,
+  .du-card-dark h3.text-xl {
+    font-size: 1.375rem !important; /* 22px */
+    line-height: 1.3 !important;
+  }
+
+  /* Micro badges and tags from 9-10px to readable 12px */
+  .du-card .text-\[10px\],
+  .du-card-dark .text-\[10px\],
+  .du-card-dark .text-\[9px\],
+  .du-card .text-\[11px\],
+  .du-card-dark .text-\[11px\] {
+    font-size: 0.75rem !important; /* 12px */
+  }
+
+  /* FAQ items on desktop */
+  .faq-btn {
+    font-size: 1rem !important; /* 16px */
+    padding: 0.25rem 0;
+  }
+
+  .faq-answer {
+    font-size: 0.875rem !important; /* 14px */
+    line-height: 1.65 !important;
+  }
+
+  /* Trust strip readability */
+  section.py-6 .text-xs .font-bold {
+    font-size: 0.875rem !important; /* 14px */
+  }
+  section.py-6 .text-xs .text-\[11px\] {
+    font-size: 0.78125rem !important; /* 12.5px */
+  }
+}
+
+
 
 

@@ -13,14 +13,17 @@
   <meta property="og:url" content="https://digitalustad.co/service-web-development">
   <meta property="og:title" content="Web Development Services | Digital Ustad">
   <meta property="og:description" content="Professional, fast and responsive websites that build trust, attract customers and grow your business. 5-Page Business Website from PKR 30,000.">
-  <meta property="og:image" content="https://digitalustad.co/assets/images/logo-dark.png">
+  <meta property="og:image" content="https://digitalustad.co/assets/images/og-social-card.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Digital Ustad - Build Grow Automate | Digital Solutions &amp; Business Automation">
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:url" content="https://digitalustad.co/service-web-development">
   <meta name="twitter:title" content="Web Development Services | Digital Ustad">
   <meta name="twitter:description" content="Professional, fast and responsive websites that build trust, attract customers and grow your business. 5-Page Business Website from PKR 30,000.">
-  <meta name="twitter:image" content="https://digitalustad.co/assets/images/logo-dark.png">
+  <meta name="twitter:image" content="https://digitalustad.co/assets/images/og-social-card.png">
 
   <!-- Theme Init (Prevents FOUC) -->
   <script>
@@ -36,7 +39,7 @@
   </script>
 
   <link rel="stylesheet" href="css/tailwind.min.css">
-  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="js/lucide.min.js"></script>
   <link rel="stylesheet" href="css/style.css">
 
   <!-- Structured Data: Service, WebPage, and BreadcrumbList -->
@@ -119,12 +122,12 @@
           <img src="assets/images/logo-dark.png" alt="Digital Ustad" width="160" height="44" class="h-10 sm:h-11 w-auto object-contain transition-transform duration-300 group-hover:scale-105">
         </a>
 
-        <nav class="hidden md:flex items-center gap-8">
+        <nav class="hidden md:flex items-center gap-6 lg:gap-8" aria-label="Main Navigation">
           <a href="index.html" class="text-sm font-semibold text-slate-300 hover:text-[#FF6600] transition-colors">Home</a>
-          <a href="services.html" class="text-sm font-semibold text-white hover:text-[#FF6600] transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-[#FF6600]">Services</a>
-          <a href="pricing.html" class="text-sm font-semibold text-slate-300 hover:text-[#FF6600] transition-colors">Pricing</a>
+          <a href="services.html" class="text-sm font-semibold text-slate-300 hover:text-[#FF6600] transition-colors">Services</a>
           <a href="solutions.html" class="text-sm font-semibold text-slate-300 hover:text-[#FF6600] transition-colors">Solutions</a>
-          <a href="how-it-works.html" class="text-sm font-semibold text-slate-300 hover:text-[#FF6600] transition-colors">How It Works</a>
+          <a href="portfolio.html" class="text-sm font-semibold text-slate-300 hover:text-[#FF6600] transition-colors">Work and Concepts</a>
+          <a href="pricing.html" class="text-sm font-semibold text-slate-300 hover:text-[#FF6600] transition-colors">Pricing</a>
           <a href="about.html" class="text-sm font-semibold text-slate-300 hover:text-[#FF6600] transition-colors">About Us</a>
           <a href="contact.html" class="text-sm font-semibold text-slate-300 hover:text-[#FF6600] transition-colors">Contact</a>
         </nav>
@@ -136,8 +139,8 @@
             <i data-lucide="sun" class="w-4 h-4 text-amber-400 theme-icon-sun"></i>
           </button>
 
-          <a href="contact.html" class="btn-get-started btn-shine hidden sm:inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-full bg-[#FF6600] hover:bg-[#EA580C] text-white text-sm font-bold shadow-lg orange-glow-sm hover:scale-105 active:scale-95 transition-all">
-            <span>Get a Free Consultation</span>
+          <a href="contact.html" class="btn-get-started btn-shine hidden sm:inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-full bg-[#FF6600] hover:bg-[#EA580C] text-white text-sm font-bold shadow-lg orange-glow-sm hover:scale-105 active:scale-95 transition-all" data-track="proposal-cta">
+            <span>Get Free Proposal</span>
             <i data-lucide="arrow-right" class="w-4 h-4"></i>
           </a>
           <button id="mobile-menu-btn" class="md:hidden p-2.5 rounded-xl text-slate-300 hover:text-white hover:bg-slate-800/80" aria-label="Open navigation menu">
@@ -162,18 +165,18 @@
           <button id="close-mobile-menu" class="p-2 text-slate-400 hover:text-white" aria-label="Close navigation menu"><i data-lucide="x" class="w-7 h-7"></i></button>
         </div>
       </div>
-      <div class="flex flex-col gap-5 py-8 flex-1">
-        <a href="index.html" class="mobile-nav-link text-lg font-semibold text-slate-300 hover:text-[#FF6600]">Home</a>
-        <a href="services.html" class="mobile-nav-link text-lg font-semibold text-white hover:text-[#FF6600]">Services</a>
-        <a href="pricing.html" class="mobile-nav-link text-lg font-semibold text-slate-300 hover:text-[#FF6600]">Pricing</a>
-        <a href="solutions.html" class="mobile-nav-link text-lg font-semibold text-slate-300 hover:text-[#FF6600]">Solutions</a>
-        <a href="how-it-works.html" class="mobile-nav-link text-lg font-semibold text-slate-300 hover:text-[#FF6600]">How It Works</a>
-        <a href="about.html" class="mobile-nav-link text-lg font-semibold text-slate-300 hover:text-[#FF6600]">About Us</a>
-        <a href="contact.html" class="mobile-nav-link text-lg font-semibold text-slate-300 hover:text-[#FF6600]">Contact</a>
-      </div>
+      <nav class="flex flex-col gap-4 py-8 flex-1 overflow-y-auto" aria-label="Mobile Navigation">
+        <a href="index.html" class="mobile-nav-link text-base font-semibold text-slate-300 hover:text-[#FF6600]">Home</a>
+        <a href="services.html" class="mobile-nav-link text-base font-semibold text-slate-300 hover:text-[#FF6600]">Services</a>
+        <a href="solutions.html" class="mobile-nav-link text-base font-semibold text-slate-300 hover:text-[#FF6600]">Solutions</a>
+        <a href="portfolio.html" class="mobile-nav-link text-base font-semibold text-slate-300 hover:text-[#FF6600]">Work and Concepts</a>
+        <a href="pricing.html" class="mobile-nav-link text-base font-semibold text-slate-300 hover:text-[#FF6600]">Pricing</a>
+        <a href="about.html" class="mobile-nav-link text-base font-semibold text-slate-300 hover:text-[#FF6600]">About Us</a>
+        <a href="contact.html" class="mobile-nav-link text-base font-semibold text-slate-300 hover:text-[#FF6600]">Contact</a>
+      </nav>
       <div class="pt-6 border-t border-slate-800 flex flex-col gap-3">
-        <a href="contact.html" class="btn-get-started btn-shine w-full py-3 rounded-full bg-[#FF6600] text-white font-bold flex items-center justify-center gap-2">
-          <span>Get a Free Consultation</span>
+        <a href="contact.html" class="btn-get-started btn-shine w-full py-3 rounded-full bg-[#FF6600] text-white font-bold flex items-center justify-center gap-2" data-track="proposal-cta">
+          <span>Get Free Proposal</span>
           <i data-lucide="arrow-right" class="w-4 h-4"></i>
         </a>
       </div>
@@ -243,14 +246,14 @@
 
           <!-- Action Buttons -->
           <div class="flex flex-wrap items-center gap-4 pt-4">
-            <button class="btn-get-started btn-shine inline-flex items-center gap-2.5 px-7 py-3.5 rounded-full bg-[#FF6600] hover:bg-[#EA580C] text-white font-bold text-sm shadow-xl orange-glow hover:scale-105 active:scale-95 transition-all">
+            <button class="btn-get-started btn-shine inline-flex items-center gap-2.5 px-7 py-3.5 rounded-full bg-[#FF6600] hover:bg-[#EA580C] text-white font-bold text-sm shadow-xl orange-glow hover:scale-105 active:scale-95 transition-all" data-track="proposal-cta">
               <span>Get Your Website</span>
               <i data-lucide="arrow-right" class="w-4 h-4"></i>
             </button>
 
-            <button type="button" onclick="openDigitalUstadChat({ intent: 'service_inquiry', service: 'Web Development', sourcePage: window.location.pathname })" class="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-full bg-slate-900 hover:bg-slate-800 text-white font-bold text-sm shadow-md hover:scale-105 active:scale-95 transition-all">
+            <button type="button" data-track="chatbot-open" onclick="openDigitalUstadChat({ intent: 'service_inquiry', service: 'Web Development', sourcePage: window.location.pathname })" class="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-full bg-slate-900 hover:bg-slate-800 text-white font-bold text-sm shadow-md hover:scale-105 active:scale-95 transition-all">
               <i data-lucide="message-square" class="w-4 h-4 text-[#FF6600]"></i>
-              <span>Discuss This Service</span>
+              <span>Chat With Us</span>
             </button>
           </div>
         </div>
@@ -274,7 +277,7 @@
                 <div class="absolute right-0 top-0 bottom-0 w-1/2 opacity-30 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&q=80');"></div>
                 <div class="flex items-center gap-2 mb-1">
                   <span class="text-xs text-[#FF6600] font-bold uppercase tracking-wider">High Impact Website</span>
-                  <span class="px-2 py-0.5 rounded-full bg-amber-500/20 text-amber-300 border border-amber-500/40 text-[9px] font-bold">Sample Concept</span>
+                  <span class="px-2 py-0.5 rounded-full bg-amber-500/20 text-amber-300 border border-amber-500/40 text-[9px] font-bold">Industry Demo Concept</span>
                 </div>
                 <div class="text-2xl font-extrabold mt-1 text-white">Grow Your<br>Business Online</div>
                 <div class="mt-4 flex gap-2">
@@ -394,7 +397,7 @@
             </p>
             <div class="pt-2">
               <div class="text-3xl sm:text-4xl font-black text-slate-900 font-outfit">PKR 17,999</div>
-              <div class="text-[11px] text-slate-500 font-semibold mt-1">2 Revision Rounds • 5–7 Days Delivery</div>
+              <div class="text-[11px] text-slate-500 font-semibold mt-1">2 Revision Rounds • 5–7 Days Delivery • 7 Days Support</div>
             </div>
 
             <!-- Payment Policy -->
@@ -432,10 +435,7 @@
           </div>
 
           <div class="pt-6 mt-6 border-t border-slate-100">
-            <button type="button" onclick="openDigitalUstadChat({ intent: 'package_consultation', service: 'Web Development', packageId: 'web-lite-3-page', sourcePage: window.location.pathname })" class="w-full py-3.5 rounded-full bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs flex items-center justify-center gap-2 transition-all">
-              <span>Discuss This Plan</span>
-              <i data-lucide="arrow-right" class="w-4 h-4"></i>
-            </button>
+            <button type="button" data-service="Web Development" data-package="web-lite-3-page" onclick="openProposalModal({ service: 'Web Development', package: 'web-lite-3-page' })" data-track="pricing-cta" class="w-full py-3.5 rounded-full bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs flex items-center justify-center gap-2 transition-all"><span>Get Free Proposal</span> <i data-lucide="arrow-right" class="w-4 h-4"></i></button>
           </div>
         </div>
 
@@ -455,19 +455,19 @@
             </p>
             <div class="pt-2">
               <div class="text-4xl sm:text-5xl font-black text-[#FF6600] font-outfit">PKR 30,000</div>
-              <div class="text-[11px] text-slate-400 font-semibold mt-1">3 Revision Rounds • 7–10 Days Delivery</div>
+              <div class="text-[11px] text-slate-400 font-semibold mt-1">3 Revision Rounds • Typical 7–10 Working Days Delivery • 14 Days Support</div>
             </div>
 
             <!-- Flex Payment Pill -->
             <div class="p-3 rounded-2xl bg-slate-900/90 border border-[#FF6600]/40 text-xs space-y-1.5">
               <div class="font-bold text-amber-400 text-[11px] flex items-center justify-between">
-                <span>INSTALLMENTS (25 / 50 / 25)</span>
+                <span>INSTALLMENTS (40 / 30 / 30)</span>
                 <span class="text-[10px] bg-emerald-500/20 text-emerald-400 px-2 py-0.5 rounded">0% Extra</span>
               </div>
               <div class="grid grid-cols-3 gap-1 text-center text-[10px]">
-                <div class="p-1 rounded bg-slate-800"><span class="text-slate-400">Kickoff (25%)</span><br><strong class="text-white text-xs">7.5k</strong></div>
-                <div class="p-1 rounded bg-slate-800"><span class="text-slate-400">Approval (50%)</span><br><strong class="text-white text-xs">15k</strong></div>
-                <div class="p-1 rounded bg-slate-800"><span class="text-slate-400">30-Day (25%)</span><br><strong class="text-white text-xs">7.5k</strong></div>
+                <div class="p-1 rounded bg-slate-800"><span class="text-slate-400">Kickoff (40%)</span><br><strong class="text-white text-xs">12k</strong></div>
+                <div class="p-1 rounded bg-slate-800"><span class="text-slate-400">Approval (30%)</span><br><strong class="text-white text-xs">9k</strong></div>
+                <div class="p-1 rounded bg-slate-800"><span class="text-slate-400">Handover (30%)</span><br><strong class="text-white text-xs">9k</strong></div>
               </div>
             </div>
 
@@ -500,10 +500,7 @@
           </div>
 
           <div class="pt-6 mt-6 border-t border-slate-800">
-            <button type="button" onclick="openDigitalUstadChat({ intent: 'package_consultation', service: 'Web Development', packageId: 'web-starter-5-page', sourcePage: window.location.pathname })" class="btn-shine w-full py-4 rounded-full bg-[#FF6600] hover:bg-[#EA580C] text-white font-bold text-xs flex items-center justify-center gap-2 shadow-xl orange-glow transition-all">
-              <span>Discuss This Plan</span>
-              <i data-lucide="arrow-right" class="w-4 h-4"></i>
-            </button>
+            <button type="button" data-service="Web Development" data-package="web-starter-5-page" onclick="openProposalModal({ service: 'Web Development', package: 'web-starter-5-page' })" data-track="pricing-cta" class="btn-shine w-full py-4 rounded-full bg-[#FF6600] hover:bg-[#EA580C] text-white font-bold text-xs flex items-center justify-center gap-2 shadow-xl orange-glow transition-all"><span>Get Free Proposal</span> <i data-lucide="arrow-right" class="w-4 h-4"></i></button>
           </div>
         </div>
 
@@ -519,19 +516,19 @@
             </p>
             <div class="pt-2">
               <div class="text-3xl sm:text-4xl font-black text-slate-900 font-outfit">PKR 42,999</div>
-              <div class="text-[11px] text-slate-500 font-semibold mt-1">4 Revisions • 1 Month Support Included</div>
+              <div class="text-[11px] text-slate-500 font-semibold mt-1">4 Revision Rounds • Typical 7–10 Working Days Delivery • 30 Days Support</div>
             </div>
 
             <!-- Flex Payment Pill -->
             <div class="p-3 rounded-2xl bg-slate-50 border border-slate-200 text-xs space-y-1.5">
               <div class="font-bold text-slate-800 text-[11px] flex items-center justify-between">
-                <span>INSTALLMENTS (25 / 50 / 25)</span>
+                <span>INSTALLMENTS (40 / 30 / 30)</span>
                 <span class="text-[10px] bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded font-bold">Split Payments</span>
               </div>
               <div class="grid grid-cols-3 gap-1 text-center text-[10px]">
-                <div class="p-1 rounded bg-white border"><span class="text-slate-400">Kickoff (25%)</span><br><strong class="text-slate-900 text-xs">10.7k</strong></div>
-                <div class="p-1 rounded bg-white border"><span class="text-slate-400">Approval (50%)</span><br><strong class="text-slate-900 text-xs">21.5k</strong></div>
-                <div class="p-1 rounded bg-white border"><span class="text-slate-400">30-Day (25%)</span><br><strong class="text-slate-900 text-xs">10.7k</strong></div>
+                <div class="p-1 rounded bg-white border"><span class="text-slate-400">Kickoff (40%)</span><br><strong class="text-slate-900 text-xs">17.2k</strong></div>
+                <div class="p-1 rounded bg-white border"><span class="text-slate-400">Approval (30%)</span><br><strong class="text-slate-900 text-xs">12.9k</strong></div>
+                <div class="p-1 rounded bg-white border"><span class="text-slate-400">Handover (30%)</span><br><strong class="text-slate-900 text-xs">12.9k</strong></div>
               </div>
             </div>
 
@@ -558,16 +555,13 @@
               </li>
               <li class="flex items-start gap-2">
                 <i data-lucide="shield-check" class="w-4 h-4 text-[#FF6600] flex-shrink-0 mt-0.5"></i>
-                <span><strong>1 Month Free Post-Launch Support</strong></span>
+                <span><strong>30 Days Free Post-Launch Support</strong></span>
               </li>
             </ul>
           </div>
 
           <div class="pt-6 mt-6 border-t border-slate-100">
-            <button type="button" onclick="openDigitalUstadChat({ intent: 'package_consultation', service: 'Web Development', packageId: 'web-growth-7-page', sourcePage: window.location.pathname })" class="w-full py-3.5 rounded-full bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs flex items-center justify-center gap-2 transition-all">
-              <span>Discuss This Plan</span>
-              <i data-lucide="arrow-right" class="w-4 h-4"></i>
-            </button>
+            <button type="button" data-service="Web Development" data-package="web-growth-7-page" onclick="openProposalModal({ service: 'Web Development', package: 'web-growth-7-page' })" data-track="pricing-cta" class="w-full py-3.5 rounded-full bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs flex items-center justify-center gap-2 transition-all"><span>Get Free Proposal</span> <i data-lucide="arrow-right" class="w-4 h-4"></i></button>
           </div>
         </div>
 
@@ -578,7 +572,7 @@
         <div class="lg:col-span-6 bg-white p-6 sm:p-8 rounded-3xl border border-slate-200 space-y-3 shadow-sm">
           <div class="font-extrabold text-slate-900 text-base flex items-center gap-2">
             <i data-lucide="calculator" class="w-5 h-5 text-[#FF6600]"></i>
-            <span>Installment Milestones (25 / 50 / 25) Breakdown</span>
+            <span>Installment Milestones (40 / 30 / 30) Breakdown</span>
           </div>
           <p class="text-slate-600 text-xs leading-relaxed">
             Spread project investment across verified milestones (Available on 5-Page and 7-Page packages only):
@@ -590,32 +584,32 @@
                   <th class="py-2">Stage</th>
                   <th class="py-2">%</th>
                   <th class="py-2">5-Page (PKR 30k)</th>
-                  <th class="py-2">7-Page (PKR 43k)</th>
+                  <th class="py-2">7-Page (PKR 42,999)</th>
                 </tr>
               </thead>
               <tbody class="divide-y divide-slate-100 font-semibold text-slate-700">
                 <tr>
                   <td class="py-2">1. Kickoff Deposit</td>
-                  <td class="py-2">25%</td>
-                  <td class="py-2 text-[#FF6600]">PKR 7,500</td>
-                  <td class="py-2 text-[#FF6600]">PKR 10,750</td>
+                  <td class="py-2">40%</td>
+                  <td class="py-2 text-[#FF6600]">PKR 12,000</td>
+                  <td class="py-2 text-[#FF6600]">PKR 17,200</td>
                 </tr>
                 <tr>
-                  <td class="py-2">2. Staging Review & Approval</td>
-                  <td class="py-2">50%</td>
-                  <td class="py-2">PKR 15,000</td>
-                  <td class="py-2">PKR 21,500</td>
+                  <td class="py-2">2. Design &amp; Development Approval</td>
+                  <td class="py-2">30%</td>
+                  <td class="py-2">PKR 9,000</td>
+                  <td class="py-2">PKR 12,900</td>
                 </tr>
                 <tr>
-                  <td class="py-2">3. 30 Days Post-Launch</td>
-                  <td class="py-2">25%</td>
-                  <td class="py-2">PKR 7,500</td>
-                  <td class="py-2">PKR 10,749 / 10,750*</td>
+                  <td class="py-2">3. Final Handover &amp; Deployment</td>
+                  <td class="py-2">30%</td>
+                  <td class="py-2">PKR 9,000</td>
+                  <td class="py-2">PKR 12,899</td>
                 </tr>
               </tbody>
             </table>
             <div class="mt-2.5 p-2 rounded-lg bg-amber-50 border border-amber-200/80 text-[11px] text-amber-900 leading-tight">
-              🔒 <strong>Flex Requirement:</strong> Website Care (PKR 3,000/mo) is mandatory during the active 30-day balance window. *7-Page installments sum to PKR 42,999 / PKR 43,000 pending owner decision.
+              🔒 <strong>Milestone Security:</strong> Every stage requires explicit client approval before next milestone commencement.
             </div>
           </div>
         </div>
@@ -662,7 +656,7 @@
             <a href="mailto:contact@digitalustad.co" class="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center hover:bg-[#FF6600] hover:text-white transition-colors" title="Email">
               <i data-lucide="mail" class="w-4 h-4"></i>
             </a>
-            <a href="tel:+923000000000" class="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center hover:bg-[#FF6600] hover:text-white transition-colors" title="Phone">
+            <a href="#" data-du-tel class="hidden w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center hover:bg-[#FF6600] hover:text-white transition-colors" title="Phone">
               <i data-lucide="phone" class="w-4 h-4"></i>
             </a>
           </div>
@@ -705,9 +699,9 @@
               <i data-lucide="map-pin" class="w-4 h-4 text-[#FF6600] flex-shrink-0 mt-0.5"></i>
               <span>Lahore, Pakistan & Worldwide Remote</span>
             </li>
-            <li class="flex items-center gap-2">
+            <li class="flex items-center gap-2 hidden" data-du-phone-container>
               <i data-lucide="phone" class="w-4 h-4 text-[#FF6600] flex-shrink-0"></i>
-              <span data-du-phone>+92 300 0000000</span>
+              <span data-du-phone></span>
             </li>
             <li class="flex items-center gap-2">
               <i data-lucide="mail" class="w-4 h-4 text-[#FF6600] flex-shrink-0"></i>
@@ -737,13 +731,6 @@
     </div>
   </footer>
 
-  <!-- ================= DIGITAL USTAD WEBCHAT LAUNCHER ================= -->
-  <button type="button" onclick="openDigitalUstadChat({ intent: 'general_consultation', sourcePage: window.location.pathname })" class="fixed bottom-6 right-6 z-40 px-4 py-3 sm:px-5 sm:py-3.5 rounded-full bg-[#0B0F19] hover:bg-slate-900 text-white flex items-center justify-center gap-2.5 shadow-2xl border border-slate-700/80 hover:border-[#FF6600] hover:scale-105 active:scale-95 transition-all group" aria-label="Open Digital Ustad assistant" title="Ask Digital Ustad">
-    <span class="w-2 h-2 rounded-full bg-[#FF6600] animate-pulse"></span>
-    <i data-lucide="bot" class="w-5 h-5 text-[#FF6600]"></i>
-    <span class="text-xs font-bold tracking-wide hidden sm:inline">Ask Digital Ustad</span>
-  </button>
-
   <!-- QUOTATION MODAL -->
   <div id="quote-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/80 modal-backdrop hidden p-4" role="dialog" aria-modal="true" aria-labelledby="quote-modal-title">
     <div class="modal-box bg-white rounded-3xl max-w-lg w-full p-6 sm:p-8 shadow-2xl relative scale-95 opacity-0 transition-all duration-200">
@@ -751,35 +738,38 @@
       <div class="mb-6">
         <div class="flex items-center justify-between mb-2">
           <h2 id="quote-modal-title" class="text-2xl font-extrabold text-slate-900">Get Web Development Quote</h2>
-          <span id="payment-milestone-badge" class="text-[11px] font-bold text-orange-800 bg-orange-100 px-3 py-1 rounded-full transition-colors">25/50/25 Installments</span>
+          <span id="payment-milestone-badge" class="text-[11px] font-bold text-orange-800 bg-orange-100 px-3 py-1 rounded-full transition-colors">40/30/30 Milestones</span>
         </div>
         <p class="text-xs text-slate-500 mt-1">Get an instant proposal for your 5-Page or Custom Website.</p>
       </div>
-      <form id="quote-form" class="space-y-4">
+      <form id="quote-form" method="POST" action="/api/leads" class="space-y-4">
+        <!-- Anti-spam Honeypot -->
+        <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" class="hidden" aria-hidden="true" style="display:none !important">
+
         <div>
           <label for="web-client-name" class="block text-xs font-bold text-slate-700 uppercase mb-1">Your Name *</label>
-          <input type="text" id="web-client-name" required placeholder="Ali Khan" class="w-full px-4 py-2.5 rounded-xl border text-sm">
+          <input type="text" id="web-client-name" name="name" required placeholder="Ali Khan" class="w-full px-4 py-2.5 rounded-xl border text-sm">
         </div>
         <div>
           <label for="web-client-phone" class="block text-xs font-bold text-slate-700 uppercase mb-1">WhatsApp Number *</label>
-          <input type="tel" id="web-client-phone" required placeholder="0300 1122334" class="w-full px-4 py-2.5 rounded-xl border text-sm">
+          <input type="tel" id="web-client-phone" name="phone" required placeholder="e.g. 03XX XXXXXXX" class="w-full px-4 py-2.5 rounded-xl border text-sm">
         </div>
         <div>
           <label for="web-client-service" class="block text-xs font-bold text-slate-700 uppercase mb-1">Website Package</label>
-          <select id="web-client-service" class="w-full px-3 py-2.5 rounded-xl border text-sm bg-white">
+          <select id="web-client-service" name="service" class="w-full px-3 py-2.5 rounded-xl border text-sm bg-white">
             <option value="5-Page Website Starter (PKR 30,000)">5-Page Website Starter (PKR 30,000) ⭐</option>
             <option value="3-Page Website Lite (PKR 17,999)">3-Page Website Lite (PKR 17,999)</option>
             <option value="7-Page Website Growth (PKR 42,999)">7-Page Website Growth (PKR 42,999)</option>
             <option value="Custom E-commerce / Web App">Custom E-Commerce / Web App</option>
           </select>
         </div>
-        <button type="submit" class="btn-shine w-full py-3.5 rounded-xl bg-[#FF6600] text-white font-bold text-sm shadow-xl flex items-center justify-center gap-2">
+        <button type="submit" class="btn-shine w-full py-3.5 rounded-xl bg-[#FF6600] text-white font-bold text-sm shadow-xl flex items-center justify-center gap-2" data-track="contact-form-submit">
           <span>Submit Project Brief</span>
           <i data-lucide="send" class="w-4 h-4"></i>
         </button>
 
         <div id="payment-milestone-text" class="text-[11px] text-slate-500 text-center pt-1 leading-relaxed">
-          🔒 Privacy guaranteed. Zero spam. <strong>Payment Milestones: 25% kickoff, 50% approval on staging, 25% within 30 days of launch.</strong>
+          🔒 Privacy guaranteed. Zero spam. By submitting, you agree to our <a href="privacy.html" class="underline hover:text-[#FF6600]">Privacy Policy</a>. <strong>Payment Milestones: 40% project kickoff, 30% after design/development approval milestone, 30% before final handover / deployment completion.</strong>
         </div>
       </form>
     </div>

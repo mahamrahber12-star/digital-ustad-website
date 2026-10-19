@@ -1,36 +1,43 @@
 /**
  * Digital Ustad - Central Brand Configuration & Source of Truth
  * 
- * IMPORTANT COMPLIANCE NOTICE (QA-01):
- * Production contact number requires explicit business owner verification.
- * Do NOT invent or guess replacement phone numbers.
- * 
- * This file is the SINGLE SOURCE OF TRUTH for all contact channels:
- * Updating this configuration automatically regenerates every WhatsApp link,
- * telephone link, and public contact display reference across the entire website.
+ * COMMERCIAL & CONTACT SOURCE OF TRUTH:
+ * - Production contact number requires explicit business owner verification.
+ * - When unverified, contact channels are left empty so the UI safely hides them.
+ * - Once supplied, inserting the verified number here activates contact elements site-wide.
  */
 
 const DU_CONFIG = {
-  // Operational Digital Ustad WhatsApp Business Number (E.164 format without +)
-  // Owner-verified number to be placed here. Default maintained until owner confirmation:
-  whatsappNumber: '923000000000',
+  // ============================================================================
+  // SINGLE SOURCE OF TRUTH — GLOBAL BUSINESS CONFIGURATION
+  // ============================================================================
+  businessName: 'Digital Ustad',
+  businessEmail: 'contact@digitalustad.co',
+  // Insert verified business number here once supplied by owner (e.g. '+92 300 0000000')
+  businessPhone: '', 
+  // Operational WhatsApp Business Number in E.164 format without + (e.g. '923XXXXXXXXX')
+  whatsappNumber: '', 
+  businessLocation: 'Lahore, Punjab, Pakistan',
+  workingHours: 'Monday – Saturday: 9:00 AM – 9:00 PM (PKT)',
+  websiteURL: 'https://digitalustad.co/',
 
-  // Formatted telephone number for tel: links
-  telPhone: '+923000000000',
-
-  // Human-readable formatted phone for public display
-  displayPhone: '+92 300 0000000',
-
-  // Official communications
+  // Backwards-compatibility aliases
+  telPhone: '',
+  displayPhone: '',
   officialEmail: 'contact@digitalustad.co',
   officeLocation: 'Lahore, Punjab, Pakistan',
 
-  // Verified baseline credentials
+  // Conservative Business Metrics (Task 6)
   verifiedWebsites: '10+',
+  verifiedWebsitesText: '10+ Websites Delivered',
+  activePartnerships: '5+',
+  activePartnershipsText: '5+ Active Growth Partnerships',
   verifiedClients: '5+',
   yearsActive: '2+',
+  yearsExperienceText: '2+ Years Experience',
+  supportLocation: 'Pakistan-Based Support',
 
-  // Service payment terms mapping for forms and WhatsApp draft messages (QA-08)
+  // Service payment terms mapping for forms and modal workflows
   paymentTerms: {
     // 1. Web Development Packages
     'lite': {
@@ -38,58 +45,58 @@ const DU_CONFIG = {
       title: '3-Page Website Lite',
       badge: '100% Upfront (5% Off)',
       badgeClass: 'bg-emerald-100 text-emerald-800',
-      note: 'Payment Milestones: 100% advance on kickoff. Single-batch delivery within 5–7 days. (5% early-payment discount applies).',
-      draftTerms: '100% Upfront Advance (with 5% early discount)'
+      note: 'Payment Milestones: 100% advance on kickoff. Single-batch delivery within 5–7 days. 5% early-payment discount applies: PKR 17,099 payable upfront.',
+      draftTerms: '100% Upfront Advance (PKR 17,099 with 5% discount)'
     },
     'starter': {
       serviceKey: 'starter',
       title: '5-Page Website Starter',
-      badge: '25/50/25 Flex Installments',
+      badge: '40/30/30 Milestones',
       badgeClass: 'bg-orange-100 text-orange-800',
-      note: 'Payment Milestones: 25% kickoff, 50% approval on staging, 25% within 30 days of launch.',
-      draftTerms: '25/50/25 Flex Installments (25% kickoff, 50% staging approval, 25% in 30 days)'
+      note: 'Payment Milestones: 40% project kickoff (PKR 12,000), 30% after design/development approval milestone (PKR 9,000), 30% before final handover / deployment completion (PKR 9,000). 5% discount for 100% upfront (PKR 28,500).',
+      draftTerms: '40/30/30 Milestone Plan (PKR 12,000 / 9,000 / 9,000)'
     },
     'growthWeb': {
       serviceKey: 'growthWeb',
       title: '7-Page Website Growth',
-      badge: '25/50/25 Flex Installments',
+      badge: '40/30/30 Milestones',
       badgeClass: 'bg-orange-100 text-orange-800',
-      note: 'Payment Milestones: 25% kickoff, 50% approval on staging, 25% within 30 days of launch.',
-      draftTerms: '25/50/25 Flex Installments (25% kickoff, 50% staging approval, 25% in 30 days)'
+      note: 'Payment Milestones: 40% project kickoff (PKR 17,200), 30% after design/development approval milestone (PKR 12,900), 30% before final handover / deployment completion (PKR 12,899). 5% discount for 100% upfront (PKR 40,849).',
+      draftTerms: '40/30/30 Milestone Plan (PKR 17,200 / 12,900 / 12,899)'
     },
     'customWeb': {
       serviceKey: 'customWeb',
       title: 'Custom Web / E-Commerce / Web App',
-      badge: '25/50/25 Milestones (Deployment Final)',
+      badge: '40/30/30 Milestones (Deployment Final)',
       badgeClass: 'bg-blue-100 text-blue-800',
-      note: 'Payment Milestones: 25% kickoff, 50% staging demo approval, 25% at final launch & deployment.',
-      draftTerms: '25/50/25 Milestone Plan (25% kickoff, 50% staging demo, 25% at final launch/deployment)'
+      note: 'Payment Milestones: 40% project kickoff, 30% after design/development approval milestone, 30% before final handover / deployment completion.',
+      draftTerms: '40/30/30 Milestone Plan (40% kickoff, 30% approval milestone, 30% final handover/deployment)'
     },
 
     // 2. WhatsApp Automation Packages
     'basicBot': {
       serviceKey: 'basicBot',
       title: 'Basic WhatsApp Bot',
-      badge: '50/50 Milestones',
+      badge: '40/30/30 Milestones',
       badgeClass: 'bg-purple-100 text-purple-800',
-      note: 'Payment Milestones: 50% kickoff, 50% upon live signoff & handover.',
-      draftTerms: '50/50 Milestone Plan (50% kickoff, 50% upon live signoff/handover)'
+      note: 'Payment Milestones: 40% kickoff, 30% staging demo/approval, 30% upon live signoff & handover.',
+      draftTerms: '40/30/30 Milestone Plan (40% kickoff, 30% approval, 30% handover)'
     },
     'growthBot': {
       serviceKey: 'growthBot',
       title: 'Growth WhatsApp Workflow',
-      badge: '25/50/25 Milestones (Live Final)',
+      badge: '40/30/30 Milestones (Live Final)',
       badgeClass: 'bg-orange-100 text-orange-800',
-      note: 'Payment Milestones: 25% kickoff, 50% staging demo, 25% at final live launch.',
-      draftTerms: '25/50/25 Milestone Plan (25% kickoff, 50% staging demo, 25% at live launch)'
+      note: 'Payment Milestones: 40% project kickoff, 30% staging demo/approval, 30% at final live launch.',
+      draftTerms: '40/30/30 Milestone Plan (40% kickoff, 30% staging demo, 30% at live launch)'
     },
     'advancedBot': {
       serviceKey: 'advancedBot',
       title: 'Advanced AI & Custom API Bot',
-      badge: '25/50/25 Milestones (Live Final)',
+      badge: '40/30/30 Milestones (Live Final)',
       badgeClass: 'bg-indigo-100 text-indigo-800',
-      note: 'Payment Milestones: 25% kickoff, 50% staging demo, 25% upon final live deployment.',
-      draftTerms: '25/50/25 Milestone Plan (25% kickoff, 50% staging demo, 25% upon live deployment)'
+      note: 'Payment Milestones: 40% project kickoff, 30% staging demo/approval, 30% upon final live deployment.',
+      draftTerms: '40/30/30 Milestone Plan (40% kickoff, 30% staging demo, 30% upon live deployment)'
     },
 
     // 3. Digital Marketing Retainers
@@ -98,15 +105,15 @@ const DU_CONFIG = {
       title: 'SEO & Google Business',
       badge: 'Advance Monthly Retainer',
       badgeClass: 'bg-emerald-100 text-emerald-800',
-      note: 'Payment Milestones: Advance monthly retainer (100% at start of each monthly cycle). No lock-in contract.',
-      draftTerms: 'Advance Monthly Retainer (100% at start of monthly cycle)'
+      note: 'Payment Milestones: Advance monthly retainer (100% at start of each monthly cycle). 3-month recommended horizon, no lock-in contract. Cancellation: at least 7 days before the next billing date.',
+      draftTerms: 'Advance Monthly Retainer (3-Month Recommended Horizon, No Lock-In)'
     },
     'socialRetainer': {
       serviceKey: 'socialRetainer',
       title: 'Social Media Management',
       badge: 'Advance Monthly Retainer',
       badgeClass: 'bg-emerald-100 text-emerald-800',
-      note: 'Payment Milestones: Advance monthly retainer (100% at start of each monthly cycle).',
+      note: 'Payment Milestones: Advance monthly retainer (100% at start of each monthly cycle). Cancellation: at least 7 days before the next billing date.',
       draftTerms: 'Advance Monthly Retainer (100% at start of monthly cycle)'
     },
     'adsRetainer': {
@@ -114,7 +121,7 @@ const DU_CONFIG = {
       title: 'Meta & Google Ads Management',
       badge: 'Advance Monthly Retainer',
       badgeClass: 'bg-emerald-100 text-emerald-800',
-      note: 'Payment Milestones: Advance management fee only. Ad spend billed directly to client debit/credit card.',
+      note: 'Payment Milestones: Advance management fee only. Ad spend billed directly to client debit/credit card. Cancellation: at least 7 days before the next billing date.',
       draftTerms: 'Advance Monthly Retainer (Ad spend direct to client card)'
     },
     'allInOneBundle': {
@@ -122,7 +129,7 @@ const DU_CONFIG = {
       title: 'All-in-One Growth Bundle',
       badge: 'Advance Monthly Retainer',
       badgeClass: 'bg-amber-100 text-amber-800',
-      note: 'Payment Milestones: Advance monthly billing (100% at start of each 30-day growth cycle).',
+      note: 'Payment Milestones: Advance monthly billing (100% at start of each 30-day growth cycle). Cancellation: at least 7 days before the next billing date.',
       draftTerms: 'Advance Monthly Retainer (100% at cycle start)'
     },
 
@@ -132,176 +139,99 @@ const DU_CONFIG = {
       title: 'Graphic Design Retainer',
       badge: 'Advance Monthly Retainer',
       badgeClass: 'bg-emerald-100 text-emerald-800',
-      note: 'Payment Milestones: Advance monthly creative retainer for continuous design assets.',
+      note: 'Payment Milestones: Advance monthly creative retainer for continuous design assets. Cancellation: at least 7 days before the next billing date.',
       draftTerms: 'Advance Monthly Creative Retainer'
     },
     'designProject': {
       serviceKey: 'designProject',
       title: 'Per-Project Graphic Design / Branding',
-      badge: '50/50 Milestones',
+      badge: '40/30/30 Milestones',
       badgeClass: 'bg-purple-100 text-purple-800',
-      note: 'Payment Milestones: 50% deposit on kickoff, 50% upon final creative delivery.',
-      draftTerms: '50/50 Milestone Plan (50% kickoff deposit, 50% upon final delivery)'
+      note: 'Payment Milestones: 40% kickoff deposit, 30% design review & approval milestone, 30% upon final creative delivery.',
+      draftTerms: '40/30/30 Milestone Plan (40% kickoff deposit, 30% approval milestone, 30% upon final delivery)'
     }
   },
 
-  // Clonvo.chat Webchat Integration Layer (QA-05)
-  // Exclusive website chat layer ("Digital Ustad Assistant")
+  // Webchat Integration Configuration Layer ("Digital Ustad Assistant")
   clonvo: {
-    enabled: true,
+    // Inactive until verified production credentials & embed documentation are provided by business owner
+    enabled: false,
     assistantName: 'Digital Ustad Assistant',
     attribution: 'Powered by Clonvo.chat',
     privacyUrl: 'privacy.html',
     contactUrl: 'contact.html',
 
-    // Security & Client Configuration Boundary:
-    // Production credentials must be supplied by the business owner.
-    // Read from window variables or build environment. Secret API keys are strictly disallowed.
+    // Strict Allowed Origins
+    allowedOrigins: [
+      'https://digitalustad.co',
+      'https://www.digitalustad.co'
+    ],
+
+    // Client Configuration Boundary (No secrets in browser JS):
     apiUrl: (typeof window !== 'undefined' && window.CLONVO_API_URL) || '',
     tenantId: (typeof window !== 'undefined' && window.CLONVO_TENANT_ID) || '',
     assistantId: (typeof window !== 'undefined' && window.CLONVO_ASSISTANT_ID) || '',
     publicKey: (typeof window !== 'undefined' && window.CLONVO_PUBLIC_KEY) || '',
     embedUrl: (typeof window !== 'undefined' && window.CLONVO_EMBED_URL) || '',
-    leadEndpoint: (typeof window !== 'undefined' && window.CLONVO_LEAD_ENDPOINT) || '',
 
-    // Rate Limiting & Reliability Parameters
-    rateLimit: {
-      maxRequests: 5,
-      windowMs: 10000 // 5 messages per 10 seconds
-    },
-    inputMaxChars: 500,
-    timeoutMs: 15000,
-    retryAttempts: 2,
-    defaultLanguage: 'en', // 'en' (English) or 'ur' (Roman Urdu)
-
-    // Configuration status check helper
+    // Verification helper
     isConfigured: function() {
-      return Boolean(this.apiUrl && this.tenantId && this.assistantId);
+      return Boolean(this.enabled && (this.embedUrl || (this.apiUrl && this.tenantId && this.assistantId)));
     }
   },
 
   // ============================================================================
-  // CANONICAL COMMERCIAL SOURCE OF TRUTH (QA-COMMERCIAL-01)
-  // Single Source of Truth for Prices, Installments, Timelines, Revisions,
-  // Support Terms, Care Requirements, and Unresolved Business Decisions.
+  // CENTRAL COMMERCIAL SOURCE OF TRUTH
+  // Canonical reference for prices, installments, upfront prices,
+  // delivery timelines, cancellation wording, SEO horizon, and discount rules.
   // ============================================================================
   commercial: {
-    // --------------------------------------------------------------------------
-    // 1. OWNER DECISIONS REQUIRED CATALOG
-    // Every conflicting policy or ambiguous value is cataloged here.
-    // When the owner approves a decision, updating this source updates all logic.
-    // --------------------------------------------------------------------------
-    ownerDecisionsRequired: {
-      growthPriceArithmetic: {
-        id: 'DECISION_GROWTH_PRICE',
-        title: '7-Page Growth Package Arithmetic Discrepancy',
-        issue: 'Advertised headline price is PKR 42,999, while the visible 25/50/25 installments (PKR 10,750 + 21,500 + 10,750) sum to PKR 43,000.',
-        advertisedPrice: 42999,
-        installmentSum: 43000,
-        installments: { kickoff: 10750, approval: 21500, final30Day: 10750 },
-        status: 'OWNER DECISION REQUIRED',
-        options: [
-          'Option A: Set advertised total to PKR 43,000 (aligns perfectly with 10,750 + 21,500 + 10,750)',
-          'Option B: Keep advertised total at PKR 42,999 and adjust installment rounding (e.g., 10,750 + 21,499 + 10,750 = 42,999)'
-        ]
-      },
-      growthDeliveryTimeline: {
-        id: 'DECISION_GROWTH_TIMELINE',
-        title: '7-Page Growth Package Delivery Timeline Conflict',
-        issue: 'Pricing page states 12–15 working days; Terms of Service states 10–14 working days.',
-        pricingPageTimeline: '12–15 working days',
-        termsPageTimeline: '10–14 working days',
-        currentCanonical: '10–14 working days', // Primary baseline pending approval
-        status: 'OWNER DECISION REQUIRED',
-        options: ['10–14 working days', '12–15 working days']
-      },
+    // 1. Core Policies & Ground Rules
+    policies: {
       retainerCancellation: {
-        id: 'DECISION_RETAINER_CANCELLATION',
-        title: 'Monthly Retainer Cancellation & Commitment Term Conflicts',
-        issue: 'Social Media mentions 15-day exit flexibility; Refund Policy says 7 days notice prior to billing date with no lock-in; SEO specifies 3-month commitment; Terms states advance monthly with no lock-in.',
-        socialMediaNotice: '15-day exit flexibility',
-        refundPolicyNotice: '7 days written notice prior to next monthly billing',
-        seoCommitment: '3-month commitment',
-        status: 'OWNER DECISION REQUIRED',
-        options: [
-          'Option A: Standardize all retainers to advance monthly billing with 7 days written notice prior to renewal; clarify SEO 3-month as recommended minimum duration for organic results.',
-          'Option B: Tiered policies: SEO requires strict 3-month lock-in; Social Media requires 15-day notice; Ads/GBP require 7-day notice.'
-        ]
+        rule: 'At least 7 days before the next billing date',
+        fullNotice: 'You may cancel or pause your retainer at any time by providing written notice at least 7 days before the next billing date.',
+        lockIn: false
       },
-      liteUpfrontDiscount: {
-        id: 'DECISION_LITE_DISCOUNT',
-        title: '3-Page Lite 5% Upfront Early Discount Discrepancy',
-        issue: 'Terms states 5% upfront discount applies to Lite package; Pricing card displays PKR 17,999 as full kickoff amount without showing calculated discounted payable.',
-        advertisedPrice: 17999,
-        discountPercent: 5,
-        calculatedDiscountedPrice: 17099, // 17,999 * 0.95 = 17,099.05 rounded
-        status: 'OWNER DECISION REQUIRED',
-        options: [
-          'Option A: PKR 17,999 is standard gross price; payable with 5% early discount is PKR 17,099',
-          'Option B: PKR 17,999 is already the net discounted price'
-        ]
+      seo: {
+        recommendedHorizon: '3-month recommended horizon',
+        lockIn: false,
+        noticeRule: 'At least 7 days before the next billing date',
+        description: 'For organic SEO campaigns, a 3-month recommended horizon is advised because search engine indexing requires progressive authority accumulation. Operates with zero lock-in contracts.'
       },
-      taxTreatment: {
-        id: 'DECISION_TAX_TREATMENT',
-        title: 'Provincial Sales Tax (PRA / SRB / WHT) Policy',
-        issue: 'Tax inclusion or exclusion is not defined across any public page or contract.',
-        status: 'OWNER DECISION REQUIRED',
-        options: [
-          'All quoted prices are exclusive of provincial sales tax (PRA) where applicable',
-          'All quoted prices are net payable'
-        ]
+      discountRules: {
+        upfrontStandardDiscountPercent: 5,
+        roundingRule: 'whole-rupee rounding',
+        description: '5% upfront early-payment discount applies with whole-rupee rounding.'
       },
-      domainRegistration: {
-        id: 'DECISION_DOMAIN_REGISTRATION',
-        title: 'Domain Registration Ownership Policy',
-        issue: 'Package cards do not explicitly specify whether .com / .pk domain purchase is included or client-provided.',
-        status: 'OWNER DECISION REQUIRED',
-        options: [
-          'Domain registration is client-owned and excluded (client provides or pays registrar cost)',
-          'First year standard .com domain included in multi-page packages'
-        ]
-      }
-    },
-
-    // --------------------------------------------------------------------------
-    // 2. CANONICAL COMMERCIAL RULES & DISCLOSURES
-    // --------------------------------------------------------------------------
-    rules: {
+      deliveryTimelines: {
+        lite: '7–10 working days',
+        starter: '7–10 working days',
+        growth: '7–10 working days',
+        custom: '15–20 working days'
+      },
       websiteCare: {
         monthlyFee: 3000,
         currency: 'PKR',
         title: 'Website Care & Managed Cloud Hosting',
-        scope: 'Ultra-fast cloud hosting, 99.9% uptime monitoring, SSL certificate, weekly automated backups, and 2 minor monthly edits.',
-        flexCondition: 'Mandatory during active Flex installment window (until 30-day final balance is settled). Optional thereafter.'
+        scope: 'Cloud hosting, proactive uptime monitoring, SSL certificate, weekly automated backups, and 2 minor monthly edits.',
+        flexCondition: 'Available as optional ongoing maintenance post-launch.'
       },
       adSpend: {
         policy: 'Excluded from Digital Ustad management fees. Client pays media ad spend directly to Meta or Google via client debit/credit card.',
         setupFees: {
           meta: 5000,
           google: 6000,
-          waiverCondition: 'Waived with 3-month upfront commitment.'
+          waiverCondition: 'Waived with 3 months upfront retainer.'
         }
       },
       whatsappMetaFees: {
         policy: 'Official Meta Cloud API conversation charges are paid directly to Meta via credit card linked to client Meta Business Manager account.',
         serverMaintenance: 'Cloud hosting & bot webhook maintenance available at PKR 3,000 – 5,000 / month (or client self-hosted).'
-      },
-      revisions: {
-        lite: '2 revision rounds included',
-        starter: '3 revision rounds included',
-        growth: '4 revision rounds included',
-        scope: 'Text adjustments, image swaps, layout tweaks, and color styling. Substantial scope additions quoted separately.'
-      },
-      supportWarranty: {
-        lite: '7 days launch technical bugfix support',
-        starter: '14 days handover support & minor adjustments',
-        growth: '30 days full technical support included'
       }
     },
 
-    // --------------------------------------------------------------------------
-    // 3. CANONICAL PACKAGE CATALOG
-    // --------------------------------------------------------------------------
+    // 2. Canonical Packages Catalog
     packages: {
       // --- Web Development ---
       'web-lite': {
@@ -310,14 +240,16 @@ const DU_CONFIG = {
         category: 'Web Development',
         price: 17999,
         priceFormatted: 'PKR 17,999',
+        discountPercent: 5,
+        upfrontPrice: 17099,
+        upfrontPriceFormatted: 'PKR 17,099',
+        upfrontDiscountText: '5% Early-Payment Discount: PKR 17,099 payable upfront',
         billingType: '100% Upfront Advance',
-        deliveryTimeline: '5–7 working days',
+        deliveryTimeline: '7–10 working days',
         revisions: '2 revision rounds',
-        supportWarranty: '7 days post-launch bugfix support',
+        supportWarranty: '7 days post-launch support',
         installments: null,
-        upfrontDiscount: '5% early-payment discount applies (Decision pending whether 17,999 is gross or net)',
-        mandatoryCare: false,
-        careFee: 3000
+        mandatoryCare: false
       },
       'web-starter': {
         id: 'web-starter',
@@ -325,19 +257,23 @@ const DU_CONFIG = {
         category: 'Web Development',
         price: 30000,
         priceFormatted: 'PKR 30,000',
-        billingType: '25/50/25 Flex Installments',
+        discountPercent: 5,
+        upfrontPrice: 28500,
+        upfrontPriceFormatted: 'PKR 28,500',
+        upfrontDiscountText: '5% Discount for 100% Upfront (PKR 28,500)',
+        billingType: '40/30/30 Milestone Plan',
         deliveryTimeline: '7–10 working days',
         revisions: '3 revision rounds',
         supportWarranty: '14 days post-launch support',
         installments: [
-          { phase: 'Kickoff (25%)', amount: 7500, amountFormatted: 'PKR 7,500' },
-          { phase: 'Staging Approval (50%)', amount: 15000, amountFormatted: 'PKR 15,000' },
-          { phase: '30-Day Post-Launch (25%)', amount: 7500, amountFormatted: 'PKR 7,500' }
+          { phase: 'Kickoff (40%)', amount: 12000, amountFormatted: 'PKR 12,000' },
+          { phase: 'Approval Milestone (30%)', amount: 9000, amountFormatted: 'PKR 9,000' },
+          { phase: 'Final Handover (30%)', amount: 9000, amountFormatted: 'PKR 9,000' }
         ],
-        upfrontDiscount: '5% Discount for 100% Upfront (PKR 28,500)',
-        mandatoryCare: true,
+        installmentTotal: 30000,
+        mandatoryCare: false,
         careFee: 3000,
-        careCondition: 'Mandatory during active Flex installment window. Optional thereafter.'
+        careCondition: 'Optional ongoing Website Care available.'
       },
       'web-growth': {
         id: 'web-growth',
@@ -345,21 +281,23 @@ const DU_CONFIG = {
         category: 'Web Development',
         price: 42999,
         priceFormatted: 'PKR 42,999',
-        priceNote: 'Pending owner approval on 42,999 vs 43,000 arithmetic alignment',
-        billingType: '25/50/25 Flex Installments',
-        deliveryTimeline: '10–14 working days',
-        deliveryTimelineNote: 'Pending owner approval on 10–14 vs 12–15 working days',
+        discountPercent: 5,
+        upfrontPrice: 40849,
+        upfrontPriceFormatted: 'PKR 40,849',
+        upfrontDiscountText: '5% Discount for 100% Upfront: PKR 40,849',
+        billingType: '40/30/30 Milestone Plan',
+        deliveryTimeline: '7–10 working days',
         revisions: '4 revision rounds',
-        supportWarranty: '30 days full technical support',
+        supportWarranty: '30 days post-launch support',
         installments: [
-          { phase: 'Kickoff (25%)', amount: 10750, amountFormatted: 'PKR 10,750' },
-          { phase: 'Staging Approval (50%)', amount: 21500, amountFormatted: 'PKR 21,500' },
-          { phase: '30-Day Post-Launch (25%)', amount: 10750, amountFormatted: 'PKR 10,750' }
+          { phase: 'Kickoff (40%)', amount: 17200, amountFormatted: 'PKR 17,200' },
+          { phase: 'Approval Milestone (30%)', amount: 12900, amountFormatted: 'PKR 12,900' },
+          { phase: 'Final Handover (30%)', amount: 12899, amountFormatted: 'PKR 12,899' }
         ],
-        upfrontDiscount: '5% Discount for 100% Upfront (PKR 40,850 calculated from 43k)',
-        mandatoryCare: true,
+        installmentTotal: 42999,
+        mandatoryCare: false,
         careFee: 3000,
-        careCondition: 'Mandatory during active Flex installment window. Optional thereafter.'
+        careCondition: 'Optional ongoing Website Care available.'
       },
       'web-custom': {
         id: 'web-custom',
@@ -367,14 +305,14 @@ const DU_CONFIG = {
         category: 'Web Development',
         price: 75000,
         priceFormatted: 'PKR 75,000+',
-        billingType: '25/50/25 Milestones (Deployment Final)',
-        deliveryTimeline: '15–20 working days (3–4 weeks)',
+        billingType: '40/30/30 Milestones (Deployment Final)',
+        deliveryTimeline: '15–20 working days',
         revisions: 'Quoted per proposal (typically 4–6 rounds)',
-        supportWarranty: '30–60 days post-launch warranty',
+        supportWarranty: '30 days post-launch support',
         installments: [
-          { phase: 'Kickoff (25%)', amount: '25%' },
-          { phase: 'Staging Demo Approval (50%)', amount: '50%' },
-          { phase: 'Final Live Deployment (25%)', amount: '25%' }
+          { phase: 'Kickoff (40%)', amount: '40%' },
+          { phase: 'Approval Milestone (30%)', amount: '30%' },
+          { phase: 'Final Live Deployment (30%)', amount: '30%' }
         ]
       },
 
@@ -384,13 +322,14 @@ const DU_CONFIG = {
         name: 'Basic WhatsApp Bot',
         category: 'WhatsApp Automation',
         priceRange: 'PKR 25,000 – 35,000',
-        billingType: '50/50 Milestones',
-        deliveryTimeline: '5–7 working days',
+        billingType: '40/30/30 Milestones',
+        deliveryTimeline: '7–10 working days',
         revisions: '2 rounds flow adjustments',
-        supportWarranty: '14 days handover support',
+        supportWarranty: '14 days post-launch support',
         installments: [
-          { phase: 'Kickoff (50%)', amount: '50%' },
-          { phase: 'Live Signoff & Handover (50%)', amount: '50%' }
+          { phase: 'Kickoff (40%)', amount: '40%' },
+          { phase: 'Approval Milestone (30%)', amount: '30%' },
+          { phase: 'Live Signoff & Handover (30%)', amount: '30%' }
         ],
         operationalNote: 'Hosting PKR 3k–5k/mo; Meta API conversation charges direct to Meta.'
       },
@@ -399,14 +338,14 @@ const DU_CONFIG = {
         name: 'Growth WhatsApp Workflow',
         category: 'WhatsApp Automation',
         priceRange: 'PKR 45,000 – 65,000',
-        billingType: '25/50/25 Milestones',
-        deliveryTimeline: '10–14 working days',
+        billingType: '40/30/30 Milestones',
+        deliveryTimeline: '7–10 working days',
         revisions: '3 rounds conversational flow adjustments',
         supportWarranty: '30 days post-launch support',
         installments: [
-          { phase: 'Kickoff (25%)', amount: '25%' },
-          { phase: 'Staging Demo (50%)', amount: '50%' },
-          { phase: 'Live Launch (25%)', amount: '25%' }
+          { phase: 'Kickoff (40%)', amount: '40%' },
+          { phase: 'Approval Milestone (30%)', amount: '30%' },
+          { phase: 'Live Launch (30%)', amount: '30%' }
         ],
         operationalNote: 'Hosting PKR 3k–5k/mo; Meta API conversation charges direct to Meta.'
       },
@@ -416,14 +355,14 @@ const DU_CONFIG = {
         category: 'WhatsApp Automation',
         price: 75000,
         priceFormatted: 'PKR 75,000+',
-        billingType: '25/50/25 Milestones',
+        billingType: '40/30/30 Milestones',
         deliveryTimeline: '2–3 weeks',
         revisions: 'Defined per technical specification',
-        supportWarranty: '30 days full warranty',
+        supportWarranty: '30 days post-launch support',
         installments: [
-          { phase: 'Kickoff (25%)', amount: '25%' },
-          { phase: 'Staging Demo (50%)', amount: '50%' },
-          { phase: 'Final Live Deployment (25%)', amount: '25%' }
+          { phase: 'Kickoff (40%)', amount: '40%' },
+          { phase: 'Approval Milestone (30%)', amount: '30%' },
+          { phase: 'Final Live Deployment (30%)', amount: '30%' }
         ],
         operationalNote: 'Hosting PKR 3k–5k/mo; Meta API conversation charges direct to Meta.'
       },
@@ -436,8 +375,9 @@ const DU_CONFIG = {
         price: 15000,
         priceFormatted: 'PKR 15,000/mo',
         billingType: 'Advance Monthly Retainer',
-        commitment: '3-Month Recommended / Minimum (Pending policy harmonization)',
-        cancellation: '7 days written notice prior to monthly renewal (No lock-in contracts)'
+        horizon: '3-month recommended horizon',
+        lockIn: false,
+        cancellation: 'At least 7 days before the next billing date'
       },
       'seo-growth': {
         id: 'seo-growth',
@@ -446,8 +386,9 @@ const DU_CONFIG = {
         price: 25000,
         priceFormatted: 'PKR 25,000/mo',
         billingType: 'Advance Monthly Retainer',
-        commitment: '3-Month Recommended / Minimum (Pending policy harmonization)',
-        cancellation: '7 days written notice prior to monthly renewal'
+        horizon: '3-month recommended horizon',
+        lockIn: false,
+        cancellation: 'At least 7 days before the next billing date'
       },
       'seo-authority': {
         id: 'seo-authority',
@@ -456,8 +397,9 @@ const DU_CONFIG = {
         price: 40000,
         priceFormatted: 'PKR 40,000/mo',
         billingType: 'Advance Monthly Retainer',
-        commitment: '3-Month Recommended / Minimum (Pending policy harmonization)',
-        cancellation: '7 days written notice prior to monthly renewal'
+        horizon: '3-month recommended horizon',
+        lockIn: false,
+        cancellation: 'At least 7 days before the next billing date'
       },
       'gbp-setup': {
         id: 'gbp-setup',
@@ -473,7 +415,8 @@ const DU_CONFIG = {
         category: 'SEO & Local Search',
         price: 4000,
         priceFormatted: 'PKR 4,000/mo',
-        billingType: 'Advance Monthly Retainer'
+        billingType: 'Advance Monthly Retainer',
+        cancellation: 'At least 7 days before the next billing date'
       },
       'social-basic': {
         id: 'social-basic',
@@ -482,7 +425,8 @@ const DU_CONFIG = {
         price: 18000,
         priceFormatted: 'PKR 18,000/mo',
         billingType: 'Advance Monthly Retainer',
-        cancellation: '7 days written notice prior to renewal (15-day exit flexibility mentioned on service page)'
+        lockIn: false,
+        cancellation: 'At least 7 days before the next billing date'
       },
       'social-growth': {
         id: 'social-growth',
@@ -491,7 +435,8 @@ const DU_CONFIG = {
         price: 32000,
         priceFormatted: 'PKR 32,000/mo',
         billingType: 'Advance Monthly Retainer',
-        cancellation: '7 days written notice prior to renewal'
+        lockIn: false,
+        cancellation: 'At least 7 days before the next billing date'
       },
       'social-pro': {
         id: 'social-pro',
@@ -500,7 +445,8 @@ const DU_CONFIG = {
         price: 50000,
         priceFormatted: 'PKR 50,000/mo',
         billingType: 'Advance Monthly Retainer',
-        cancellation: '7 days written notice prior to renewal'
+        lockIn: false,
+        cancellation: 'At least 7 days before the next billing date'
       },
       'ads-starter': {
         id: 'ads-starter',
@@ -509,6 +455,8 @@ const DU_CONFIG = {
         price: 15000,
         priceFormatted: 'PKR 15,000/mo',
         billingType: 'Advance Monthly Management Fee',
+        lockIn: false,
+        cancellation: 'At least 7 days before the next billing date',
         adSpendRule: 'Media spend paid directly to ad networks via client card'
       },
       'ads-growth': {
@@ -518,6 +466,8 @@ const DU_CONFIG = {
         price: 28000,
         priceFormatted: 'PKR 28,000/mo',
         billingType: 'Advance Monthly Management Fee',
+        lockIn: false,
+        cancellation: 'At least 7 days before the next billing date',
         adSpendRule: 'Media spend paid directly to ad networks via client card'
       },
       'ads-scale': {
@@ -527,6 +477,8 @@ const DU_CONFIG = {
         price: 45000,
         priceFormatted: 'PKR 45,000/mo',
         billingType: 'Advance Monthly Management Fee',
+        lockIn: false,
+        cancellation: 'At least 7 days before the next billing date',
         adSpendRule: 'Media spend paid directly to ad networks via client card'
       },
 
@@ -561,7 +513,9 @@ const DU_CONFIG = {
         category: 'Graphic Design',
         price: 25000,
         priceFormatted: 'PKR 25,000/mo',
-        billingType: 'Advance Monthly Retainer'
+        billingType: 'Advance Monthly Retainer',
+        lockIn: false,
+        cancellation: 'At least 7 days before the next billing date'
       },
 
       // --- Website Care & Hosting ---
@@ -572,7 +526,7 @@ const DU_CONFIG = {
         price: 3000,
         priceFormatted: 'PKR 3,000/mo',
         billingType: 'Monthly Advance',
-        scope: 'Ultra-fast cloud hosting, 99.9% uptime monitoring, SSL certificate, weekly automated cloud backups, 2 minor monthly edits.',
+        scope: 'Cloud hosting, proactive uptime monitoring, SSL certificate, weekly automated cloud backups, 2 minor monthly edits.',
         flexRequirement: 'Mandatory during active Flex installment window (PKR 3,000/mo). Optional thereafter.'
       }
     }
